@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E15600D-04FF-4F2A-A829-13133A8FD0C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GiicNetBus</RootNamespace>
+    <AssemblyName>GiicNetBus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Clientes.cs" />
+    <Compile Include="Base\CondEntrega.cs" />
+    <Compile Include="Base\Estacoes.cs" />
+    <Compile Include="Base\Familias.cs" />
+    <Compile Include="Base\Pecas.cs" />
+    <Compile Include="Base\ResultList.cs" />
+    <Compile Include="Base\TabAge.cs" />
+    <Compile Include="Base\TabClasse.cs" />
+    <Compile Include="Base\TabContasBan.cs" />
+    <Compile Include="Base\TabEuro.cs" />
+    <Compile Include="Base\TabFPag.cs" />
+    <Compile Include="Base\TabIdioma.cs" />
+    <Compile Include="Base\TabLocal.cs" />
+    <Compile Include="Base\TabMT.cs" />
+    <Compile Include="Base\TabPag.cs" />
+    <Compile Include="Base\TabPais.cs" />
+    <Compile Include="Base\Tab_Retencoes.cs" />
+    <Compile Include="Base\TabSeg.cs" />
+    <Compile Include="Base\TabTran.cs" />
+    <Compile Include="Base\TabZon.cs" />
+    <Compile Include="Helper\ProcessEmpty.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gcmp\" />
+    <Folder Include="Gcom\" />
+    <Folder Include="Gdtec\" />
+    <Folder Include="Gmat\" />
+    <Folder Include="Gplan\" />
+    <Folder Include="Gprep\" />
+    <Folder Include="Gprod\" />
+    <Folder Include="Gstk\" />
+    <Folder Include="Integra\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GiicNetModels\GiicNetModels.csproj">
+      <Project>{a2258c4b-c25f-4a35-8388-43a28696ce01}</Project>
+      <Name>GiicNetModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

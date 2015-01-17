@@ -1,0 +1,3031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96A9BD82-EF08-462E-8A2F-A720083D323F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Giic.Storage.EF</RootNamespace>
+    <AssemblyName>Giic.Storage.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\packages\LINQKit.1.1.1\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel.Actividades.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Actividades.Generated.cs">
+      <DependentUpon>DataModel.Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Activ_Consertos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Activ_Consertos.Generated.cs">
+      <DependentUpon>DataModel.Activ_Consertos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasEmail.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasEmail.Generated.cs">
+      <DependentUpon>DataModel.AlertasEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasErros.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasErros.Generated.cs">
+      <DependentUpon>DataModel.AlertasErros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasLog.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AlertasLog.Generated.cs">
+      <DependentUpon>DataModel.AlertasLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ALOCF_DET.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ALOCF_DET.Generated.cs">
+      <DependentUpon>DataModel.ALOCF_DET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AMORTIZACOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.AMORTIZACOES.Generated.cs">
+      <DependentUpon>DataModel.AMORTIZACOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTCLI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTCLI.Generated.cs">
+      <DependentUpon>DataModel.ARTCLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTCLI_SORT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTCLI_SORT.Generated.cs">
+      <DependentUpon>DataModel.ARTCLI_SORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTFORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTFORN.Generated.cs">
+      <DependentUpon>DataModel.ARTFORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOCOR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOCOR.Generated.cs">
+      <DependentUpon>DataModel.ARTIGOCOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOS.Generated.cs">
+      <DependentUpon>DataModel.ARTIGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOS_BASE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ARTIGOS_BASE.Generated.cs">
+      <DependentUpon>DataModel.ARTIGOS_BASE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ATRIBUTO_ARTIGO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ATRIBUTO_ARTIGO.Generated.cs">
+      <DependentUpon>DataModel.ATRIBUTO_ARTIGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cabcartaz.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cabcartaz.Generated.cs">
+      <DependentUpon>DataModel.cabcartaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CABCONSERTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CABCONSERTOS.Generated.cs">
+      <DependentUpon>DataModel.CABCONSERTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cabcores.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cabcores.Generated.cs">
+      <DependentUpon>DataModel.cabcores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CABDOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CABDOC.Generated.cs">
+      <DependentUpon>DataModel.CABDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_FECHO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_FECHO.Generated.cs">
+      <DependentUpon>DataModel.CAIXA_FECHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_MODOPAG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_MODOPAG.Generated.cs">
+      <DependentUpon>DataModel.CAIXA_MODOPAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_MOV.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_MOV.Generated.cs">
+      <DependentUpon>DataModel.CAIXA_MOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_RUBRICAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_RUBRICAS.Generated.cs">
+      <DependentUpon>DataModel.CAIXA_RUBRICAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_TABDOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAIXA_TABDOC.Generated.cs">
+      <DependentUpon>DataModel.CAIXA_TABDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAPAC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CAPAC.Generated.cs">
+      <DependentUpon>DataModel.CAPAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT.Generated.cs">
+      <DependentUpon>DataModel.CARACT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTC.Generated.cs">
+      <DependentUpon>DataModel.CARACTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTREF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTREF.Generated.cs">
+      <DependentUpon>DataModel.CARACTREF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACTWEB.Generated.cs">
+      <DependentUpon>DataModel.CARACTWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT_LNENCO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT_LNENCO.Generated.cs">
+      <DependentUpon>DataModel.CARACT_LNENCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT_SA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARACT_SA.Generated.cs">
+      <DependentUpon>DataModel.CARACT_SA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARTOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARTOES.Generated.cs">
+      <DependentUpon>DataModel.CARTOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARTOES_DHL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CARTOES_DHL.Generated.cs">
+      <DependentUpon>DataModel.CARTOES_DHL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATALOGO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATALOGO.Generated.cs">
+      <DependentUpon>DataModel.CATALOGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATFORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATFORN.Generated.cs">
+      <DependentUpon>DataModel.CATFORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATFORN_EAN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATFORN_EAN.Generated.cs">
+      <DependentUpon>DataModel.CATFORN_EAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATSORT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CATSORT.Generated.cs">
+      <DependentUpon>DataModel.CATSORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCATALOG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCATALOG.Generated.cs">
+      <DependentUpon>DataModel.CCATALOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCATFORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCATFORN.Generated.cs">
+      <DependentUpon>DataModel.CCATFORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCAT_AGENTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCAT_AGENTES.Generated.cs">
+      <DependentUpon>DataModel.CCAT_AGENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCAT_TARIFAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CCAT_TARIFAS.Generated.cs">
+      <DependentUpon>DataModel.CCAT_TARIFAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.check_mat_of.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.check_mat_of.Generated.cs">
+      <DependentUpon>DataModel.check_mat_of.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES.Generated.cs">
+      <DependentUpon>DataModel.CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTESLoja.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTESLoja.Generated.cs">
+      <DependentUpon>DataModel.CLIENTESLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTESWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTESWEB.Generated.cs">
+      <DependentUpon>DataModel.CLIENTESWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_ALT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_ALT.Generated.cs">
+      <DependentUpon>DataModel.CLIENTES_ALT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_CRM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_CRM.Generated.cs">
+      <DependentUpon>DataModel.CLIENTES_CRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_GRIFO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_GRIFO.Generated.cs">
+      <DependentUpon>DataModel.CLIENTES_GRIFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_MARCAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CLIENTES_MARCAS.Generated.cs">
+      <DependentUpon>DataModel.CLIENTES_MARCAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMP.Generated.cs">
+      <DependentUpon>DataModel.CMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPARTC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPARTC.Generated.cs">
+      <DependentUpon>DataModel.CMPARTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPARTF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPARTF.Generated.cs">
+      <DependentUpon>DataModel.CMPARTF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPFORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPFORN.Generated.cs">
+      <DependentUpon>DataModel.CMPFORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPLN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPLN.Generated.cs">
+      <DependentUpon>DataModel.CMPLN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCC.Generated.cs">
+      <DependentUpon>DataModel.CMPOCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCCCLI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCCCLI.Generated.cs">
+      <DependentUpon>DataModel.CMPOCCCLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL.Generated.cs">
+      <DependentUpon>DataModel.CMPOCL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCLCLI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCLCLI.Generated.cs">
+      <DependentUpon>DataModel.CMPOCLCLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL_ALOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL_ALOC.Generated.cs">
+      <DependentUpon>DataModel.CMPOCL_ALOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL_CONF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPOCL_CONF.Generated.cs">
+      <DependentUpon>DataModel.CMPOCL_CONF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPPRC.Generated.cs">
+      <DependentUpon>DataModel.CMPPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECC.Generated.cs">
+      <DependentUpon>DataModel.CMPRECC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECL.Generated.cs">
+      <DependentUpon>DataModel.CMPRECL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECVOL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPRECVOL.Generated.cs">
+      <DependentUpon>DataModel.CMPRECVOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPSORT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CMPSORT.Generated.cs">
+      <DependentUpon>DataModel.CMPSORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CNDENT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CNDENT.Generated.cs">
+      <DependentUpon>DataModel.CNDENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ConfigAlertas.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ConfigAlertas.Generated.cs">
+      <DependentUpon>DataModel.ConfigAlertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CONFIG_MODELOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CONFIG_MODELOS.Generated.cs">
+      <DependentUpon>DataModel.CONFIG_MODELOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORES.Generated.cs">
+      <DependentUpon>DataModel.CORES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORES_PA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORES_PA.Generated.cs">
+      <DependentUpon>DataModel.CORES_PA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORTANTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CORTANTES.Generated.cs">
+      <DependentUpon>DataModel.CORTANTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CTB_TOKEN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.CTB_TOKEN.Generated.cs">
+      <DependentUpon>DataModel.CTB_TOKEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cummlative.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.cummlative.Generated.cs">
+      <DependentUpon>DataModel.cummlative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DADOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DADOS.Generated.cs">
+      <DependentUpon>DataModel.DADOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DataGiic_LiagoEntities.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DICIONARIO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DICIONARIO.Generated.cs">
+      <DependentUpon>DataModel.DICIONARIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DICIONARIO_VAGA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DICIONARIO_VAGA.Generated.cs">
+      <DependentUpon>DataModel.DICIONARIO_VAGA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.dimensoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.dimensoes.Generated.cs">
+      <DependentUpon>DataModel.dimensoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOC_MARGENS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOC_MARGENS.Generated.cs">
+      <DependentUpon>DataModel.DOC_MARGENS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS.Generated.cs">
+      <DependentUpon>DataModel.DOWNLOADS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS_LOG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS_LOG.Generated.cs">
+      <DependentUpon>DataModel.DOWNLOADS_LOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS_PERMI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.DOWNLOADS_PERMI.Generated.cs">
+      <DependentUpon>DataModel.DOWNLOADS_PERMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EAN13.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EAN13.Generated.cs">
+      <DependentUpon>DataModel.EAN13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EMBALAGENS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EMBALAGENS.Generated.cs">
+      <DependentUpon>DataModel.EMBALAGENS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EMBTROCAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.EMBTROCAS.Generated.cs">
+      <DependentUpon>DataModel.EMBTROCAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO.Generated.cs">
+      <DependentUpon>DataModel.ENCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRC.Generated.cs">
+      <DependentUpon>DataModel.ENCOPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRCWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRCWEB.Generated.cs">
+      <DependentUpon>DataModel.ENCOPRCWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRCWEBAG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOPRCWEBAG.Generated.cs">
+      <DependentUpon>DataModel.ENCOPRCWEBAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOSORT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOSORT.Generated.cs">
+      <DependentUpon>DataModel.ENCOSORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOSORTWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOSORTWEB.Generated.cs">
+      <DependentUpon>DataModel.ENCOSORTWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCOWEB.Generated.cs">
+      <DependentUpon>DataModel.ENCOWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO_HOL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO_HOL.Generated.cs">
+      <DependentUpon>DataModel.ENCO_HOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO_LEFT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ENCO_LEFT.Generated.cs">
+      <DependentUpon>DataModel.ENCO_LEFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ErrosSTKMOV.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ErrosSTKMOV.Generated.cs">
+      <DependentUpon>DataModel.ErrosSTKMOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ESCALAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ESCALAS.Generated.cs">
+      <DependentUpon>DataModel.ESCALAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ESCALOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ESCALOES.Generated.cs">
+      <DependentUpon>DataModel.ESCALOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.estacoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.estacoes.Generated.cs">
+      <DependentUpon>DataModel.estacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQAMO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQAMO.Generated.cs">
+      <DependentUpon>DataModel.ETIQAMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQART.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQART.Generated.cs">
+      <DependentUpon>DataModel.ETIQART.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQGIIC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQGIIC.Generated.cs">
+      <DependentUpon>DataModel.ETIQGIIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQGIIC_DET.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ETIQGIIC_DET.Generated.cs">
+      <DependentUpon>DataModel.ETIQGIIC_DET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FASES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FASES.Generated.cs">
+      <DependentUpon>DataModel.FASES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FASES_LIG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FASES_LIG.Generated.cs">
+      <DependentUpon>DataModel.FASES_LIG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATCAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATCAB.Generated.cs">
+      <DependentUpon>DataModel.FATCAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATLIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATLIN.Generated.cs">
+      <DependentUpon>DataModel.FATLIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATPRC.Generated.cs">
+      <DependentUpon>DataModel.FATPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATPREST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FATPREST.Generated.cs">
+      <DependentUpon>DataModel.FATPREST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FICH_LINKS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FICH_LINKS.Generated.cs">
+      <DependentUpon>DataModel.FICH_LINKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FOLDER.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FOLDER.Generated.cs">
+      <DependentUpon>DataModel.FOLDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FOLDERLN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FOLDERLN.Generated.cs">
+      <DependentUpon>DataModel.FOLDERLN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.formeiro.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.formeiro.Generated.cs">
+      <DependentUpon>DataModel.formeiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.formularios.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.formularios.Generated.cs">
+      <DependentUpon>DataModel.formularios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FTRCB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FTRCB.Generated.cs">
+      <DependentUpon>DataModel.FTRCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FTRCBL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.FTRCBL.Generated.cs">
+      <DependentUpon>DataModel.FTRCBL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GAMAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GAMAS.Generated.cs">
+      <DependentUpon>DataModel.GAMAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GAMAS_OFAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GAMAS_OFAB.Generated.cs">
+      <DependentUpon>DataModel.GAMAS_OFAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GRUPOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GRUPOS.Generated.cs">
+      <DependentUpon>DataModel.GRUPOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GUIFAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.GUIFAB.Generated.cs">
+      <DependentUpon>DataModel.GUIFAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.horarios.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.horarios.Generated.cs">
+      <DependentUpon>DataModel.horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORARIOS_HORAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORARIOS_HORAS.Generated.cs">
+      <DependentUpon>DataModel.HORARIOS_HORAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORARIOS_SECCOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORARIOS_SECCOES.Generated.cs">
+      <DependentUpon>DataModel.HORARIOS_SECCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORASEMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORASEMP.Generated.cs">
+      <DependentUpon>DataModel.HORASEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.horasimprod.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.horasimprod.Generated.cs">
+      <DependentUpon>DataModel.horasimprod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORAS_PROD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.HORAS_PROD.Generated.cs">
+      <DependentUpon>DataModel.HORAS_PROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_cxgcr.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_cxgcr.Generated.cs">
+      <DependentUpon>DataModel.input_cxgcr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_enc.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_enc.Generated.cs">
+      <DependentUpon>DataModel.input_enc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_etiq.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_etiq.Generated.cs">
+      <DependentUpon>DataModel.input_etiq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_nec.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_nec.Generated.cs">
+      <DependentUpon>DataModel.input_nec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_vmof.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.input_vmof.Generated.cs">
+      <DependentUpon>DataModel.input_vmof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.interdicoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.interdicoes.Generated.cs">
+      <DependentUpon>DataModel.interdicoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGACOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGACOES.Generated.cs">
+      <DependentUpon>DataModel.LIGACOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGACOES_EMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGACOES_EMP.Generated.cs">
+      <DependentUpon>DataModel.LIGACOES_EMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGA_VAR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LIGA_VAR.Generated.cs">
+      <DependentUpon>DataModel.LIGA_VAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LINKS_DOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LINKS_DOC.Generated.cs">
+      <DependentUpon>DataModel.LINKS_DOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNCONSERTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNCONSERTOS.Generated.cs">
+      <DependentUpon>DataModel.LNCONSERTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNDOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNDOC.Generated.cs">
+      <DependentUpon>DataModel.LNDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNENCO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNENCO.Generated.cs">
+      <DependentUpon>DataModel.LNENCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNENCOWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LNENCOWEB.Generated.cs">
+      <DependentUpon>DataModel.LNENCOWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOG_CARACT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOG_CARACT.Generated.cs">
+      <DependentUpon>DataModel.LOG_CARACT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOTES.Generated.cs">
+      <DependentUpon>DataModel.LOTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOTES_SUB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LOTES_SUB.Generated.cs">
+      <DependentUpon>DataModel.LOTES_SUB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_ERROS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_ERROS.Generated.cs">
+      <DependentUpon>DataModel.LWEB_ERROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_WKARTIGOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_WKARTIGOS.Generated.cs">
+      <DependentUpon>DataModel.LWEB_WKARTIGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_WKLOJAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.LWEB_WKLOJAS.Generated.cs">
+      <DependentUpon>DataModel.LWEB_WKLOJAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MateriaisCAD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MateriaisCAD.Generated.cs">
+      <DependentUpon>DataModel.MateriaisCAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mensagensMostrador.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mensagensMostrador.Generated.cs">
+      <DependentUpon>DataModel.mensagensMostrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODELOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODELOS.Generated.cs">
+      <DependentUpon>DataModel.MODELOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODELOSWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODELOSWEB.Generated.cs">
+      <DependentUpon>DataModel.MODELOSWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Modelos_Multiview.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Modelos_Multiview.Generated.cs">
+      <DependentUpon>DataModel.Modelos_Multiview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODMEMO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MODMEMO.Generated.cs">
+      <DependentUpon>DataModel.MODMEMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS.Generated.cs">
+      <DependentUpon>DataModel.MORADAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS_ALT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS_ALT.Generated.cs">
+      <DependentUpon>DataModel.MORADAS_ALT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS_FORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MORADAS_FORN.Generated.cs">
+      <DependentUpon>DataModel.MORADAS_FORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_AMOSTRAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_AMOSTRAS.Generated.cs">
+      <DependentUpon>DataModel.MOV_AMOSTRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_CONSERTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_CONSERTOS.Generated.cs">
+      <DependentUpon>DataModel.MOV_CONSERTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_PROD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.MOV_PROD.Generated.cs">
+      <DependentUpon>DataModel.MOV_PROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_oper.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_oper.Generated.cs">
+      <DependentUpon>DataModel.mrp_oper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_order.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_order.Generated.cs">
+      <DependentUpon>DataModel.mrp_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_sugoc.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.mrp_sugoc.Generated.cs">
+      <DependentUpon>DataModel.mrp_sugoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSCATALOGO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSCATALOGO.Generated.cs">
+      <DependentUpon>DataModel.OBSCATALOGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSOC.Generated.cs">
+      <DependentUpon>DataModel.OBSOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSOCPA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OBSOCPA.Generated.cs">
+      <DependentUpon>DataModel.OBSOCPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OPERA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OPERA.Generated.cs">
+      <DependentUpon>DataModel.OPERA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OPTCONFIGURATION.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OPTCONFIGURATION.Generated.cs">
+      <DependentUpon>DataModel.OPTCONFIGURATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcAmortizacoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcAmortizacoes.Generated.cs">
+      <DependentUpon>DataModel.OrcAmortizacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcFt.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcFt.Generated.cs">
+      <DependentUpon>DataModel.OrcFt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcModelos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcModelos.Generated.cs">
+      <DependentUpon>DataModel.OrcModelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcTempos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.OrcTempos.Generated.cs">
+      <DependentUpon>DataModel.OrcTempos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDENC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDENC.Generated.cs">
+      <DependentUpon>DataModel.ORDENC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDFAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDFAB.Generated.cs">
+      <DependentUpon>DataModel.ORDFAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDFABPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ORDFABPRC.Generated.cs">
+      <DependentUpon>DataModel.ORDFABPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKCAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKCAB.Generated.cs">
+      <DependentUpon>DataModel.PACKCAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKLIST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKLIST.Generated.cs">
+      <DependentUpon>DataModel.PACKLIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACKOC.Generated.cs">
+      <DependentUpon>DataModel.PACKOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACK_PDT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PACK_PDT.Generated.cs">
+      <DependentUpon>DataModel.PACK_PDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PAISESWEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PAISESWEB.Generated.cs">
+      <DependentUpon>DataModel.PAISESWEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PAISES_ISO3166.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PAISES_ISO3166.Generated.cs">
+      <DependentUpon>DataModel.PAISES_ISO3166.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM.Generated.cs">
+      <DependentUpon>DataModel.PARAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM_SAFT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM_SAFT.Generated.cs">
+      <DependentUpon>DataModel.PARAM_SAFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM_WEB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PARAM_WEB.Generated.cs">
+      <DependentUpon>DataModel.PARAM_WEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PECAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PECAS.Generated.cs">
+      <DependentUpon>DataModel.PECAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PESSOAL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PESSOAL.Generated.cs">
+      <DependentUpon>DataModel.PESSOAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PICTOGRAMAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PICTOGRAMAS.Generated.cs">
+      <DependentUpon>DataModel.PICTOGRAMAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.planning.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.planning.Generated.cs">
+      <DependentUpon>DataModel.planning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.planning_ec.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.planning_ec.Generated.cs">
+      <DependentUpon>DataModel.planning_ec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS.Generated.cs">
+      <DependentUpon>DataModel.PLANOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_SEL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_SEL.Generated.cs">
+      <DependentUpon>DataModel.PLANOS_SEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_TMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_TMP.Generated.cs">
+      <DependentUpon>DataModel.PLANOS_TMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_WRK.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANOS_WRK.Generated.cs">
+      <DependentUpon>DataModel.PLANOS_WRK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANO_DIA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANO_DIA.Generated.cs">
+      <DependentUpon>DataModel.PLANO_DIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANO_DIA_HORAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLANO_DIA_HORAS.Generated.cs">
+      <DependentUpon>DataModel.PLANO_DIA_HORAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLN_SCHEDULE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PLN_SCHEDULE.Generated.cs">
+      <DependentUpon>DataModel.PLN_SCHEDULE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PPS3_KPI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PPS3_KPI.Generated.cs">
+      <DependentUpon>DataModel.PPS3_KPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PPS3_KPI_DESCRICAO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PPS3_KPI_DESCRICAO.Generated.cs">
+      <DependentUpon>DataModel.PPS3_KPI_DESCRICAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.precos_subc.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.precos_subc.Generated.cs">
+      <DependentUpon>DataModel.precos_subc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PrePack.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PrePack.Generated.cs">
+      <DependentUpon>DataModel.PrePack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRESERIE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRESERIE.Generated.cs">
+      <DependentUpon>DataModel.PRESERIE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRGCONFIGURATION.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRGCONFIGURATION.Generated.cs">
+      <DependentUpon>DataModel.PRGCONFIGURATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRGCONFIGURATION_UNTIESORTERS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRGCONFIGURATION_UNTIESORTERS.Generated.cs">
+      <DependentUpon>DataModel.PRGCONFIGURATION_UNTIESORTERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRINT_SERVER.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRINT_SERVER.Generated.cs">
+      <DependentUpon>DataModel.PRINT_SERVER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODEMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODEMP.Generated.cs">
+      <DependentUpon>DataModel.PRODEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODET.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODET.Generated.cs">
+      <DependentUpon>DataModel.PRODET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODRES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRODRES.Generated.cs">
+      <DependentUpon>DataModel.PRODRES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ProductCAD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ProductCAD.Generated.cs">
+      <DependentUpon>DataModel.ProductCAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PROD_PDT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PROD_PDT.Generated.cs">
+      <DependentUpon>DataModel.PROD_PDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PromocoesArtigos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PromocoesArtigos.Generated.cs">
+      <DependentUpon>DataModel.PromocoesArtigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.promocoes_cab.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.promocoes_cab.Generated.cs">
+      <DependentUpon>DataModel.promocoes_cab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRONTO_EXP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRONTO_EXP.Generated.cs">
+      <DependentUpon>DataModel.PRONTO_EXP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRONTO_EXP_CLIENTE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.PRONTO_EXP_CLIENTE.Generated.cs">
+      <DependentUpon>DataModel.PRONTO_EXP_CLIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECCAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECCAB.Generated.cs">
+      <DependentUpon>DataModel.RECCAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.reccaixas.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.reccaixas.Generated.cs">
+      <DependentUpon>DataModel.reccaixas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECLIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECLIN.Generated.cs">
+      <DependentUpon>DataModel.RECLIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RECPRC.Generated.cs">
+      <DependentUpon>DataModel.RECPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REF.Generated.cs">
+      <DependentUpon>DataModel.REF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REF_CX.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REF_CX.Generated.cs">
+      <DependentUpon>DataModel.REF_CX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REGDEF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.REGDEF.Generated.cs">
+      <DependentUpon>DataModel.REGDEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RESERVAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RESERVAS.Generated.cs">
+      <DependentUpon>DataModel.RESERVAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RESERVASLN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.RESERVASLN.Generated.cs">
+      <DependentUpon>DataModel.RESERVASLN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTA.Generated.cs">
+      <DependentUpon>DataModel.ROTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTACAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTACAB.Generated.cs">
+      <DependentUpon>DataModel.ROTACAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTEIRO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTEIRO.Generated.cs">
+      <DependentUpon>DataModel.ROTEIRO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTEIRO_PLAN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.ROTEIRO_PLAN.Generated.cs">
+      <DependentUpon>DataModel.ROTEIRO_PLAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SAFT_EMPRESA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SAFT_EMPRESA.Generated.cs">
+      <DependentUpon>DataModel.SAFT_EMPRESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SALTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SALTOS.Generated.cs">
+      <DependentUpon>DataModel.SALTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SB_ERROS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SB_ERROS.Generated.cs">
+      <DependentUpon>DataModel.SB_ERROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SB_MENSAGENS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SB_MENSAGENS.Generated.cs">
+      <DependentUpon>DataModel.SB_MENSAGENS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SECCOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SECCOES.Generated.cs">
+      <DependentUpon>DataModel.SECCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SECCOES_SISTEMAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SECCOES_SISTEMAS.Generated.cs">
+      <DependentUpon>DataModel.SECCOES_SISTEMAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SORTIDOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SORTIDOS.Generated.cs">
+      <DependentUpon>DataModel.SORTIDOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKLOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKLOC.Generated.cs">
+      <DependentUpon>DataModel.STKLOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKLOT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKLOT.Generated.cs">
+      <DependentUpon>DataModel.STKLOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMIN.Generated.cs">
+      <DependentUpon>DataModel.STKMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMINPA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMINPA.Generated.cs">
+      <DependentUpon>DataModel.STKMINPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOV.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOV.Generated.cs">
+      <DependentUpon>DataModel.STKMOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVHIST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVHIST.Generated.cs">
+      <DependentUpon>DataModel.STKMOVHIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVP.Generated.cs">
+      <DependentUpon>DataModel.STKMOVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVPHIST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKMOVPHIST.Generated.cs">
+      <DependentUpon>DataModel.STKMOVPHIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC.Generated.cs">
+      <DependentUpon>DataModel.STKNEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNECM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNECM.Generated.cs">
+      <DependentUpon>DataModel.STKNECM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNECOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNECOC.Generated.cs">
+      <DependentUpon>DataModel.STKNECOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC_PREP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC_PREP.Generated.cs">
+      <DependentUpon>DataModel.STKNEC_PREP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC_PREP_VOL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKNEC_PREP_VOL.Generated.cs">
+      <DependentUpon>DataModel.STKNEC_PREP_VOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKPREP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKPREP.Generated.cs">
+      <DependentUpon>DataModel.STKPREP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKSTO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKSTO.Generated.cs">
+      <DependentUpon>DataModel.STKSTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKSTOP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKSTOP.Generated.cs">
+      <DependentUpon>DataModel.STKSTOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTAR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTAR.Generated.cs">
+      <DependentUpon>DataModel.STKTAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTCC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTCC.Generated.cs">
+      <DependentUpon>DataModel.STKTCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTEN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.STKTEN.Generated.cs">
+      <DependentUpon>DataModel.STKTEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Subscricoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.Subscricoes.Generated.cs">
+      <DependentUpon>DataModel.Subscricoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SubscricoesClientes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SubscricoesClientes.Generated.cs">
+      <DependentUpon>DataModel.SubscricoesClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.subscricoes_reports.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.subscricoes_reports.Generated.cs">
+      <DependentUpon>DataModel.subscricoes_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUGESTOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUGESTOES.Generated.cs">
+      <DependentUpon>DataModel.SUGESTOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUPEREP_IMPORT_CLIENTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUPEREP_IMPORT_CLIENTES.Generated.cs">
+      <DependentUpon>DataModel.SUPEREP_IMPORT_CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUPEREP_IMPORT_ENCOMENDAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.SUPEREP_IMPORT_ENCOMENDAS.Generated.cs">
+      <DependentUpon>DataModel.SUPEREP_IMPORT_ENCOMENDAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.sys_familias.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.sys_familias.Generated.cs">
+      <DependentUpon>DataModel.sys_familias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.sys_relatorios.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.sys_relatorios.Generated.cs">
+      <DependentUpon>DataModel.sys_relatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABAGE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABAGE.Generated.cs">
+      <DependentUpon>DataModel.TABAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABANUL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABANUL.Generated.cs">
+      <DependentUpon>DataModel.TABANUL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABBAN_TIPOCONTA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABBAN_TIPOCONTA.Generated.cs">
+      <DependentUpon>DataModel.TABBAN_TIPOCONTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCAP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCAP.Generated.cs">
+      <DependentUpon>DataModel.TABCAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabcartaz.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabcartaz.Generated.cs">
+      <DependentUpon>DataModel.tabcartaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCI.Generated.cs">
+      <DependentUpon>DataModel.TABCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCLASSE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCLASSE.Generated.cs">
+      <DependentUpon>DataModel.TABCLASSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabClientes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabClientes.Generated.cs">
+      <DependentUpon>DataModel.tabClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TabCodPostais.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TabCodPostais.Generated.cs">
+      <DependentUpon>DataModel.TabCodPostais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOM.Generated.cs">
+      <DependentUpon>DataModel.TABCOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOMISSOESF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOMISSOESF.Generated.cs">
+      <DependentUpon>DataModel.TABCOMISSOESF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOMISSOESL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCOMISSOESL.Generated.cs">
+      <DependentUpon>DataModel.TABCOMISSOESL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTACTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTACTOS.Generated.cs">
+      <DependentUpon>DataModel.TABCONTACTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTACTOS_ALT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTACTOS_ALT.Generated.cs">
+      <DependentUpon>DataModel.TABCONTACTOS_ALT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTASBAN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONTASBAN.Generated.cs">
+      <DependentUpon>DataModel.TABCONTASBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONV.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCONV.Generated.cs">
+      <DependentUpon>DataModel.TABCONV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabcores.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabcores.Generated.cs">
+      <DependentUpon>DataModel.tabcores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCT.Generated.cs">
+      <DependentUpon>DataModel.TABCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCX.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABCX.Generated.cs">
+      <DependentUpon>DataModel.TABCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDEF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDEF.Generated.cs">
+      <DependentUpon>DataModel.TABDEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDIA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDIA.Generated.cs">
+      <DependentUpon>DataModel.TABDIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDOC.Generated.cs">
+      <DependentUpon>DataModel.TABDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDOC_SAFT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABDOC_SAFT.Generated.cs">
+      <DependentUpon>DataModel.TABDOC_SAFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABEMB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABEMB.Generated.cs">
+      <DependentUpon>DataModel.TABEMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabEnco.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabEnco.Generated.cs">
+      <DependentUpon>DataModel.tabEnco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabEncoLinhas.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabEncoLinhas.Generated.cs">
+      <DependentUpon>DataModel.tabEncoLinhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabeuro.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabeuro.Generated.cs">
+      <DependentUpon>DataModel.tabeuro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFAM.Generated.cs">
+      <DependentUpon>DataModel.TABFAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFERR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFERR.Generated.cs">
+      <DependentUpon>DataModel.TABFERR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFPAG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFPAG.Generated.cs">
+      <DependentUpon>DataModel.TABFPAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFUNC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABFUNC.Generated.cs">
+      <DependentUpon>DataModel.TABFUNC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABHORA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABHORA.Generated.cs">
+      <DependentUpon>DataModel.TABHORA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABIDIOMA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABIDIOMA.Generated.cs">
+      <DependentUpon>DataModel.TABIDIOMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABIVA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABIVA.Generated.cs">
+      <DependentUpon>DataModel.TABIVA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABLINHAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABLINHAS.Generated.cs">
+      <DependentUpon>DataModel.TABLINHAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABLOCAL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABLOCAL.Generated.cs">
+      <DependentUpon>DataModel.TABLOCAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMAQ.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMAQ.Generated.cs">
+      <DependentUpon>DataModel.TABMAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMAT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMAT.Generated.cs">
+      <DependentUpon>DataModel.TABMAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMES.Generated.cs">
+      <DependentUpon>DataModel.TABMES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABML.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABML.Generated.cs">
+      <DependentUpon>DataModel.TABML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMS.Generated.cs">
+      <DependentUpon>DataModel.TABMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABMT.Generated.cs">
+      <DependentUpon>DataModel.TABMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAG.Generated.cs">
+      <DependentUpon>DataModel.TABPAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAIS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAIS.Generated.cs">
+      <DependentUpon>DataModel.TABPAIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAUTAL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPAUTAL.Generated.cs">
+      <DependentUpon>DataModel.TABPAUTAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPERMCAT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABPERMCAT.Generated.cs">
+      <DependentUpon>DataModel.TABPERMCAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABRUBRICAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABRUBRICAS.Generated.cs">
+      <DependentUpon>DataModel.TABRUBRICAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSEG.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSEG.Generated.cs">
+      <DependentUpon>DataModel.TABSEG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSEMCAP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSEMCAP.Generated.cs">
+      <DependentUpon>DataModel.TABSEMCAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSERIES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSERIES.Generated.cs">
+      <DependentUpon>DataModel.TABSERIES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSISTEMAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSISTEMAS.Generated.cs">
+      <DependentUpon>DataModel.TABSISTEMAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabStatusEnco.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabStatusEnco.Generated.cs">
+      <DependentUpon>DataModel.tabStatusEnco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabStatusPagamento.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabStatusPagamento.Generated.cs">
+      <DependentUpon>DataModel.tabStatusPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabstkinv.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tabstkinv.Generated.cs">
+      <DependentUpon>DataModel.tabstkinv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSUBFAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABSUBFAM.Generated.cs">
+      <DependentUpon>DataModel.TABSUBFAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABTIPOART.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABTIPOART.Generated.cs">
+      <DependentUpon>DataModel.TABTIPOART.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABTRAN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABTRAN.Generated.cs">
+      <DependentUpon>DataModel.TABTRAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABUNMED.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABUNMED.Generated.cs">
+      <DependentUpon>DataModel.TABUNMED.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABZON.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABZON.Generated.cs">
+      <DependentUpon>DataModel.TABZON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABZON_AGENTE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TABZON_AGENTE.Generated.cs">
+      <DependentUpon>DataModel.TABZON_AGENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CAPAC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CAPAC.Generated.cs">
+      <DependentUpon>DataModel.TAB_CAPAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tab_cert.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tab_cert.Generated.cs">
+      <DependentUpon>DataModel.tab_cert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CODETIQ.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CODETIQ.Generated.cs">
+      <DependentUpon>DataModel.TAB_CODETIQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CONSERTOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CONSERTOS.Generated.cs">
+      <DependentUpon>DataModel.TAB_CONSERTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CUMPRE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_CUMPRE.Generated.cs">
+      <DependentUpon>DataModel.TAB_CUMPRE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_HORARIOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_HORARIOS.Generated.cs">
+      <DependentUpon>DataModel.TAB_HORARIOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_IMPRESSORAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_IMPRESSORAS.Generated.cs">
+      <DependentUpon>DataModel.TAB_IMPRESSORAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_ISENCAO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_ISENCAO.Generated.cs">
+      <DependentUpon>DataModel.TAB_ISENCAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MARCACOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MARCACOES.Generated.cs">
+      <DependentUpon>DataModel.TAB_MARCACOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MATRICULAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MATRICULAS.Generated.cs">
+      <DependentUpon>DataModel.TAB_MATRICULAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MODOEMB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_MODOEMB.Generated.cs">
+      <DependentUpon>DataModel.TAB_MODOEMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_OBJLOJA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_OBJLOJA.Generated.cs">
+      <DependentUpon>DataModel.TAB_OBJLOJA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_ORCR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_ORCR.Generated.cs">
+      <DependentUpon>DataModel.TAB_ORCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PICT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PICT.Generated.cs">
+      <DependentUpon>DataModel.TAB_PICT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tab_prestacoes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tab_prestacoes.Generated.cs">
+      <DependentUpon>DataModel.tab_prestacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROCESSOS_DET.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROCESSOS_DET.Generated.cs">
+      <DependentUpon>DataModel.TAB_PROCESSOS_DET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROCESSOS_MOD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROCESSOS_MOD.Generated.cs">
+      <DependentUpon>DataModel.TAB_PROCESSOS_MOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROC_DET.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROC_DET.Generated.cs">
+      <DependentUpon>DataModel.TAB_PROC_DET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROC_TIPO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_PROC_TIPO.Generated.cs">
+      <DependentUpon>DataModel.TAB_PROC_TIPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_REGRAEMB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_REGRAEMB.Generated.cs">
+      <DependentUpon>DataModel.TAB_REGRAEMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_RETENCOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_RETENCOES.Generated.cs">
+      <DependentUpon>DataModel.TAB_RETENCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_TURNOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAB_TURNOS.Generated.cs">
+      <DependentUpon>DataModel.TAB_TURNOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAM_CORRESP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TAM_CORRESP.Generated.cs">
+      <DependentUpon>DataModel.TAM_CORRESP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblAgentesCatalogos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblAgentesCatalogos.Generated.cs">
+      <DependentUpon>DataModel.tblAgentesCatalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TblArtigoLoteArrum.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TblArtigoLoteArrum.Generated.cs">
+      <DependentUpon>DataModel.TblArtigoLoteArrum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblclientescatalogos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblclientescatalogos.Generated.cs">
+      <DependentUpon>DataModel.tblclientescatalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblEncoTemp.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblEncoTemp.Generated.cs">
+      <DependentUpon>DataModel.tblEncoTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblmarcas.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblmarcas.Generated.cs">
+      <DependentUpon>DataModel.tblmarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblParametros.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblParametros.Generated.cs">
+      <DependentUpon>DataModel.tblParametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblRegUtil.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblRegUtil.Generated.cs">
+      <DependentUpon>DataModel.tblRegUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblStatusEnco.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblStatusEnco.Generated.cs">
+      <DependentUpon>DataModel.tblStatusEnco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblUtil.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.tblUtil.Generated.cs">
+      <DependentUpon>DataModel.tblUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES.Generated.cs">
+      <DependentUpon>DataModel.TEMPLATES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES_CAB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES_CAB.Generated.cs">
+      <DependentUpon>DataModel.TEMPLATES_CAB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES_PICT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TEMPLATES_PICT.Generated.cs">
+      <DependentUpon>DataModel.TEMPLATES_PICT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TIPOCOR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TIPOCOR.Generated.cs">
+      <DependentUpon>DataModel.TIPOCOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TRI_MENSAGENS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TRI_MENSAGENS.Generated.cs">
+      <DependentUpon>DataModel.TRI_MENSAGENS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TSTKMOVP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TSTKMOVP.Generated.cs">
+      <DependentUpon>DataModel.TSTKMOVP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_CLIENTES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_CLIENTES.Generated.cs">
+      <DependentUpon>DataModel.TS_CLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_ARTIGOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_ARTIGOS.Generated.cs">
+      <DependentUpon>DataModel.TS_WK_ARTIGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_CONSUMOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_CONSUMOS.Generated.cs">
+      <DependentUpon>DataModel.TS_WK_CONSUMOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_MODELOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.TS_WK_MODELOS.Generated.cs">
+      <DependentUpon>DataModel.TS_WK_MODELOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.UPS_ROUTECODES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.UPS_ROUTECODES.Generated.cs">
+      <DependentUpon>DataModel.UPS_ROUTECODES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.UPS_WKPACK.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.UPS_WKPACK.Generated.cs">
+      <DependentUpon>DataModel.UPS_WKPACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.utentes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.utentes.Generated.cs">
+      <DependentUpon>DataModel.utentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALECRED.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALECRED.Generated.cs">
+      <DependentUpon>DataModel.VALECRED.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALEMAT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALEMAT.Generated.cs">
+      <DependentUpon>DataModel.VALEMAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALEMAT_CX.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.VALEMAT_CX.Generated.cs">
+      <DependentUpon>DataModel.VALEMAT_CX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WARTIGOCOR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WARTIGOCOR.Generated.cs">
+      <DependentUpon>DataModel.WARTIGOCOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WARTIGOCORLOTE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WARTIGOCORLOTE.Generated.cs">
+      <DependentUpon>DataModel.WARTIGOCORLOTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKBALSTK.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKBALSTK.Generated.cs">
+      <DependentUpon>DataModel.WKBALSTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkbrnec.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkbrnec.Generated.cs">
+      <DependentUpon>DataModel.wkbrnec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKCB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKCB.Generated.cs">
+      <DependentUpon>DataModel.WKCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKCB_CAIXA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKCB_CAIXA.Generated.cs">
+      <DependentUpon>DataModel.WKCB_CAIXA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkcmprecl.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkcmprecl.Generated.cs">
+      <DependentUpon>DataModel.wkcmprecl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkconf.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkconf.Generated.cs">
+      <DependentUpon>DataModel.wkconf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkcores.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkcores.Generated.cs">
+      <DependentUpon>DataModel.wkcores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKERROS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKERROS.Generated.cs">
+      <DependentUpon>DataModel.WKERROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkEtiqOCForn.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkEtiqOCForn.Generated.cs">
+      <DependentUpon>DataModel.wkEtiqOCForn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKETIQ_EAN13.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKETIQ_EAN13.Generated.cs">
+      <DependentUpon>DataModel.WKETIQ_EAN13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKFATL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKFATL.Generated.cs">
+      <DependentUpon>DataModel.WKFATL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkfraccao.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkfraccao.Generated.cs">
+      <DependentUpon>DataModel.wkfraccao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKINVENT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKINVENT.Generated.cs">
+      <DependentUpon>DataModel.WKINVENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKLOTE.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKLOTE.Generated.cs">
+      <DependentUpon>DataModel.WKLOTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKLOTEM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKLOTEM.Generated.cs">
+      <DependentUpon>DataModel.WKLOTEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkLotesPlanoFab.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkLotesPlanoFab.Generated.cs">
+      <DependentUpon>DataModel.wkLotesPlanoFab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP.Generated.cs">
+      <DependentUpon>DataModel.WKMRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP0.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP0.Generated.cs">
+      <DependentUpon>DataModel.WKMRP0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrpdet.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrpdet.Generated.cs">
+      <DependentUpon>DataModel.wkmrpdet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRPL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRPL.Generated.cs">
+      <DependentUpon>DataModel.WKMRPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP_EC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP_EC.Generated.cs">
+      <DependentUpon>DataModel.WKMRP_EC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP_EMB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKMRP_EMB.Generated.cs">
+      <DependentUpon>DataModel.WKMRP_EMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_plan.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_plan.Generated.cs">
+      <DependentUpon>DataModel.wkmrp_plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_semana.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_semana.Generated.cs">
+      <DependentUpon>DataModel.wkmrp_semana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_sug.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkmrp_sug.Generated.cs">
+      <DependentUpon>DataModel.wkmrp_sug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKOC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKOC.Generated.cs">
+      <DependentUpon>DataModel.WKOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKOCX.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKOCX.Generated.cs">
+      <DependentUpon>DataModel.WKOCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC.Generated.cs">
+      <DependentUpon>DataModel.WKORC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_LISTA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_LISTA.Generated.cs">
+      <DependentUpon>DataModel.WKORC_LISTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_NIVEL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_NIVEL.Generated.cs">
+      <DependentUpon>DataModel.WKORC_NIVEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_SIMULACOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKORC_SIMULACOES.Generated.cs">
+      <DependentUpon>DataModel.WKORC_SIMULACOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkORDENC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkORDENC.Generated.cs">
+      <DependentUpon>DataModel.wkORDENC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKPACK.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKPACK.Generated.cs">
+      <DependentUpon>DataModel.WKPACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkPACKLIST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkPACKLIST.Generated.cs">
+      <DependentUpon>DataModel.wkPACKLIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKPLAN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKPLAN.Generated.cs">
+      <DependentUpon>DataModel.WKPLAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkplano.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkplano.Generated.cs">
+      <DependentUpon>DataModel.wkplano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkprePACKLIST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkprePACKLIST.Generated.cs">
+      <DependentUpon>DataModel.wkprePACKLIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WkPrintPack.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WkPrintPack.Generated.cs">
+      <DependentUpon>DataModel.WkPrintPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkPromocoesArtigos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkPromocoesArtigos.Generated.cs">
+      <DependentUpon>DataModel.wkPromocoesArtigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkrec.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkrec.Generated.cs">
+      <DependentUpon>DataModel.wkrec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkrecolha.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkrecolha.Generated.cs">
+      <DependentUpon>DataModel.wkrecolha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKREC_LEITURAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKREC_LEITURAS.Generated.cs">
+      <DependentUpon>DataModel.WKREC_LEITURAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKRES_OP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKRES_OP.Generated.cs">
+      <DependentUpon>DataModel.WKRES_OP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_DISP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_DISP.Generated.cs">
+      <DependentUpon>DataModel.WKSALDO_DISP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_DISP_GRELHA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_DISP_GRELHA.Generated.cs">
+      <DependentUpon>DataModel.WKSALDO_DISP_GRELHA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_MOV.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_MOV.Generated.cs">
+      <DependentUpon>DataModel.WKSALDO_MOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_RESUMO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_RESUMO.Generated.cs">
+      <DependentUpon>DataModel.WKSALDO_RESUMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_RESUMO_OUTROS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WKSALDO_RESUMO_OUTROS.Generated.cs">
+      <DependentUpon>DataModel.WKSALDO_RESUMO_OUTROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkstkarm.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkstkarm.Generated.cs">
+      <DependentUpon>DataModel.wkstkarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkstocks.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wkstocks.Generated.cs">
+      <DependentUpon>DataModel.wkstocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wksug_resumo.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wksug_resumo.Generated.cs">
+      <DependentUpon>DataModel.wksug_resumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_Art.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_Art.Generated.cs">
+      <DependentUpon>DataModel.wktabprc_Art.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_escaloes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_escaloes.Generated.cs">
+      <DependentUpon>DataModel.wktabprc_escaloes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_forn.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_forn.Generated.cs">
+      <DependentUpon>DataModel.wktabprc_forn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_modcli.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_modcli.Generated.cs">
+      <DependentUpon>DataModel.wktabprc_modcli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_modforn.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprc_modforn.Generated.cs">
+      <DependentUpon>DataModel.wktabprc_modforn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprecos.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wktabprecos.Generated.cs">
+      <DependentUpon>DataModel.wktabprecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ALOC_OF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ALOC_OF.Generated.cs">
+      <DependentUpon>DataModel.WK_ALOC_OF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_capac.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_capac.Generated.cs">
+      <DependentUpon>DataModel.wk_capac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACT.Generated.cs">
+      <DependentUpon>DataModel.WK_CARACT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACTREF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACTREF.Generated.cs">
+      <DependentUpon>DataModel.WK_CARACTREF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACT_NIVEL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CARACT_NIVEL.Generated.cs">
+      <DependentUpon>DataModel.WK_CARACT_NIVEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CAT_PAIS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CAT_PAIS.Generated.cs">
+      <DependentUpon>DataModel.WK_CAT_PAIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CMPRECL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CMPRECL.Generated.cs">
+      <DependentUpon>DataModel.WK_CMPRECL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONFIRMACOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONFIRMACOES.Generated.cs">
+      <DependentUpon>DataModel.WK_CONFIRMACOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONVERSAO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONVERSAO.Generated.cs">
+      <DependentUpon>DataModel.WK_CONVERSAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONVERSAO_CLI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_CONVERSAO_CLI.Generated.cs">
+      <DependentUpon>DataModel.WK_CONVERSAO_CLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_DISPON_CMP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_DISPON_CMP.Generated.cs">
+      <DependentUpon>DataModel.WK_DISPON_CMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_DISP_ART_SEM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_DISP_ART_SEM.Generated.cs">
+      <DependentUpon>DataModel.WK_DISP_ART_SEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_DETTAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_DETTAM.Generated.cs">
+      <DependentUpon>DataModel.WK_EC_DETTAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_DETTAM_EC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_DETTAM_EC.Generated.cs">
+      <DependentUpon>DataModel.WK_EC_DETTAM_EC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_MP_RESUMO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_MP_RESUMO.Generated.cs">
+      <DependentUpon>DataModel.WK_EC_MP_RESUMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_PA_RESUMO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_PA_RESUMO.Generated.cs">
+      <DependentUpon>DataModel.WK_EC_PA_RESUMO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_ULT_MOV_EA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EC_ULT_MOV_EA.Generated.cs">
+      <DependentUpon>DataModel.WK_EC_ULT_MOV_EA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB.Generated.cs">
+      <DependentUpon>DataModel.WK_EMB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB_PORFACTURAR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB_PORFACTURAR.Generated.cs">
+      <DependentUpon>DataModel.WK_EMB_PORFACTURAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB_PORFACTURAR_EC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMB_PORFACTURAR_EC.Generated.cs">
+      <DependentUpon>DataModel.WK_EMB_PORFACTURAR_EC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMCURSO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMCURSO.Generated.cs">
+      <DependentUpon>DataModel.WK_EMCURSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMFILA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMFILA.Generated.cs">
+      <DependentUpon>DataModel.WK_EMFILA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMFILA_TAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_EMFILA_TAM.Generated.cs">
+      <DependentUpon>DataModel.WK_EMFILA_TAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_encocli_mod.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_encocli_mod.Generated.cs">
+      <DependentUpon>DataModel.wk_encocli_mod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_enc_por_of.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_enc_por_of.Generated.cs">
+      <DependentUpon>DataModel.wk_enc_por_of.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FATLIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FATLIN.Generated.cs">
+      <DependentUpon>DataModel.WK_FATLIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FATPRC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FATPRC.Generated.cs">
+      <DependentUpon>DataModel.WK_FATPRC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FLUXOS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FLUXOS.Generated.cs">
+      <DependentUpon>DataModel.WK_FLUXOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FTCORES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_FTCORES.Generated.cs">
+      <DependentUpon>DataModel.WK_FTCORES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_GAMAS_OF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_GAMAS_OF.Generated.cs">
+      <DependentUpon>DataModel.WK_GAMAS_OF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_LISTA_SEXP.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_LISTA_SEXP.Generated.cs">
+      <DependentUpon>DataModel.WK_LISTA_SEXP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_LNENCO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_LNENCO.Generated.cs">
+      <DependentUpon>DataModel.WK_LNENCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_margens.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_margens.Generated.cs">
+      <DependentUpon>DataModel.wk_margens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MOV_AMOSTRAS.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MOV_AMOSTRAS.Generated.cs">
+      <DependentUpon>DataModel.WK_MOV_AMOSTRAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MOV_PROD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MOV_PROD.Generated.cs">
+      <DependentUpon>DataModel.WK_MOV_PROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MRPSEM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_MRPSEM.Generated.cs">
+      <DependentUpon>DataModel.WK_MRPSEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_mrp_disp_det.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_mrp_disp_det.Generated.cs">
+      <DependentUpon>DataModel.wk_mrp_disp_det.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_NEC_VALOR.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_NEC_VALOR.Generated.cs">
+      <DependentUpon>DataModel.WK_NEC_VALOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OF.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OF.Generated.cs">
+      <DependentUpon>DataModel.WK_OF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OF_EC_NA_DATA.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OF_EC_NA_DATA.Generated.cs">
+      <DependentUpon>DataModel.WK_OF_EC_NA_DATA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OPER.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_OPER.Generated.cs">
+      <DependentUpon>DataModel.WK_OPER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCFT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCFT.Generated.cs">
+      <DependentUpon>DataModel.WK_ORCFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCR_EST.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCR_EST.Generated.cs">
+      <DependentUpon>DataModel.WK_ORCR_EST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCR_MP_OF_FAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORCR_MP_OF_FAM.Generated.cs">
+      <DependentUpon>DataModel.WK_ORCR_MP_OF_FAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORC_EST_QT_ESCALAO.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_ORC_EST_QT_ESCALAO.Generated.cs">
+      <DependentUpon>DataModel.WK_ORC_EST_QT_ESCALAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PA_DETTAM.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PA_DETTAM.Generated.cs">
+      <DependentUpon>DataModel.WK_PA_DETTAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN.Generated.cs">
+      <DependentUpon>DataModel.WK_PLN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN_FORN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN_FORN.Generated.cs">
+      <DependentUpon>DataModel.WK_PLN_FORN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN_MAT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PLN_MAT.Generated.cs">
+      <DependentUpon>DataModel.WK_PLN_MAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pospre.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pospre.Generated.cs">
+      <DependentUpon>DataModel.wk_pospre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod.Generated.cs">
+      <DependentUpon>DataModel.wk_pos_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod_enco.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod_enco.Generated.cs">
+      <DependentUpon>DataModel.wk_pos_prod_enco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod_N.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_pos_prod_N.Generated.cs">
+      <DependentUpon>DataModel.wk_pos_prod_N.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PRC_ART.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PRC_ART.Generated.cs">
+      <DependentUpon>DataModel.WK_PRC_ART.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PrePack.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PrePack.Generated.cs">
+      <DependentUpon>DataModel.WK_PrePack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PRINT_ENTID.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_PRINT_ENTID.Generated.cs">
+      <DependentUpon>DataModel.WK_PRINT_ENTID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_REGLIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_REGLIN.Generated.cs">
+      <DependentUpon>DataModel.WK_REGLIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_REGPROD.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_REGPROD.Generated.cs">
+      <DependentUpon>DataModel.WK_REGPROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SAFT_PROCESSA_GT.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SAFT_PROCESSA_GT.Generated.cs">
+      <DependentUpon>DataModel.WK_SAFT_PROCESSA_GT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_sch.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_sch.Generated.cs">
+      <DependentUpon>DataModel.wk_sch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SECCOES.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SECCOES.Generated.cs">
+      <DependentUpon>DataModel.WK_SECCOES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SEGCLI.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SEGCLI.Generated.cs">
+      <DependentUpon>DataModel.WK_SEGCLI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SELECT_OF_EC.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_SELECT_OF_EC.Generated.cs">
+      <DependentUpon>DataModel.WK_SELECT_OF_EC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_STKMIN.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_STKMIN.Generated.cs">
+      <DependentUpon>DataModel.WK_STKMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_TEXTIL.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.WK_TEXTIL.Generated.cs">
+      <DependentUpon>DataModel.WK_TEXTIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_variantes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_variantes.Generated.cs">
+      <DependentUpon>DataModel.wk_variantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_variantes_web.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_variantes_web.Generated.cs">
+      <DependentUpon>DataModel.wk_variantes_web.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_ver_prep.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_ver_prep.Generated.cs">
+      <DependentUpon>DataModel.wk_ver_prep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_ver_variantes.cs">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel.wk_ver_variantes.Generated.cs">
+      <DependentUpon>DataModel.wk_ver_variantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DataModel.Diagram1.view">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </None>
+    <DevartEntityDeploy Include="DataModel.edml">
+      <Generator>DevartEfGenerator</Generator>
+      <LastGenOutput>DataModel.info</LastGenOutput>
+    </DevartEntityDeploy>
+    <None Include="DataModel.edps">
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </None>
+    <None Include="DataModel.info">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.edml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

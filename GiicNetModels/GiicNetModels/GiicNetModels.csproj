@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2258C4B-C25F-4A35-8388-43A28696CE01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GiicNetModels</RootNamespace>
+    <AssemblyName>GiicNetModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLIENTES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES_BR.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CNDENT.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESCALAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="estacoes.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FASES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FASES_LIG.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GAMAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GRUPOS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LINKS_DOC.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_DataGiicNet.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_DataGiicNet.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_DataGiicNet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_DataGiicNet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_DataGiicNet.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PECAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PICTOGRAMAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ROTA.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROTACAB.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SECCOES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SORTIDOS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STKTAR.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sys_menus.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABAGE.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABANUL.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABCLASSE.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABCONTASBAN.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABDIA.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABDOC.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABEMB.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tabeuro.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABFAM.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABFPAG.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABFUNC.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABIDIOMA.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABIVA.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABLINHAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABLOCAL.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABMAQ.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABMT.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABPAG.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABPAIS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABPAUTAL.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABRUBRICAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABSEG.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABSERIES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABSISTEMAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABSUBFAM.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABTIPOART.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABTRAN.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABUNMED.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABZON.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABZON_AGENTE.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_PICT.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_REGRAEMB.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_RETENCOES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblmarcas.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblUtil.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMPLATES.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMPLATES_CAB.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TEMPLATES_PICT.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utentes.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Model_DataGiicNet.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_DataGiicNet.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_DataGiicNet.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_DataGiicNet.edmx</DependentUpon>
+      <LastGenOutput>Model_DataGiicNet.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model_DataGiicNet.edmx.diagram">
+      <DependentUpon>Model_DataGiicNet.edmx</DependentUpon>
+    </None>
+    <None Include="Model_DataGiicNet.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_DataGiicNet.edmx</DependentUpon>
+      <LastGenOutput>Model_DataGiicNet.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

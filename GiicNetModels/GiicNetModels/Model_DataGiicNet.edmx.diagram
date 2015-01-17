@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ebb6efb1e9e47c881ec6c5135adcaed" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="DataGiicNetModel.CNDENT" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.ESCALAS" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.estacoes" Width="1.5" PointX="11.625" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.FASES" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.FASES_LIG" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.GAMAS" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.GRUPOS" Width="1.5" PointX="6.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.LINKS_DOC" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.PECAS" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.PICTOGRAMAS" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.ROTA" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.ROTACAB" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.SECCOES" Width="1.5" PointX="13.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.SORTIDOS" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.STKTAR" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.sys_menus" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TAB_PICT" Width="1.5" PointX="15.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TAB_REGRAEMB" Width="1.5" PointX="5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TAB_RETENCOES" Width="1.5" PointX="15.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABAGE" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABANUL" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABCLASSE" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABCONTASBAN" Width="1.5" PointX="15.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABDIA" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABDOC" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABEMB" Width="1.5" PointX="2.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.tabeuro" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABFAM" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABFPAG" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABFUNC" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABIDIOMA" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABIVA" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABLINHAS" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABLOCAL" Width="1.5" PointX="7.375" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABMAQ" Width="1.5" PointX="19.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABMT" Width="1.5" PointX="19.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABPAG" Width="1.5" PointX="19.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABPAIS" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABPAUTAL" Width="1.5" PointX="19.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABRUBRICAS" Width="1.5" PointX="19.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABSEG" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABSERIES" Width="1.5" PointX="19.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABSISTEMAS" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABSUBFAM" Width="1.5" PointX="0.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABTIPOART" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABTRAN" Width="1.5" PointX="21.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABUNMED" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABZON" Width="1.5" PointX="5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABZON_AGENTE" Width="1.5" PointX="21.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.tblmarcas" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.tblUtil" Width="1.5" PointX="21.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TEMPLATES" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TEMPLATES_CAB" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TEMPLATES_PICT" Width="1.5" PointX="21.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.utentes" Width="1.5" PointX="21.75" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TEMPLATES_PECAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TAB_REGRAEMB_TABEMB" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TABAGE_TABAGE" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TABLINHAS_tblmarcas" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TABLOCAL_TABZON" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TABZON_TABPAIS" ManuallyRouted="false" />
+        <AssociationConnector Association="DataGiicNetModel.FK_TEMPLATES_TEMPLATES_CAB" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES" Width="1.5" PointX="24.625" PointY="1.5" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABAGE" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABCONTASBAN" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABPAG" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABPAIS" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABSEG" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABZON" />
+        <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES_BR" Width="1.5" PointX="3.375" PointY="22.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

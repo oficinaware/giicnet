@@ -1,0 +1,1051 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper Version="5.7.471.0">
+  <ModelSettings xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" AppConnectionStringName="DataGiic_LiagoEntitiesConnectionString" ConnectionStringInAppConfig="True" RegenareteConnectionStringInAppConfig="True" TargetFramework="Net45" DetectTPTInheritance="False" EntityFrameworkVersion="Version6" IncludeForeignKeysInModel="true" DetectFunctionBasedColumnDefault="false">
+    <Connection ConnectionString="Data Source=CARDEIRO-TOSH\CARDEIRO2012;Initial Catalog=DataGiic_Liago;Integrated Security=False;Persist Security Info=True;User ID=sa;Password=sa" Provider="System.Data.SqlClient" />
+    <Generation>
+      <GeneratedFiles>
+        <File Name="DataModel.DataGiic_LiagoEntities.cs" />
+        <File Name="DataModel.Activ_Consertos.cs" OverwriteMode="None" />
+        <File Name="DataModel.Activ_Consertos.Generated.cs" />
+        <File Name="DataModel.Actividades.cs" OverwriteMode="None" />
+        <File Name="DataModel.Actividades.Generated.cs" />
+        <File Name="DataModel.AlertasEmail.cs" OverwriteMode="None" />
+        <File Name="DataModel.AlertasEmail.Generated.cs" />
+        <File Name="DataModel.AlertasErros.cs" OverwriteMode="None" />
+        <File Name="DataModel.AlertasErros.Generated.cs" />
+        <File Name="DataModel.AlertasLog.cs" OverwriteMode="None" />
+        <File Name="DataModel.AlertasLog.Generated.cs" />
+        <File Name="DataModel.ALOCF_DET.cs" OverwriteMode="None" />
+        <File Name="DataModel.ALOCF_DET.Generated.cs" />
+        <File Name="DataModel.AMORTIZACOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.AMORTIZACOES.Generated.cs" />
+        <File Name="DataModel.ARTCLI.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTCLI.Generated.cs" />
+        <File Name="DataModel.ARTCLI_SORT.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTCLI_SORT.Generated.cs" />
+        <File Name="DataModel.ARTFORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTFORN.Generated.cs" />
+        <File Name="DataModel.ARTIGOCOR.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTIGOCOR.Generated.cs" />
+        <File Name="DataModel.ARTIGOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTIGOS.Generated.cs" />
+        <File Name="DataModel.ARTIGOS_BASE.cs" OverwriteMode="None" />
+        <File Name="DataModel.ARTIGOS_BASE.Generated.cs" />
+        <File Name="DataModel.ATRIBUTO_ARTIGO.cs" OverwriteMode="None" />
+        <File Name="DataModel.ATRIBUTO_ARTIGO.Generated.cs" />
+        <File Name="DataModel.cabcartaz.cs" OverwriteMode="None" />
+        <File Name="DataModel.cabcartaz.Generated.cs" />
+        <File Name="DataModel.CABCONSERTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.CABCONSERTOS.Generated.cs" />
+        <File Name="DataModel.cabcores.cs" OverwriteMode="None" />
+        <File Name="DataModel.cabcores.Generated.cs" />
+        <File Name="DataModel.CABDOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CABDOC.Generated.cs" />
+        <File Name="DataModel.CAIXA_FECHO.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAIXA_FECHO.Generated.cs" />
+        <File Name="DataModel.CAIXA_MODOPAG.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAIXA_MODOPAG.Generated.cs" />
+        <File Name="DataModel.CAIXA_MOV.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAIXA_MOV.Generated.cs" />
+        <File Name="DataModel.CAIXA_RUBRICAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAIXA_RUBRICAS.Generated.cs" />
+        <File Name="DataModel.CAIXA_TABDOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAIXA_TABDOC.Generated.cs" />
+        <File Name="DataModel.CAPAC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CAPAC.Generated.cs" />
+        <File Name="DataModel.CARACT.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACT.Generated.cs" />
+        <File Name="DataModel.CARACT_LNENCO.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACT_LNENCO.Generated.cs" />
+        <File Name="DataModel.CARACT_SA.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACT_SA.Generated.cs" />
+        <File Name="DataModel.CARACTC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACTC.Generated.cs" />
+        <File Name="DataModel.CARACTREF.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACTREF.Generated.cs" />
+        <File Name="DataModel.CARACTWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARACTWEB.Generated.cs" />
+        <File Name="DataModel.CARTOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARTOES.Generated.cs" />
+        <File Name="DataModel.CARTOES_DHL.cs" OverwriteMode="None" />
+        <File Name="DataModel.CARTOES_DHL.Generated.cs" />
+        <File Name="DataModel.CATALOGO.cs" OverwriteMode="None" />
+        <File Name="DataModel.CATALOGO.Generated.cs" />
+        <File Name="DataModel.CATFORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CATFORN.Generated.cs" />
+        <File Name="DataModel.CATFORN_EAN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CATFORN_EAN.Generated.cs" />
+        <File Name="DataModel.CATSORT.cs" OverwriteMode="None" />
+        <File Name="DataModel.CATSORT.Generated.cs" />
+        <File Name="DataModel.CCAT_AGENTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.CCAT_AGENTES.Generated.cs" />
+        <File Name="DataModel.CCAT_TARIFAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.CCAT_TARIFAS.Generated.cs" />
+        <File Name="DataModel.CCATALOG.cs" OverwriteMode="None" />
+        <File Name="DataModel.CCATALOG.Generated.cs" />
+        <File Name="DataModel.CCATFORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CCATFORN.Generated.cs" />
+        <File Name="DataModel.check_mat_of.cs" OverwriteMode="None" />
+        <File Name="DataModel.check_mat_of.Generated.cs" />
+        <File Name="DataModel.CLIENTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTES.Generated.cs" />
+        <File Name="DataModel.CLIENTES_ALT.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTES_ALT.Generated.cs" />
+        <File Name="DataModel.CLIENTES_CRM.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTES_CRM.Generated.cs" />
+        <File Name="DataModel.CLIENTES_GRIFO.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTES_GRIFO.Generated.cs" />
+        <File Name="DataModel.CLIENTES_MARCAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTES_MARCAS.Generated.cs" />
+        <File Name="DataModel.CLIENTESLoja.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTESLoja.Generated.cs" />
+        <File Name="DataModel.CLIENTESWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.CLIENTESWEB.Generated.cs" />
+        <File Name="DataModel.CMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMP.Generated.cs" />
+        <File Name="DataModel.CMPARTC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPARTC.Generated.cs" />
+        <File Name="DataModel.CMPARTF.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPARTF.Generated.cs" />
+        <File Name="DataModel.CMPFORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPFORN.Generated.cs" />
+        <File Name="DataModel.CMPLN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPLN.Generated.cs" />
+        <File Name="DataModel.CMPOCC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCC.Generated.cs" />
+        <File Name="DataModel.CMPOCCCLI.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCCCLI.Generated.cs" />
+        <File Name="DataModel.CMPOCL.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCL.Generated.cs" />
+        <File Name="DataModel.CMPOCL_ALOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCL_ALOC.Generated.cs" />
+        <File Name="DataModel.CMPOCL_CONF.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCL_CONF.Generated.cs" />
+        <File Name="DataModel.CMPOCLCLI.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPOCLCLI.Generated.cs" />
+        <File Name="DataModel.CMPPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPPRC.Generated.cs" />
+        <File Name="DataModel.CMPRECC.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPRECC.Generated.cs" />
+        <File Name="DataModel.CMPRECL.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPRECL.Generated.cs" />
+        <File Name="DataModel.CMPRECVOL.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPRECVOL.Generated.cs" />
+        <File Name="DataModel.CMPSORT.cs" OverwriteMode="None" />
+        <File Name="DataModel.CMPSORT.Generated.cs" />
+        <File Name="DataModel.CNDENT.cs" OverwriteMode="None" />
+        <File Name="DataModel.CNDENT.Generated.cs" />
+        <File Name="DataModel.CONFIG_MODELOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.CONFIG_MODELOS.Generated.cs" />
+        <File Name="DataModel.ConfigAlertas.cs" OverwriteMode="None" />
+        <File Name="DataModel.ConfigAlertas.Generated.cs" />
+        <File Name="DataModel.CORES.cs" OverwriteMode="None" />
+        <File Name="DataModel.CORES.Generated.cs" />
+        <File Name="DataModel.CORES_PA.cs" OverwriteMode="None" />
+        <File Name="DataModel.CORES_PA.Generated.cs" />
+        <File Name="DataModel.CORTANTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.CORTANTES.Generated.cs" />
+        <File Name="DataModel.CTB_TOKEN.cs" OverwriteMode="None" />
+        <File Name="DataModel.CTB_TOKEN.Generated.cs" />
+        <File Name="DataModel.cummlative.cs" OverwriteMode="None" />
+        <File Name="DataModel.cummlative.Generated.cs" />
+        <File Name="DataModel.DADOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.DADOS.Generated.cs" />
+        <File Name="DataModel.DICIONARIO.cs" OverwriteMode="None" />
+        <File Name="DataModel.DICIONARIO.Generated.cs" />
+        <File Name="DataModel.DICIONARIO_VAGA.cs" OverwriteMode="None" />
+        <File Name="DataModel.DICIONARIO_VAGA.Generated.cs" />
+        <File Name="DataModel.dimensoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.dimensoes.Generated.cs" />
+        <File Name="DataModel.DOC_MARGENS.cs" OverwriteMode="None" />
+        <File Name="DataModel.DOC_MARGENS.Generated.cs" />
+        <File Name="DataModel.DOWNLOADS.cs" OverwriteMode="None" />
+        <File Name="DataModel.DOWNLOADS.Generated.cs" />
+        <File Name="DataModel.DOWNLOADS_LOG.cs" OverwriteMode="None" />
+        <File Name="DataModel.DOWNLOADS_LOG.Generated.cs" />
+        <File Name="DataModel.DOWNLOADS_PERMI.cs" OverwriteMode="None" />
+        <File Name="DataModel.DOWNLOADS_PERMI.Generated.cs" />
+        <File Name="DataModel.EAN13.cs" OverwriteMode="None" />
+        <File Name="DataModel.EAN13.Generated.cs" />
+        <File Name="DataModel.EMBALAGENS.cs" OverwriteMode="None" />
+        <File Name="DataModel.EMBALAGENS.Generated.cs" />
+        <File Name="DataModel.EMBTROCAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.EMBTROCAS.Generated.cs" />
+        <File Name="DataModel.ENCO.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCO.Generated.cs" />
+        <File Name="DataModel.ENCO_HOL.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCO_HOL.Generated.cs" />
+        <File Name="DataModel.ENCO_LEFT.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCO_LEFT.Generated.cs" />
+        <File Name="DataModel.ENCOPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOPRC.Generated.cs" />
+        <File Name="DataModel.ENCOPRCWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOPRCWEB.Generated.cs" />
+        <File Name="DataModel.ENCOPRCWEBAG.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOPRCWEBAG.Generated.cs" />
+        <File Name="DataModel.ENCOSORT.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOSORT.Generated.cs" />
+        <File Name="DataModel.ENCOSORTWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOSORTWEB.Generated.cs" />
+        <File Name="DataModel.ENCOWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.ENCOWEB.Generated.cs" />
+        <File Name="DataModel.ErrosSTKMOV.cs" OverwriteMode="None" />
+        <File Name="DataModel.ErrosSTKMOV.Generated.cs" />
+        <File Name="DataModel.ESCALAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.ESCALAS.Generated.cs" />
+        <File Name="DataModel.ESCALOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.ESCALOES.Generated.cs" />
+        <File Name="DataModel.estacoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.estacoes.Generated.cs" />
+        <File Name="DataModel.ETIQAMO.cs" OverwriteMode="None" />
+        <File Name="DataModel.ETIQAMO.Generated.cs" />
+        <File Name="DataModel.ETIQART.cs" OverwriteMode="None" />
+        <File Name="DataModel.ETIQART.Generated.cs" />
+        <File Name="DataModel.ETIQGIIC.cs" OverwriteMode="None" />
+        <File Name="DataModel.ETIQGIIC.Generated.cs" />
+        <File Name="DataModel.ETIQGIIC_DET.cs" OverwriteMode="None" />
+        <File Name="DataModel.ETIQGIIC_DET.Generated.cs" />
+        <File Name="DataModel.FASES.cs" OverwriteMode="None" />
+        <File Name="DataModel.FASES.Generated.cs" />
+        <File Name="DataModel.FASES_LIG.cs" OverwriteMode="None" />
+        <File Name="DataModel.FASES_LIG.Generated.cs" />
+        <File Name="DataModel.FATCAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.FATCAB.Generated.cs" />
+        <File Name="DataModel.FATLIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.FATLIN.Generated.cs" />
+        <File Name="DataModel.FATPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.FATPRC.Generated.cs" />
+        <File Name="DataModel.FATPREST.cs" OverwriteMode="None" />
+        <File Name="DataModel.FATPREST.Generated.cs" />
+        <File Name="DataModel.FICH_LINKS.cs" OverwriteMode="None" />
+        <File Name="DataModel.FICH_LINKS.Generated.cs" />
+        <File Name="DataModel.FOLDER.cs" OverwriteMode="None" />
+        <File Name="DataModel.FOLDER.Generated.cs" />
+        <File Name="DataModel.FOLDERLN.cs" OverwriteMode="None" />
+        <File Name="DataModel.FOLDERLN.Generated.cs" />
+        <File Name="DataModel.formeiro.cs" OverwriteMode="None" />
+        <File Name="DataModel.formeiro.Generated.cs" />
+        <File Name="DataModel.formularios.cs" OverwriteMode="None" />
+        <File Name="DataModel.formularios.Generated.cs" />
+        <File Name="DataModel.FTRCB.cs" OverwriteMode="None" />
+        <File Name="DataModel.FTRCB.Generated.cs" />
+        <File Name="DataModel.FTRCBL.cs" OverwriteMode="None" />
+        <File Name="DataModel.FTRCBL.Generated.cs" />
+        <File Name="DataModel.GAMAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.GAMAS.Generated.cs" />
+        <File Name="DataModel.GAMAS_OFAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.GAMAS_OFAB.Generated.cs" />
+        <File Name="DataModel.GRUPOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.GRUPOS.Generated.cs" />
+        <File Name="DataModel.GUIFAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.GUIFAB.Generated.cs" />
+        <File Name="DataModel.horarios.cs" OverwriteMode="None" />
+        <File Name="DataModel.horarios.Generated.cs" />
+        <File Name="DataModel.HORARIOS_HORAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.HORARIOS_HORAS.Generated.cs" />
+        <File Name="DataModel.HORARIOS_SECCOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.HORARIOS_SECCOES.Generated.cs" />
+        <File Name="DataModel.HORAS_PROD.cs" OverwriteMode="None" />
+        <File Name="DataModel.HORAS_PROD.Generated.cs" />
+        <File Name="DataModel.HORASEMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.HORASEMP.Generated.cs" />
+        <File Name="DataModel.horasimprod.cs" OverwriteMode="None" />
+        <File Name="DataModel.horasimprod.Generated.cs" />
+        <File Name="DataModel.input_cxgcr.cs" OverwriteMode="None" />
+        <File Name="DataModel.input_cxgcr.Generated.cs" />
+        <File Name="DataModel.input_enc.cs" OverwriteMode="None" />
+        <File Name="DataModel.input_enc.Generated.cs" />
+        <File Name="DataModel.input_etiq.cs" OverwriteMode="None" />
+        <File Name="DataModel.input_etiq.Generated.cs" />
+        <File Name="DataModel.input_nec.cs" OverwriteMode="None" />
+        <File Name="DataModel.input_nec.Generated.cs" />
+        <File Name="DataModel.input_vmof.cs" OverwriteMode="None" />
+        <File Name="DataModel.input_vmof.Generated.cs" />
+        <File Name="DataModel.interdicoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.interdicoes.Generated.cs" />
+        <File Name="DataModel.LIGA_VAR.cs" OverwriteMode="None" />
+        <File Name="DataModel.LIGA_VAR.Generated.cs" />
+        <File Name="DataModel.LIGACOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.LIGACOES.Generated.cs" />
+        <File Name="DataModel.LIGACOES_EMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.LIGACOES_EMP.Generated.cs" />
+        <File Name="DataModel.LINKS_DOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.LINKS_DOC.Generated.cs" />
+        <File Name="DataModel.LNCONSERTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.LNCONSERTOS.Generated.cs" />
+        <File Name="DataModel.LNDOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.LNDOC.Generated.cs" />
+        <File Name="DataModel.LNENCO.cs" OverwriteMode="None" />
+        <File Name="DataModel.LNENCO.Generated.cs" />
+        <File Name="DataModel.LNENCOWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.LNENCOWEB.Generated.cs" />
+        <File Name="DataModel.LOG_CARACT.cs" OverwriteMode="None" />
+        <File Name="DataModel.LOG_CARACT.Generated.cs" />
+        <File Name="DataModel.LOTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.LOTES.Generated.cs" />
+        <File Name="DataModel.LOTES_SUB.cs" OverwriteMode="None" />
+        <File Name="DataModel.LOTES_SUB.Generated.cs" />
+        <File Name="DataModel.LWEB_ERROS.cs" OverwriteMode="None" />
+        <File Name="DataModel.LWEB_ERROS.Generated.cs" />
+        <File Name="DataModel.LWEB_WKARTIGOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.LWEB_WKARTIGOS.Generated.cs" />
+        <File Name="DataModel.LWEB_WKLOJAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.LWEB_WKLOJAS.Generated.cs" />
+        <File Name="DataModel.MateriaisCAD.cs" OverwriteMode="None" />
+        <File Name="DataModel.MateriaisCAD.Generated.cs" />
+        <File Name="DataModel.mensagensMostrador.cs" OverwriteMode="None" />
+        <File Name="DataModel.mensagensMostrador.Generated.cs" />
+        <File Name="DataModel.MODELOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.MODELOS.Generated.cs" />
+        <File Name="DataModel.Modelos_Multiview.cs" OverwriteMode="None" />
+        <File Name="DataModel.Modelos_Multiview.Generated.cs" />
+        <File Name="DataModel.MODELOSWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.MODELOSWEB.Generated.cs" />
+        <File Name="DataModel.MODMEMO.cs" OverwriteMode="None" />
+        <File Name="DataModel.MODMEMO.Generated.cs" />
+        <File Name="DataModel.MORADAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.MORADAS.Generated.cs" />
+        <File Name="DataModel.MORADAS_ALT.cs" OverwriteMode="None" />
+        <File Name="DataModel.MORADAS_ALT.Generated.cs" />
+        <File Name="DataModel.MORADAS_FORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.MORADAS_FORN.Generated.cs" />
+        <File Name="DataModel.MOV_AMOSTRAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.MOV_AMOSTRAS.Generated.cs" />
+        <File Name="DataModel.MOV_CONSERTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.MOV_CONSERTOS.Generated.cs" />
+        <File Name="DataModel.MOV_PROD.cs" OverwriteMode="None" />
+        <File Name="DataModel.MOV_PROD.Generated.cs" />
+        <File Name="DataModel.mrp_oper.cs" OverwriteMode="None" />
+        <File Name="DataModel.mrp_oper.Generated.cs" />
+        <File Name="DataModel.mrp_order.cs" OverwriteMode="None" />
+        <File Name="DataModel.mrp_order.Generated.cs" />
+        <File Name="DataModel.mrp_sugoc.cs" OverwriteMode="None" />
+        <File Name="DataModel.mrp_sugoc.Generated.cs" />
+        <File Name="DataModel.OBSCATALOGO.cs" OverwriteMode="None" />
+        <File Name="DataModel.OBSCATALOGO.Generated.cs" />
+        <File Name="DataModel.OBSOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.OBSOC.Generated.cs" />
+        <File Name="DataModel.OBSOCPA.cs" OverwriteMode="None" />
+        <File Name="DataModel.OBSOCPA.Generated.cs" />
+        <File Name="DataModel.OPERA.cs" OverwriteMode="None" />
+        <File Name="DataModel.OPERA.Generated.cs" />
+        <File Name="DataModel.OPTCONFIGURATION.cs" OverwriteMode="None" />
+        <File Name="DataModel.OPTCONFIGURATION.Generated.cs" />
+        <File Name="DataModel.OrcAmortizacoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.OrcAmortizacoes.Generated.cs" />
+        <File Name="DataModel.OrcFt.cs" OverwriteMode="None" />
+        <File Name="DataModel.OrcFt.Generated.cs" />
+        <File Name="DataModel.OrcModelos.cs" OverwriteMode="None" />
+        <File Name="DataModel.OrcModelos.Generated.cs" />
+        <File Name="DataModel.OrcTempos.cs" OverwriteMode="None" />
+        <File Name="DataModel.OrcTempos.Generated.cs" />
+        <File Name="DataModel.ORDENC.cs" OverwriteMode="None" />
+        <File Name="DataModel.ORDENC.Generated.cs" />
+        <File Name="DataModel.ORDFAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.ORDFAB.Generated.cs" />
+        <File Name="DataModel.ORDFABPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.ORDFABPRC.Generated.cs" />
+        <File Name="DataModel.PACK_PDT.cs" OverwriteMode="None" />
+        <File Name="DataModel.PACK_PDT.Generated.cs" />
+        <File Name="DataModel.PACKCAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.PACKCAB.Generated.cs" />
+        <File Name="DataModel.PACKLIST.cs" OverwriteMode="None" />
+        <File Name="DataModel.PACKLIST.Generated.cs" />
+        <File Name="DataModel.PACKOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.PACKOC.Generated.cs" />
+        <File Name="DataModel.PAISES_ISO3166.cs" OverwriteMode="None" />
+        <File Name="DataModel.PAISES_ISO3166.Generated.cs" />
+        <File Name="DataModel.PAISESWEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.PAISESWEB.Generated.cs" />
+        <File Name="DataModel.PARAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.PARAM.Generated.cs" />
+        <File Name="DataModel.PARAM_SAFT.cs" OverwriteMode="None" />
+        <File Name="DataModel.PARAM_SAFT.Generated.cs" />
+        <File Name="DataModel.PARAM_WEB.cs" OverwriteMode="None" />
+        <File Name="DataModel.PARAM_WEB.Generated.cs" />
+        <File Name="DataModel.PECAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.PECAS.Generated.cs" />
+        <File Name="DataModel.PESSOAL.cs" OverwriteMode="None" />
+        <File Name="DataModel.PESSOAL.Generated.cs" />
+        <File Name="DataModel.PICTOGRAMAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.PICTOGRAMAS.Generated.cs" />
+        <File Name="DataModel.planning.cs" OverwriteMode="None" />
+        <File Name="DataModel.planning.Generated.cs" />
+        <File Name="DataModel.planning_ec.cs" OverwriteMode="None" />
+        <File Name="DataModel.planning_ec.Generated.cs" />
+        <File Name="DataModel.PLANO_DIA.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANO_DIA.Generated.cs" />
+        <File Name="DataModel.PLANO_DIA_HORAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANO_DIA_HORAS.Generated.cs" />
+        <File Name="DataModel.PLANOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANOS.Generated.cs" />
+        <File Name="DataModel.PLANOS_SEL.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANOS_SEL.Generated.cs" />
+        <File Name="DataModel.PLANOS_TMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANOS_TMP.Generated.cs" />
+        <File Name="DataModel.PLANOS_WRK.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLANOS_WRK.Generated.cs" />
+        <File Name="DataModel.PLN_SCHEDULE.cs" OverwriteMode="None" />
+        <File Name="DataModel.PLN_SCHEDULE.Generated.cs" />
+        <File Name="DataModel.PPS3_KPI.cs" OverwriteMode="None" />
+        <File Name="DataModel.PPS3_KPI.Generated.cs" />
+        <File Name="DataModel.PPS3_KPI_DESCRICAO.cs" OverwriteMode="None" />
+        <File Name="DataModel.PPS3_KPI_DESCRICAO.Generated.cs" />
+        <File Name="DataModel.precos_subc.cs" OverwriteMode="None" />
+        <File Name="DataModel.precos_subc.Generated.cs" />
+        <File Name="DataModel.PrePack.cs" OverwriteMode="None" />
+        <File Name="DataModel.PrePack.Generated.cs" />
+        <File Name="DataModel.PRESERIE.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRESERIE.Generated.cs" />
+        <File Name="DataModel.PRGCONFIGURATION.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRGCONFIGURATION.Generated.cs" />
+        <File Name="DataModel.PRGCONFIGURATION_UNTIESORTERS.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRGCONFIGURATION_UNTIESORTERS.Generated.cs" />
+        <File Name="DataModel.PRINT_SERVER.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRINT_SERVER.Generated.cs" />
+        <File Name="DataModel.PROD_PDT.cs" OverwriteMode="None" />
+        <File Name="DataModel.PROD_PDT.Generated.cs" />
+        <File Name="DataModel.PRODEMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRODEMP.Generated.cs" />
+        <File Name="DataModel.PRODET.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRODET.Generated.cs" />
+        <File Name="DataModel.PRODRES.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRODRES.Generated.cs" />
+        <File Name="DataModel.ProductCAD.cs" OverwriteMode="None" />
+        <File Name="DataModel.ProductCAD.Generated.cs" />
+        <File Name="DataModel.promocoes_cab.cs" OverwriteMode="None" />
+        <File Name="DataModel.promocoes_cab.Generated.cs" />
+        <File Name="DataModel.PromocoesArtigos.cs" OverwriteMode="None" />
+        <File Name="DataModel.PromocoesArtigos.Generated.cs" />
+        <File Name="DataModel.PRONTO_EXP.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRONTO_EXP.Generated.cs" />
+        <File Name="DataModel.PRONTO_EXP_CLIENTE.cs" OverwriteMode="None" />
+        <File Name="DataModel.PRONTO_EXP_CLIENTE.Generated.cs" />
+        <File Name="DataModel.RECCAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.RECCAB.Generated.cs" />
+        <File Name="DataModel.reccaixas.cs" OverwriteMode="None" />
+        <File Name="DataModel.reccaixas.Generated.cs" />
+        <File Name="DataModel.RECLIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.RECLIN.Generated.cs" />
+        <File Name="DataModel.RECPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.RECPRC.Generated.cs" />
+        <File Name="DataModel.REF.cs" OverwriteMode="None" />
+        <File Name="DataModel.REF.Generated.cs" />
+        <File Name="DataModel.REF_CX.cs" OverwriteMode="None" />
+        <File Name="DataModel.REF_CX.Generated.cs" />
+        <File Name="DataModel.REGDEF.cs" OverwriteMode="None" />
+        <File Name="DataModel.REGDEF.Generated.cs" />
+        <File Name="DataModel.RESERVAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.RESERVAS.Generated.cs" />
+        <File Name="DataModel.RESERVASLN.cs" OverwriteMode="None" />
+        <File Name="DataModel.RESERVASLN.Generated.cs" />
+        <File Name="DataModel.ROTA.cs" OverwriteMode="None" />
+        <File Name="DataModel.ROTA.Generated.cs" />
+        <File Name="DataModel.ROTACAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.ROTACAB.Generated.cs" />
+        <File Name="DataModel.ROTEIRO.cs" OverwriteMode="None" />
+        <File Name="DataModel.ROTEIRO.Generated.cs" />
+        <File Name="DataModel.ROTEIRO_PLAN.cs" OverwriteMode="None" />
+        <File Name="DataModel.ROTEIRO_PLAN.Generated.cs" />
+        <File Name="DataModel.SAFT_EMPRESA.cs" OverwriteMode="None" />
+        <File Name="DataModel.SAFT_EMPRESA.Generated.cs" />
+        <File Name="DataModel.SALTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SALTOS.Generated.cs" />
+        <File Name="DataModel.SB_ERROS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SB_ERROS.Generated.cs" />
+        <File Name="DataModel.SB_MENSAGENS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SB_MENSAGENS.Generated.cs" />
+        <File Name="DataModel.SECCOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.SECCOES.Generated.cs" />
+        <File Name="DataModel.SECCOES_SISTEMAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SECCOES_SISTEMAS.Generated.cs" />
+        <File Name="DataModel.SORTIDOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SORTIDOS.Generated.cs" />
+        <File Name="DataModel.STKLOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKLOC.Generated.cs" />
+        <File Name="DataModel.STKLOT.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKLOT.Generated.cs" />
+        <File Name="DataModel.STKMIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMIN.Generated.cs" />
+        <File Name="DataModel.STKMINPA.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMINPA.Generated.cs" />
+        <File Name="DataModel.STKMOV.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMOV.Generated.cs" />
+        <File Name="DataModel.STKMOVHIST.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMOVHIST.Generated.cs" />
+        <File Name="DataModel.STKMOVP.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMOVP.Generated.cs" />
+        <File Name="DataModel.STKMOVPHIST.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKMOVPHIST.Generated.cs" />
+        <File Name="DataModel.STKNEC.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKNEC.Generated.cs" />
+        <File Name="DataModel.STKNEC_PREP.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKNEC_PREP.Generated.cs" />
+        <File Name="DataModel.STKNEC_PREP_VOL.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKNEC_PREP_VOL.Generated.cs" />
+        <File Name="DataModel.STKNECM.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKNECM.Generated.cs" />
+        <File Name="DataModel.STKNECOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKNECOC.Generated.cs" />
+        <File Name="DataModel.STKPREP.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKPREP.Generated.cs" />
+        <File Name="DataModel.STKSTO.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKSTO.Generated.cs" />
+        <File Name="DataModel.STKSTOP.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKSTOP.Generated.cs" />
+        <File Name="DataModel.STKTAR.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKTAR.Generated.cs" />
+        <File Name="DataModel.STKTCC.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKTCC.Generated.cs" />
+        <File Name="DataModel.STKTEN.cs" OverwriteMode="None" />
+        <File Name="DataModel.STKTEN.Generated.cs" />
+        <File Name="DataModel.Subscricoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.Subscricoes.Generated.cs" />
+        <File Name="DataModel.subscricoes_reports.cs" OverwriteMode="None" />
+        <File Name="DataModel.subscricoes_reports.Generated.cs" />
+        <File Name="DataModel.SubscricoesClientes.cs" OverwriteMode="None" />
+        <File Name="DataModel.SubscricoesClientes.Generated.cs" />
+        <File Name="DataModel.SUGESTOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.SUGESTOES.Generated.cs" />
+        <File Name="DataModel.SUPEREP_IMPORT_CLIENTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.SUPEREP_IMPORT_CLIENTES.Generated.cs" />
+        <File Name="DataModel.SUPEREP_IMPORT_ENCOMENDAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.SUPEREP_IMPORT_ENCOMENDAS.Generated.cs" />
+        <File Name="DataModel.sys_familias.cs" OverwriteMode="None" />
+        <File Name="DataModel.sys_familias.Generated.cs" />
+        <File Name="DataModel.sys_relatorios.cs" OverwriteMode="None" />
+        <File Name="DataModel.sys_relatorios.Generated.cs" />
+        <File Name="DataModel.TAB_CAPAC.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_CAPAC.Generated.cs" />
+        <File Name="DataModel.tab_cert.cs" OverwriteMode="None" />
+        <File Name="DataModel.tab_cert.Generated.cs" />
+        <File Name="DataModel.TAB_CODETIQ.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_CODETIQ.Generated.cs" />
+        <File Name="DataModel.TAB_CONSERTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_CONSERTOS.Generated.cs" />
+        <File Name="DataModel.TAB_CUMPRE.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_CUMPRE.Generated.cs" />
+        <File Name="DataModel.TAB_HORARIOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_HORARIOS.Generated.cs" />
+        <File Name="DataModel.TAB_IMPRESSORAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_IMPRESSORAS.Generated.cs" />
+        <File Name="DataModel.TAB_ISENCAO.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_ISENCAO.Generated.cs" />
+        <File Name="DataModel.TAB_MARCACOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_MARCACOES.Generated.cs" />
+        <File Name="DataModel.TAB_MATRICULAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_MATRICULAS.Generated.cs" />
+        <File Name="DataModel.TAB_MODOEMB.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_MODOEMB.Generated.cs" />
+        <File Name="DataModel.TAB_OBJLOJA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_OBJLOJA.Generated.cs" />
+        <File Name="DataModel.TAB_ORCR.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_ORCR.Generated.cs" />
+        <File Name="DataModel.TAB_PICT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_PICT.Generated.cs" />
+        <File Name="DataModel.tab_prestacoes.cs" OverwriteMode="None" />
+        <File Name="DataModel.tab_prestacoes.Generated.cs" />
+        <File Name="DataModel.TAB_PROC_DET.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_PROC_DET.Generated.cs" />
+        <File Name="DataModel.TAB_PROC_TIPO.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_PROC_TIPO.Generated.cs" />
+        <File Name="DataModel.TAB_PROCESSOS_DET.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_PROCESSOS_DET.Generated.cs" />
+        <File Name="DataModel.TAB_PROCESSOS_MOD.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_PROCESSOS_MOD.Generated.cs" />
+        <File Name="DataModel.TAB_REGRAEMB.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_REGRAEMB.Generated.cs" />
+        <File Name="DataModel.TAB_RETENCOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_RETENCOES.Generated.cs" />
+        <File Name="DataModel.TAB_TURNOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAB_TURNOS.Generated.cs" />
+        <File Name="DataModel.TABAGE.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABAGE.Generated.cs" />
+        <File Name="DataModel.TABANUL.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABANUL.Generated.cs" />
+        <File Name="DataModel.TABBAN_TIPOCONTA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABBAN_TIPOCONTA.Generated.cs" />
+        <File Name="DataModel.TABCAP.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCAP.Generated.cs" />
+        <File Name="DataModel.tabcartaz.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabcartaz.Generated.cs" />
+        <File Name="DataModel.TABCI.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCI.Generated.cs" />
+        <File Name="DataModel.TABCLASSE.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCLASSE.Generated.cs" />
+        <File Name="DataModel.tabClientes.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabClientes.Generated.cs" />
+        <File Name="DataModel.TabCodPostais.cs" OverwriteMode="None" />
+        <File Name="DataModel.TabCodPostais.Generated.cs" />
+        <File Name="DataModel.TABCOM.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCOM.Generated.cs" />
+        <File Name="DataModel.TABCOMISSOESF.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCOMISSOESF.Generated.cs" />
+        <File Name="DataModel.TABCOMISSOESL.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCOMISSOESL.Generated.cs" />
+        <File Name="DataModel.TABCONTACTOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCONTACTOS.Generated.cs" />
+        <File Name="DataModel.TABCONTACTOS_ALT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCONTACTOS_ALT.Generated.cs" />
+        <File Name="DataModel.TABCONTASBAN.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCONTASBAN.Generated.cs" />
+        <File Name="DataModel.TABCONV.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCONV.Generated.cs" />
+        <File Name="DataModel.tabcores.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabcores.Generated.cs" />
+        <File Name="DataModel.TABCT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCT.Generated.cs" />
+        <File Name="DataModel.TABCX.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABCX.Generated.cs" />
+        <File Name="DataModel.TABDEF.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABDEF.Generated.cs" />
+        <File Name="DataModel.TABDIA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABDIA.Generated.cs" />
+        <File Name="DataModel.TABDOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABDOC.Generated.cs" />
+        <File Name="DataModel.TABDOC_SAFT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABDOC_SAFT.Generated.cs" />
+        <File Name="DataModel.TABEMB.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABEMB.Generated.cs" />
+        <File Name="DataModel.tabEnco.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabEnco.Generated.cs" />
+        <File Name="DataModel.tabEncoLinhas.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabEncoLinhas.Generated.cs" />
+        <File Name="DataModel.tabeuro.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabeuro.Generated.cs" />
+        <File Name="DataModel.TABFAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABFAM.Generated.cs" />
+        <File Name="DataModel.TABFERR.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABFERR.Generated.cs" />
+        <File Name="DataModel.TABFPAG.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABFPAG.Generated.cs" />
+        <File Name="DataModel.TABFUNC.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABFUNC.Generated.cs" />
+        <File Name="DataModel.TABHORA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABHORA.Generated.cs" />
+        <File Name="DataModel.TABIDIOMA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABIDIOMA.Generated.cs" />
+        <File Name="DataModel.TABIVA.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABIVA.Generated.cs" />
+        <File Name="DataModel.TABLINHAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABLINHAS.Generated.cs" />
+        <File Name="DataModel.TABLOCAL.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABLOCAL.Generated.cs" />
+        <File Name="DataModel.TABMAQ.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABMAQ.Generated.cs" />
+        <File Name="DataModel.TABMAT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABMAT.Generated.cs" />
+        <File Name="DataModel.TABMES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABMES.Generated.cs" />
+        <File Name="DataModel.TABML.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABML.Generated.cs" />
+        <File Name="DataModel.TABMS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABMS.Generated.cs" />
+        <File Name="DataModel.TABMT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABMT.Generated.cs" />
+        <File Name="DataModel.TABPAG.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABPAG.Generated.cs" />
+        <File Name="DataModel.TABPAIS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABPAIS.Generated.cs" />
+        <File Name="DataModel.TABPAUTAL.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABPAUTAL.Generated.cs" />
+        <File Name="DataModel.TABPERMCAT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABPERMCAT.Generated.cs" />
+        <File Name="DataModel.TABRUBRICAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABRUBRICAS.Generated.cs" />
+        <File Name="DataModel.TABSEG.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABSEG.Generated.cs" />
+        <File Name="DataModel.TABSEMCAP.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABSEMCAP.Generated.cs" />
+        <File Name="DataModel.TABSERIES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABSERIES.Generated.cs" />
+        <File Name="DataModel.TABSISTEMAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABSISTEMAS.Generated.cs" />
+        <File Name="DataModel.tabStatusEnco.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabStatusEnco.Generated.cs" />
+        <File Name="DataModel.tabStatusPagamento.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabStatusPagamento.Generated.cs" />
+        <File Name="DataModel.tabstkinv.cs" OverwriteMode="None" />
+        <File Name="DataModel.tabstkinv.Generated.cs" />
+        <File Name="DataModel.TABSUBFAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABSUBFAM.Generated.cs" />
+        <File Name="DataModel.TABTIPOART.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABTIPOART.Generated.cs" />
+        <File Name="DataModel.TABTRAN.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABTRAN.Generated.cs" />
+        <File Name="DataModel.TABUNMED.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABUNMED.Generated.cs" />
+        <File Name="DataModel.TABZON.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABZON.Generated.cs" />
+        <File Name="DataModel.TABZON_AGENTE.cs" OverwriteMode="None" />
+        <File Name="DataModel.TABZON_AGENTE.Generated.cs" />
+        <File Name="DataModel.TAM_CORRESP.cs" OverwriteMode="None" />
+        <File Name="DataModel.TAM_CORRESP.Generated.cs" />
+        <File Name="DataModel.tblAgentesCatalogos.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblAgentesCatalogos.Generated.cs" />
+        <File Name="DataModel.TblArtigoLoteArrum.cs" OverwriteMode="None" />
+        <File Name="DataModel.TblArtigoLoteArrum.Generated.cs" />
+        <File Name="DataModel.tblclientescatalogos.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblclientescatalogos.Generated.cs" />
+        <File Name="DataModel.tblEncoTemp.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblEncoTemp.Generated.cs" />
+        <File Name="DataModel.tblmarcas.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblmarcas.Generated.cs" />
+        <File Name="DataModel.tblParametros.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblParametros.Generated.cs" />
+        <File Name="DataModel.tblRegUtil.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblRegUtil.Generated.cs" />
+        <File Name="DataModel.tblStatusEnco.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblStatusEnco.Generated.cs" />
+        <File Name="DataModel.tblUtil.cs" OverwriteMode="None" />
+        <File Name="DataModel.tblUtil.Generated.cs" />
+        <File Name="DataModel.TEMPLATES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TEMPLATES.Generated.cs" />
+        <File Name="DataModel.TEMPLATES_CAB.cs" OverwriteMode="None" />
+        <File Name="DataModel.TEMPLATES_CAB.Generated.cs" />
+        <File Name="DataModel.TEMPLATES_PICT.cs" OverwriteMode="None" />
+        <File Name="DataModel.TEMPLATES_PICT.Generated.cs" />
+        <File Name="DataModel.TIPOCOR.cs" OverwriteMode="None" />
+        <File Name="DataModel.TIPOCOR.Generated.cs" />
+        <File Name="DataModel.TRI_MENSAGENS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TRI_MENSAGENS.Generated.cs" />
+        <File Name="DataModel.TS_CLIENTES.cs" OverwriteMode="None" />
+        <File Name="DataModel.TS_CLIENTES.Generated.cs" />
+        <File Name="DataModel.TS_WK_ARTIGOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TS_WK_ARTIGOS.Generated.cs" />
+        <File Name="DataModel.TS_WK_CONSUMOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TS_WK_CONSUMOS.Generated.cs" />
+        <File Name="DataModel.TS_WK_MODELOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.TS_WK_MODELOS.Generated.cs" />
+        <File Name="DataModel.TSTKMOVP.cs" OverwriteMode="None" />
+        <File Name="DataModel.TSTKMOVP.Generated.cs" />
+        <File Name="DataModel.UPS_ROUTECODES.cs" OverwriteMode="None" />
+        <File Name="DataModel.UPS_ROUTECODES.Generated.cs" />
+        <File Name="DataModel.UPS_WKPACK.cs" OverwriteMode="None" />
+        <File Name="DataModel.UPS_WKPACK.Generated.cs" />
+        <File Name="DataModel.utentes.cs" OverwriteMode="None" />
+        <File Name="DataModel.utentes.Generated.cs" />
+        <File Name="DataModel.VALECRED.cs" OverwriteMode="None" />
+        <File Name="DataModel.VALECRED.Generated.cs" />
+        <File Name="DataModel.VALEMAT.cs" OverwriteMode="None" />
+        <File Name="DataModel.VALEMAT.Generated.cs" />
+        <File Name="DataModel.VALEMAT_CX.cs" OverwriteMode="None" />
+        <File Name="DataModel.VALEMAT_CX.Generated.cs" />
+        <File Name="DataModel.WARTIGOCOR.cs" OverwriteMode="None" />
+        <File Name="DataModel.WARTIGOCOR.Generated.cs" />
+        <File Name="DataModel.WARTIGOCORLOTE.cs" OverwriteMode="None" />
+        <File Name="DataModel.WARTIGOCORLOTE.Generated.cs" />
+        <File Name="DataModel.WK_ALOC_OF.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_ALOC_OF.Generated.cs" />
+        <File Name="DataModel.wk_capac.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_capac.Generated.cs" />
+        <File Name="DataModel.WK_CARACT.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CARACT.Generated.cs" />
+        <File Name="DataModel.WK_CARACT_NIVEL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CARACT_NIVEL.Generated.cs" />
+        <File Name="DataModel.WK_CARACTREF.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CARACTREF.Generated.cs" />
+        <File Name="DataModel.WK_CAT_PAIS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CAT_PAIS.Generated.cs" />
+        <File Name="DataModel.WK_CMPRECL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CMPRECL.Generated.cs" />
+        <File Name="DataModel.WK_CONFIRMACOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CONFIRMACOES.Generated.cs" />
+        <File Name="DataModel.WK_CONVERSAO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CONVERSAO.Generated.cs" />
+        <File Name="DataModel.WK_CONVERSAO_CLI.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_CONVERSAO_CLI.Generated.cs" />
+        <File Name="DataModel.WK_DISP_ART_SEM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_DISP_ART_SEM.Generated.cs" />
+        <File Name="DataModel.WK_DISPON_CMP.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_DISPON_CMP.Generated.cs" />
+        <File Name="DataModel.WK_EC_DETTAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EC_DETTAM.Generated.cs" />
+        <File Name="DataModel.WK_EC_DETTAM_EC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EC_DETTAM_EC.Generated.cs" />
+        <File Name="DataModel.WK_EC_MP_RESUMO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EC_MP_RESUMO.Generated.cs" />
+        <File Name="DataModel.WK_EC_PA_RESUMO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EC_PA_RESUMO.Generated.cs" />
+        <File Name="DataModel.WK_EC_ULT_MOV_EA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EC_ULT_MOV_EA.Generated.cs" />
+        <File Name="DataModel.WK_EMB.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMB.Generated.cs" />
+        <File Name="DataModel.WK_EMB_PORFACTURAR.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMB_PORFACTURAR.Generated.cs" />
+        <File Name="DataModel.WK_EMB_PORFACTURAR_EC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMB_PORFACTURAR_EC.Generated.cs" />
+        <File Name="DataModel.WK_EMCURSO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMCURSO.Generated.cs" />
+        <File Name="DataModel.WK_EMFILA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMFILA.Generated.cs" />
+        <File Name="DataModel.WK_EMFILA_TAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_EMFILA_TAM.Generated.cs" />
+        <File Name="DataModel.wk_enc_por_of.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_enc_por_of.Generated.cs" />
+        <File Name="DataModel.wk_encocli_mod.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_encocli_mod.Generated.cs" />
+        <File Name="DataModel.WK_FATLIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_FATLIN.Generated.cs" />
+        <File Name="DataModel.WK_FATPRC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_FATPRC.Generated.cs" />
+        <File Name="DataModel.WK_FLUXOS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_FLUXOS.Generated.cs" />
+        <File Name="DataModel.WK_FTCORES.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_FTCORES.Generated.cs" />
+        <File Name="DataModel.WK_GAMAS_OF.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_GAMAS_OF.Generated.cs" />
+        <File Name="DataModel.WK_LISTA_SEXP.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_LISTA_SEXP.Generated.cs" />
+        <File Name="DataModel.WK_LNENCO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_LNENCO.Generated.cs" />
+        <File Name="DataModel.wk_margens.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_margens.Generated.cs" />
+        <File Name="DataModel.WK_MOV_AMOSTRAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_MOV_AMOSTRAS.Generated.cs" />
+        <File Name="DataModel.WK_MOV_PROD.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_MOV_PROD.Generated.cs" />
+        <File Name="DataModel.wk_mrp_disp_det.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_mrp_disp_det.Generated.cs" />
+        <File Name="DataModel.WK_MRPSEM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_MRPSEM.Generated.cs" />
+        <File Name="DataModel.WK_NEC_VALOR.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_NEC_VALOR.Generated.cs" />
+        <File Name="DataModel.WK_OF.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_OF.Generated.cs" />
+        <File Name="DataModel.WK_OF_EC_NA_DATA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_OF_EC_NA_DATA.Generated.cs" />
+        <File Name="DataModel.WK_OPER.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_OPER.Generated.cs" />
+        <File Name="DataModel.WK_ORC_EST_QT_ESCALAO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_ORC_EST_QT_ESCALAO.Generated.cs" />
+        <File Name="DataModel.WK_ORCFT.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_ORCFT.Generated.cs" />
+        <File Name="DataModel.WK_ORCR_EST.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_ORCR_EST.Generated.cs" />
+        <File Name="DataModel.WK_ORCR_MP_OF_FAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_ORCR_MP_OF_FAM.Generated.cs" />
+        <File Name="DataModel.WK_PA_DETTAM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PA_DETTAM.Generated.cs" />
+        <File Name="DataModel.WK_PLN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PLN.Generated.cs" />
+        <File Name="DataModel.WK_PLN_FORN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PLN_FORN.Generated.cs" />
+        <File Name="DataModel.WK_PLN_MAT.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PLN_MAT.Generated.cs" />
+        <File Name="DataModel.wk_pos_prod.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_pos_prod.Generated.cs" />
+        <File Name="DataModel.wk_pos_prod_enco.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_pos_prod_enco.Generated.cs" />
+        <File Name="DataModel.wk_pos_prod_N.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_pos_prod_N.Generated.cs" />
+        <File Name="DataModel.wk_pospre.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_pospre.Generated.cs" />
+        <File Name="DataModel.WK_PRC_ART.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PRC_ART.Generated.cs" />
+        <File Name="DataModel.WK_PrePack.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PrePack.Generated.cs" />
+        <File Name="DataModel.WK_PRINT_ENTID.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_PRINT_ENTID.Generated.cs" />
+        <File Name="DataModel.WK_REGLIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_REGLIN.Generated.cs" />
+        <File Name="DataModel.WK_REGPROD.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_REGPROD.Generated.cs" />
+        <File Name="DataModel.WK_SAFT_PROCESSA_GT.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_SAFT_PROCESSA_GT.Generated.cs" />
+        <File Name="DataModel.wk_sch.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_sch.Generated.cs" />
+        <File Name="DataModel.WK_SECCOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_SECCOES.Generated.cs" />
+        <File Name="DataModel.WK_SEGCLI.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_SEGCLI.Generated.cs" />
+        <File Name="DataModel.WK_SELECT_OF_EC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_SELECT_OF_EC.Generated.cs" />
+        <File Name="DataModel.WK_STKMIN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_STKMIN.Generated.cs" />
+        <File Name="DataModel.WK_TEXTIL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WK_TEXTIL.Generated.cs" />
+        <File Name="DataModel.wk_variantes.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_variantes.Generated.cs" />
+        <File Name="DataModel.wk_variantes_web.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_variantes_web.Generated.cs" />
+        <File Name="DataModel.wk_ver_prep.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_ver_prep.Generated.cs" />
+        <File Name="DataModel.wk_ver_variantes.cs" OverwriteMode="None" />
+        <File Name="DataModel.wk_ver_variantes.Generated.cs" />
+        <File Name="DataModel.WKBALSTK.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKBALSTK.Generated.cs" />
+        <File Name="DataModel.wkbrnec.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkbrnec.Generated.cs" />
+        <File Name="DataModel.WKCB.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKCB.Generated.cs" />
+        <File Name="DataModel.WKCB_CAIXA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKCB_CAIXA.Generated.cs" />
+        <File Name="DataModel.wkcmprecl.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkcmprecl.Generated.cs" />
+        <File Name="DataModel.wkconf.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkconf.Generated.cs" />
+        <File Name="DataModel.wkcores.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkcores.Generated.cs" />
+        <File Name="DataModel.WKERROS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKERROS.Generated.cs" />
+        <File Name="DataModel.WKETIQ_EAN13.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKETIQ_EAN13.Generated.cs" />
+        <File Name="DataModel.wkEtiqOCForn.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkEtiqOCForn.Generated.cs" />
+        <File Name="DataModel.WKFATL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKFATL.Generated.cs" />
+        <File Name="DataModel.wkfraccao.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkfraccao.Generated.cs" />
+        <File Name="DataModel.WKINVENT.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKINVENT.Generated.cs" />
+        <File Name="DataModel.WKLOTE.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKLOTE.Generated.cs" />
+        <File Name="DataModel.WKLOTEM.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKLOTEM.Generated.cs" />
+        <File Name="DataModel.wkLotesPlanoFab.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkLotesPlanoFab.Generated.cs" />
+        <File Name="DataModel.WKMRP.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKMRP.Generated.cs" />
+        <File Name="DataModel.WKMRP_EC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKMRP_EC.Generated.cs" />
+        <File Name="DataModel.WKMRP_EMB.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKMRP_EMB.Generated.cs" />
+        <File Name="DataModel.wkmrp_plan.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkmrp_plan.Generated.cs" />
+        <File Name="DataModel.wkmrp_semana.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkmrp_semana.Generated.cs" />
+        <File Name="DataModel.wkmrp_sug.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkmrp_sug.Generated.cs" />
+        <File Name="DataModel.WKMRP0.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKMRP0.Generated.cs" />
+        <File Name="DataModel.wkmrpdet.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkmrpdet.Generated.cs" />
+        <File Name="DataModel.WKMRPL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKMRPL.Generated.cs" />
+        <File Name="DataModel.WKOC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKOC.Generated.cs" />
+        <File Name="DataModel.WKOCX.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKOCX.Generated.cs" />
+        <File Name="DataModel.WKORC.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKORC.Generated.cs" />
+        <File Name="DataModel.WKORC_LISTA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKORC_LISTA.Generated.cs" />
+        <File Name="DataModel.WKORC_NIVEL.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKORC_NIVEL.Generated.cs" />
+        <File Name="DataModel.WKORC_SIMULACOES.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKORC_SIMULACOES.Generated.cs" />
+        <File Name="DataModel.wkORDENC.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkORDENC.Generated.cs" />
+        <File Name="DataModel.WKPACK.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKPACK.Generated.cs" />
+        <File Name="DataModel.wkPACKLIST.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkPACKLIST.Generated.cs" />
+        <File Name="DataModel.WKPLAN.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKPLAN.Generated.cs" />
+        <File Name="DataModel.wkplano.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkplano.Generated.cs" />
+        <File Name="DataModel.wkprePACKLIST.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkprePACKLIST.Generated.cs" />
+        <File Name="DataModel.WkPrintPack.cs" OverwriteMode="None" />
+        <File Name="DataModel.WkPrintPack.Generated.cs" />
+        <File Name="DataModel.wkPromocoesArtigos.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkPromocoesArtigos.Generated.cs" />
+        <File Name="DataModel.wkrec.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkrec.Generated.cs" />
+        <File Name="DataModel.WKREC_LEITURAS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKREC_LEITURAS.Generated.cs" />
+        <File Name="DataModel.wkrecolha.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkrecolha.Generated.cs" />
+        <File Name="DataModel.WKRES_OP.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKRES_OP.Generated.cs" />
+        <File Name="DataModel.WKSALDO_DISP.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKSALDO_DISP.Generated.cs" />
+        <File Name="DataModel.WKSALDO_DISP_GRELHA.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKSALDO_DISP_GRELHA.Generated.cs" />
+        <File Name="DataModel.WKSALDO_MOV.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKSALDO_MOV.Generated.cs" />
+        <File Name="DataModel.WKSALDO_RESUMO.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKSALDO_RESUMO.Generated.cs" />
+        <File Name="DataModel.WKSALDO_RESUMO_OUTROS.cs" OverwriteMode="None" />
+        <File Name="DataModel.WKSALDO_RESUMO_OUTROS.Generated.cs" />
+        <File Name="DataModel.wkstkarm.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkstkarm.Generated.cs" />
+        <File Name="DataModel.wkstocks.cs" OverwriteMode="None" />
+        <File Name="DataModel.wkstocks.Generated.cs" />
+        <File Name="DataModel.wksug_resumo.cs" OverwriteMode="None" />
+        <File Name="DataModel.wksug_resumo.Generated.cs" />
+        <File Name="DataModel.wktabprc_Art.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprc_Art.Generated.cs" />
+        <File Name="DataModel.wktabprc_escaloes.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprc_escaloes.Generated.cs" />
+        <File Name="DataModel.wktabprc_forn.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprc_forn.Generated.cs" />
+        <File Name="DataModel.wktabprc_modcli.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprc_modcli.Generated.cs" />
+        <File Name="DataModel.wktabprc_modforn.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprc_modforn.Generated.cs" />
+        <File Name="DataModel.wktabprecos.cs" OverwriteMode="None" />
+        <File Name="DataModel.wktabprecos.Generated.cs" />
+      </GeneratedFiles>
+    </Generation>
+    <DatabaseFirstNamingRules>
+      <EntitySet PluralizationName="Unchanged" />
+      <Class UseSchemaAsPrefix="False" PluralizeCollectionNavigationPropertyName="False" RemoveUnderscores="False" RemoveInvalidCharacters="False" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      <Property RemoveUnderscores="False" RemoveInvalidCharacters="False" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+    </DatabaseFirstNamingRules>
+    <ModelFirst StorageSynchronizationEnabled="False" TargetSchema="dbo" TargetProviderName="System.Data.SqlClient">
+      <TargetServer Server="SQL Server" ServerVersion="2012" />
+      <ModelFirstNamingRules>
+        <Table RemoveUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Pluralize" />
+        <Column RemoveUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      </ModelFirstNamingRules>
+    </ModelFirst>
+    <Diagrams>
+      <Diagram Name="Diagram1" DefaultDiagram="True" />
+    </Diagrams>
+    <Templates>
+      <Template Name="EntityObject" Description="Use this template to generate a strongly-typed ObjectContext class and persistence-aware classes." Enabled="True" PredefinedTemplateName="Entity C#">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=5.7.471.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>DataAnnotations</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=5.7.471.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </ed:Property>
+        <ed:Property Name="FilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ModelNameAsFilesPrefix" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="EntitiesOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=5.7.471.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ContextOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=5.7.471.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementCloneable" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementEquals" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+      </Template>
+    </Templates>
+    <AttributeAssemblies />
+  </ModelSettings>
+</EntityDeveloper>

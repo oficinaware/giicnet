@@ -50,13 +50,11 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="GiicNetBus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\GiicNetBus.dll</HintPath>
+    <Reference Include="GiicNetBus">
+      <HintPath>..\..\SharedBin\GiicNetBus.dll</HintPath>
     </Reference>
-    <Reference Include="GiicNetModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\GiicNetModels.dll</HintPath>
+    <Reference Include="GiicNetModels">
+      <HintPath>..\..\SharedBin\GiicNetModels.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />

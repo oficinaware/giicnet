@@ -40,6 +40,7 @@ namespace WinGiicNet
             myFormGrid.TopLevel = false;
             myFormGrid.AutoScroll = true;
             myFormGrid.Dock = DockStyle.Fill;
+            myFormGrid.tipoLoad = "1";
             this.panel2.Controls.Add(myFormGrid);
             myFormGrid.Show();
         }
@@ -53,6 +54,16 @@ namespace WinGiicNet
             myForm.AutoScroll = true;
             this.panel1.Controls.Add(myForm);
             myForm.Show();
+
+            //this.panel2.Controls.Clear();
+            PanelHelper.Clear(panel2);
+            PastaGrids.formGridClientes myFormGrid = new PastaGrids.formGridClientes();
+            myFormGrid.TopLevel = false;
+            myFormGrid.AutoScroll = true;
+            myFormGrid.Dock = DockStyle.Fill;
+            myFormGrid.tipoLoad = "2";
+            this.panel2.Controls.Add(myFormGrid);
+            myFormGrid.Show();
         }
     }
 }

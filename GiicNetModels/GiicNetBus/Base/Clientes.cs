@@ -76,34 +76,35 @@ namespace GiicNetBus.Base
         //    return cL;
         //}
 
-        public ResultList GetAll(Int32 pag, Int32 itemsByPag)
+        public OperationResult<List<CLIENTES>> GetAll(Int32 pag, Int32 itemsByPag)
         {
-            ResultList r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
+            var resullt = new OperationResult<List<CLIENTES>>();
             DataGiicNetEntities ctx = new DataGiicNetEntities();
 
             try
             {
                 //v ar obj = (from c in ctx.CNDENT select c).Skip(pag * itemsByPag).Take(itemsByPag).ToList();
-                var obj = (from c in ctx.CLIENTES select c).ToList();
+                List<CLIENTES> obj = (from c in ctx.CLIENTES select c).ToList();
                 if (obj.Count > 0)
                 {
-                    r.Status = true;
-                    r.Lista = obj;
-                    return r;
+                    resullt.AddResult(obj);
+
+                    resullt.Type= ResultType.OK;
+
+                    return resullt;
                 }
 
-                r.Status = true;
-                r.Erros = "Não Existem Registos...";
-                return r;
+                resullt.Type = ResultType.Warning;
+                resullt.AddMessage(ResultType.Warning, "Não existem registos...");
+              
+                return resullt;
             }
             catch (Exception ex)
             {
-                r.Status = false;
-                r.Erros = ex.Message + " Details: " + ex.InnerException;
-                return r;
+                resullt.Type = ResultType.Error;
+                resullt.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
+             
+                return resullt;
             }
             finally
             {
@@ -111,24 +112,38 @@ namespace GiicNetBus.Base
             }
         }
 
-        public List<CLIENTES_BR> Browse()
+        public OperationResult<CLIENTES_BR> Browse()
         {
-            Boolean ok = false;
-            string msg = "";
+            ResultList r = new ResultList();
+            r.Status = false;
+            r.Erros = "";
+            r.Lista = null;
+            //Boolean ok = false;
+            //string msg = "";
             try
             {
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 var obj = (from c in ctx.CLIENTES_BR select c).ToList();
-                if (obj != null)
+                if (obj.Count > 0)
                 {
-                    return obj;
+
+
+                    r.Status = true;
+                    r.Lista = obj;
+                    return r;
                 }
-                return null;
+                //return null;
+                r.Status = true;
+                r.Erros = "Não Existem Registos...";
+                return r;
             }
             catch (Exception ex)
             {
-                msg = ex.Message;
-                return null;
+                //msg = ex.Message;
+                //return null;
+                r.Status = false;
+                r.Erros = ex.Message + " Details: " + ex.InnerException;
+                return r;
             }
         }
 
@@ -280,7 +295,7 @@ namespace GiicNetBus.Base
                 ctx.Dispose();
             }
         }
-        
+
         public CLIENTES_BR GetClientesBr(String key)
         {
             Boolean ok = false;

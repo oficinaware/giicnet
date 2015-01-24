@@ -54,7 +54,7 @@
     <Compile Include="Base\Estacoes.cs" />
     <Compile Include="Base\Familias.cs" />
     <Compile Include="Base\Pecas.cs" />
-    <Compile Include="Base\ResultList.cs" />
+    <Compile Include="Base\OperationResult.cs" />
     <Compile Include="Base\TabAge.cs" />
     <Compile Include="Base\TabClasse.cs" />
     <Compile Include="Base\TabContasBan.cs" />

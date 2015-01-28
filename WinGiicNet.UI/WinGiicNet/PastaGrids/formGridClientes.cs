@@ -46,7 +46,7 @@ namespace WinGiicNet.PastaGrids
 
             if(tipoLoad == "2")
             {
-                var watch = Stopwatch.StartNew(); 
+                var watch = Stopwatch.StartNew();
 
                 SqlConnection sX = new SqlConnection("Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true");
                 if (sX.State == ConnectionState.Closed) sX.Open();
@@ -62,14 +62,28 @@ namespace WinGiicNet.PastaGrids
                 watch.Stop();
                 MessageBox.Show(watch.ElapsedMilliseconds.ToString());
             }
+            if (tipoLoad == "3")
+            {
+                var watch = Stopwatch.StartNew();
+                var dTClientes = new DataTable();
+                var cL= new Clientes();
+
+                dTClientes = cL.BrowseDT();
+
+                gridControl1.DataSource = dTClientes;
+
+                watch.Stop();
+                MessageBox.Show(watch.ElapsedMilliseconds.ToString());
+            }
         }
 
         public List<GiicNetModels.CLIENTES_BR> get(string filtro)
         {
-            GiicNetBus.Base.Clientes busClientes = new GiicNetBus.Base.Clientes();
+            Clientes busClientes = new GiicNetBus.Base.Clientes();
+            OperationResult<List<CLIENTES_BR>> oP = new OperationResult<List<CLIENTES_BR>>();
             var list = new List<CLIENTES_BR>();
-            list = busClientes.Browse();
-            return list;
+            oP = busClientes.Browse();
+            return oP.Value;
         }
 
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

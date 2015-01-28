@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinGiicNet.Properties {
+namespace GiicNetBus.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,16 +20,6 @@ namespace WinGiicNet.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"metadata=res://*/Model_DataGiicNet.csdl|res://*/Model_DataGiicNet.ssdl|res://*/Model_DataGiicNet.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=server\sql2008dev;initial catalog=DataGiicNet;persist security info=True;user id=sa;password=sa;multipleactiveresultsets=True;App=EntityFramework&quot;"" providerName=""System.Data.EntityClient")]
-        public string DataGiicNetEntities {
-            get {
-                return ((string)(this["DataGiicNetEntities"]));
             }
         }
         

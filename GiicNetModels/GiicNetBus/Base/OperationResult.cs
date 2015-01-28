@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace GiicNetBus.Base
 {
@@ -22,6 +24,13 @@ namespace GiicNetBus.Base
 
         //Information for validaton of model data
         Validation = 4
+    }
+    public class ResultList
+    {
+        public Boolean Status { get; set; }
+        public IList Lista { get; set; }
+        public String Erros { get; set; }
+
     }
     public class OperationResult<T>
     {

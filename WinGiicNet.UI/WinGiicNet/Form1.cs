@@ -65,5 +65,18 @@ namespace WinGiicNet
             this.panel2.Controls.Add(myFormGrid);
             myFormGrid.Show();
         }
+
+        private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //this.panel2.Controls.Clear();
+            PanelHelper.Clear(panel2);
+            PastaGrids.formGridClientes myFormGrid = new PastaGrids.formGridClientes();
+            myFormGrid.TopLevel = false;
+            myFormGrid.AutoScroll = true;
+            myFormGrid.Dock = DockStyle.Fill;
+            myFormGrid.tipoLoad = "3";
+            this.panel2.Controls.Add(myFormGrid);
+            myFormGrid.Show();
+        }
     }
 }

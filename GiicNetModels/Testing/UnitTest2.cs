@@ -13,10 +13,10 @@ namespace Testing
         [TestMethod]
         public void TestMethod1()
         {
-            var xxZ = new GiicNetBus.Base.Clientes();
-            var resultZ = xxZ.Browse();
-            List<CLIENTES_BR> rZ = new List<CLIENTES_BR>();
-            rZ = resultZ;
+            //var xxZ = new GiicNetBus.Base.Clientes();
+            //var resultZ = xxZ.Browse();
+            //List<CLIENTES_BR> rZ = new List<CLIENTES_BR>();
+            //rZ = resultZ;
 
 
             GiicNetModels.CLIENTES cL = new CLIENTES();

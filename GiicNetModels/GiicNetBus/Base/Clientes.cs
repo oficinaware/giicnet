@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using GiicNetModels;
 using System;
 using System.Collections.Generic;
@@ -78,7 +80,7 @@ namespace GiicNetBus.Base
 
         public OperationResult<List<CLIENTES>> GetAll(Int32 pag, Int32 itemsByPag)
         {
-            var resullt = new OperationResult<List<CLIENTES>>();
+            var result = new OperationResult<List<CLIENTES>>();
             DataGiicNetEntities ctx = new DataGiicNetEntities();
 
             try
@@ -87,24 +89,24 @@ namespace GiicNetBus.Base
                 List<CLIENTES> obj = (from c in ctx.CLIENTES select c).ToList();
                 if (obj.Count > 0)
                 {
-                    resullt.AddResult(obj);
+                    result.AddResult(obj);
 
-                    resullt.Type= ResultType.OK;
+                    result.Type= ResultType.OK;
 
-                    return resullt;
+                    return result;
                 }
 
-                resullt.Type = ResultType.Warning;
-                resullt.AddMessage(ResultType.Warning, "Não existem registos...");
+                result.Type = ResultType.Warning;
+                result.AddMessage(ResultType.Warning, "Não existem registos...");
               
-                return resullt;
+                return result;
             }
             catch (Exception ex)
             {
-                resullt.Type = ResultType.Error;
-                resullt.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
+                result.Type = ResultType.Error;
+                result.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
              
-                return resullt;
+                return result;
             }
             finally
             {
@@ -112,12 +114,33 @@ namespace GiicNetBus.Base
             }
         }
 
-        public OperationResult<CLIENTES_BR> Browse()
+        public DataTable BrowseDT()
         {
-            ResultList r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
+            DataTable dTClientes = new DataTable();
+            string cn = "Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true";
+            SqlConnection sX = new SqlConnection(cn);
+            if(sX.State == ConnectionState.Closed) sX.Open();
+
+            SqlCommand sCmd = new SqlCommand("SELECT * FROM CLIENTES_BR", sX);
+            SqlDataReader sDR = sCmd.ExecuteReader();
+            dTClientes.Load(sDR);
+
+            sDR.Close();
+            sDR.Dispose();
+
+            sX.Close();
+            sX.Dispose();
+
+            return dTClientes;
+        }
+
+        public OperationResult<List<CLIENTES_BR>> Browse()
+        {
+            var result = new OperationResult<List<CLIENTES_BR>>();
+            //ResultList r = new ResultList();
+            //r.Status = false;
+            //r.Erros = "";
+            //r.Lista = null;
             //Boolean ok = false;
             //string msg = "";
             try
@@ -127,23 +150,34 @@ namespace GiicNetBus.Base
                 if (obj.Count > 0)
                 {
 
+                    result.AddResult(obj);
 
-                    r.Status = true;
-                    r.Lista = obj;
-                    return r;
+                    result.Type = ResultType.OK;
+
+                    return result;
+                    //r.Status = true;
+                    //r.Lista = obj;
+                    //return r;
                 }
-                //return null;
-                r.Status = true;
-                r.Erros = "Não Existem Registos...";
-                return r;
+                result.Type = ResultType.Warning;
+                result.AddMessage(ResultType.Warning, "Não existem registos...");
+
+                return result;
+                
+                //r.Status = true;
+                //r.Erros = "Não Existem Registos...";
+                //return r;
             }
             catch (Exception ex)
             {
-                //msg = ex.Message;
-                //return null;
-                r.Status = false;
-                r.Erros = ex.Message + " Details: " + ex.InnerException;
-                return r;
+                result.Type = ResultType.Error;
+                result.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
+
+                return result;
+                
+                //r.Status = false;
+                //r.Erros = ex.Message + " Details: " + ex.InnerException;
+                //return r;
             }
         }
 

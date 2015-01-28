@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiicNetUI", "GiicNetUI\GiicNetUI.csproj", "{A52ABAB2-E83A-44DE-8EC6-94CD6B002AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiicNetUI.Comum", "GiicNetUI.Comum\GiicNetUI.Comum.csproj", "{2960DE44-8164-46C1-872E-4D4B0EE788DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A52ABAB2-E83A-44DE-8EC6-94CD6B002AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52ABAB2-E83A-44DE-8EC6-94CD6B002AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52ABAB2-E83A-44DE-8EC6-94CD6B002AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52ABAB2-E83A-44DE-8EC6-94CD6B002AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2960DE44-8164-46C1-872E-4D4B0EE788DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2960DE44-8164-46C1-872E-4D4B0EE788DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2960DE44-8164-46C1-872E-4D4B0EE788DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2960DE44-8164-46C1-872E-4D4B0EE788DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

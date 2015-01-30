@@ -45,50 +45,56 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(675, 379);
+            this.txtUsername.Location = new System.Drawing.Point(900, 466);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(139, 20);
+            this.txtUsername.Size = new System.Drawing.Size(185, 22);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPasswoed
             // 
-            this.txtPasswoed.Location = new System.Drawing.Point(675, 405);
+            this.txtPasswoed.Location = new System.Drawing.Point(900, 498);
+            this.txtPasswoed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPasswoed.Name = "txtPasswoed";
-            this.txtPasswoed.Size = new System.Drawing.Size(139, 20);
+            this.txtPasswoed.Size = new System.Drawing.Size(185, 22);
             this.txtPasswoed.TabIndex = 1;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl1.Location = new System.Drawing.Point(621, 382);
+            this.labelControl1.Location = new System.Drawing.Point(828, 470);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 13);
+            this.labelControl1.Size = new System.Drawing.Size(58, 16);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Username";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.labelControl2.Location = new System.Drawing.Point(621, 408);
+            this.labelControl2.Location = new System.Drawing.Point(828, 502);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(46, 13);
+            this.labelControl2.Size = new System.Drawing.Size(55, 16);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Password";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(739, 464);
+            this.simpleButton1.Location = new System.Drawing.Point(985, 571);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(100, 28);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Entrar";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(12, 464);
+            this.simpleButton2.Location = new System.Drawing.Point(16, 571);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.Size = new System.Drawing.Size(100, 28);
             this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "Fechar";
             // 
@@ -98,27 +104,29 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(826, 499);
+            this.pictureBox1.Size = new System.Drawing.Size(1157, 614);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(675, 431);
+            this.checkEdit1.Location = new System.Drawing.Point(900, 530);
+            this.checkEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.checkEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.checkEdit1.Properties.Caption = "Lembrar Username";
-            this.checkEdit1.Size = new System.Drawing.Size(139, 19);
+            this.checkEdit1.Size = new System.Drawing.Size(185, 20);
             this.checkEdit1.TabIndex = 7;
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(826, 499);
+            this.ClientSize = new System.Drawing.Size(1157, 614);
             this.Controls.Add(this.checkEdit1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.simpleButton2);
@@ -128,7 +136,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";

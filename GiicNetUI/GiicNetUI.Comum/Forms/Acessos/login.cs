@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GiicNetUI;
 
 namespace GiicNetUI.Comum.Forms.Acessos
 {
@@ -15,6 +16,14 @@ namespace GiicNetUI.Comum.Forms.Acessos
         public login()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            main mainForm = new main();
+            this.Hide();
+            mainForm.ShowDialog();
+            this.Dispose();
         }
     }
 }

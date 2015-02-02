@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            this.mainMenu = new DevExpress.XtraBars.BarManager(this.components);
+            this.mainMenu = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.mainBar = new DevExpress.XtraBars.Bar();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
@@ -188,8 +187,61 @@
             this.barButtonItem206 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem207 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem12 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem18 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem222 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem223 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem224 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem225 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem226 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem227 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem228 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem229 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem230 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem231 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem232 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem233 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem234 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem235 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem38 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem237 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem238 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem239 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem240 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem241 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem242 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem243 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem244 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem39 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem245 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem246 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem247 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem13 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem248 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem249 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem250 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem251 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem252 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem253 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem254 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem255 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem40 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem258 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem259 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem257 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem41 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem260 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem261 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem262 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem263 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem264 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem265 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem42 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem266 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem267 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem268 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem269 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem270 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem271 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem272 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem14 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem114 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem115 = new DevExpress.XtraBars.BarButtonItem();
@@ -290,6 +342,7 @@
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem18 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem60 = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -298,62 +351,74 @@
             this.barButtonItem122 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem195 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem196 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem222 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem223 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem224 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem225 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem226 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem227 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem228 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem229 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem230 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem231 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem232 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem233 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem234 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem235 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem38 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem236 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem237 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem238 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem239 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem240 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem241 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem242 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem243 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem244 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem39 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem245 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem246 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem247 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem248 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem249 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem250 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem251 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem252 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem253 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem254 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem255 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem256 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem40 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem257 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem41 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem42 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem258 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem259 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem260 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem261 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem262 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem263 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem264 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem265 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem266 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem267 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem268 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem269 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem270 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem271 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem272 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem273 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem43 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem44 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem274 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem275 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem276 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem277 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem278 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem279 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem280 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem281 = new DevExpress.XtraBars.BarButtonItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.barButtonItem282 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem283 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem284 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem285 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem286 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem287 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem288 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem289 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem290 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem291 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem292 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem293 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem294 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem295 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem296 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem297 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem298 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem299 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem300 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem301 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem302 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem303 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem304 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem305 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem306 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem307 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem308 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem309 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem310 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem311 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem312 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem313 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem314 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem315 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem316 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem317 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem318 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem319 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem320 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem321 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem322 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem323 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem324 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem325 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem326 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem327 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem328 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem329 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem45 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem46 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem330 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem331 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem332 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem333 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
@@ -684,9 +749,75 @@
             this.barButtonItem269,
             this.barButtonItem270,
             this.barButtonItem271,
-            this.barButtonItem272});
+            this.barButtonItem272,
+            this.barButtonItem273,
+            this.barSubItem43,
+            this.barSubItem44,
+            this.barButtonItem274,
+            this.barButtonItem275,
+            this.barButtonItem276,
+            this.barButtonItem277,
+            this.barButtonItem278,
+            this.barButtonItem279,
+            this.barButtonItem280,
+            this.barButtonItem281,
+            this.barCheckItem1,
+            this.barButtonItem282,
+            this.barButtonItem283,
+            this.barButtonItem284,
+            this.barButtonItem285,
+            this.barButtonItem286,
+            this.barButtonItem287,
+            this.barButtonItem288,
+            this.barButtonItem289,
+            this.barButtonItem290,
+            this.barButtonItem291,
+            this.barButtonItem292,
+            this.barButtonItem293,
+            this.barButtonItem294,
+            this.barButtonItem295,
+            this.barButtonItem296,
+            this.barButtonItem297,
+            this.barButtonItem298,
+            this.barButtonItem299,
+            this.barButtonItem300,
+            this.barButtonItem301,
+            this.barButtonItem302,
+            this.barButtonItem303,
+            this.barButtonItem304,
+            this.barButtonItem305,
+            this.barButtonItem306,
+            this.barButtonItem307,
+            this.barButtonItem308,
+            this.barButtonItem309,
+            this.barButtonItem310,
+            this.barButtonItem311,
+            this.barButtonItem312,
+            this.barButtonItem313,
+            this.barButtonItem314,
+            this.barButtonItem315,
+            this.barButtonItem316,
+            this.barButtonItem317,
+            this.barButtonItem318,
+            this.barButtonItem319,
+            this.barButtonItem320,
+            this.barButtonItem321,
+            this.barButtonItem322,
+            this.barButtonItem323,
+            this.barButtonItem324,
+            this.barButtonItem325,
+            this.barButtonItem326,
+            this.barButtonItem327,
+            this.barButtonItem328,
+            this.barButtonItem329,
+            this.barSubItem45,
+            this.barSubItem46,
+            this.barButtonItem330,
+            this.barButtonItem331,
+            this.barButtonItem332,
+            this.barButtonItem333});
             this.mainMenu.MainMenu = this.mainBar;
-            this.mainMenu.MaxItemId = 315;
+            this.mainMenu.MaxItemId = 381;
             this.mainMenu.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
             this.mainMenu.StatusBar = this.bar3;
@@ -780,48 +911,56 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem35)});
             this.barSubItem4.Name = "barSubItem4";
+            this.barSubItem4.Tag = "Tabelas Saltos";
             // 
             // barButtonItem29
             // 
             this.barButtonItem29.Caption = "Tabela de Dimensões";
             this.barButtonItem29.Id = 47;
             this.barButtonItem29.Name = "barButtonItem29";
+            this.barButtonItem29.Tag = "Tabela de Dimensões";
             // 
             // barButtonItem30
             // 
             this.barButtonItem30.Caption = "Tabela de Capas";
             this.barButtonItem30.Id = 48;
             this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.Tag = "Tabela de Capas";
             // 
             // barButtonItem31
             // 
             this.barButtonItem31.Caption = "Tabela de Custos Industriais";
             this.barButtonItem31.Id = 49;
             this.barButtonItem31.Name = "barButtonItem31";
+            this.barButtonItem31.Tag = "Tabela de Custos Industriais";
             // 
             // barButtonItem32
             // 
             this.barButtonItem32.Caption = "Tabela de Cortantes";
             this.barButtonItem32.Id = 50;
             this.barButtonItem32.Name = "barButtonItem32";
+            this.barButtonItem32.Tag = "Tabela de Cortantes";
             // 
             // barButtonItem33
             // 
             this.barButtonItem33.Caption = "Tabela de Materiais";
             this.barButtonItem33.Id = 51;
             this.barButtonItem33.Name = "barButtonItem33";
+            this.barButtonItem33.Tag = "Tabela de Materiais";
             // 
             // barButtonItem34
             // 
             this.barButtonItem34.Caption = "Tabela de Margens";
             this.barButtonItem34.Id = 52;
             this.barButtonItem34.Name = "barButtonItem34";
+            this.barButtonItem34.Tag = "Tabela de Margens";
             // 
             // barButtonItem35
             // 
             this.barButtonItem35.Caption = "Tabela de Matérias Subsidiárias";
             this.barButtonItem35.Id = 53;
             this.barButtonItem35.Name = "barButtonItem35";
+            this.barButtonItem35.Tag = "Tabela de Matérias Subsidiárias";
             // 
             // barSubItem5
             // 
@@ -854,150 +993,175 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem59, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem20, true)});
             this.barSubItem5.Name = "barSubItem5";
+            this.barSubItem5.Tag = "Tabela Dados Técnicos";
             // 
             // barButtonItem36
             // 
-            this.barButtonItem36.Caption = "Tabla de Processos de Amostras";
+            this.barButtonItem36.Caption = "Tabela de Processos de Amostras";
             this.barButtonItem36.Id = 54;
             this.barButtonItem36.Name = "barButtonItem36";
+            this.barButtonItem36.Tag = "Tabela de Processos de Amostras";
             // 
             // barButtonItem37
             // 
             this.barButtonItem37.Caption = "Tabela de Cores P.Acabado";
             this.barButtonItem37.Id = 55;
             this.barButtonItem37.Name = "barButtonItem37";
+            this.barButtonItem37.Tag = "Tabela de Cores P.Acabado";
             // 
             // barButtonItem38
             // 
             this.barButtonItem38.Caption = "Tabela de Cores Produto Final / Variantes";
             this.barButtonItem38.Id = 56;
             this.barButtonItem38.Name = "barButtonItem38";
+            this.barButtonItem38.Tag = "Tabela de Cores Produto Final / Variantes";
             // 
             // barButtonItem39
             // 
             this.barButtonItem39.Caption = "Tabela de Codigos Pautais Intrastat";
             this.barButtonItem39.Id = 57;
             this.barButtonItem39.Name = "barButtonItem39";
+            this.barButtonItem39.Tag = "Tabela de Codigos Pautais Intrastat";
             // 
             // barButtonItem40
             // 
             this.barButtonItem40.Caption = "Tabela de Unidades de Medida";
             this.barButtonItem40.Id = 58;
             this.barButtonItem40.Name = "barButtonItem40";
+            this.barButtonItem40.Tag = "Tabela de Unidades de Medida";
             // 
             // barButtonItem41
             // 
             this.barButtonItem41.Caption = "Tabela de Conversão de Un Medidas";
             this.barButtonItem41.Id = 59;
             this.barButtonItem41.Name = "barButtonItem41";
+            this.barButtonItem41.Tag = "Tabela de Conversão de Un Medidas";
             // 
             // barButtonItem42
             // 
             this.barButtonItem42.Caption = "Tabela de Marcas/Linhas";
             this.barButtonItem42.Id = 60;
             this.barButtonItem42.Name = "barButtonItem42";
+            this.barButtonItem42.Tag = "Tabela de Marcas/Linhas";
             // 
             // barButtonItem43
             // 
             this.barButtonItem43.Caption = "Tabela de Sistemas de Corte";
             this.barButtonItem43.Id = 61;
             this.barButtonItem43.Name = "barButtonItem43";
+            this.barButtonItem43.Tag = "Tabela de Sistemas de Corte";
             // 
             // barButtonItem44
             // 
             this.barButtonItem44.Caption = "Tabela de Sistemas de Montagem";
             this.barButtonItem44.Id = 62;
             this.barButtonItem44.Name = "barButtonItem44";
+            this.barButtonItem44.Tag = "Tabela de Sistemas de Montagem";
             // 
             // barButtonItem45
             // 
             this.barButtonItem45.Caption = "Tabelas de Familias";
             this.barButtonItem45.Id = 63;
             this.barButtonItem45.Name = "barButtonItem45";
+            this.barButtonItem45.Tag = "Tabelas de Familias";
             // 
             // barButtonItem46
             // 
             this.barButtonItem46.Caption = "Tabelas de Preços";
             this.barButtonItem46.Id = 64;
             this.barButtonItem46.Name = "barButtonItem46";
+            this.barButtonItem46.Tag = "Tabelas de Preços";
             // 
             // barButtonItem47
             // 
             this.barButtonItem47.Caption = "Peças -> Familias";
             this.barButtonItem47.Id = 65;
             this.barButtonItem47.Name = "barButtonItem47";
+            this.barButtonItem47.Tag = "Peças -> Familias";
             // 
             // barButtonItem48
             // 
             this.barButtonItem48.Caption = "Pré-Séries";
             this.barButtonItem48.Id = 66;
             this.barButtonItem48.Name = "barButtonItem48";
+            this.barButtonItem48.Tag = "Pré-Séries";
             // 
             // barButtonItem49
             // 
             this.barButtonItem49.Caption = "Tabela de Escalas";
             this.barButtonItem49.Id = 67;
             this.barButtonItem49.Name = "barButtonItem49";
+            this.barButtonItem49.Tag = "Tabela de Escalas";
             // 
             // barButtonItem50
             // 
             this.barButtonItem50.Caption = "Tabela de Estações";
             this.barButtonItem50.Id = 68;
             this.barButtonItem50.Name = "barButtonItem50";
+            this.barButtonItem50.Tag = "Tabela de Estações";
             // 
             // barButtonItem51
             // 
             this.barButtonItem51.Caption = "Tabela de Maquinas";
             this.barButtonItem51.Id = 69;
             this.barButtonItem51.Name = "barButtonItem51";
+            this.barButtonItem51.Tag = "Tabela de Maquinas";
             // 
             // barButtonItem52
             // 
             this.barButtonItem52.Caption = "Operações";
             this.barButtonItem52.Id = 70;
             this.barButtonItem52.Name = "barButtonItem52";
+            this.barButtonItem52.Tag = "Operações";
             // 
             // barButtonItem53
             // 
             this.barButtonItem53.Caption = "Tabela de Fases de Fabrico";
             this.barButtonItem53.Id = 71;
             this.barButtonItem53.Name = "barButtonItem53";
+            this.barButtonItem53.Tag = "Tabela de Fases de Fabrico";
             // 
             // barButtonItem54
             // 
             this.barButtonItem54.Caption = "Tabela de Secções";
             this.barButtonItem54.Id = 72;
             this.barButtonItem54.Name = "barButtonItem54";
+            this.barButtonItem54.Tag = "Tabela de Secções";
             // 
             // barButtonItem55
             // 
             this.barButtonItem55.Caption = "tabelas de Orçamentos - Ano/Mes - Resumo";
             this.barButtonItem55.Id = 73;
             this.barButtonItem55.Name = "barButtonItem55";
+            this.barButtonItem55.Tag = "tabelas de Orçamentos - Ano/Mes - Resumo";
             // 
             // barButtonItem56
             // 
             this.barButtonItem56.Caption = "Consumos Por Ref/Tamanho (Cad)";
             this.barButtonItem56.Id = 74;
             this.barButtonItem56.Name = "barButtonItem56";
+            this.barButtonItem56.Tag = "Consumos Por Ref/Tamanho (Cad)";
             // 
             // barButtonItem57
             // 
             this.barButtonItem57.Caption = "Tipo Cartaz";
             this.barButtonItem57.Id = 75;
             this.barButtonItem57.Name = "barButtonItem57";
+            this.barButtonItem57.Tag = "Tipo Cartaz";
             // 
             // barButtonItem58
             // 
             this.barButtonItem58.Caption = "Tipos de Côr";
             this.barButtonItem58.Id = 76;
             this.barButtonItem58.Name = "barButtonItem58";
+            this.barButtonItem58.Tag = "Tipos de Côr";
             // 
             // barButtonItem59
             // 
             this.barButtonItem59.Caption = "Templates";
             this.barButtonItem59.Id = 77;
             this.barButtonItem59.Name = "barButtonItem59";
+            this.barButtonItem59.Tag = "Templates";
             // 
             // barSubItem20
             // 
@@ -1007,180 +1171,214 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem61),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem62)});
             this.barSubItem20.Name = "barSubItem20";
+            this.barSubItem20.Tag = "Pictogramas";
             // 
             // barButtonItem61
             // 
             this.barButtonItem61.Caption = "Tabela de Pictogramas";
             this.barButtonItem61.Id = 80;
             this.barButtonItem61.Name = "barButtonItem61";
+            this.barButtonItem61.Tag = "Tabela de Pictogramas";
             // 
             // barButtonItem62
             // 
             this.barButtonItem62.Caption = "Configuração Pictogramas";
             this.barButtonItem62.Id = 81;
             this.barButtonItem62.Name = "barButtonItem62";
+            this.barButtonItem62.Tag = "Configuração Pictogramas";
             // 
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "Clientes";
             this.barButtonItem2.Id = 7;
             this.barButtonItem2.Name = "barButtonItem2";
+<<<<<<< HEAD
+            this.barButtonItem2.Tag = "Clientes";
+=======
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+>>>>>>> origin/master
             // 
             // barButtonItem3
             // 
             this.barButtonItem3.Caption = "Fornecedores";
             this.barButtonItem3.Id = 8;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.Tag = "Fornecedores";
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Tabela de Documentos";
             this.barButtonItem4.Id = 22;
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.Tag = "Tabela de Documentos";
             // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "Tabel de Taxa de IVA";
             this.barButtonItem5.Id = 23;
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.Tag = "Tabel de Taxa de IVA";
             // 
             // barButtonItem6
             // 
             this.barButtonItem6.Caption = "Tabela de Motivos de Isenção de IVA";
             this.barButtonItem6.Id = 24;
             this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.Tag = "Tabela de Motivos de Isenção de IVA";
             // 
             // barButtonItem7
             // 
             this.barButtonItem7.Caption = "Tabela de Retenções na Fonte";
             this.barButtonItem7.Id = 25;
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.Tag = "Tabela de Retenções na Fonte";
             // 
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "Tabela de Codigo Diário";
             this.barButtonItem8.Id = 26;
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.Tag = "Tabela de Codigo Diário";
             // 
             // barButtonItem9
             // 
             this.barButtonItem9.Caption = "Moedas / Cambios";
             this.barButtonItem9.Id = 27;
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.Tag = "Moedas / Cambios";
             // 
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "Tabela Contas de Bancos";
             this.barButtonItem10.Id = 28;
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.Tag = "Tabela Contas de Bancos";
             // 
             // barButtonItem11
             // 
             this.barButtonItem11.Caption = "Condições de Pagamento";
             this.barButtonItem11.Id = 29;
             this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.Tag = "Condições de Pagamento";
             // 
             // barButtonItem12
             // 
             this.barButtonItem12.Caption = "Tabela de Classe";
             this.barButtonItem12.Id = 30;
             this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.Tag = "Tabela de Classe";
             // 
             // barButtonItem13
             // 
             this.barButtonItem13.Caption = "Zonas/Países/Local";
             this.barButtonItem13.Id = 31;
             this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.Tag = "Zonas/Países/Local";
             // 
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Agentes";
             this.barButtonItem14.Id = 32;
             this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.Tag = "Agentes";
             // 
             // barButtonItem15
             // 
             this.barButtonItem15.Caption = "Associar Agente -> Zona";
             this.barButtonItem15.Id = 33;
             this.barButtonItem15.Name = "barButtonItem15";
+            this.barButtonItem15.Tag = "Associar Agente -> Zona";
             // 
             // barButtonItem16
             // 
             this.barButtonItem16.Caption = "Meios de Transporte";
             this.barButtonItem16.Id = 34;
             this.barButtonItem16.Name = "barButtonItem16";
+            this.barButtonItem16.Tag = "Meios de Transporte";
             // 
             // barButtonItem17
             // 
             this.barButtonItem17.Caption = "Transitários";
             this.barButtonItem17.Id = 35;
             this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItem17.Tag = "Transitários";
             // 
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "Condições de Entrega";
             this.barButtonItem18.Id = 36;
             this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.Tag = "Condições de Entrega";
             // 
             // barButtonItem19
             // 
             this.barButtonItem19.Caption = "M.Transporte / Cod Matriculas";
             this.barButtonItem19.Id = 37;
             this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.Tag = "M.Transporte / Cod Matriculas";
             // 
             // barButtonItem20
             // 
             this.barButtonItem20.Caption = "Tabela de Seguradoras de Crédito";
             this.barButtonItem20.Id = 38;
             this.barButtonItem20.Name = "barButtonItem20";
+            this.barButtonItem20.Tag = "Tabela de Seguradoras de Crédito";
             // 
             // barButtonItem21
             // 
             this.barButtonItem21.Caption = "Tabela de Rubricas";
             this.barButtonItem21.Id = 39;
             this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItem21.Tag = "Tabela de Rubricas";
             // 
             // barButtonItem22
             // 
             this.barButtonItem22.Caption = "Tabela de Motivos de Anulações de Encomendas";
             this.barButtonItem22.Id = 40;
             this.barButtonItem22.Name = "barButtonItem22";
+            this.barButtonItem22.Tag = "Tabela de Motivos de Anulações de Encomendas";
             // 
             // barButtonItem23
             // 
             this.barButtonItem23.Caption = "Tabela de Sortidos";
             this.barButtonItem23.Id = 41;
             this.barButtonItem23.Name = "barButtonItem23";
+            this.barButtonItem23.Tag = "Tabela de Sortidos";
             // 
             // barButtonItem24
             // 
             this.barButtonItem24.Caption = "Tabela de Classes de Caixas";
             this.barButtonItem24.Id = 42;
             this.barButtonItem24.Name = "barButtonItem24";
+            this.barButtonItem24.Tag = "Tabela de Classes de Caixas";
             // 
             // barButtonItem25
             // 
             this.barButtonItem25.Caption = "Tabela de Embalagens";
             this.barButtonItem25.Id = 43;
             this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.Tag = "Tabela de Embalagens";
             // 
             // barButtonItem26
             // 
             this.barButtonItem26.Caption = "Tabela de Regras de Embalagens";
             this.barButtonItem26.Id = 44;
             this.barButtonItem26.Name = "barButtonItem26";
+            this.barButtonItem26.Tag = "Tabela de Regras de Embalagens";
             // 
             // barButtonItem27
             // 
             this.barButtonItem27.Caption = "Tabela de Armazéns";
             this.barButtonItem27.Id = 45;
             this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.Tag = "Tabela de Armazéns";
             // 
             // barButtonItem28
             // 
             this.barButtonItem28.Caption = "Ficheiros - Links";
             this.barButtonItem28.Id = 46;
             this.barButtonItem28.Name = "barButtonItem28";
+            this.barButtonItem28.Tag = "Ficheiros - Links";
             // 
             // barSubItem3
             // 
@@ -1211,36 +1409,42 @@
             this.barButtonItem63.Caption = "Tabela de Cartazes/Cores";
             this.barButtonItem63.Id = 82;
             this.barButtonItem63.Name = "barButtonItem63";
+            this.barButtonItem63.Tag = "Tabela de Cartazes/Cores";
             // 
             // barButtonItem64
             // 
             this.barButtonItem64.Caption = "Artigos";
             this.barButtonItem64.Id = 83;
             this.barButtonItem64.Name = "barButtonItem64";
+            this.barButtonItem64.Tag = "Artigos";
             // 
             // barButtonItem65
             // 
             this.barButtonItem65.Caption = "Artigos - Estação - Marca";
             this.barButtonItem65.Id = 84;
             this.barButtonItem65.Name = "barButtonItem65";
+            this.barButtonItem65.Tag = "Artigos - Estação - Marca";
             // 
             // barButtonItem66
             // 
             this.barButtonItem66.Caption = "Tabela de Referências";
             this.barButtonItem66.Id = 85;
             this.barButtonItem66.Name = "barButtonItem66";
+            this.barButtonItem66.Tag = "Tabela de Referências";
             // 
             // barButtonItem67
             // 
             this.barButtonItem67.Caption = "Modelos / Variantes";
             this.barButtonItem67.Id = 86;
             this.barButtonItem67.Name = "barButtonItem67";
+            this.barButtonItem67.Tag = "Modelos / Variantes";
             // 
             // barButtonItem68
             // 
             this.barButtonItem68.Caption = "Rotas de Fabrico";
             this.barButtonItem68.Id = 87;
             this.barButtonItem68.Name = "barButtonItem68";
+            this.barButtonItem68.Tag = "Rotas de Fabrico";
             // 
             // barSubItem21
             // 
@@ -1250,18 +1454,21 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem76),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem77)});
             this.barSubItem21.Name = "barSubItem21";
+            this.barSubItem21.Tag = "Cortantes";
             // 
             // barButtonItem76
             // 
             this.barButtonItem76.Caption = "Tabela de Cortantes";
             this.barButtonItem76.Id = 100;
             this.barButtonItem76.Name = "barButtonItem76";
+            this.barButtonItem76.Tag = "Tabela de Cortantes";
             // 
             // barButtonItem77
             // 
             this.barButtonItem77.Caption = "Tabela de Ferramentas";
             this.barButtonItem77.Id = 101;
             this.barButtonItem77.Name = "barButtonItem77";
+            this.barButtonItem77.Tag = "Tabela de Ferramentas";
             // 
             // barSubItem22
             // 
@@ -1272,66 +1479,78 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem79),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem80)});
             this.barSubItem22.Name = "barSubItem22";
+            this.barSubItem22.Tag = "Moldes";
             // 
             // barButtonItem78
             // 
             this.barButtonItem78.Caption = "Tabela de Cotas";
             this.barButtonItem78.Id = 102;
             this.barButtonItem78.Name = "barButtonItem78";
+            this.barButtonItem78.Tag = "Tabela de Cotas";
             // 
             // barButtonItem79
             // 
             this.barButtonItem79.Caption = "Tabela de Moldes";
             this.barButtonItem79.Id = 103;
             this.barButtonItem79.Name = "barButtonItem79";
+            this.barButtonItem79.Tag = "Tabela de Moldes";
             // 
             // barButtonItem80
             // 
             this.barButtonItem80.Caption = "Tempos de Injecção";
             this.barButtonItem80.Id = 104;
             this.barButtonItem80.Name = "barButtonItem80";
+            this.barButtonItem80.Tag = "Tempos de Injecção";
             // 
             // barButtonItem69
             // 
             this.barButtonItem69.Caption = "Orçamentos";
             this.barButtonItem69.Id = 90;
             this.barButtonItem69.Name = "barButtonItem69";
+            this.barButtonItem69.Tag = "Orçamentos";
             // 
             // barButtonItem70
             // 
             this.barButtonItem70.Caption = "Orçamentos - Lista de Modelos";
             this.barButtonItem70.Id = 91;
             this.barButtonItem70.Name = "barButtonItem70";
+            this.barButtonItem70.Tag = "Orçamentos - Lista de Modelos";
             // 
             // barButtonItem71
             // 
             this.barButtonItem71.Caption = "Orçamentos - Lista de Modelos - Por Escalões";
             this.barButtonItem71.Id = 92;
             this.barButtonItem71.Name = "barButtonItem71";
+            this.barButtonItem71.Tag = "Orçamentos - Lista de Modelos - Por Escalões";
             // 
             // barButtonItem72
             // 
             this.barButtonItem72.Caption = "Registo de Orçamentos / Simulações / Amostras";
             this.barButtonItem72.Id = 93;
             this.barButtonItem72.Name = "barButtonItem72";
+            this.barButtonItem72.Tag = "Registo de Orçamentos / Simulações / Amostras";
             // 
             // barButtonItem73
             // 
             this.barButtonItem73.Caption = "Amostras Pendentes / Posição";
             this.barButtonItem73.Id = 94;
             this.barButtonItem73.Name = "barButtonItem73";
+            this.barButtonItem73.Tag = "Amostras Pendentes / Posição";
             // 
             // barButtonItem74
             // 
             this.barButtonItem74.Caption = "Mapa Resumo das Amostras Fabricadas";
             this.barButtonItem74.Id = 95;
             this.barButtonItem74.Name = "barButtonItem74";
+            this.barButtonItem74.Tag = "Mapa Resumo das Amostras Fabricadas";
             // 
             // barButtonItem75
             // 
             this.barButtonItem75.Caption = "Etiquetas P/Amostras";
             this.barButtonItem75.Id = 96;
             this.barButtonItem75.Name = "barButtonItem75";
+            this.barButtonItem75.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.False;
+            this.barButtonItem75.Tag = "Etiquetas P/Amostras";
             // 
             // barSubItem23
             // 
@@ -1341,18 +1560,21 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem81),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem82)});
             this.barSubItem23.Name = "barSubItem23";
+            this.barSubItem23.Tag = "Consultas";
             // 
             // barButtonItem81
             // 
             this.barButtonItem81.Caption = "Fichas Técnica";
             this.barButtonItem81.Id = 105;
             this.barButtonItem81.Name = "barButtonItem81";
+            this.barButtonItem81.Tag = "Fichas Técnica";
             // 
             // barButtonItem82
             // 
             this.barButtonItem82.Caption = "Pré-Séries - Ficha Técnica";
             this.barButtonItem82.Id = 106;
             this.barButtonItem82.Name = "barButtonItem82";
+            this.barButtonItem82.Tag = "Pré-Séries - Ficha Técnica";
             // 
             // barSubItem24
             // 
@@ -1364,30 +1586,35 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem85),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem86)});
             this.barSubItem24.Name = "barSubItem24";
+            this.barSubItem24.Tag = "Relatórios";
             // 
             // barButtonItem83
             // 
             this.barButtonItem83.Caption = "Ficha Técnica - C/Opção de Lingua";
             this.barButtonItem83.Id = 107;
             this.barButtonItem83.Name = "barButtonItem83";
+            this.barButtonItem83.Tag = "Ficha Técnica - C/Opção de Lingua";
             // 
             // barButtonItem84
             // 
             this.barButtonItem84.Caption = "Artigos";
             this.barButtonItem84.Id = 108;
             this.barButtonItem84.Name = "barButtonItem84";
+            this.barButtonItem84.Tag = "Artigos";
             // 
             // barButtonItem85
             // 
             this.barButtonItem85.Caption = "Familias";
             this.barButtonItem85.Id = 109;
             this.barButtonItem85.Name = "barButtonItem85";
+            this.barButtonItem85.Tag = "Familias";
             // 
             // barButtonItem86
             // 
             this.barButtonItem86.Caption = "Peças";
             this.barButtonItem86.Id = 110;
             this.barButtonItem86.Name = "barButtonItem86";
+            this.barButtonItem86.Tag = "Peças";
             // 
             // barSubItem7
             // 
@@ -1437,36 +1664,42 @@
             this.barButtonItem91.Caption = "Registo de Preços - Estação / Marca";
             this.barButtonItem91.Id = 115;
             this.barButtonItem91.Name = "barButtonItem91";
+            this.barButtonItem91.Tag = "Registo de Preços - Estação / Marca";
             // 
             // barButtonItem92
             // 
             this.barButtonItem92.Caption = "Registo de Preços - Modelo/Cliente";
             this.barButtonItem92.Id = 116;
             this.barButtonItem92.Name = "barButtonItem92";
+            this.barButtonItem92.Tag = "Registo de Preços - Modelo/Cliente";
             // 
             // barButtonItem93
             // 
             this.barButtonItem93.Caption = "Pré-Packing List";
             this.barButtonItem93.Id = 117;
             this.barButtonItem93.Name = "barButtonItem93";
+            this.barButtonItem93.Tag = "Pré-Packing List";
             // 
             // barButtonItem94
             // 
             this.barButtonItem94.Caption = "Catálogos";
             this.barButtonItem94.Id = 118;
             this.barButtonItem94.Name = "barButtonItem94";
+            this.barButtonItem94.Tag = "Catálogos";
             // 
             // barButtonItem95
             // 
             this.barButtonItem95.Caption = "Catálogos Fornecedores - ShoeBiz";
             this.barButtonItem95.Id = 119;
             this.barButtonItem95.Name = "barButtonItem95";
+            this.barButtonItem95.Tag = "Catálogos Fornecedores - ShoeBiz";
             // 
             // barButtonItem96
             // 
             this.barButtonItem96.Caption = "Calculo Nec Materiais - Conjunto Encomendas";
             this.barButtonItem96.Id = 120;
             this.barButtonItem96.Name = "barButtonItem96";
+            this.barButtonItem96.Tag = "Calculo Nec Materiais - Conjunto Encomendas";
             // 
             // barSubItem25
             // 
@@ -1481,6 +1714,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem103),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem104)});
             this.barSubItem25.Name = "barSubItem25";
+            this.barSubItem25.Tag = "Consultas";
             // 
             // barButtonItem98
             // 
@@ -1539,6 +1773,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem112),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem113)});
             this.barSubItem26.Name = "barSubItem26";
+            this.barSubItem26.Tag = "Relatórios";
             // 
             // barButtonItem105
             // 
@@ -1598,18 +1833,63 @@
             // 
             this.barSubItem8.Caption = "Preparação";
             this.barSubItem8.Id = 10;
+            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem43),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem44),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem274),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem275),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem276),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem277),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem278),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem279)});
             this.barSubItem8.Name = "barSubItem8";
             // 
             // barSubItem9
             // 
             this.barSubItem9.Caption = "Planeamento";
             this.barSubItem9.Id = 11;
+            this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem298),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem299),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem300),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem301),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem302),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem303),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem304),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem305),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem306),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem307),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem308)});
             this.barSubItem9.Name = "barSubItem9";
             // 
             // barSubItem10
             // 
             this.barSubItem10.Caption = "Exploração da Produção";
             this.barSubItem10.Id = 12;
+            this.barSubItem10.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem309),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem310),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem311),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem312),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem313),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem314),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem315),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem316),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem317),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem318),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem319),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem320),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem321),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem322),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem323),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem324),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem325),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem326),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem327),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem328),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem329),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem45),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem46)});
             this.barSubItem10.Name = "barSubItem10";
             // 
             // barSubItem11
@@ -1841,11 +2121,181 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem39, true)});
             this.barSubItem12.Name = "barSubItem12";
             // 
-            // barSubItem18
+            // barButtonItem222
             // 
-            this.barSubItem18.Caption = "Encomendas Clientes";
-            this.barSubItem18.Id = 20;
-            this.barSubItem18.Name = "barSubItem18";
+            this.barButtonItem222.Caption = "Manutenção Mov. de Stocks";
+            this.barButtonItem222.Id = 259;
+            this.barButtonItem222.Name = "barButtonItem222";
+            // 
+            // barButtonItem223
+            // 
+            this.barButtonItem223.Caption = "Registo de Movimentos - Stocks";
+            this.barButtonItem223.Id = 260;
+            this.barButtonItem223.Name = "barButtonItem223";
+            // 
+            // barButtonItem224
+            // 
+            this.barButtonItem224.Caption = "Fraccionamento de Lotes";
+            this.barButtonItem224.Id = 261;
+            this.barButtonItem224.Name = "barButtonItem224";
+            // 
+            // barButtonItem225
+            // 
+            this.barButtonItem225.Caption = "Inventários";
+            this.barButtonItem225.Id = 262;
+            this.barButtonItem225.Name = "barButtonItem225";
+            // 
+            // barButtonItem226
+            // 
+            this.barButtonItem226.Caption = "Movimentos Stocks - Via Leitura Óptica";
+            this.barButtonItem226.Id = 263;
+            this.barButtonItem226.Name = "barButtonItem226";
+            // 
+            // barButtonItem227
+            // 
+            this.barButtonItem227.Caption = "Movimentos Stocks - Via Ordens Fabrico";
+            this.barButtonItem227.Id = 264;
+            this.barButtonItem227.Name = "barButtonItem227";
+            // 
+            // barButtonItem228
+            // 
+            this.barButtonItem228.Caption = "Movimentos Stocks - Via Encomenda";
+            this.barButtonItem228.Id = 265;
+            this.barButtonItem228.Name = "barButtonItem228";
+            // 
+            // barButtonItem229
+            // 
+            this.barButtonItem229.Caption = "Movimentos Stocks - Via Folder";
+            this.barButtonItem229.Id = 266;
+            this.barButtonItem229.Name = "barButtonItem229";
+            // 
+            // barButtonItem230
+            // 
+            this.barButtonItem230.Caption = "Movimentos Stocks - Via Packing List";
+            this.barButtonItem230.Id = 267;
+            this.barButtonItem230.Name = "barButtonItem230";
+            // 
+            // barButtonItem231
+            // 
+            this.barButtonItem231.Caption = "Tabela de Locais / Consultas de Existências";
+            this.barButtonItem231.Id = 268;
+            this.barButtonItem231.Name = "barButtonItem231";
+            // 
+            // barButtonItem232
+            // 
+            this.barButtonItem232.Caption = "Consultas de Existências / Transferência de Localização";
+            this.barButtonItem232.Id = 269;
+            this.barButtonItem232.Name = "barButtonItem232";
+            // 
+            // barButtonItem233
+            // 
+            this.barButtonItem233.Caption = "Consulta de Existências / Lotes";
+            this.barButtonItem233.Id = 270;
+            this.barButtonItem233.Name = "barButtonItem233";
+            // 
+            // barButtonItem234
+            // 
+            this.barButtonItem234.Caption = "Consultas a Conta Corrente/Artigo";
+            this.barButtonItem234.Id = 271;
+            this.barButtonItem234.Name = "barButtonItem234";
+            // 
+            // barButtonItem235
+            // 
+            this.barButtonItem235.Caption = "Consultas a Conta Corrente/Artigo - Local/Lote";
+            this.barButtonItem235.Id = 272;
+            this.barButtonItem235.Name = "barButtonItem235";
+<<<<<<< HEAD
+            // 
+            // barSubItem38
+            // 
+            this.barSubItem38.Caption = "Relatórios";
+            this.barSubItem38.Id = 273;
+            this.barSubItem38.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem237),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem238),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem239),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem240),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem241),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem242),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem243),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem244)});
+            this.barSubItem38.Name = "barSubItem38";
+            // 
+            // barButtonItem237
+            // 
+            this.barButtonItem237.Caption = "Relatórios de Movimentos";
+            this.barButtonItem237.Id = 275;
+            this.barButtonItem237.Name = "barButtonItem237";
+            // 
+            // barButtonItem238
+            // 
+            this.barButtonItem238.Caption = "Relatórios de Movimentos P/Armazém";
+            this.barButtonItem238.Id = 276;
+            this.barButtonItem238.Name = "barButtonItem238";
+            // 
+            // barButtonItem239
+            // 
+            this.barButtonItem239.Caption = "Relatórios de Movimentos por Tipo Documento";
+            this.barButtonItem239.Id = 277;
+            this.barButtonItem239.Name = "barButtonItem239";
+            // 
+            // barButtonItem240
+            // 
+            this.barButtonItem240.Caption = "Conta Corrente por Artigo";
+            this.barButtonItem240.Id = 278;
+            this.barButtonItem240.Name = "barButtonItem240";
+            // 
+            // barButtonItem241
+            // 
+            this.barButtonItem241.Caption = "Mapa de Existências P/Familia";
+            this.barButtonItem241.Id = 279;
+            this.barButtonItem241.Name = "barButtonItem241";
+            // 
+            // barButtonItem242
+            // 
+            this.barButtonItem242.Caption = "Mapa de Existências P/Familia / Local e Lotes";
+            this.barButtonItem242.Id = 280;
+            this.barButtonItem242.Name = "barButtonItem242";
+            // 
+            // barButtonItem243
+            // 
+            this.barButtonItem243.Caption = "Mapa Stocks Minimos";
+            this.barButtonItem243.Id = 281;
+            this.barButtonItem243.Name = "barButtonItem243";
+            // 
+            // barButtonItem244
+            // 
+            this.barButtonItem244.Caption = "Antiguidades P/Familia";
+            this.barButtonItem244.Id = 282;
+            this.barButtonItem244.Name = "barButtonItem244";
+            // 
+            // barSubItem39
+            // 
+            this.barSubItem39.Caption = "Utilitários";
+            this.barSubItem39.Id = 283;
+            this.barSubItem39.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem245),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem246),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem247)});
+            this.barSubItem39.Name = "barSubItem39";
+            // 
+            // barButtonItem245
+            // 
+            this.barButtonItem245.Caption = "Conciliação dos Saldos pelos Movimentos de Stock";
+            this.barButtonItem245.Id = 284;
+            this.barButtonItem245.Name = "barButtonItem245";
+            // 
+            // barButtonItem246
+            // 
+            this.barButtonItem246.Caption = "Alteração das datas em movimentos de Stocks";
+            this.barButtonItem246.Id = 285;
+            this.barButtonItem246.Name = "barButtonItem246";
+            // 
+            // barButtonItem247
+            // 
+            this.barButtonItem247.Caption = "Encerramento de Stocks";
+            this.barButtonItem247.Id = 286;
+            this.barButtonItem247.Name = "barButtonItem247";
             // 
             // barSubItem13
             // 
@@ -1865,6 +2315,574 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem41, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem42)});
             this.barSubItem13.Name = "barSubItem13";
+            // 
+            // barButtonItem248
+            // 
+            this.barButtonItem248.Caption = "Ordens de Compra";
+            this.barButtonItem248.Id = 287;
+            this.barButtonItem248.Name = "barButtonItem248";
+            // 
+            // barButtonItem249
+            // 
+            this.barButtonItem249.Caption = "Ordens de Compra Automáticas - Via Encomenda";
+            this.barButtonItem249.Id = 288;
+            this.barButtonItem249.Name = "barButtonItem249";
+            // 
+            // barButtonItem250
+            // 
+            this.barButtonItem250.Caption = "Ordens de Compra Automáticas - VIa O.Fabrico";
+            this.barButtonItem250.Id = 289;
+            this.barButtonItem250.Name = "barButtonItem250";
+            // 
+            // barButtonItem251
+            // 
+            this.barButtonItem251.Caption = "Ordens de Compra Automáticas - Via Disponibilidade";
+            this.barButtonItem251.Id = 290;
+            this.barButtonItem251.Name = "barButtonItem251";
+            // 
+            // barButtonItem252
+            // 
+            this.barButtonItem252.Caption = "Ordens de Compra - Grelha - Confirmação";
+            this.barButtonItem252.Id = 291;
+            this.barButtonItem252.Name = "barButtonItem252";
+            // 
+            // barButtonItem253
+            // 
+            this.barButtonItem253.Caption = "Alocar O.Compra/O.Fabrico - Print Etiquetas";
+            this.barButtonItem253.Id = 292;
+            this.barButtonItem253.Name = "barButtonItem253";
+            // 
+            // barButtonItem254
+            // 
+            this.barButtonItem254.Caption = "Registos / Manutenção Documentos de Arm Mar.Primas";
+            this.barButtonItem254.Id = 293;
+            this.barButtonItem254.Name = "barButtonItem254";
+            // 
+            // barButtonItem255
+            // 
+            this.barButtonItem255.Caption = "Conferência de Facturas de Fornecedores";
+            this.barButtonItem255.Id = 294;
+            this.barButtonItem255.Name = "barButtonItem255";
+            // 
+            // barSubItem40
+            // 
+            this.barSubItem40.Caption = "Conversão de Guias de Remessa em Facturas";
+            this.barSubItem40.Id = 296;
+            this.barSubItem40.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem258),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem259)});
+            this.barSubItem40.Name = "barSubItem40";
+            // 
+            // barButtonItem258
+            // 
+            this.barButtonItem258.Caption = "Converter 1 Guia -> 1 Factura";
+            this.barButtonItem258.Id = 300;
+            this.barButtonItem258.Name = "barButtonItem258";
+            // 
+            // barButtonItem259
+            // 
+            this.barButtonItem259.Caption = "Converter Várias Guias -> 1 Factura";
+            this.barButtonItem259.Id = 301;
+            this.barButtonItem259.Name = "barButtonItem259";
+            // 
+            // barButtonItem257
+            // 
+            this.barButtonItem257.Caption = "Verificação de Doc. Arm Mat.Primas";
+            this.barButtonItem257.Id = 297;
+            this.barButtonItem257.Name = "barButtonItem257";
+            // 
+            // barSubItem41
+            // 
+            this.barSubItem41.Caption = "Consultas";
+            this.barSubItem41.Id = 298;
+            this.barSubItem41.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem260),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem261),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem262),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem263, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem264),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem265, true)});
+            this.barSubItem41.Name = "barSubItem41";
+            // 
+            // barButtonItem260
+            // 
+            this.barButtonItem260.Caption = "Consultas - Ordens de Compra";
+            this.barButtonItem260.Id = 302;
+            this.barButtonItem260.Name = "barButtonItem260";
+            // 
+            // barButtonItem261
+            // 
+            this.barButtonItem261.Caption = "Compras - Fornecedores/Resumo";
+            this.barButtonItem261.Id = 303;
+            this.barButtonItem261.Name = "barButtonItem261";
+            // 
+            // barButtonItem262
+            // 
+            this.barButtonItem262.Caption = "Gráfico - Compras/Vendas - Mês";
+            this.barButtonItem262.Id = 304;
+            this.barButtonItem262.Name = "barButtonItem262";
+            // 
+            // barButtonItem263
+            // 
+            this.barButtonItem263.Caption = "Analise - Encomendas/O.Fabrico - O.Compra";
+            this.barButtonItem263.Id = 305;
+            this.barButtonItem263.Name = "barButtonItem263";
+            // 
+            // barButtonItem264
+            // 
+            this.barButtonItem264.Caption = "Ver Alocações O.Fabrico/O.Compra";
+            this.barButtonItem264.Id = 306;
+            this.barButtonItem264.Name = "barButtonItem264";
+            // 
+            // barButtonItem265
+            // 
+            this.barButtonItem265.Caption = "Consultas O.Compra - Nr. Documento";
+            this.barButtonItem265.Id = 307;
+            this.barButtonItem265.Name = "barButtonItem265";
+            // 
+            // barSubItem42
+            // 
+            this.barSubItem42.Caption = "Relatórios";
+            this.barSubItem42.Id = 299;
+            this.barSubItem42.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem266),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem267),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem268, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem269),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem270),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem271, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem272)});
+            this.barSubItem42.Name = "barSubItem42";
+            // 
+            // barButtonItem266
+            // 
+            this.barButtonItem266.Caption = "Compras Pendentes - Fornecedor - Armazém Destino";
+            this.barButtonItem266.Id = 308;
+            this.barButtonItem266.Name = "barButtonItem266";
+            // 
+            // barButtonItem267
+            // 
+            this.barButtonItem267.Caption = "Mapas Exploração de O.Compra";
+            this.barButtonItem267.Id = 309;
+            this.barButtonItem267.Name = "barButtonItem267";
+            // 
+            // barButtonItem268
+            // 
+            this.barButtonItem268.Caption = "Imprime Mapa de Comissões / Agentes";
+            this.barButtonItem268.Id = 310;
+            this.barButtonItem268.Name = "barButtonItem268";
+            // 
+            // barButtonItem269
+            // 
+            this.barButtonItem269.Caption = "Mapa Resumo de Documentos/Entidade";
+            this.barButtonItem269.Id = 311;
+            this.barButtonItem269.Name = "barButtonItem269";
+            // 
+            // barButtonItem270
+            // 
+            this.barButtonItem270.Caption = "Analise ABC Por Entidade/Ano";
+            this.barButtonItem270.Id = 312;
+            this.barButtonItem270.Name = "barButtonItem270";
+            // 
+            // barButtonItem271
+            // 
+            this.barButtonItem271.Caption = "Mapa de Documentos Detalhe - Artigos/Entidade";
+            this.barButtonItem271.Id = 313;
+            this.barButtonItem271.Name = "barButtonItem271";
+            // 
+            // barButtonItem272
+            // 
+            this.barButtonItem272.Caption = "Analise Cumprimento Prazos de entrega";
+            this.barButtonItem272.Id = 314;
+            this.barButtonItem272.Name = "barButtonItem272";
+            // 
+            // barSubItem14
+            // 
+            this.barSubItem14.Caption = "Expedição";
+            this.barSubItem14.Id = 16;
+            this.barSubItem14.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem114),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem115),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem116),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem117),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem118),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem27, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem30, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem31),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem123, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem124),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem125, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem126, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem127),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem128),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem129),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem28, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem29)});
+            this.barSubItem14.Name = "barSubItem14";
+            // 
+            // barButtonItem114
+            // 
+            this.barButtonItem114.Caption = "Guias / Facturas";
+            this.barButtonItem114.Id = 140;
+            this.barButtonItem114.Name = "barButtonItem114";
+            // 
+            // barButtonItem115
+            // 
+            this.barButtonItem115.Caption = "Guias / Facturas Via Prep.Expedição - Pronto Expedir - Cliente";
+            this.barButtonItem115.Id = 141;
+            this.barButtonItem115.Name = "barButtonItem115";
+            // 
+            // barButtonItem116
+            // 
+            this.barButtonItem116.Caption = "Guias / Facturas Via Prep.Expedição - Pronto Expedir - Nr Enco";
+            this.barButtonItem116.Id = 142;
+            this.barButtonItem116.Name = "barButtonItem116";
+            // 
+            // barButtonItem117
+            // 
+            this.barButtonItem117.Caption = "Conversão de Enc. -> Factura Proforma";
+            this.barButtonItem117.Id = 143;
+            this.barButtonItem117.Name = "barButtonItem117";
+            // 
+            // barButtonItem118
+            // 
+            this.barButtonItem118.Caption = "Verificação de Facturação";
+            this.barButtonItem118.Id = 144;
+            this.barButtonItem118.Name = "barButtonItem118";
+            // 
+            // barSubItem27
+            // 
+            this.barSubItem27.Caption = "Documentos Diversos";
+            this.barSubItem27.Id = 145;
+            this.barSubItem27.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem119),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem120)});
+            this.barSubItem27.Name = "barSubItem27";
+            // 
+            // barButtonItem119
+            // 
+            this.barButtonItem119.Caption = "Registo Documentos Diversos";
+            this.barButtonItem119.Id = 146;
+            this.barButtonItem119.Name = "barButtonItem119";
+            // 
+            // barButtonItem120
+            // 
+            this.barButtonItem120.Caption = "Verificação de Doc Diversos";
+            this.barButtonItem120.Id = 147;
+            this.barButtonItem120.Name = "barButtonItem120";
+            // 
+            // barSubItem30
+            // 
+            this.barSubItem30.Caption = "Conversão de Guias de Remessa em Facturas";
+            this.barSubItem30.Id = 159;
+            this.barSubItem30.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem130),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem131)});
+            this.barSubItem30.Name = "barSubItem30";
+            // 
+            // barButtonItem130
+            // 
+            this.barButtonItem130.Caption = "Converter 1 Guia - > 1 Factura";
+            this.barButtonItem130.Id = 161;
+            this.barButtonItem130.Name = "barButtonItem130";
+            // 
+            // barButtonItem131
+            // 
+            this.barButtonItem131.Caption = "Converter Várias Guias -> 1 Factura";
+            this.barButtonItem131.Id = 162;
+            this.barButtonItem131.Name = "barButtonItem131";
+=======
+>>>>>>> origin/master
+            // 
+            // barSubItem38
+            // 
+            this.barSubItem38.Caption = "Relatórios";
+            this.barSubItem38.Id = 273;
+            this.barSubItem38.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem237),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem238),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem239),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem240),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem241),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem242),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem243),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem244)});
+            this.barSubItem38.Name = "barSubItem38";
+            // 
+            // barButtonItem237
+            // 
+            this.barButtonItem237.Caption = "Relatórios de Movimentos";
+            this.barButtonItem237.Id = 275;
+            this.barButtonItem237.Name = "barButtonItem237";
+            // 
+            // barButtonItem238
+            // 
+            this.barButtonItem238.Caption = "Relatórios de Movimentos P/Armazém";
+            this.barButtonItem238.Id = 276;
+            this.barButtonItem238.Name = "barButtonItem238";
+            // 
+            // barButtonItem239
+            // 
+            this.barButtonItem239.Caption = "Relatórios de Movimentos por Tipo Documento";
+            this.barButtonItem239.Id = 277;
+            this.barButtonItem239.Name = "barButtonItem239";
+            // 
+            // barButtonItem240
+            // 
+            this.barButtonItem240.Caption = "Conta Corrente por Artigo";
+            this.barButtonItem240.Id = 278;
+            this.barButtonItem240.Name = "barButtonItem240";
+            // 
+            // barButtonItem241
+            // 
+            this.barButtonItem241.Caption = "Mapa de Existências P/Familia";
+            this.barButtonItem241.Id = 279;
+            this.barButtonItem241.Name = "barButtonItem241";
+            // 
+            // barButtonItem242
+            // 
+            this.barButtonItem242.Caption = "Mapa de Existências P/Familia / Local e Lotes";
+            this.barButtonItem242.Id = 280;
+            this.barButtonItem242.Name = "barButtonItem242";
+            // 
+            // barButtonItem243
+            // 
+            this.barButtonItem243.Caption = "Mapa Stocks Minimos";
+            this.barButtonItem243.Id = 281;
+            this.barButtonItem243.Name = "barButtonItem243";
+            // 
+            // barButtonItem244
+            // 
+            this.barButtonItem244.Caption = "Antiguidades P/Familia";
+            this.barButtonItem244.Id = 282;
+            this.barButtonItem244.Name = "barButtonItem244";
+            // 
+            // barSubItem39
+            // 
+            this.barSubItem39.Caption = "Utilitários";
+            this.barSubItem39.Id = 283;
+            this.barSubItem39.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem245),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem246),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem247)});
+            this.barSubItem39.Name = "barSubItem39";
+            // 
+            // barButtonItem245
+            // 
+            this.barButtonItem245.Caption = "Conciliação dos Saldos pelos Movimentos de Stock";
+            this.barButtonItem245.Id = 284;
+            this.barButtonItem245.Name = "barButtonItem245";
+            // 
+            // barButtonItem246
+            // 
+            this.barButtonItem246.Caption = "Alteração das datas em movimentos de Stocks";
+            this.barButtonItem246.Id = 285;
+            this.barButtonItem246.Name = "barButtonItem246";
+            // 
+            // barButtonItem247
+            // 
+            this.barButtonItem247.Caption = "Encerramento de Stocks";
+            this.barButtonItem247.Id = 286;
+            this.barButtonItem247.Name = "barButtonItem247";
+            // 
+            // barSubItem13
+            // 
+            this.barSubItem13.Caption = "Compras";
+            this.barSubItem13.Id = 15;
+            this.barSubItem13.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem248),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem249),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem250),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem251),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem252, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem253),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem254, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem255),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem40, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem257),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem41, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem42)});
+            this.barSubItem13.Name = "barSubItem13";
+            // 
+            // barButtonItem248
+            // 
+            this.barButtonItem248.Caption = "Ordens de Compra";
+            this.barButtonItem248.Id = 287;
+            this.barButtonItem248.Name = "barButtonItem248";
+            // 
+            // barButtonItem249
+            // 
+            this.barButtonItem249.Caption = "Ordens de Compra Automáticas - Via Encomenda";
+            this.barButtonItem249.Id = 288;
+            this.barButtonItem249.Name = "barButtonItem249";
+            // 
+            // barButtonItem250
+            // 
+            this.barButtonItem250.Caption = "Ordens de Compra Automáticas - VIa O.Fabrico";
+            this.barButtonItem250.Id = 289;
+            this.barButtonItem250.Name = "barButtonItem250";
+            // 
+            // barButtonItem251
+            // 
+            this.barButtonItem251.Caption = "Ordens de Compra Automáticas - Via Disponibilidade";
+            this.barButtonItem251.Id = 290;
+            this.barButtonItem251.Name = "barButtonItem251";
+            // 
+            // barButtonItem252
+            // 
+            this.barButtonItem252.Caption = "Ordens de Compra - Grelha - Confirmação";
+            this.barButtonItem252.Id = 291;
+            this.barButtonItem252.Name = "barButtonItem252";
+            // 
+            // barButtonItem253
+            // 
+            this.barButtonItem253.Caption = "Alocar O.Compra/O.Fabrico - Print Etiquetas";
+            this.barButtonItem253.Id = 292;
+            this.barButtonItem253.Name = "barButtonItem253";
+            // 
+            // barButtonItem254
+            // 
+            this.barButtonItem254.Caption = "Registos / Manutenção Documentos de Arm Mar.Primas";
+            this.barButtonItem254.Id = 293;
+            this.barButtonItem254.Name = "barButtonItem254";
+            // 
+            // barButtonItem255
+            // 
+            this.barButtonItem255.Caption = "Conferência de Facturas de Fornecedores";
+            this.barButtonItem255.Id = 294;
+            this.barButtonItem255.Name = "barButtonItem255";
+            // 
+            // barSubItem40
+            // 
+            this.barSubItem40.Caption = "Conversão de Guias de Remessa em Facturas";
+            this.barSubItem40.Id = 296;
+            this.barSubItem40.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem258),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem259)});
+            this.barSubItem40.Name = "barSubItem40";
+            // 
+            // barButtonItem258
+            // 
+            this.barButtonItem258.Caption = "Converter 1 Guia -> 1 Factura";
+            this.barButtonItem258.Id = 300;
+            this.barButtonItem258.Name = "barButtonItem258";
+            // 
+            // barButtonItem259
+            // 
+            this.barButtonItem259.Caption = "Converter Várias Guias -> 1 Factura";
+            this.barButtonItem259.Id = 301;
+            this.barButtonItem259.Name = "barButtonItem259";
+            // 
+            // barButtonItem257
+            // 
+            this.barButtonItem257.Caption = "Verificação de Doc. Arm Mat.Primas";
+            this.barButtonItem257.Id = 297;
+            this.barButtonItem257.Name = "barButtonItem257";
+            // 
+            // barSubItem41
+            // 
+            this.barSubItem41.Caption = "Consultas";
+            this.barSubItem41.Id = 298;
+            this.barSubItem41.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem260),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem261),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem262),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem263, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem264),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem265, true)});
+            this.barSubItem41.Name = "barSubItem41";
+            // 
+            // barButtonItem260
+            // 
+            this.barButtonItem260.Caption = "Consultas - Ordens de Compra";
+            this.barButtonItem260.Id = 302;
+            this.barButtonItem260.Name = "barButtonItem260";
+            // 
+            // barButtonItem261
+            // 
+            this.barButtonItem261.Caption = "Compras - Fornecedores/Resumo";
+            this.barButtonItem261.Id = 303;
+            this.barButtonItem261.Name = "barButtonItem261";
+            // 
+            // barButtonItem262
+            // 
+            this.barButtonItem262.Caption = "Gráfico - Compras/Vendas - Mês";
+            this.barButtonItem262.Id = 304;
+            this.barButtonItem262.Name = "barButtonItem262";
+            // 
+            // barButtonItem263
+            // 
+            this.barButtonItem263.Caption = "Analise - Encomendas/O.Fabrico - O.Compra";
+            this.barButtonItem263.Id = 305;
+            this.barButtonItem263.Name = "barButtonItem263";
+            // 
+            // barButtonItem264
+            // 
+            this.barButtonItem264.Caption = "Ver Alocações O.Fabrico/O.Compra";
+            this.barButtonItem264.Id = 306;
+            this.barButtonItem264.Name = "barButtonItem264";
+            // 
+            // barButtonItem265
+            // 
+            this.barButtonItem265.Caption = "Consultas O.Compra - Nr. Documento";
+            this.barButtonItem265.Id = 307;
+            this.barButtonItem265.Name = "barButtonItem265";
+            // 
+            // barSubItem42
+            // 
+            this.barSubItem42.Caption = "Relatórios";
+            this.barSubItem42.Id = 299;
+            this.barSubItem42.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem266),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem267),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem268, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem269),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem270),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem271, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem272)});
+            this.barSubItem42.Name = "barSubItem42";
+            // 
+            // barButtonItem266
+            // 
+            this.barButtonItem266.Caption = "Compras Pendentes - Fornecedor - Armazém Destino";
+            this.barButtonItem266.Id = 308;
+            this.barButtonItem266.Name = "barButtonItem266";
+            // 
+            // barButtonItem267
+            // 
+            this.barButtonItem267.Caption = "Mapas Exploração de O.Compra";
+            this.barButtonItem267.Id = 309;
+            this.barButtonItem267.Name = "barButtonItem267";
+            // 
+            // barButtonItem268
+            // 
+            this.barButtonItem268.Caption = "Imprime Mapa de Comissões / Agentes";
+            this.barButtonItem268.Id = 310;
+            this.barButtonItem268.Name = "barButtonItem268";
+            // 
+            // barButtonItem269
+            // 
+            this.barButtonItem269.Caption = "Mapa Resumo de Documentos/Entidade";
+            this.barButtonItem269.Id = 311;
+            this.barButtonItem269.Name = "barButtonItem269";
+            // 
+            // barButtonItem270
+            // 
+            this.barButtonItem270.Caption = "Analise ABC Por Entidade/Ano";
+            this.barButtonItem270.Id = 312;
+            this.barButtonItem270.Name = "barButtonItem270";
+            // 
+            // barButtonItem271
+            // 
+            this.barButtonItem271.Caption = "Mapa de Documentos Detalhe - Artigos/Entidade";
+            this.barButtonItem271.Id = 313;
+            this.barButtonItem271.Name = "barButtonItem271";
+            // 
+            // barButtonItem272
+            // 
+            this.barButtonItem272.Caption = "Analise Cumprimento Prazos de entrega";
+            this.barButtonItem272.Id = 314;
+            this.barButtonItem272.Name = "barButtonItem272";
             // 
             // barSubItem14
             // 
@@ -2203,7 +3221,17 @@
             this.barButtonItem156.Id = 187;
             this.barButtonItem156.Name = "barButtonItem156";
             // 
+<<<<<<< HEAD
+            // barSubItem18
+            // 
+            this.barSubItem18.Caption = "Encomendas Clientes";
+            this.barSubItem18.Id = 20;
+            this.barSubItem18.Name = "barSubItem18";
+            // 
+            // barButtonItem60
+=======
             // barButtonItem157
+>>>>>>> origin/master
             // 
             this.barButtonItem157.Caption = "Facturação - Modelo/Cliente/Familia";
             this.barButtonItem157.Id = 188;
@@ -2268,6 +3296,441 @@
             this.barButtonItem160.Id = 192;
             this.barButtonItem160.Name = "barButtonItem160";
             // 
+<<<<<<< HEAD
+            // barButtonItem236
+            // 
+            this.barButtonItem236.Caption = "Utilitários";
+            this.barButtonItem236.Id = 274;
+            this.barButtonItem236.Name = "barButtonItem236";
+            // 
+            // barButtonItem256
+            // 
+            this.barButtonItem256.Caption = "barButtonItem256";
+            this.barButtonItem256.Id = 295;
+            this.barButtonItem256.Name = "barButtonItem256";
+            // 
+            // barButtonItem273
+            // 
+            this.barButtonItem273.Caption = "Ordens de Fabrico";
+            this.barButtonItem273.Id = 315;
+            this.barButtonItem273.Name = "barButtonItem273";
+            // 
+            // barSubItem43
+            // 
+            this.barSubItem43.Caption = "Ordens de Fabrico";
+            this.barSubItem43.Id = 316;
+            this.barSubItem43.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem280),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem281),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem282),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem283),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem284),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem285),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem286),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem287),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem288),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem289),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem290),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem291),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem292),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem293),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem294),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem295),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem296)});
+            this.barSubItem43.Name = "barSubItem43";
+            // 
+            // barSubItem44
+            // 
+            this.barSubItem44.Caption = "Impressão";
+            this.barSubItem44.Id = 317;
+            this.barSubItem44.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem297)});
+            this.barSubItem44.Name = "barSubItem44";
+            // 
+            // barButtonItem274
+            // 
+            this.barButtonItem274.Caption = "Vale de Materiais - Conjunto O.Fabrico - Gerar Folder\'s";
+            this.barButtonItem274.Id = 318;
+            this.barButtonItem274.Name = "barButtonItem274";
+            // 
+            // barButtonItem275
+            // 
+            this.barButtonItem275.Caption = "Gestão de Folder\'s";
+            this.barButtonItem275.Id = 319;
+            this.barButtonItem275.Name = "barButtonItem275";
+            // 
+            // barButtonItem276
+            // 
+            this.barButtonItem276.Caption = "Consultar Folder\'s / Clientes";
+            this.barButtonItem276.Id = 320;
+            this.barButtonItem276.Name = "barButtonItem276";
+            // 
+            // barButtonItem277
+            // 
+            this.barButtonItem277.Caption = "Cancelar Enco de Clientes";
+            this.barButtonItem277.Id = 321;
+            this.barButtonItem277.Name = "barButtonItem277";
+            // 
+            // barButtonItem278
+            // 
+            this.barButtonItem278.Caption = "Planos de Produção";
+            this.barButtonItem278.Id = 322;
+            this.barButtonItem278.Name = "barButtonItem278";
+            // 
+            // barButtonItem279
+            // 
+            this.barButtonItem279.Caption = "Planos de Montagem";
+            this.barButtonItem279.Id = 323;
+            this.barButtonItem279.Name = "barButtonItem279";
+            // 
+            // barButtonItem280
+            // 
+            this.barButtonItem280.Caption = "Standard";
+            this.barButtonItem280.Id = 324;
+            this.barButtonItem280.Name = "barButtonItem280";
+            // 
+            // barButtonItem281
+            // 
+            this.barButtonItem281.Caption = "Registo de Quantidades Adicionais P/Folder";
+            this.barButtonItem281.Id = 325;
+            this.barButtonItem281.Name = "barButtonItem281";
+            // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.Caption = "barCheckItem1";
+            this.barCheckItem1.Id = 326;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // barButtonItem282
+            // 
+            this.barButtonItem282.Caption = "Criação O.Fabrico Standard - Conjunto de Encomendas";
+            this.barButtonItem282.Id = 327;
+            this.barButtonItem282.Name = "barButtonItem282";
+            // 
+            // barButtonItem283
+            // 
+            this.barButtonItem283.Caption = "Pequenas Séries - C/Único Lote";
+            this.barButtonItem283.Id = 328;
+            this.barButtonItem283.Name = "barButtonItem283";
+            // 
+            // barButtonItem284
+            // 
+            this.barButtonItem284.Caption = "Ordens de Fabrico - SALTOS";
+            this.barButtonItem284.Id = 329;
+            this.barButtonItem284.Name = "barButtonItem284";
+            // 
+            // barButtonItem285
+            // 
+            this.barButtonItem285.Caption = "Agrupamentos de Encomendas";
+            this.barButtonItem285.Id = 330;
+            this.barButtonItem285.Name = "barButtonItem285";
+            // 
+            // barButtonItem286
+            // 
+            this.barButtonItem286.Caption = "Agrupamentos - Versão Automática";
+            this.barButtonItem286.Id = 331;
+            this.barButtonItem286.Name = "barButtonItem286";
+            // 
+            // barButtonItem287
+            // 
+            this.barButtonItem287.Caption = "Agrupamentos - Versão Folder";
+            this.barButtonItem287.Id = 332;
+            this.barButtonItem287.Name = "barButtonItem287";
+            // 
+            // barButtonItem288
+            // 
+            this.barButtonItem288.Caption = "Divisão Da O.Fabrico em Lotes - Formeiro (Automatico)";
+            this.barButtonItem288.Id = 333;
+            this.barButtonItem288.Name = "barButtonItem288";
+            // 
+            // barButtonItem289
+            // 
+            this.barButtonItem289.Caption = "Divisão Da O.Fabrico em Lotes - Formeiro (Stock)";
+            this.barButtonItem289.Id = 334;
+            this.barButtonItem289.Name = "barButtonItem289";
+            // 
+            // barButtonItem290
+            // 
+            this.barButtonItem290.Caption = "Divisão Da O.Fabrico em Lotes - Tamanho Unico";
+            this.barButtonItem290.Id = 335;
+            this.barButtonItem290.Name = "barButtonItem290";
+            // 
+            // barButtonItem291
+            // 
+            this.barButtonItem291.Caption = "Divisão da Enco. em Planos de fabrico (Automatico)";
+            this.barButtonItem291.Id = 336;
+            this.barButtonItem291.Name = "barButtonItem291";
+            // 
+            // barButtonItem292
+            // 
+            this.barButtonItem292.Caption = "Divisão da Enco. em Planos de Fabrico - Formeiro (Stock)";
+            this.barButtonItem292.Id = 337;
+            this.barButtonItem292.Name = "barButtonItem292";
+            // 
+            // barButtonItem293
+            // 
+            this.barButtonItem293.Caption = "Divisão via PrePacking List";
+            this.barButtonItem293.Id = 338;
+            this.barButtonItem293.Name = "barButtonItem293";
+            // 
+            // barButtonItem294
+            // 
+            this.barButtonItem294.Caption = "Divisão Automática C/ Qt. Variavel Por Tam.";
+            this.barButtonItem294.Id = 339;
+            this.barButtonItem294.Name = "barButtonItem294";
+            // 
+            // barButtonItem295
+            // 
+            this.barButtonItem295.Caption = "Agrupamentos/Encomendas - Fornece./Modelo";
+            this.barButtonItem295.Id = 340;
+            this.barButtonItem295.Name = "barButtonItem295";
+            // 
+            // barButtonItem296
+            // 
+            this.barButtonItem296.Caption = "Agrupamentos - Versão Auto / Fornecedor";
+            this.barButtonItem296.Id = 341;
+            this.barButtonItem296.Name = "barButtonItem296";
+            // 
+            // barButtonItem297
+            // 
+            this.barButtonItem297.Caption = "Documentos P/Fabrico";
+            this.barButtonItem297.Id = 342;
+            this.barButtonItem297.Name = "barButtonItem297";
+            // 
+            // barButtonItem298
+            // 
+            this.barButtonItem298.Caption = "Tabela de Sistemas de Produção";
+            this.barButtonItem298.Id = 343;
+            this.barButtonItem298.Name = "barButtonItem298";
+            // 
+            // barButtonItem299
+            // 
+            this.barButtonItem299.Caption = "Tabela de Capacidades";
+            this.barButtonItem299.Id = 344;
+            this.barButtonItem299.Name = "barButtonItem299";
+            // 
+            // barButtonItem300
+            // 
+            this.barButtonItem300.Caption = "Inserir Novas Cargas";
+            this.barButtonItem300.Id = 345;
+            this.barButtonItem300.Name = "barButtonItem300";
+            // 
+            // barButtonItem301
+            // 
+            this.barButtonItem301.Caption = "Gestão de Planos";
+            this.barButtonItem301.Id = 346;
+            this.barButtonItem301.Name = "barButtonItem301";
+            // 
+            // barButtonItem302
+            // 
+            this.barButtonItem302.Caption = "RePlaneamento";
+            this.barButtonItem302.Id = 347;
+            this.barButtonItem302.Name = "barButtonItem302";
+            // 
+            // barButtonItem303
+            // 
+            this.barButtonItem303.Caption = "Consultar Capacidades/Cargas";
+            this.barButtonItem303.Id = 348;
+            this.barButtonItem303.Name = "barButtonItem303";
+            // 
+            // barButtonItem304
+            // 
+            this.barButtonItem304.Caption = "Planing Semanal";
+            this.barButtonItem304.Id = 349;
+            this.barButtonItem304.Name = "barButtonItem304";
+            // 
+            // barButtonItem305
+            // 
+            this.barButtonItem305.Caption = "Imprime Plano Semanal";
+            this.barButtonItem305.Id = 350;
+            this.barButtonItem305.Name = "barButtonItem305";
+            // 
+            // barButtonItem306
+            // 
+            this.barButtonItem306.Caption = "Imprime Plano C/Alteração de Datas";
+            this.barButtonItem306.Id = 351;
+            this.barButtonItem306.Name = "barButtonItem306";
+            // 
+            // barButtonItem307
+            // 
+            this.barButtonItem307.Caption = "Registo de Planeamento Inicio Produção";
+            this.barButtonItem307.Id = 352;
+            this.barButtonItem307.Name = "barButtonItem307";
+            // 
+            // barButtonItem308
+            // 
+            this.barButtonItem308.Caption = "Folder\'s Planeados";
+            this.barButtonItem308.Id = 353;
+            this.barButtonItem308.Name = "barButtonItem308";
+            // 
+            // barButtonItem309
+            // 
+            this.barButtonItem309.Caption = "O.Fabrico Planeadas e Pendentes de Envio (COSIDOS)";
+            this.barButtonItem309.Id = 354;
+            this.barButtonItem309.Name = "barButtonItem309";
+            // 
+            // barButtonItem310
+            // 
+            this.barButtonItem310.Caption = "Consulta / Encomenda - O.Fabrico";
+            this.barButtonItem310.Id = 355;
+            this.barButtonItem310.Name = "barButtonItem310";
+            // 
+            // barButtonItem311
+            // 
+            this.barButtonItem311.Caption = "Mapa das O.Fabrico / Semana";
+            this.barButtonItem311.Id = 356;
+            this.barButtonItem311.Name = "barButtonItem311";
+            // 
+            // barButtonItem312
+            // 
+            this.barButtonItem312.Caption = "Encomendas Em-Filas Para Inicio de Produção";
+            this.barButtonItem312.Id = 357;
+            this.barButtonItem312.Name = "barButtonItem312";
+            // 
+            // barButtonItem313
+            // 
+            this.barButtonItem313.Caption = "Posição Por Fase Fabrico (Em Curso e Fila de Espera)";
+            this.barButtonItem313.Id = 358;
+            this.barButtonItem313.Name = "barButtonItem313";
+            // 
+            // barButtonItem314
+            // 
+            this.barButtonItem314.Caption = "Posição da O.Fabrico na Produção S/Filas de Espera";
+            this.barButtonItem314.Id = 359;
+            this.barButtonItem314.Name = "barButtonItem314";
+            // 
+            // barButtonItem315
+            // 
+            this.barButtonItem315.Caption = "Posição da O.Fabrico na Produção C/Filas de Espera";
+            this.barButtonItem315.Id = 360;
+            this.barButtonItem315.Name = "barButtonItem315";
+            // 
+            // barButtonItem316
+            // 
+            this.barButtonItem316.Caption = "Análise dos Fluxos de Produção";
+            this.barButtonItem316.Id = 361;
+            this.barButtonItem316.Name = "barButtonItem316";
+            // 
+            // barButtonItem317
+            // 
+            this.barButtonItem317.Caption = "Mapa de Valorização do Em-Curso - Ficha Tecnica";
+            this.barButtonItem317.Id = 362;
+            this.barButtonItem317.Name = "barButtonItem317";
+            // 
+            // barButtonItem318
+            // 
+            this.barButtonItem318.Caption = "Mapa de Valorização do Em-curso pelos Movimentos";
+            this.barButtonItem318.Id = 363;
+            this.barButtonItem318.Name = "barButtonItem318";
+            // 
+            // barButtonItem319
+            // 
+            this.barButtonItem319.Caption = "Em-Curso e Em-Fila de Produção";
+            this.barButtonItem319.Id = 364;
+            this.barButtonItem319.Name = "barButtonItem319";
+            // 
+            // barButtonItem320
+            // 
+            this.barButtonItem320.Caption = "Em-Curso Por Subcontratado";
+            this.barButtonItem320.Id = 365;
+            this.barButtonItem320.Name = "barButtonItem320";
+            // 
+            // barButtonItem321
+            // 
+            this.barButtonItem321.Caption = "Produção Diária P/Secção - Entre Datas - Resumo";
+            this.barButtonItem321.Id = 366;
+            this.barButtonItem321.Name = "barButtonItem321";
+            // 
+            // barButtonItem322
+            // 
+            this.barButtonItem322.Caption = "Produção Diária P/Secção - Entre Datas - Detalhe";
+            this.barButtonItem322.Id = 367;
+            this.barButtonItem322.Name = "barButtonItem322";
+            // 
+            // barButtonItem323
+            // 
+            this.barButtonItem323.Caption = "Produção - Entre Datas - Subcontratados - Valorizada";
+            this.barButtonItem323.Id = 368;
+            this.barButtonItem323.Name = "barButtonItem323";
+            // 
+            // barButtonItem324
+            // 
+            this.barButtonItem324.Caption = "Produtividade Diária P/Secção - Entre Datas";
+            this.barButtonItem324.Id = 369;
+            this.barButtonItem324.Name = "barButtonItem324";
+            // 
+            // barButtonItem325
+            // 
+            this.barButtonItem325.Caption = "Encomendas P/Modelo Em Armazém P.Acabado - Tamanho";
+            this.barButtonItem325.Id = 370;
+            this.barButtonItem325.Name = "barButtonItem325";
+            // 
+            // barButtonItem326
+            // 
+            this.barButtonItem326.Caption = "Encomendas P/Cliente Em Armazém P.Acabado";
+            this.barButtonItem326.Id = 371;
+            this.barButtonItem326.Name = "barButtonItem326";
+            // 
+            // barButtonItem327
+            // 
+            this.barButtonItem327.Caption = "Entradas Em Armazém P .Acabado - Entre Datas - Resumo";
+            this.barButtonItem327.Id = 372;
+            this.barButtonItem327.Name = "barButtonItem327";
+            // 
+            // barButtonItem328
+            // 
+            this.barButtonItem328.Caption = "Produção Diária - Reg de Embalagem";
+            this.barButtonItem328.Id = 373;
+            this.barButtonItem328.Name = "barButtonItem328";
+            // 
+            // barButtonItem329
+            // 
+            this.barButtonItem329.Caption = "Mapa de Actividades Indirectas";
+            this.barButtonItem329.Id = 374;
+            this.barButtonItem329.Name = "barButtonItem329";
+            // 
+            // barSubItem45
+            // 
+            this.barSubItem45.Caption = "Produtividades Individuais";
+            this.barSubItem45.Id = 375;
+            this.barSubItem45.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem330),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem331)});
+            this.barSubItem45.Name = "barSubItem45";
+            // 
+            // barSubItem46
+            // 
+            this.barSubItem46.Caption = "Controlo de Defeitos";
+            this.barSubItem46.Id = 376;
+            this.barSubItem46.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem332),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem333)});
+            this.barSubItem46.Name = "barSubItem46";
+            // 
+            // barButtonItem330
+            // 
+            this.barButtonItem330.Caption = "Consultar Produtividades";
+            this.barButtonItem330.Id = 377;
+            this.barButtonItem330.Name = "barButtonItem330";
+            // 
+            // barButtonItem331
+            // 
+            this.barButtonItem331.Caption = "Mapas Produtividades / Funcionário";
+            this.barButtonItem331.Id = 378;
+            this.barButtonItem331.Name = "barButtonItem331";
+            // 
+            // barButtonItem332
+            // 
+            this.barButtonItem332.Caption = "Imprime Produção P/Seccao-Mod.";
+            this.barButtonItem332.Id = 379;
+            this.barButtonItem332.Name = "barButtonItem332";
+            // 
+            // barButtonItem333
+            // 
+            this.barButtonItem333.Caption = "Imprime Produção/Ano-Mês";
+            this.barButtonItem333.Id = 380;
+            this.barButtonItem333.Name = "barButtonItem333";
+=======
             // barButtonItem161
             // 
             this.barButtonItem161.Caption = "Consulta Lista de Compras";
@@ -2534,28 +3997,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1264, 49);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1685, 52);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 718);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1264, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 889);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1685, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 49);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 669);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 52);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 837);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1264, 49);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 669);
+            this.barDockControlRight.Location = new System.Drawing.Point(1685, 52);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 837);
             // 
             // barButtonItem1
             // 
@@ -2574,6 +4041,12 @@
             this.barSubItem6.Caption = "barSubItem6";
             this.barSubItem6.Id = 6;
             this.barSubItem6.Name = "barSubItem6";
+            // 
+            // barSubItem18
+            // 
+            this.barSubItem18.Caption = "Encomendas Clientes";
+            this.barSubItem18.Id = 20;
+            this.barSubItem18.Name = "barSubItem18";
             // 
             // barButtonItem60
             // 
@@ -2623,383 +4096,30 @@
             this.barButtonItem196.Id = 231;
             this.barButtonItem196.Name = "barButtonItem196";
             // 
-            // barButtonItem222
-            // 
-            this.barButtonItem222.Caption = "Manutenção Mov. de Stocks";
-            this.barButtonItem222.Id = 259;
-            this.barButtonItem222.Name = "barButtonItem222";
-            // 
-            // barButtonItem223
-            // 
-            this.barButtonItem223.Caption = "Registo de Movimentos - Stocks";
-            this.barButtonItem223.Id = 260;
-            this.barButtonItem223.Name = "barButtonItem223";
-            // 
-            // barButtonItem224
-            // 
-            this.barButtonItem224.Caption = "Fraccionamento de Lotes";
-            this.barButtonItem224.Id = 261;
-            this.barButtonItem224.Name = "barButtonItem224";
-            // 
-            // barButtonItem225
-            // 
-            this.barButtonItem225.Caption = "Inventários";
-            this.barButtonItem225.Id = 262;
-            this.barButtonItem225.Name = "barButtonItem225";
-            // 
-            // barButtonItem226
-            // 
-            this.barButtonItem226.Caption = "Movimentos Stocks - Via Leitura Óptica";
-            this.barButtonItem226.Id = 263;
-            this.barButtonItem226.Name = "barButtonItem226";
-            // 
-            // barButtonItem227
-            // 
-            this.barButtonItem227.Caption = "Movimentos Stocks - Via Ordens Fabrico";
-            this.barButtonItem227.Id = 264;
-            this.barButtonItem227.Name = "barButtonItem227";
-            // 
-            // barButtonItem228
-            // 
-            this.barButtonItem228.Caption = "Movimentos Stocks - Via Encomenda";
-            this.barButtonItem228.Id = 265;
-            this.barButtonItem228.Name = "barButtonItem228";
-            // 
-            // barButtonItem229
-            // 
-            this.barButtonItem229.Caption = "Movimentos Stocks - Via Folder";
-            this.barButtonItem229.Id = 266;
-            this.barButtonItem229.Name = "barButtonItem229";
-            // 
-            // barButtonItem230
-            // 
-            this.barButtonItem230.Caption = "Movimentos Stocks - Via Packing List";
-            this.barButtonItem230.Id = 267;
-            this.barButtonItem230.Name = "barButtonItem230";
-            // 
-            // barButtonItem231
-            // 
-            this.barButtonItem231.Caption = "Tabela de Locais / Consultas de Existências";
-            this.barButtonItem231.Id = 268;
-            this.barButtonItem231.Name = "barButtonItem231";
-            // 
-            // barButtonItem232
-            // 
-            this.barButtonItem232.Caption = "Consultas de Existências / Transferência de Localização";
-            this.barButtonItem232.Id = 269;
-            this.barButtonItem232.Name = "barButtonItem232";
-            // 
-            // barButtonItem233
-            // 
-            this.barButtonItem233.Caption = "Consulta de Existências / Lotes";
-            this.barButtonItem233.Id = 270;
-            this.barButtonItem233.Name = "barButtonItem233";
-            // 
-            // barButtonItem234
-            // 
-            this.barButtonItem234.Caption = "Consultas a Conta Corrente/Artigo";
-            this.barButtonItem234.Id = 271;
-            this.barButtonItem234.Name = "barButtonItem234";
-            // 
-            // barButtonItem235
-            // 
-            this.barButtonItem235.Caption = "Consultas a Conta Corrente/Artigo - Local/Lote";
-            this.barButtonItem235.Id = 272;
-            this.barButtonItem235.Name = "barButtonItem235";
-            // 
-            // barSubItem38
-            // 
-            this.barSubItem38.Caption = "Relatórios";
-            this.barSubItem38.Id = 273;
-            this.barSubItem38.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem237),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem238),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem239),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem240),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem241),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem242),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem243),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem244)});
-            this.barSubItem38.Name = "barSubItem38";
-            // 
             // barButtonItem236
             // 
             this.barButtonItem236.Caption = "Utilitários";
             this.barButtonItem236.Id = 274;
             this.barButtonItem236.Name = "barButtonItem236";
             // 
-            // barButtonItem237
-            // 
-            this.barButtonItem237.Caption = "Relatórios de Movimentos";
-            this.barButtonItem237.Id = 275;
-            this.barButtonItem237.Name = "barButtonItem237";
-            // 
-            // barButtonItem238
-            // 
-            this.barButtonItem238.Caption = "Relatórios de Movimentos P/Armazém";
-            this.barButtonItem238.Id = 276;
-            this.barButtonItem238.Name = "barButtonItem238";
-            // 
-            // barButtonItem239
-            // 
-            this.barButtonItem239.Caption = "Relatórios de Movimentos por Tipo Documento";
-            this.barButtonItem239.Id = 277;
-            this.barButtonItem239.Name = "barButtonItem239";
-            // 
-            // barButtonItem240
-            // 
-            this.barButtonItem240.Caption = "Conta Corrente por Artigo";
-            this.barButtonItem240.Id = 278;
-            this.barButtonItem240.Name = "barButtonItem240";
-            // 
-            // barButtonItem241
-            // 
-            this.barButtonItem241.Caption = "Mapa de Existências P/Familia";
-            this.barButtonItem241.Id = 279;
-            this.barButtonItem241.Name = "barButtonItem241";
-            // 
-            // barButtonItem242
-            // 
-            this.barButtonItem242.Caption = "Mapa de Existências P/Familia / Local e Lotes";
-            this.barButtonItem242.Id = 280;
-            this.barButtonItem242.Name = "barButtonItem242";
-            // 
-            // barButtonItem243
-            // 
-            this.barButtonItem243.Caption = "Mapa Stocks Minimos";
-            this.barButtonItem243.Id = 281;
-            this.barButtonItem243.Name = "barButtonItem243";
-            // 
-            // barButtonItem244
-            // 
-            this.barButtonItem244.Caption = "Antiguidades P/Familia";
-            this.barButtonItem244.Id = 282;
-            this.barButtonItem244.Name = "barButtonItem244";
-            // 
-            // barSubItem39
-            // 
-            this.barSubItem39.Caption = "Utilitários";
-            this.barSubItem39.Id = 283;
-            this.barSubItem39.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem245),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem246),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem247)});
-            this.barSubItem39.Name = "barSubItem39";
-            // 
-            // barButtonItem245
-            // 
-            this.barButtonItem245.Caption = "Conciliação dos Saldos pelos Movimentos de Stock";
-            this.barButtonItem245.Id = 284;
-            this.barButtonItem245.Name = "barButtonItem245";
-            // 
-            // barButtonItem246
-            // 
-            this.barButtonItem246.Caption = "Alteração das datas em movimentos de Stocks";
-            this.barButtonItem246.Id = 285;
-            this.barButtonItem246.Name = "barButtonItem246";
-            // 
-            // barButtonItem247
-            // 
-            this.barButtonItem247.Caption = "Encerramento de Stocks";
-            this.barButtonItem247.Id = 286;
-            this.barButtonItem247.Name = "barButtonItem247";
-            // 
-            // barButtonItem248
-            // 
-            this.barButtonItem248.Caption = "Ordens de Compra";
-            this.barButtonItem248.Id = 287;
-            this.barButtonItem248.Name = "barButtonItem248";
-            // 
-            // barButtonItem249
-            // 
-            this.barButtonItem249.Caption = "Ordens de Compra Automáticas - Via Encomenda";
-            this.barButtonItem249.Id = 288;
-            this.barButtonItem249.Name = "barButtonItem249";
-            // 
-            // barButtonItem250
-            // 
-            this.barButtonItem250.Caption = "Ordens de Compra Automáticas - VIa O.Fabrico";
-            this.barButtonItem250.Id = 289;
-            this.barButtonItem250.Name = "barButtonItem250";
-            // 
-            // barButtonItem251
-            // 
-            this.barButtonItem251.Caption = "Ordens de Compra Automáticas - Via Disponibilidade";
-            this.barButtonItem251.Id = 290;
-            this.barButtonItem251.Name = "barButtonItem251";
-            // 
-            // barButtonItem252
-            // 
-            this.barButtonItem252.Caption = "Ordens de Compra - Grelha - Confirmação";
-            this.barButtonItem252.Id = 291;
-            this.barButtonItem252.Name = "barButtonItem252";
-            // 
-            // barButtonItem253
-            // 
-            this.barButtonItem253.Caption = "Alocar O.Compra/O.Fabrico - Print Etiquetas";
-            this.barButtonItem253.Id = 292;
-            this.barButtonItem253.Name = "barButtonItem253";
-            // 
-            // barButtonItem254
-            // 
-            this.barButtonItem254.Caption = "Registos / Manutenção Documentos de Arm Mar.Primas";
-            this.barButtonItem254.Id = 293;
-            this.barButtonItem254.Name = "barButtonItem254";
-            // 
-            // barButtonItem255
-            // 
-            this.barButtonItem255.Caption = "Conferência de Facturas de Fornecedores";
-            this.barButtonItem255.Id = 294;
-            this.barButtonItem255.Name = "barButtonItem255";
-            // 
             // barButtonItem256
             // 
             this.barButtonItem256.Caption = "barButtonItem256";
             this.barButtonItem256.Id = 295;
             this.barButtonItem256.Name = "barButtonItem256";
-            // 
-            // barSubItem40
-            // 
-            this.barSubItem40.Caption = "Conversão de Guias de Remessa em Facturas";
-            this.barSubItem40.Id = 296;
-            this.barSubItem40.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem258),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem259)});
-            this.barSubItem40.Name = "barSubItem40";
-            // 
-            // barButtonItem257
-            // 
-            this.barButtonItem257.Caption = "Verificação de Doc. Arm Mat.Primas";
-            this.barButtonItem257.Id = 297;
-            this.barButtonItem257.Name = "barButtonItem257";
-            // 
-            // barSubItem41
-            // 
-            this.barSubItem41.Caption = "Consultas";
-            this.barSubItem41.Id = 298;
-            this.barSubItem41.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem260),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem261),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem262),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem263, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem264),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem265, true)});
-            this.barSubItem41.Name = "barSubItem41";
-            // 
-            // barSubItem42
-            // 
-            this.barSubItem42.Caption = "Relatórios";
-            this.barSubItem42.Id = 299;
-            this.barSubItem42.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem266),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem267),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem268, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem269),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem270),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem271, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem272)});
-            this.barSubItem42.Name = "barSubItem42";
-            // 
-            // barButtonItem258
-            // 
-            this.barButtonItem258.Caption = "Converter 1 Guia -> 1 Factura";
-            this.barButtonItem258.Id = 300;
-            this.barButtonItem258.Name = "barButtonItem258";
-            // 
-            // barButtonItem259
-            // 
-            this.barButtonItem259.Caption = "Converter Várias Guias -> 1 Factura";
-            this.barButtonItem259.Id = 301;
-            this.barButtonItem259.Name = "barButtonItem259";
-            // 
-            // barButtonItem260
-            // 
-            this.barButtonItem260.Caption = "Consultas - Ordens de Compra";
-            this.barButtonItem260.Id = 302;
-            this.barButtonItem260.Name = "barButtonItem260";
-            // 
-            // barButtonItem261
-            // 
-            this.barButtonItem261.Caption = "Compras - Fornecedores/Resumo";
-            this.barButtonItem261.Id = 303;
-            this.barButtonItem261.Name = "barButtonItem261";
-            // 
-            // barButtonItem262
-            // 
-            this.barButtonItem262.Caption = "Gráfico - Compras/Vendas - Mês";
-            this.barButtonItem262.Id = 304;
-            this.barButtonItem262.Name = "barButtonItem262";
-            // 
-            // barButtonItem263
-            // 
-            this.barButtonItem263.Caption = "Analise - Encomendas/O.Fabrico - O.Compra";
-            this.barButtonItem263.Id = 305;
-            this.barButtonItem263.Name = "barButtonItem263";
-            // 
-            // barButtonItem264
-            // 
-            this.barButtonItem264.Caption = "Ver Alocações O.Fabrico/O.Compra";
-            this.barButtonItem264.Id = 306;
-            this.barButtonItem264.Name = "barButtonItem264";
-            // 
-            // barButtonItem265
-            // 
-            this.barButtonItem265.Caption = "Consultas O.Compra - Nr. Documento";
-            this.barButtonItem265.Id = 307;
-            this.barButtonItem265.Name = "barButtonItem265";
-            // 
-            // barButtonItem266
-            // 
-            this.barButtonItem266.Caption = "Compras Pendentes - Fornecedor - Armazém Destino";
-            this.barButtonItem266.Id = 308;
-            this.barButtonItem266.Name = "barButtonItem266";
-            // 
-            // barButtonItem267
-            // 
-            this.barButtonItem267.Caption = "Mapas Exploração de O.Compra";
-            this.barButtonItem267.Id = 309;
-            this.barButtonItem267.Name = "barButtonItem267";
-            // 
-            // barButtonItem268
-            // 
-            this.barButtonItem268.Caption = "Imprime Mapa de Comissões / Agentes";
-            this.barButtonItem268.Id = 310;
-            this.barButtonItem268.Name = "barButtonItem268";
-            // 
-            // barButtonItem269
-            // 
-            this.barButtonItem269.Caption = "Mapa Resumo de Documentos/Entidade";
-            this.barButtonItem269.Id = 311;
-            this.barButtonItem269.Name = "barButtonItem269";
-            // 
-            // barButtonItem270
-            // 
-            this.barButtonItem270.Caption = "Analise ABC Por Entidade/Ano";
-            this.barButtonItem270.Id = 312;
-            this.barButtonItem270.Name = "barButtonItem270";
-            // 
-            // barButtonItem271
-            // 
-            this.barButtonItem271.Caption = "Mapa de Documentos Detalhe - Artigos/Entidade";
-            this.barButtonItem271.Id = 313;
-            this.barButtonItem271.Name = "barButtonItem271";
-            // 
-            // barButtonItem272
-            // 
-            this.barButtonItem272.Caption = "Analise Cumprimento Prazos de entrega";
-            this.barButtonItem272.Id = 314;
-            this.barButtonItem272.Name = "barButtonItem272";
+>>>>>>> origin/master
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 741);
+            this.ClientSize = new System.Drawing.Size(1685, 912);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WinGiic";
@@ -3335,6 +4455,72 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem272;
         private DevExpress.XtraBars.BarButtonItem barButtonItem236;
         private DevExpress.XtraBars.BarButtonItem barButtonItem256;
+        private DevExpress.XtraBars.BarSubItem barSubItem43;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem280;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem281;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem282;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem283;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem284;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem285;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem286;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem287;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem288;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem289;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem290;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem291;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem292;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem293;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem294;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem295;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem296;
+        private DevExpress.XtraBars.BarSubItem barSubItem44;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem297;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem274;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem275;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem276;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem277;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem278;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem279;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem298;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem299;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem300;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem301;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem302;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem303;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem304;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem305;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem306;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem307;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem308;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem309;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem310;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem311;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem312;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem313;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem314;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem315;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem316;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem317;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem318;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem319;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem320;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem321;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem322;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem323;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem324;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem325;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem326;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem327;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem328;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem329;
+        private DevExpress.XtraBars.BarSubItem barSubItem45;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem330;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem331;
+        private DevExpress.XtraBars.BarSubItem barSubItem46;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem332;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem333;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem273;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
 
     }
 }

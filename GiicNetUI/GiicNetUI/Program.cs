@@ -17,7 +17,10 @@ namespace GiicNetUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            //Application.Run(new login());
+           main Wingiic = new main();
+            
+            Wingiic.ShowDialog();
         }
     }
 }

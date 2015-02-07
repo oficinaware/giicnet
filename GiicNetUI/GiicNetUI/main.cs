@@ -17,8 +17,8 @@ namespace GiicNetUI
         GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
 
-        string varA = "Alteração numero um!";
-        string varB = "Alteração numero dois!";
+        string CamelCaseA = "Alteração numero um!";
+        string CamelCaseB = "Alteração numero dois!";
 
         public main()
         {
@@ -66,7 +66,7 @@ namespace GiicNetUI
 
         private void main_Load(object sender, EventArgs e)
         {
-            if (varA != varB) MessageBox.Show("As váriáveis são diferentes!");
+            if (CamelCaseA != CamelCaseB) MessageBox.Show("As váriáveis são diferentes!");
         }
     }
 }

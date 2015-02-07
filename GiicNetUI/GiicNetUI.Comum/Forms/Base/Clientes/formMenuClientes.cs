@@ -29,9 +29,12 @@ namespace GiicNetUI.Comum.Forms.Base.Clientes
             Form fMenuClientes = this.FindForm();
             formClientes fClient = fMenuClientes.Tag as formClientes;
             fClient.SwitchVisibility();
-      
-
            
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

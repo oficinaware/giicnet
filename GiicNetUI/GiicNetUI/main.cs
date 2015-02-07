@@ -14,6 +14,9 @@ namespace GiicNetUI
     {
         public GiicNetUI.Comum.Forms.Base.Clientes.formClientes fClients { get; set; }
 
+        string varA = "Alteração numero um!";
+        string varB = "Alteração numero dois!";
+
         public main()
         {
             InitializeComponent();
@@ -56,6 +59,11 @@ namespace GiicNetUI
             fM.Dock = DockStyle.Fill;
             this.panelTopo.Controls.Add(fM);
             fM.Show();
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            if (varA != varB) MessageBox.Show("As váriáveis são diferentes!");
         }
     }
 }

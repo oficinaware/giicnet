@@ -12,7 +12,10 @@ namespace GiicNetUI
 {
     public partial class main : Form
     {
-        public GiicNetUI.Comum.Forms.Base.Clientes.formClientes fClients { get; set; }
+        GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm { get; set; }
+        public GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm { get; set; }
+        GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
+        GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
 
         public main()
         {
@@ -22,40 +25,40 @@ namespace GiicNetUI
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);
-            fClients = new Comum.Forms.Base.Clientes.formClientes();
-            fClients.TopLevel = false;
-            fClients.AutoScroll = true;
-            fClients.Dock = DockStyle.Fill;
-            this.panelPrincipal.Controls.Add(fClients);
-            fClients.Show();
+            ClientForm = new Comum.Forms.Base.Clientes.formClientes();
+            ClientForm.TopLevel = false;
+            ClientForm.AutoScroll = true;
+            ClientForm.Dock = DockStyle.Fill;
+            this.panelPrincipal.Controls.Add(ClientForm);
+            ClientForm.Show();
 
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-            GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes fMenuClientes = new Comum.Forms.Base.Clientes.formMenuClientes();
-            fMenuClientes.TopLevel = false;
-            fMenuClientes.AutoScroll = true;
-            fMenuClientes.Dock = DockStyle.Fill;
-            this.panelTopo.Controls.Add(fMenuClientes);
-            fMenuClientes.Show();
-            fMenuClientes.Tag = fClients;
+             MenuClientForm = new Comum.Forms.Base.Clientes.formMenuClientes();
+            MenuClientForm.TopLevel = false;
+            MenuClientForm.AutoScroll = true;
+            MenuClientForm.Dock = DockStyle.Fill;
+            this.panelTopo.Controls.Add(MenuClientForm);
+            MenuClientForm.Show();
+            MenuClientForm.Tag = ClientForm;
         }
 
         private void barButtonItem64_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);
-            GiicNetUI.Comum.Forms.Base.Artigos.formArtigos f = new Comum.Forms.Base.Artigos.formArtigos();
-            f.TopLevel = false;
-            f.AutoScroll = true;
-            f.Dock = DockStyle.Fill;
-            this.panelPrincipal.Controls.Add(f);
-            f.Show();
+            ArticleForm = new Comum.Forms.Base.Artigos.formArtigos();
+            ArticleForm.TopLevel = false;
+            ArticleForm.AutoScroll = true;
+            ArticleForm.Dock = DockStyle.Fill;
+            this.panelPrincipal.Controls.Add(ArticleForm);
+            ArticleForm.Show();
 
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-            GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos fM = new Comum.Forms.Base.Artigos.formMenuArtigos();
-            fM.TopLevel = false;
-            fM.AutoScroll = true;
-            fM.Dock = DockStyle.Fill;
-            this.panelTopo.Controls.Add(fM);
-            fM.Show();
+            MenuArticleForm = new Comum.Forms.Base.Artigos.formMenuArtigos();
+            MenuArticleForm.TopLevel = false;
+            MenuArticleForm.AutoScroll = true;
+            MenuArticleForm.Dock = DockStyle.Fill;
+            this.panelTopo.Controls.Add(MenuArticleForm);
+            MenuArticleForm.Show();
         }
     }
 }

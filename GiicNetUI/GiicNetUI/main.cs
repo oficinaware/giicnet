@@ -17,6 +17,9 @@ namespace GiicNetUI
         GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
 
+        string varA = "Alteração numero um!";
+        string varB = "Alteração numero dois!";
+
         public main()
         {
             InitializeComponent();
@@ -59,6 +62,11 @@ namespace GiicNetUI
             MenuArticleForm.Dock = DockStyle.Fill;
             this.panelTopo.Controls.Add(MenuArticleForm);
             MenuArticleForm.Show();
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            if (varA != varB) MessageBox.Show("As váriáveis são diferentes!");
         }
     }
 }

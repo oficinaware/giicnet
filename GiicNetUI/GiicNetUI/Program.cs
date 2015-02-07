@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GiicNetUI.Comum.Forms.Acessos;
 
 namespace GiicNetUI
 {
@@ -16,11 +17,12 @@ namespace GiicNetUI
         static void Main()
         {
             Application.EnableVisualStyles();
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-PT");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-PT");
+
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new login());
-           main Wingiic = new main();
-            
-            Wingiic.ShowDialog();
+            Application.Run(new Forms.Base.Acessos.login());
         }
     }
 }

@@ -44,9 +44,6 @@
     <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="GiicNetUI.Comum">
-      <HintPath>..\..\SharedBin\GiicNetUI.Comum.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,21 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGIICDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataGIICDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataGiicNetDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataGiicNetDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Testes\teste_pivot.cs">
+    <Compile Include="Forms\Base\Acessos\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Testes\teste_pivot.Designer.cs">
-      <DependentUpon>teste_pivot.cs</DependentUpon>
+    <Compile Include="Forms\Base\Acessos\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -83,8 +70,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Testes\teste_pivot.resx">
-      <DependentUpon>teste_pivot.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\Acessos\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -99,28 +86,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataGIICDataSet.xsc">
-      <DependentUpon>DataGIICDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataGIICDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataGIICDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataGIICDataSet.xss">
-      <DependentUpon>DataGIICDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataGiicNetDataSet.xsc">
-      <DependentUpon>DataGiicNetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataGiicNetDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataGiicNetDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataGiicNetDataSet.xss">
-      <DependentUpon>DataGiicNetDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,8 +100,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\Acessos\" />
-    <Folder Include="Forms\Base\" />
     <Folder Include="Forms\Gcmp\" />
     <Folder Include="Forms\Gcom\" />
     <Folder Include="Forms\Gdtec\" />
@@ -149,6 +112,12 @@
     <Folder Include="Reports\" />
     <Folder Include="Resources\" />
     <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GiicNetUI.Comum\GiicNetUI.Comum.csproj">
+      <Project>{2960de44-8164-46c1-872e-4d4b0ee788df}</Project>
+      <Name>GiicNetUI.Comum</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

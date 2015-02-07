@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using GiicNetUI;
 
-namespace GiicNetUI.Comum.Forms.Acessos
+namespace GiicNetUI.Forms.Base.Acessos
 {
     public partial class login : Form
     {
@@ -18,12 +17,12 @@ namespace GiicNetUI.Comum.Forms.Acessos
             InitializeComponent();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //main mainForm = new main();
-            //this.Hide();
-            //mainForm.ShowDialog();
-            //this.Dispose();
+            main mainForm = new main();
+            this.Hide();
+            mainForm.ShowDialog();
+            this.Dispose();
         }
     }
 }

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
+using System.ComponentModel;
 
 namespace GiicNetBus.Base
 {
@@ -126,43 +128,74 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(TABMT tab)
+        public ResultList Update(TABMT source)
         {
-            tab = ProcessarVazios(tab);
+            TABMT tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
+            var ctx = new DataGiicNetEntities();
             try
             {
-                var ctx = new DataGiicNetEntities();
-
-                var obj = GetByKey(tab.CODMT);
-                if (obj != null)
+                ctx.TABMT.Attach(tab);
+                ctx.Entry(tab).State = EntityState.Modified;
+                if (ctx.SaveChanges() > 0)
                 {
-                    obj = tab;
-                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
-                    if (!msg.Any())
-                    {
-                        ctx.SaveChanges();
-                        r.Status = true;
-                        return r;
-                    }
-                    {
-                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                        return r;
-                    }
-
+                    r.Status = true;
+                    return r;
                 }
-                r.Erros = "Não encontra o Registo...";
-                return r;
+                else
+                {
+                    r.Status = false;
+                    r.Erros = "No records were changed in update process!";
+                    return r;
+                }
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message.ToString();
+                r.Erros = ex.Message.ToString() + " Details: " + ex.InnerException;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
+            //tab = ProcessarVazios(tab);
+            //var r = new ResultList();
+            //r.Status = false;
+            //r.Erros = "";
+            //r.Lista = null;
+            //try
+            //{
+            //    var ctx = new DataGiicNetEntities();
+
+            //    var obj = GetByKey(tab.CODMT);
+            //    if (obj != null)
+            //    {
+            //        obj = tab;
+            //        IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+            //        //update fields
+            //        if (!msg.Any())
+            //        {
+            //            ctx.SaveChanges();
+            //            r.Status = true;
+            //            return r;
+            //        }
+            //        {
+            //            r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+            //            return r;
+            //        }
+
+            //    }
+            //    r.Erros = "Não encontra o Registo...";
+            //    return r;
+            //}
+            //catch (Exception ex)
+            //{
+            //    r.Erros = ex.Message.ToString();
+            //    return r;
+            //}
         }
 
         public ResultList Delete(String key)
@@ -171,25 +204,60 @@ namespace GiicNetBus.Base
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
+            var ctx = new DataGiicNetEntities();
             try
             {
-                var ctx = new DataGiicNetEntities();
-                var obj = GetByKey(key);
+                Boolean ok = false;
+                TABMT obj = GetByKey(key);
                 if (obj != null)
                 {
+                    ctx.TABMT.Attach(obj);
                     ctx.TABMT.Remove(obj);
-                    ctx.SaveChanges();
-                    r.Status = true;
+                    if (ctx.SaveChanges() > 0)
+                    {
+                        r.Status = true;
+                        return r;
+                    }
+                    r.Status = false;
+                    r.Erros = "No records were changed in update process!";
                     return r;
                 }
-                r.Erros = "Não encontra Registo...";
+                r.Status = false;
+                r.Erros = "Key value is null!";
                 return r;
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message;
+                r.Erros = ex.Message + " Details: " + ex.InnerException;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
+            //var r = new ResultList();
+            //r.Status = false;
+            //r.Erros = "";
+            //r.Lista = null;
+            //try
+            //{
+            //    var ctx = new DataGiicNetEntities();
+            //    var obj = GetByKey(key);
+            //    if (obj != null)
+            //    {
+            //        ctx.TABMT.Remove(obj);
+            //        ctx.SaveChanges();
+            //        r.Status = true;
+            //        return r;
+            //    }
+            //    r.Erros = "Não encontra Registo...";
+            //    return r;
+            //}
+            //catch (Exception ex)
+            //{
+            //    r.Erros = ex.Message;
+            //    return r;
+            //}
         }
 
         public ResultList Valida(TABMT tab)

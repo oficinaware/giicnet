@@ -16,9 +16,7 @@ namespace GiicNetUI
         public GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
-
-        string CamelCaseA = "Alteração numero um!";
-        string CamelCaseB = "Alteração numero dois!";
+        GiicNetUI.Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte FormMeiosTransporte { get; set; }
 
         public main()
         {
@@ -27,7 +25,7 @@ namespace GiicNetUI
 
         private void main_Load(object sender, EventArgs e)
         {
-            if (varX != varY) MessageBox.Show("As váriáveis são diferentes!");
+
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -69,9 +67,11 @@ namespace GiicNetUI
             MenuArticleForm.Show();
         }
 
-        private void main_Load(object sender, EventArgs e)
+        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (CamelCaseA != CamelCaseB) MessageBox.Show("As váriáveis são diferentes!");
+            FormMeiosTransporte = new Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte();
+            FormMeiosTransporte.ShowDialog();
+            FormMeiosTransporte.Dispose();
         }
     }
 }

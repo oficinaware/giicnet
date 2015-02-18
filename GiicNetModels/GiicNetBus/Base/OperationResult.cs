@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace GiicNetBus.Base
 {
@@ -29,6 +30,13 @@ namespace GiicNetBus.Base
     {
         public Boolean Status { get; set; }
         public IList Lista { get; set; }
+        public String Erros { get; set; }
+
+    }
+    public class ResultList_BL
+    {
+        public Boolean Status { get; set; }
+        public IBindingList Lista { get; set; }
         public String Erros { get; set; }
 
     }

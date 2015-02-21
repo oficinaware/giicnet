@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
 using System.Data.Entity;
-using System.ComponentModel;
 
 namespace GiicNetBus.Base
 {

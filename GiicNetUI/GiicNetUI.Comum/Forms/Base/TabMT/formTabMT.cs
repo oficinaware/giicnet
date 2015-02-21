@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
     public partial class formMeiosTransporte : Form
     {
         GiicNetBus.Base.TabMT busMT = new GiicNetBus.Base.TabMT();
+
+        public static string sendBack;
         
         public formMeiosTransporte()
         {
@@ -55,18 +58,18 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {            
             var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT;
-            if (Convert.ToInt32(novaLinha.CODMT) < 0) e.Valid = false;
-            if (string.IsNullOrWhiteSpace(novaLinha.DESCRICAO) || string.IsNullOrEmpty(novaLinha.DESCRICAO))
-            {
-                e.Valid = false;
-                e.ErrorText = "A descrição é um campo obrigatório";
-            }
-            if (Convert.ToInt32(novaLinha.COD_INTRASTAT) < 0) e.Valid = false;
+            GiicNetBus.Base.ResultList resultList = busMT.Valida(novaLinha);
+            e.Valid = resultList.Status;
+            e.ErrorText = resultList.Erros;
         }
 
-        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT;
+            GridHitInfo info = ((GridView)sender).CalcHitInfo(((GridView)sender).GridControl.PointToClient(Control.MousePosition));
+            if (info.InRow || info.InRowCell)
+            {
+                sendBack = (string)gridView1.GetRowCellValue(info.RowHandle, "CODMT");
+            }
         }
     }
 }

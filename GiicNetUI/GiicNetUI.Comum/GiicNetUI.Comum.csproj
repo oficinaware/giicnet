@@ -100,11 +100,17 @@
     <Compile Include="Forms\Base\Clientes\formObservações.Designer.cs">
       <DependentUpon>formObservações.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Base\MeiosTrasporte\formMeiosTransporte.cs">
+    <Compile Include="Forms\Base\TabMT\formTabMT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\MeiosTrasporte\formMeiosTransporte.Designer.cs">
-      <DependentUpon>formMeiosTransporte.cs</DependentUpon>
+    <Compile Include="Forms\Base\TabMT\formTabMT.Designer.cs">
+      <DependentUpon>formTabMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabPag\formTabPag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabPag\formTabPag.Designer.cs">
+      <DependentUpon>formTabPag.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\PanelHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,8 +151,11 @@
     <EmbeddedResource Include="Forms\Base\Clientes\formMenuClientes.resx">
       <DependentUpon>formMenuClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Base\MeiosTrasporte\formMeiosTransporte.resx">
-      <DependentUpon>formMeiosTransporte.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Base\TabMT\formTabMT.resx">
+      <DependentUpon>formTabMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabPag\formTabPag.resx">
+      <DependentUpon>formTabPag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

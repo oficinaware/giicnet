@@ -1265,6 +1265,7 @@
             this.barButtonItem11.Id = 29;
             this.barButtonItem11.Name = "barButtonItem11";
             this.barButtonItem11.Tag = "Condições de Pagamento";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
             // 
             // barButtonItem12
             // 
@@ -3779,7 +3780,7 @@
             this.panelTopo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTopo.Location = new System.Drawing.Point(0, 0);
             this.panelTopo.Name = "panelTopo";
-            this.panelTopo.Size = new System.Drawing.Size(1264, 66);
+            this.panelTopo.Size = new System.Drawing.Size(1264, 88);
             this.panelTopo.TabIndex = 0;
             // 
             // splitContainerControl1
@@ -3792,7 +3793,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.panelPrincipal);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1264, 598);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1264, 576);
             this.splitContainerControl1.SplitterPosition = 108;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -3802,7 +3803,7 @@
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(81, 598);
+            this.PanelLateral.Size = new System.Drawing.Size(108, 576);
             this.PanelLateral.TabIndex = 0;
             // 
             // panelPrincipal
@@ -3810,7 +3811,7 @@
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1178, 598);
+            this.panelPrincipal.Size = new System.Drawing.Size(1151, 576);
             this.panelPrincipal.TabIndex = 0;
             // 
             // main

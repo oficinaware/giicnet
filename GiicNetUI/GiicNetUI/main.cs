@@ -17,6 +17,7 @@ namespace GiicNetUI
         GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte FormMeiosTransporte { get; set; }
+        GiicNetUI.Comum.Forms.Base.TabPag.formTabPag FormTabPag { get; set; }
 
         public main()
         {
@@ -72,6 +73,13 @@ namespace GiicNetUI
             FormMeiosTransporte = new Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte();
             FormMeiosTransporte.ShowDialog();
             FormMeiosTransporte.Dispose();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTabPag = new Comum.Forms.Base.TabPag.formTabPag();
+            FormTabPag.ShowDialog();
+            FormTabPag.Dispose();
         }
     }
 }

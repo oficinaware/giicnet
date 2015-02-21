@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="Base\Clientes.cs" />
     <Compile Include="Base\CondEntrega.cs" />
     <Compile Include="Base\Estacoes.cs" />

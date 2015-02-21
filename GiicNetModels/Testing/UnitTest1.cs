@@ -1,4 +1,5 @@
 ﻿using System;
+using GiicNetModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Testing
@@ -9,7 +10,8 @@ namespace Testing
         [TestMethod]
         public void Hasresult()
         {
-            var xx = new GiicNetBus.Base.Clientes();
+            var ctx = new DataGiicNetEntities();
+            var xx = new GiicNetBus.Base.Clientes(ctx);
             var result = xx.GetClientesBr("90276");
 
             Assert.IsNotNull(result);

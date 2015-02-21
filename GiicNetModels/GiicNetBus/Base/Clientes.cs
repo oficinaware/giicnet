@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using GiicNetModels;
@@ -12,8 +13,14 @@ using System.Threading.Tasks;
 
 namespace GiicNetBus.Base
 {
-    public class Clientes
+    public class Clientes : BaseRepository
     {
+        public Clientes(DbContext context)
+            : base(context)
+        {
+        }
+
+
         public CLIENTES GetByKey(String key)
         {
             Boolean ok = false;
@@ -91,21 +98,21 @@ namespace GiicNetBus.Base
                 {
                     result.AddResult(obj);
 
-                    result.Type= ResultType.OK;
+                    result.Type = ResultType.OK;
 
                     return result;
                 }
 
                 result.Type = ResultType.Warning;
                 result.AddMessage(ResultType.Warning, "Não existem registos...");
-              
+
                 return result;
             }
             catch (Exception ex)
             {
                 result.Type = ResultType.Error;
                 result.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
-             
+
                 return result;
             }
             finally
@@ -117,33 +124,151 @@ namespace GiicNetBus.Base
         public DataTable BrowseDT()
         {
             DataTable dTClientes = new DataTable();
-            string cn = "Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true";
-            SqlConnection sX = new SqlConnection(cn);
-            if(sX.State == ConnectionState.Closed) sX.Open();
+            //string cn = "Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true";
+            //SqlConnection sX = new SqlConnection(cn);
 
-            SqlCommand sCmd = new SqlCommand("SELECT * FROM CLIENTES_BR", sX);
-            SqlDataReader sDR = sCmd.ExecuteReader();
-            dTClientes.Load(sDR);
+            if (Connection.State == ConnectionState.Closed)
+            {
+                Connection.Open();
+            }
 
-            sDR.Close();
-            sDR.Dispose();
+            using (SqlCommand command = new SqlCommand("SELECT * FROM CLIENTES_BR", Connection))
+            {
+                SqlDataReader dataReader = command.ExecuteReader();
+                dTClientes.Load(dataReader);
 
-            sX.Close();
-            sX.Dispose();
+                dataReader.Close();
+                dataReader.Dispose();
+            }
+
+
+
+
+            //if(Connection.State == ConnectionState.Closed) 
+            //    Connection.Open();
+            //            SqlCommand sCmd = new SqlCommand("SELECT * FROM CLIENTES_BR", Connection);
+            //SqlDataReader sDR = sCmd.ExecuteReader();
+            //dTClientes.Load(sDR);
+
+            //sDR.Close();
+            //sDR.Dispose();
+
+            //Connection.Close();
+            //Connection.Dispose();
 
             return dTClientes;
         }
 
-        public DataTable BrowseDT(List<SqlParameter> paramfiltro )
-            // Exemplo de Uso da função
-            //
-//        List<SqlParameter> sp = new List<SqlParameter>()
-//{
-//    new SqlParameter() {ParameterName = "@CmpyCode", SqlDbType = SqlDbType.NVarChar, Value= CV.Global.CMPYCODE},
-//    new SqlParameter() {ParameterName = "@Code", SqlDbType = SqlDbType.NVarChar, Value = codeName},
-//    new SqlParameter() {ParameterName = "@DisplayCode", SqlDbType = SqlDbType.NVarChar, Value = codeName + "-"},
-//    new SqlParameter() {ParameterName = "@TotalDigit", SqlDbType = SqlDbType.Int, Value = CV.Global.PARAMTOTALDIGIT }
-        
+        public DataTable BrowseTable(List<EntittyParamFilter> filters)
+        {
+            DataTable dTClientes = new DataTable();
+
+            if (Connection.State == ConnectionState.Closed)
+            {
+                Connection.Open();
+            }
+
+
+            var query = "SELECT * FROM CLIENTES_BR cc";
+            if (filters.Count > 0)
+            {
+                query = string.Format("{0} {1}", query, "where");
+
+                for (var i = 0; i < filters.Count; i++)
+                {
+                    var item = filters[i];
+                    if (item.Value == null) break;
+                    var parameter = new SqlParameter();
+                    ClientParamFilter param = (ClientParamFilter)item.Param;
+                    #region switch
+                    switch (param)
+                    {
+                        case ClientParamFilter.Cliente:
+                            parameter.ParameterName = "@CLIENTE";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = item.Value + "%";
+
+                            query = i > 0 ?
+                                string.Format(" and {0} {1} ", query, "cc.CLIENTE LIKE @CLIENTE") : string.Format(" {0} {1} ", query, "cc.CLIENTE LIKE @CLIENTE");
+
+                            break;
+                        case ClientParamFilter.Nome:
+                            parameter.ParameterName = "@NOME";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = "%" + item.Value + "%";
+
+                            query = i > 0 ?
+                              string.Format(" and {0} {1} ", query, "cc.NOME LIKE @NOME") : string.Format(" {0} {1} ", query, "cc.NOME LIKE @NOME");
+                            break;
+                        case ClientParamFilter.NomeAbv:
+                            parameter.ParameterName = "@NOMEABR";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = "%" + item.Value + "%";
+
+                            query = i > 0 ?
+                             string.Format(" and {0} {1} ", query, "cc.NOMEABR LIKE @NOMEABR") : string.Format(" {0} {1} ", query, "cc.NOMEABR LIKE @NOMEABR");
+                            break;
+                        case ClientParamFilter.Classe:
+                            parameter.ParameterName = "@CLASSE";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = item.Value;
+
+                            query = i > 0 ?
+                                string.Format(" and {0} {1} ", query, "cc.CLASSE = @CLASSE") : string.Format(" {0} {1} ", query, "cc.CLASSE = @CLASSE");
+                            break;
+                        case ClientParamFilter.Pais:
+                            parameter.ParameterName = "@PAIS";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = item.Value;
+
+                            query = i > 0 ?
+                                string.Format(" and {0} {1} ", query, "cc.PAIS = @PAIS") : string.Format(" {0} {1} ", query, "cc.PAIS = @PAIS");
+                            break;
+                        case ClientParamFilter.NRCont:
+                            parameter.ParameterName = "@NRCONT";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = item.Value;
+
+                            query = i > 0 ?
+                               string.Format(" and {0} {1} ", query, "cc.NRCONT = @NRCONT") : string.Format(" {0} {1} ", query, "cc.NRCONT = @NRCONT");
+                            break;
+                        case ClientParamFilter.CodCTB:
+                            parameter.ParameterName = "@COD_CTB";
+                            parameter.DbType = DbType.String;
+                            parameter.Value = item.Value;
+                            query = i > 0 ?
+                        string.Format(" and {0} {1} ", query, "cc.COD_CTB = @COD_CTB") : string.Format(" {0} {1} ", query, "cc.COD_CTB = @COD_CTB");
+                            break;
+                        default:
+                            break;
+                    }
+                    #endregion
+
+                }
+
+
+            }
+
+            using (SqlCommand command = new SqlCommand(query, Connection))
+            {
+                SqlDataReader dataReader = command.ExecuteReader();
+                dTClientes.Load(dataReader);
+
+                dataReader.Close();
+                dataReader.Dispose();
+            }
+            return dTClientes;
+        }
+
+        public DataTable BrowseDT(List<SqlParameter> paramfiltro)
+        // Exemplo de Uso da função
+        //
+        //        List<SqlParameter> sp = new List<SqlParameter>()
+        //{
+        //    new SqlParameter() {ParameterName = "@CmpyCode", SqlDbType = SqlDbType.NVarChar, Value= CV.Global.CMPYCODE},
+        //    new SqlParameter() {ParameterName = "@Code", SqlDbType = SqlDbType.NVarChar, Value = codeName},
+        //    new SqlParameter() {ParameterName = "@DisplayCode", SqlDbType = SqlDbType.NVarChar, Value = codeName + "-"},
+        //    new SqlParameter() {ParameterName = "@TotalDigit", SqlDbType = SqlDbType.Int, Value = CV.Global.PARAMTOTALDIGIT }
         {
             DataTable dTClientes = new DataTable();
             string cn = "Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true";
@@ -156,7 +281,7 @@ namespace GiicNetBus.Base
             sCmd.Connection = sX;
             sCmd.CommandText = "SELECT * FROM CLIENTES_BR WHERE (NOME LIKE @NOME OR @NOME = '') AND (PAIS = @PAIS OR @PAIS = '')";
             sCmd.Parameters.AddRange(paramfiltro.ToArray());
-            
+
             SqlDataReader sDR = sCmd.ExecuteReader();
             dTClientes.Load(sDR);
 
@@ -198,7 +323,7 @@ namespace GiicNetBus.Base
                 result.AddMessage(ResultType.Warning, "Não existem registos...");
 
                 return result;
-                
+
                 //r.Status = true;
                 //r.Erros = "Não Existem Registos...";
                 //return r;
@@ -209,7 +334,7 @@ namespace GiicNetBus.Base
                 result.AddMessage(ResultType.Error, ex.Message + " Details: " + ex.InnerException);
 
                 return result;
-                
+
                 //r.Status = false;
                 //r.Erros = ex.Message + " Details: " + ex.InnerException;
                 //return r;
@@ -388,5 +513,22 @@ namespace GiicNetBus.Base
                 ctx.Dispose();
             }
         }
+    }
+
+    public enum ClientParamFilter
+    {
+        Cliente = 0,
+        Nome = 1,
+        NomeAbv = 2,
+        Classe = 3,
+        Pais = 4,
+        NRCont = 5,
+        CodCTB = 6
+    }
+
+    public class EntittyParamFilter
+    {
+        public int Param { get; set; }
+        public string Value { get; set; }
     }
 }

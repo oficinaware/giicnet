@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using GiicNetBus;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using GiicNetBus.Base;
@@ -13,6 +14,7 @@ namespace Testing
         [TestMethod]
         public void TestMethod1()
         {
+            var ctx = new DataGiicNetEntities();
             //var xxZ = new GiicNetBus.Base.Clientes();
             //var resultZ = xxZ.Browse();
             //List<CLIENTES_BR> rZ = new List<CLIENTES_BR>();
@@ -26,7 +28,7 @@ namespace Testing
 
             CLIENTES cLZ = cL.ProcessEmpty();
 
-            Clientes cLO = new Clientes();
+            Clientes cLO = new Clientes(ctx);
             //cLO.ProcessarVazios(cL);
 
             GiicNetModels.CNDENT exemplo = new CNDENT();
@@ -57,6 +59,24 @@ namespace Testing
             string Result = xx.Valida(est);
             Boolean ok = (Result == "");
             Assert.IsTrue(ok);
+        }
+
+        [TestMethod]
+        public void Test_BrowseDT()
+        {
+            var ctx = new DataGiicNetEntities();
+            var clients = new Clientes(ctx);
+
+            DataTable result = clients.BrowseDT();
+
+            foreach (var item in result.Rows)
+            {
+                Assert.IsNotNull(item);
+            }
+
+            Assert.IsNotNull(result);
+
+
         }
     }
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GiicNetModels;
 using System.Text;
 using System.Threading.Tasks;
-using GiicNetModels;
-using System.Reflection;
 using System.Data.Entity;
+using OFSInterOp;
 
 namespace GiicNetBus.Base
 {
-    public class TabMT
+    class Moradas
     {
-        public TABMT GetByKey(String key)
+         public MORADAS GetByKey(string cliente, int itemCli)
         {
             var r = new ResultList();
             r.Status = false;
@@ -20,8 +20,11 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                TABMT obj = (from c in ctx.TABMT where c.CODMT == key select c).FirstOrDefault();
-                if (obj != null) return obj;
+                MORADAS obj = (from c in ctx.MORADAS where c.CLIENTE == cliente & c.ITEMCLI == itemCli select c).FirstOrDefault();
+                if (obj != null)
+                {
+                   return obj;
+                }
                 r.Erros = "Não encontra registo...";
                 return null;
             }
@@ -32,42 +35,32 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABMT ProcessarVazios(TABMT obj)
-        {
-            Type type = typeof(TABMT);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
 
+         public ResultList GetByCliente(string cliente)
+         {
+             var r = new ResultList();
+             //r.Status = false;
+             //r.Erros = "";
+             //r.Lista = null;
+             try
+             {
+                 var ctx = new DataGiicNetEntities();
+                 var obj = (from c in ctx.MORADAS where c.CLIENTE == cliente  select c).ToList();
+                 if (obj.Count > 0)
+                 {
+                     r.Status = true;
+                     r.Lista = obj;
+                     return r;
+                 }
+                 r.Erros = "Não encontra registo...";
+                 return r;
+             }
+             catch (Exception ex)
+             {
+                 r.Erros = ex.Message;
+                 return r;
+             }
+         }
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             var r = new ResultList();
@@ -77,7 +70,7 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                var obj = (from c in ctx.TABMT select c).ToList();
+                var obj = (from c in ctx.MORADAS select c).ToList();
                 if (obj.Count > 0)
                 {
                     r.Status = true;
@@ -96,39 +89,57 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABMT tab)
+        public ResultList Insert(MORADAS source)
         {
-            tab = ProcessarVazios(tab);
+            
+             MORADAS tab = source.ProcessEmpty();
             var r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
+           
+            //r.Status = false;
+            //r.Erros = "";
+            //r.Lista = null;
             var ctx = new DataGiicNetEntities();
+            var iofs  = new OFSInterOp.ServicosGcom();
+            using (var ctxTransaction = ctx.Database.BeginTransaction())
+            
             try
             {
-                //var ctx = new DataGiicNetEntities();
-                TABMT obj = GetByKey(tab.CODMT);
+                
+                MORADAS obj = GetByKey(tab.CLIENTE,tab.ITEMCLI);
                 if (obj == null)
                 {
-                    ctx.TABMT.Add(tab);
+                    int mitemcli = (int)iofs.NOVONR_MORADA();
+                    if (mitemcli == 0)
+                    {
+                        r.Status = false;
+                        r.Erros = "Erro ao gerar ItemCli em Moradas...";
+                        ctxTransaction.Rollback();
+                        return r;
+                    }
+                    tab.ITEMCLI = mitemcli;
+                    ctx.MORADAS.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (!msg.Any())
                     {
                         ctx.SaveChanges();
+                        ctxTransaction.Commit();
                         r.Status = true;
                         return r;
                     }
                     {
+                        ctxTransaction.Rollback();
                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
                         return r;
                     }
                   
                 }
+                ctxTransaction.Rollback();
                 r.Erros = "Registo já Existe...";
                 return r;
             }
             catch (Exception ex)
             {
+                ctxTransaction.Rollback();
                 r.Erros = ex.Message;
                 return r;
             }
@@ -138,9 +149,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(TABMT source)
+        public ResultList Update(MORADAS source)
         {
-            TABMT tab = source.ProcessEmpty();
+            MORADAS tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -148,7 +159,7 @@ namespace GiicNetBus.Base
             var ctx = new DataGiicNetEntities();
             try
             {
-                ctx.TABMT.Attach(tab);
+                ctx.MORADAS.Attach(tab);
                 ctx.Entry(tab).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)
                 {
@@ -171,44 +182,10 @@ namespace GiicNetBus.Base
             {
                 ctx.Dispose();
             }
-            //tab = ProcessarVazios(tab);
-            //var r = new ResultList();
-            //r.Status = false;
-            //r.Erros = "";
-            //r.Lista = null;
-            //try
-            //{
-            //    var ctx = new DataGiicNetEntities();
-
-            //    var obj = GetByKey(tab.CODMT);
-            //    if (obj != null)
-            //    {
-            //        obj = tab;
-            //        IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-            //        //update fields
-            //        if (!msg.Any())
-            //        {
-            //            ctx.SaveChanges();
-            //            r.Status = true;
-            //            return r;
-            //        }
-            //        {
-            //            r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-            //            return r;
-            //        }
-
-            //    }
-            //    r.Erros = "Não encontra o Registo...";
-            //    return r;
-            //}
-            //catch (Exception ex)
-            //{
-            //    r.Erros = ex.Message.ToString();
-            //    return r;
-            //}
+            
         }
 
-        public ResultList Delete(String key)
+        public ResultList Delete(string cliente, int itemcli)
         {
             var r = new ResultList();
             r.Status = false;
@@ -218,11 +195,11 @@ namespace GiicNetBus.Base
             try
             {
                 Boolean ok = false;
-                TABMT obj = GetByKey(key);
+                MORADAS obj = GetByKey(cliente,itemcli);
                 if (obj != null)
                 {
-                    ctx.TABMT.Attach(obj);
-                    ctx.TABMT.Remove(obj);
+                    ctx.MORADAS.Attach(obj);
+                    ctx.MORADAS.Remove(obj);
                     if (ctx.SaveChanges() > 0)
                     {
                         r.Status = true;
@@ -245,49 +222,27 @@ namespace GiicNetBus.Base
             {
                 ctx.Dispose();
             }
-            //var r = new ResultList();
+            
+        }
+
+        public ResultList Valida(MORADAS tab)
+        {
+            var r = new ResultList();
             //r.Status = false;
             //r.Erros = "";
             //r.Lista = null;
-            //try
-            //{
-            //    var ctx = new DataGiicNetEntities();
-            //    var obj = GetByKey(key);
-            //    if (obj != null)
-            //    {
-            //        ctx.TABMT.Remove(obj);
-            //        ctx.SaveChanges();
-            //        r.Status = true;
-            //        return r;
-            //    }
-            //    r.Erros = "Não encontra Registo...";
-            //    return r;
-            //}
-            //catch (Exception ex)
-            //{
-            //    r.Erros = ex.Message;
-            //    return r;
-            //}
-        }
-
-        public ResultList Valida(TABMT tab)
-        {
-            var r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
             try
             {
                 var ctx = new DataGiicNetEntities();
-                if ((tab.CODMT ?? "") == "")
+                if ((tab.NOME_MORADA ?? "") == "")
                 {
-                    r.Erros = "Código é Obrigatório...";
+                    r.Erros = "Nome da Morada é Obrigatório...";
                     return r;
                 }
                
-                if ((tab.DESCRICAO ?? "") == "")
+                if ((tab.MORADA1 ?? "") == "")
                 {
-                    r.Erros = "Descricao é Obrigatória...";
+                    r.Erros = "Morada é Obrigatório";
                     return r;
                 }
                 r.Status = true;
@@ -301,3 +256,4 @@ namespace GiicNetBus.Base
         }
     }
 }
+   

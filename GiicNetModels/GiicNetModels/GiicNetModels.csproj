@@ -56,6 +56,15 @@
     <Compile Include="CLIENTES_BR.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
+    <Compile Include="CLIENTES_CRM.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES_GRIFO.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENTES_MARCAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
     <Compile Include="CNDENT.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
@@ -95,6 +104,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model_DataGiicNet.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MORADAS.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
     <Compile Include="PECAS.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
@@ -130,6 +142,9 @@
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
     <Compile Include="TABCLASSE.cs">
+      <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TABCONTACTOS.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
     <Compile Include="TABCONTASBAN.cs">

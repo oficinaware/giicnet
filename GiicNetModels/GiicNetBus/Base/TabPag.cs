@@ -107,22 +107,29 @@ namespace GiicNetBus.Base
             {
                 var ctx = new DataGiicNetEntities();
                 TABPAG obj = GetByKey(tab.CNDPAG);
-                if (obj == null) ctx.TABPAG.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any())
+                if (obj == null)
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
+                    ctx.TABPAG.Add(tab);
+                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                    if (!msg.Any())
+                    {
+                        ctx.SaveChanges();
+                        r.Status = true;
+                        return r;
+                    }
+                    {
+                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+                        r.Status = false;
+                        return r;
+                    }
                 }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    return r;
-                }
+                r.Erros = "O Registo já existe...";
+                return r;
             }
             catch (Exception ex)
             {
                 r.Erros = ex.Message;
+                r.Status = false;
                 return r;
             }
         }

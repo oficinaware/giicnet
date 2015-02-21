@@ -39,6 +39,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="OFSInterOp">
+      <HintPath>..\..\SharedBin\OFSInterOp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
@@ -54,10 +57,12 @@
     <Compile Include="Base\CondEntrega.cs" />
     <Compile Include="Base\Estacoes.cs" />
     <Compile Include="Base\Familias.cs" />
+    <Compile Include="Base\Moradas.cs" />
     <Compile Include="Base\Pecas.cs" />
     <Compile Include="Base\OperationResult.cs" />
     <Compile Include="Base\TabAge.cs" />
     <Compile Include="Base\TabClasse.cs" />
+    <Compile Include="Base\TabContactos.cs" />
     <Compile Include="Base\TabContasBan.cs" />
     <Compile Include="Base\TabEuro.cs" />
     <Compile Include="Base\TabFPag.cs" />

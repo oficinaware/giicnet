@@ -12,16 +12,18 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABRUBRICAS
+    public partial class CLIENTES_CRM
     {
-        public TABRUBRICAS()
-        {
-            this.CLIENTES_CRM = new HashSet<CLIENTES_CRM>();
-        }
+        public System.Guid NR_REG { get; set; }
+        public string CLIENTE { get; set; }
+        public Nullable<System.DateTime> DATA_REG { get; set; }
+        public string EDITOR { get; set; }
+        public string RUBRICA { get; set; }
+        public string NR_DOC { get; set; }
+        public string TITULO { get; set; }
+        public string TEXTO { get; set; }
     
-        public string rubrica { get; set; }
-        public string descricao { get; set; }
-    
-        public virtual ICollection<CLIENTES_CRM> CLIENTES_CRM { get; set; }
+        public virtual CLIENTES CLIENTES { get; set; }
+        public virtual TABRUBRICAS TABRUBRICAS { get; set; }
     }
 }

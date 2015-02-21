@@ -14,6 +14,11 @@ namespace GiicNetModels
     
     public partial class CLIENTES
     {
+        public CLIENTES()
+        {
+            this.CLIENTES_CRM = new HashSet<CLIENTES_CRM>();
+        }
+    
         public string CLIENTE { get; set; }
         public string NOME { get; set; }
         public string NOMEABR { get; set; }
@@ -103,5 +108,6 @@ namespace GiicNetModels
         public virtual TABPAIS TABPAIS { get; set; }
         public virtual TABSEG TABSEG { get; set; }
         public virtual TABZON TABZON { get; set; }
+        public virtual ICollection<CLIENTES_CRM> CLIENTES_CRM { get; set; }
     }
 }

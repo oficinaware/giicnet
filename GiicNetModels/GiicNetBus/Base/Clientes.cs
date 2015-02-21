@@ -134,6 +134,41 @@ namespace GiicNetBus.Base
             return dTClientes;
         }
 
+        public DataTable BrowseDT(List<SqlParameter> paramfiltro )
+            // Exemplo de Uso da função
+            //
+//        List<SqlParameter> sp = new List<SqlParameter>()
+//{
+//    new SqlParameter() {ParameterName = "@CmpyCode", SqlDbType = SqlDbType.NVarChar, Value= CV.Global.CMPYCODE},
+//    new SqlParameter() {ParameterName = "@Code", SqlDbType = SqlDbType.NVarChar, Value = codeName},
+//    new SqlParameter() {ParameterName = "@DisplayCode", SqlDbType = SqlDbType.NVarChar, Value = codeName + "-"},
+//    new SqlParameter() {ParameterName = "@TotalDigit", SqlDbType = SqlDbType.Int, Value = CV.Global.PARAMTOTALDIGIT }
+        
+        {
+            DataTable dTClientes = new DataTable();
+            string cn = "Data Source=server\\sql2008dev;Initial Catalog=DataGiicNet;Persist Security Info=True;User ID=sa;Password=sa;MultipleActiveResultSets=true";
+            SqlConnection sX = new SqlConnection(cn);
+            if (sX.State == ConnectionState.Closed) sX.Open();
+
+            //SqlCommand sCmd = new SqlCommand("SELECT * FROM CLIENTES_BR WHERE (NOME LIKE @NOME OR @NOME = '') AND (PAIS = @PAIS OR @PAIS = ''), sX);
+            SqlCommand sCmd = new SqlCommand();
+
+            sCmd.Connection = sX;
+            sCmd.CommandText = "SELECT * FROM CLIENTES_BR WHERE (NOME LIKE @NOME OR @NOME = '') AND (PAIS = @PAIS OR @PAIS = '')";
+            sCmd.Parameters.AddRange(paramfiltro.ToArray());
+            
+            SqlDataReader sDR = sCmd.ExecuteReader();
+            dTClientes.Load(sDR);
+
+            sDR.Close();
+            sDR.Dispose();
+
+            sX.Close();
+            sX.Dispose();
+
+            return dTClientes;
+        }
+
         public OperationResult<List<CLIENTES_BR>> Browse()
         {
             var result = new OperationResult<List<CLIENTES_BR>>();

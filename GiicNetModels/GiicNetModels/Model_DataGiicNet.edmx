@@ -92,6 +92,40 @@
           <Property Name="INACTIVO" Type="bit" />
           <Property Name="DATA_INACTIVO" Type="datetime" />
         </EntityType>
+        <EntityType Name="CLIENTES_CRM">
+          <Key>
+            <PropertyRef Name="NR_REG" />
+          </Key>
+          <Property Name="NR_REG" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CLIENTE" Type="nvarchar" MaxLength="5" />
+          <Property Name="DATA_REG" Type="datetime" />
+          <Property Name="EDITOR" Type="nvarchar" MaxLength="15" />
+          <Property Name="RUBRICA" Type="nvarchar" MaxLength="3" />
+          <Property Name="NR_DOC" Type="nvarchar" MaxLength="20" />
+          <Property Name="TITULO" Type="nvarchar" MaxLength="200" />
+          <Property Name="TEXTO" Type="ntext" />
+        </EntityType>
+        <EntityType Name="CLIENTES_GRIFO">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="MARCA" />
+            <PropertyRef Name="ESTACAO" />
+          </Key>
+          <Property Name="CLIENTE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="MARCA" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="ESTACAO" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="ARTIGO" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="CARTAZ" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="CODCOR" Type="nvarchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CLIENTES_MARCAS">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="MARCA" />
+          </Key>
+          <Property Name="CLIENTE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="MARCA" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
         <EntityType Name="CNDENT">
           <Key>
             <PropertyRef Name="CODIGO" />
@@ -246,6 +280,28 @@
           <Property Name="LINK" Type="nvarchar" MaxLength="250" />
           <Property Name="DATAREG" Type="datetime" />
           <Property Name="UTENTE" Type="nvarchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="MORADAS">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="ITEMCLI" />
+          </Key>
+          <Property Name="CLIENTE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="ITEMCLI" Type="int" Nullable="false" />
+          <Property Name="NOME_MORADA" Type="nvarchar" MaxLength="45" />
+          <Property Name="MORADA1" Type="nvarchar" MaxLength="45" />
+          <Property Name="MORADA2" Type="nvarchar" MaxLength="45" />
+          <Property Name="MORADA3" Type="nvarchar" MaxLength="45" />
+          <Property Name="MORADA4" Type="nvarchar" MaxLength="45" />
+          <Property Name="CODPOST" Type="nvarchar" MaxLength="12" />
+          <Property Name="TELEF" Type="nvarchar" MaxLength="20" />
+          <Property Name="FAX" Type="nvarchar" MaxLength="20" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="60" />
+          <Property Name="CONTACTO" Type="nvarchar" MaxLength="20" />
+          <Property Name="PAIS" Type="nvarchar" MaxLength="3" />
+          <Property Name="LOJAWEB" Type="bit" />
+          <Property Name="GPS_LATITUDE" Type="nvarchar" MaxLength="15" />
+          <Property Name="GPS_LONGITUDE" Type="nvarchar" MaxLength="15" />
         </EntityType>
         <EntityType Name="PECAS">
           <Key>
@@ -474,6 +530,24 @@
           </Key>
           <Property Name="CLASSE" Type="nvarchar" MaxLength="2" Nullable="false" />
           <Property Name="DESCRICAO" Type="nvarchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="TABCONTACTOS">
+          <Key>
+            <PropertyRef Name="NR_REG" />
+          </Key>
+          <Property Name="NR_REG" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TERCEIRO" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="CLIENTE" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="NOME" Type="nvarchar" MaxLength="45" />
+          <Property Name="TELEF" Type="nvarchar" MaxLength="20" />
+          <Property Name="TELEM" Type="nvarchar" MaxLength="20" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="60" />
+          <Property Name="DEPARTAMENTO" Type="nvarchar" MaxLength="15" />
+          <Property Name="FAX" Type="nvarchar" MaxLength="20" />
+          <Property Name="SKYPE" Type="nvarchar" MaxLength="60" />
+          <Property Name="MESSENGER" Type="nvarchar" MaxLength="60" />
+          <Property Name="DATANASC" Type="datetime" />
+          <Property Name="CARGO" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TABCONTASBAN">
           <Key>
@@ -1023,6 +1097,30 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           <Property Name="INACTIVO" Type="bit" />
           <Property Name="DATA_INACTIVO" Type="datetime" />
         </EntityType>
+        <Association Name="FK_CLIENTES_CRM_CLIENTES">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="0..1" />
+          <End Role="CLIENTES_CRM" Type="Self.CLIENTES_CRM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="CLIENTE" />
+            </Principal>
+            <Dependent Role="CLIENTES_CRM">
+              <PropertyRef Name="CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTES_CRM_TABRUBRICAS">
+          <End Role="TABRUBRICAS" Type="Self.TABRUBRICAS" Multiplicity="0..1" />
+          <End Role="CLIENTES_CRM" Type="Self.CLIENTES_CRM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TABRUBRICAS">
+              <PropertyRef Name="rubrica" />
+            </Principal>
+            <Dependent Role="CLIENTES_CRM">
+              <PropertyRef Name="RUBRICA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CLIENTES_TABAGE">
           <End Role="TABAGE" Type="Self.TABAGE" Multiplicity="0..1" />
           <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="*" />
@@ -1185,6 +1283,9 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
         </Association>
         <EntityContainer Name="DataGiicNetModelStoreContainer">
           <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLIENTES_CRM" EntityType="Self.CLIENTES_CRM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLIENTES_GRIFO" EntityType="Self.CLIENTES_GRIFO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLIENTES_MARCAS" EntityType="Self.CLIENTES_MARCAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CNDENT" EntityType="Self.CNDENT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESCALAS" EntityType="Self.ESCALAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="estacoes" EntityType="Self.estacoes" Schema="dbo" store:Type="Tables" />
@@ -1193,6 +1294,7 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           <EntitySet Name="GAMAS" EntityType="Self.GAMAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GRUPOS" EntityType="Self.GRUPOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LINKS_DOC" EntityType="Self.LINKS_DOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MORADAS" EntityType="Self.MORADAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PECAS" EntityType="Self.PECAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PICTOGRAMAS" EntityType="Self.PICTOGRAMAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROTA" EntityType="Self.ROTA" Schema="dbo" store:Type="Tables" />
@@ -1208,6 +1310,7 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           <EntitySet Name="TABAGE" EntityType="Self.TABAGE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TABANUL" EntityType="Self.TABANUL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TABCLASSE" EntityType="Self.TABCLASSE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABCONTACTOS" EntityType="Self.TABCONTACTOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TABCONTASBAN" EntityType="Self.TABCONTASBAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TABDIA" EntityType="Self.TABDIA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TABDOC" EntityType="Self.TABDOC" Schema="dbo" store:Type="Tables" />
@@ -1339,6 +1442,14 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
     [CLIENTES_BR].[DATA_INACTIVO] AS [DATA_INACTIVO]
     FROM [dbo].[CLIENTES_BR] AS [CLIENTES_BR]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_CLIENTES_CRM_CLIENTES" Association="Self.FK_CLIENTES_CRM_CLIENTES">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="CLIENTES_CRM" EntitySet="CLIENTES_CRM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTES_CRM_TABRUBRICAS" Association="Self.FK_CLIENTES_CRM_TABRUBRICAS">
+            <End Role="TABRUBRICAS" EntitySet="TABRUBRICAS" />
+            <End Role="CLIENTES_CRM" EntitySet="CLIENTES_CRM" />
+          </AssociationSet>
           <AssociationSet Name="FK_CLIENTES_TABAGE" Association="Self.FK_CLIENTES_TABAGE">
             <End Role="TABAGE" EntitySet="TABAGE" />
             <End Role="CLIENTES" EntitySet="CLIENTES" />
@@ -2075,6 +2186,7 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           </Key>
           <Property Name="rubrica" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="descricao" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CLIENTES_CRM" Relationship="DataGiicNetModel.FK_CLIENTES_CRM_TABRUBRICAS" FromRole="TABRUBRICAS" ToRole="CLIENTES_CRM" />
         </EntityType>
         <EntityType Name="TABSEG">
           <Key>
@@ -2443,6 +2555,19 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
             <End Role="CLIENTES" EntitySet="CLIENTES" />
           </AssociationSet>
           <EntitySet Name="CLIENTES_BR" EntityType="DataGiicNetModel.CLIENTES_BR" />
+          <EntitySet Name="CLIENTES_CRM" EntityType="DataGiicNetModel.CLIENTES_CRM" />
+          <EntitySet Name="CLIENTES_GRIFO" EntityType="DataGiicNetModel.CLIENTES_GRIFO" />
+          <EntitySet Name="CLIENTES_MARCAS" EntityType="DataGiicNetModel.CLIENTES_MARCAS" />
+          <EntitySet Name="MORADAS" EntityType="DataGiicNetModel.MORADAS" />
+          <EntitySet Name="TABCONTACTOS" EntityType="DataGiicNetModel.TABCONTACTOS" />
+          <AssociationSet Name="FK_CLIENTES_CRM_CLIENTES" Association="DataGiicNetModel.FK_CLIENTES_CRM_CLIENTES">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="CLIENTES_CRM" EntitySet="CLIENTES_CRM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTES_CRM_TABRUBRICAS" Association="DataGiicNetModel.FK_CLIENTES_CRM_TABRUBRICAS">
+            <End Role="TABRUBRICAS" EntitySet="TABRUBRICAS" />
+            <End Role="CLIENTES_CRM" EntitySet="CLIENTES_CRM" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CLIENTES">
           <Key>
@@ -2536,6 +2661,7 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           <Property Name="CODMT" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="CODTRAN" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
           <Property Name="CNDENT" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CLIENTES_CRM" Relationship="DataGiicNetModel.FK_CLIENTES_CRM_CLIENTES" FromRole="CLIENTES" ToRole="CLIENTES_CRM" />
         </EntityType>
         <Association Name="FK_CLIENTES_TABAGE">
           <End Type="DataGiicNetModel.TABAGE" Role="TABAGE" Multiplicity="0..1" />
@@ -2710,6 +2836,106 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
           <Property Name="INACTIVO" Type="Boolean" />
           <Property Name="DATA_INACTIVO" Type="DateTime" Precision="3" />
         </EntityType>
+        <EntityType Name="CLIENTES_CRM">
+          <Key>
+            <PropertyRef Name="NR_REG" />
+          </Key>
+          <Property Name="NR_REG" Type="Guid" Nullable="false" />
+          <Property Name="CLIENTE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="DATA_REG" Type="DateTime" Precision="3" />
+          <Property Name="EDITOR" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RUBRICA" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="NR_DOC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TITULO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TEXTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CLIENTES" Relationship="DataGiicNetModel.FK_CLIENTES_CRM_CLIENTES" FromRole="CLIENTES_CRM" ToRole="CLIENTES" />
+          <NavigationProperty Name="TABRUBRICAS" Relationship="DataGiicNetModel.FK_CLIENTES_CRM_TABRUBRICAS" FromRole="CLIENTES_CRM" ToRole="TABRUBRICAS" />
+        </EntityType>
+        <EntityType Name="CLIENTES_GRIFO">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="MARCA" />
+            <PropertyRef Name="ESTACAO" />
+          </Key>
+          <Property Name="CLIENTE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="MARCA" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ESTACAO" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ARTIGO" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CARTAZ" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="CODCOR" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CLIENTES_MARCAS">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="MARCA" />
+          </Key>
+          <Property Name="CLIENTE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="MARCA" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MORADAS">
+          <Key>
+            <PropertyRef Name="CLIENTE" />
+            <PropertyRef Name="ITEMCLI" />
+          </Key>
+          <Property Name="CLIENTE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ITEMCLI" Type="Int32" Nullable="false" />
+          <Property Name="NOME_MORADA" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="MORADA1" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="MORADA2" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="MORADA3" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="MORADA4" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="CODPOST" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="TELEF" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FAX" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="CONTACTO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PAIS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="LOJAWEB" Type="Boolean" />
+          <Property Name="GPS_LATITUDE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="GPS_LONGITUDE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TABCONTACTOS">
+          <Key>
+            <PropertyRef Name="NR_REG" />
+          </Key>
+          <Property Name="NR_REG" Type="Guid" Nullable="false" />
+          <Property Name="TERCEIRO" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CLIENTE" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="NOME" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="TELEF" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TELEM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DEPARTAMENTO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FAX" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SKYPE" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="MESSENGER" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DATANASC" Type="DateTime" Precision="3" />
+          <Property Name="CARGO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_CLIENTES_CRM_CLIENTES">
+          <End Type="DataGiicNetModel.CLIENTES" Role="CLIENTES" Multiplicity="0..1" />
+          <End Type="DataGiicNetModel.CLIENTES_CRM" Role="CLIENTES_CRM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="CLIENTE" />
+            </Principal>
+            <Dependent Role="CLIENTES_CRM">
+              <PropertyRef Name="CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTES_CRM_TABRUBRICAS">
+          <End Type="DataGiicNetModel.TABRUBRICAS" Role="TABRUBRICAS" Multiplicity="0..1" />
+          <End Type="DataGiicNetModel.CLIENTES_CRM" Role="CLIENTES_CRM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TABRUBRICAS">
+              <PropertyRef Name="rubrica" />
+            </Principal>
+            <Dependent Role="CLIENTES_CRM">
+              <PropertyRef Name="RUBRICA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3769,6 +3995,81 @@ warning 6002: The table/view 'DataGiicNet.dbo.CLIENTES_BR' does not have a prima
                 <ScalarProperty Name="NOME" ColumnName="NOME" />
                 <ScalarProperty Name="DTINI" ColumnName="DTINI" />
                 <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTES_CRM">
+            <EntityTypeMapping TypeName="DataGiicNetModel.CLIENTES_CRM">
+              <MappingFragment StoreEntitySet="CLIENTES_CRM">
+                <ScalarProperty Name="TEXTO" ColumnName="TEXTO" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="NR_DOC" ColumnName="NR_DOC" />
+                <ScalarProperty Name="RUBRICA" ColumnName="RUBRICA" />
+                <ScalarProperty Name="EDITOR" ColumnName="EDITOR" />
+                <ScalarProperty Name="DATA_REG" ColumnName="DATA_REG" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="NR_REG" ColumnName="NR_REG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTES_GRIFO">
+            <EntityTypeMapping TypeName="DataGiicNetModel.CLIENTES_GRIFO">
+              <MappingFragment StoreEntitySet="CLIENTES_GRIFO">
+                <ScalarProperty Name="CODCOR" ColumnName="CODCOR" />
+                <ScalarProperty Name="CARTAZ" ColumnName="CARTAZ" />
+                <ScalarProperty Name="ARTIGO" ColumnName="ARTIGO" />
+                <ScalarProperty Name="ESTACAO" ColumnName="ESTACAO" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTES_MARCAS">
+            <EntityTypeMapping TypeName="DataGiicNetModel.CLIENTES_MARCAS">
+              <MappingFragment StoreEntitySet="CLIENTES_MARCAS">
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MORADAS">
+            <EntityTypeMapping TypeName="DataGiicNetModel.MORADAS">
+              <MappingFragment StoreEntitySet="MORADAS">
+                <ScalarProperty Name="GPS_LONGITUDE" ColumnName="GPS_LONGITUDE" />
+                <ScalarProperty Name="GPS_LATITUDE" ColumnName="GPS_LATITUDE" />
+                <ScalarProperty Name="LOJAWEB" ColumnName="LOJAWEB" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CONTACTO" ColumnName="CONTACTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="TELEF" ColumnName="TELEF" />
+                <ScalarProperty Name="CODPOST" ColumnName="CODPOST" />
+                <ScalarProperty Name="MORADA4" ColumnName="MORADA4" />
+                <ScalarProperty Name="MORADA3" ColumnName="MORADA3" />
+                <ScalarProperty Name="MORADA2" ColumnName="MORADA2" />
+                <ScalarProperty Name="MORADA1" ColumnName="MORADA1" />
+                <ScalarProperty Name="NOME_MORADA" ColumnName="NOME_MORADA" />
+                <ScalarProperty Name="ITEMCLI" ColumnName="ITEMCLI" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABCONTACTOS">
+            <EntityTypeMapping TypeName="DataGiicNetModel.TABCONTACTOS">
+              <MappingFragment StoreEntitySet="TABCONTACTOS">
+                <ScalarProperty Name="CARGO" ColumnName="CARGO" />
+                <ScalarProperty Name="DATANASC" ColumnName="DATANASC" />
+                <ScalarProperty Name="MESSENGER" ColumnName="MESSENGER" />
+                <ScalarProperty Name="SKYPE" ColumnName="SKYPE" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TELEM" ColumnName="TELEM" />
+                <ScalarProperty Name="TELEF" ColumnName="TELEF" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+                <ScalarProperty Name="TERCEIRO" ColumnName="TERCEIRO" />
+                <ScalarProperty Name="NR_REG" ColumnName="NR_REG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -31,6 +31,15 @@ namespace GiicNetBus.Base
         public IList Lista { get; set; }
         public String Erros { get; set; }
 
+        public ResultList()
+        {
+            Status = false;
+            Erros = "";
+            Lista = null;
+        }
+
+
+
     }
     public class OperationResult<T>
     {

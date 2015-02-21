@@ -83,5 +83,10 @@ namespace GiicNetModels
         public virtual DbSet<utentes> utentes { get; set; }
         public virtual DbSet<CLIENTES> CLIENTES { get; set; }
         public virtual DbSet<CLIENTES_BR> CLIENTES_BR { get; set; }
+        public virtual DbSet<CLIENTES_CRM> CLIENTES_CRM { get; set; }
+        public virtual DbSet<CLIENTES_GRIFO> CLIENTES_GRIFO { get; set; }
+        public virtual DbSet<CLIENTES_MARCAS> CLIENTES_MARCAS { get; set; }
+        public virtual DbSet<MORADAS> MORADAS { get; set; }
+        public virtual DbSet<TABCONTACTOS> TABCONTACTOS { get; set; }
     }
 }

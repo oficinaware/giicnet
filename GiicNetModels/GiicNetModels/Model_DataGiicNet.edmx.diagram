@@ -76,6 +76,13 @@
         <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABSEG" />
         <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_TABZON" />
         <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES_BR" Width="1.5" PointX="3.375" PointY="22.75" />
+        <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES_CRM" Width="1.5" PointX="27.25" PointY="9.125" />
+        <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES_GRIFO" Width="1.5" PointX="15.75" PointY="22.75" />
+        <EntityTypeShape EntityType="DataGiicNetModel.CLIENTES_MARCAS" Width="1.5" PointX="17.75" PointY="23.75" />
+        <EntityTypeShape EntityType="DataGiicNetModel.MORADAS" Width="1.5" PointX="0.75" PointY="24.75" />
+        <EntityTypeShape EntityType="DataGiicNetModel.TABCONTACTOS" Width="1.5" PointX="5.75" PointY="24.75" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_CRM_CLIENTES" />
+        <AssociationConnector Association="DataGiicNetModel.FK_CLIENTES_CRM_TABRUBRICAS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

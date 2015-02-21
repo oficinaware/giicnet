@@ -25,6 +25,11 @@ namespace GiicNetUI
             InitializeComponent();
         }
 
+        private void main_Load(object sender, EventArgs e)
+        {
+            if (varX != varY) MessageBox.Show("As váriáveis são diferentes!");
+        }
+
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);

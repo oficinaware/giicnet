@@ -32,7 +32,9 @@ namespace GiicNetUI.Comum.Forms.Base.Artigos
 
         public DataTable get()
         {
-            GiicNetBus.Base.Clientes busArtigos = new GiicNetBus.Base.Clientes();
+            var context = new DataGiicNetEntities();
+
+            GiicNetBus.Base.Clientes busArtigos = new GiicNetBus.Base.Clientes(context);
             DataTable dT = new DataTable();
             dT = busArtigos.BrowseDT();
             return dT;

@@ -1252,6 +1252,7 @@
             this.barButtonItem9.Id = 27;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.Tag = "Moedas / Cambios";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -1274,6 +1275,7 @@
             this.barButtonItem12.Id = 30;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.Tag = "Tabela de Classe";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
             // 

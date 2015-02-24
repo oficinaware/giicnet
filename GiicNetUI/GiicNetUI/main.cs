@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Utils.MVVM;
+using GiicNetUI.Comum.Forms.Base.Clientes;
 
 namespace GiicNetUI
 {
     public partial class main : Form
     {
         GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm { get; set; }
-        public GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm { get; set; }
+        //public GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
         GiicNetUI.Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte FormMeiosTransporte { get; set; }
@@ -32,7 +34,7 @@ namespace GiicNetUI
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);
-            ClientForm = new Comum.Forms.Base.Clientes.formClientes();
+            formClientes ClientForm = new Comum.Forms.Base.Clientes.formClientes();
             ClientForm.TopLevel = false;
             ClientForm.AutoScroll = true;
             ClientForm.Dock = DockStyle.Fill;
@@ -47,6 +49,13 @@ namespace GiicNetUI
             this.panelTopo.Controls.Add(MenuClientForm);
             MenuClientForm.Show();
             MenuClientForm.Tag = ClientForm;
+            // aqui
+            if (panelPrincipal.Controls.Contains(ClientForm))
+            {
+                formClientes c1 = ClientForm;
+
+            }
+            // fim
         }
 
         private void barButtonItem64_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

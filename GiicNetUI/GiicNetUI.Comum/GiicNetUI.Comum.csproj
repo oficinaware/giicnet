@@ -100,6 +100,24 @@
     <Compile Include="Forms\Base\Clientes\formObservações.Designer.cs">
       <DependentUpon>formObservações.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Base\TabCLASSE\formTabClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabCLASSE\formTabClasse.Designer.cs">
+      <DependentUpon>formTabClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabCONTASBAN\formCONTASBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabCONTASBAN\formCONTASBAN.Designer.cs">
+      <DependentUpon>formCONTASBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabEURO\formTabEURO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabEURO\formTabEURO.Designer.cs">
+      <DependentUpon>formTabEURO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Base\TabMT\formTabMT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +129,24 @@
     </Compile>
     <Compile Include="Forms\Base\TabPag\formTabPag.Designer.cs">
       <DependentUpon>formTabPag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabPais\formTabPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabPais\formTabPais.Designer.cs">
+      <DependentUpon>formTabPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabSEG\formTabSeg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabSEG\formTabSeg.Designer.cs">
+      <DependentUpon>formTabSeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabTRAN\formTabTRAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabTRAN\formTabTRAN.Designer.cs">
+      <DependentUpon>formTabTRAN.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\PanelHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,11 +187,29 @@
     <EmbeddedResource Include="Forms\Base\Clientes\formMenuClientes.resx">
       <DependentUpon>formMenuClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabCLASSE\formTabClasse.resx">
+      <DependentUpon>formTabClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabCONTASBAN\formCONTASBAN.resx">
+      <DependentUpon>formCONTASBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabEURO\formTabEURO.resx">
+      <DependentUpon>formTabEURO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabMT\formTabMT.resx">
       <DependentUpon>formTabMT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabPag\formTabPag.resx">
       <DependentUpon>formTabPag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabPais\formTabPais.resx">
+      <DependentUpon>formTabPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabSEG\formTabSeg.resx">
+      <DependentUpon>formTabSeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabTRAN\formTabTRAN.resx">
+      <DependentUpon>formTabTRAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

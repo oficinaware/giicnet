@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GiicNetUI.Comum;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,6 @@ namespace GiicNetUI
 {
     public partial class main : Form
     {
-        GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm { get; set; }
-        public GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm { get; set; }
-        GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm { get; set; }
-        GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm { get; set; }
-        GiicNetUI.Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte FormMeiosTransporte { get; set; }
-        GiicNetUI.Comum.Forms.Base.TabPag.formTabPag FormTabPag { get; set; }
-
         public main()
         {
             InitializeComponent();
@@ -32,7 +26,7 @@ namespace GiicNetUI
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);
-            ClientForm = new Comum.Forms.Base.Clientes.formClientes();
+            GiicNetUI.Comum.Forms.Base.Clientes.formClientes ClientForm = new Comum.Forms.Base.Clientes.formClientes();
             ClientForm.TopLevel = false;
             ClientForm.AutoScroll = true;
             ClientForm.Dock = DockStyle.Fill;
@@ -40,7 +34,7 @@ namespace GiicNetUI
             ClientForm.Show();
 
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-             MenuClientForm = new Comum.Forms.Base.Clientes.formMenuClientes();
+            GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm = new Comum.Forms.Base.Clientes.formMenuClientes();
             MenuClientForm.TopLevel = false;
             MenuClientForm.AutoScroll = true;
             MenuClientForm.Dock = DockStyle.Fill;
@@ -52,7 +46,7 @@ namespace GiicNetUI
         private void barButtonItem64_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelPrincipal);
-            ArticleForm = new Comum.Forms.Base.Artigos.formArtigos();
+            GiicNetUI.Comum.Forms.Base.Artigos.formArtigos ArticleForm = new Comum.Forms.Base.Artigos.formArtigos();
             ArticleForm.TopLevel = false;
             ArticleForm.AutoScroll = true;
             ArticleForm.Dock = DockStyle.Fill;
@@ -60,7 +54,7 @@ namespace GiicNetUI
             ArticleForm.Show();
 
             GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-            MenuArticleForm = new Comum.Forms.Base.Artigos.formMenuArtigos();
+            GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm = new Comum.Forms.Base.Artigos.formMenuArtigos();
             MenuArticleForm.TopLevel = false;
             MenuArticleForm.AutoScroll = true;
             MenuArticleForm.Dock = DockStyle.Fill;
@@ -70,16 +64,30 @@ namespace GiicNetUI
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormMeiosTransporte = new Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte();
+            GiicNetUI.Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte FormMeiosTransporte = new Comum.Forms.Base.MeiosTrasporte.formMeiosTransporte();
             FormMeiosTransporte.ShowDialog();
             FormMeiosTransporte.Dispose();
         }
 
         private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormTabPag = new Comum.Forms.Base.TabPag.formTabPag();
+            GiicNetUI.Comum.Forms.Base.TabPag.formTabPag FormTabPag = new Comum.Forms.Base.TabPag.formTabPag();
             FormTabPag.ShowDialog();
             FormTabPag.Dispose();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GiicNetUI.Comum.Forms.Base.TabEURO.formTabEURO FormTabEuro = new Comum.Forms.Base.TabEURO.formTabEURO();
+            FormTabEuro.ShowDialog();
+            FormTabEuro.Dispose();
+        }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GiicNetUI.Comum.Forms.Base.TabCLASSE.formTabClasse FormTabClasse = new Comum.Forms.Base.TabCLASSE.formTabClasse();
+            FormTabClasse.ShowDialog();
+            FormTabClasse.Dispose();
         }
     }
 }

@@ -100,11 +100,29 @@
     <Compile Include="Forms\Base\Clientes\formObservações.Designer.cs">
       <DependentUpon>formObservações.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Base\TabAGE\formManutTABAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabAGE\formManutTABAGE.Designer.cs">
+      <DependentUpon>formManutTABAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabAGE\formTABAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabAGE\formTABAGE.Designer.cs">
+      <DependentUpon>formTABAGE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Base\TabCLASSE\formTabClasse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Base\TabCLASSE\formTabClasse.Designer.cs">
       <DependentUpon>formTabClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabCNDENT\formCNDENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabCNDENT\formCNDENT.Designer.cs">
+      <DependentUpon>formCNDENT.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Base\TabCONTASBAN\formCONTASBAN.cs">
       <SubType>Form</SubType>
@@ -124,17 +142,23 @@
     <Compile Include="Forms\Base\TabMT\formTabMT.Designer.cs">
       <DependentUpon>formTabMT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Base\TabPag\formTabPag.cs">
+    <Compile Include="Forms\Base\TabPAG\formTabPag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\TabPag\formTabPag.Designer.cs">
+    <Compile Include="Forms\Base\TabPAG\formTabPag.Designer.cs">
       <DependentUpon>formTabPag.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Base\TabPais\formTabPais.cs">
+    <Compile Include="Forms\Base\TabPAIS\formTabPais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Base\TabPais\formTabPais.Designer.cs">
+    <Compile Include="Forms\Base\TabPAIS\formTabPais.Designer.cs">
       <DependentUpon>formTabPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\TabRETENCOES\formTABRETENCOES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\TabRETENCOES\formTABRETENCOES.Designer.cs">
+      <DependentUpon>formTABRETENCOES.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Base\TabSEG\formTabSeg.cs">
       <SubType>Form</SubType>
@@ -187,8 +211,17 @@
     <EmbeddedResource Include="Forms\Base\Clientes\formMenuClientes.resx">
       <DependentUpon>formMenuClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabAGE\formManutTABAGE.resx">
+      <DependentUpon>formManutTABAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabAGE\formTABAGE.resx">
+      <DependentUpon>formTABAGE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabCLASSE\formTabClasse.resx">
       <DependentUpon>formTabClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabCNDENT\formCNDENT.resx">
+      <DependentUpon>formCNDENT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabCONTASBAN\formCONTASBAN.resx">
       <DependentUpon>formCONTASBAN.cs</DependentUpon>
@@ -199,11 +232,14 @@
     <EmbeddedResource Include="Forms\Base\TabMT\formTabMT.resx">
       <DependentUpon>formTabMT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Base\TabPag\formTabPag.resx">
+    <EmbeddedResource Include="Forms\Base\TabPAG\formTabPag.resx">
       <DependentUpon>formTabPag.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Base\TabPais\formTabPais.resx">
+    <EmbeddedResource Include="Forms\Base\TabPAIS\formTabPais.resx">
       <DependentUpon>formTabPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabRETENCOES\formTABRETENCOES.resx">
+      <DependentUpon>formTABRETENCOES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabSEG\formTabSeg.resx">
       <DependentUpon>formTabSeg.cs</DependentUpon>

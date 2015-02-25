@@ -72,13 +72,12 @@
             this.barButtonItem14,
             this.barButtonItem15});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1333, 123);
+            this.ribbonControl1.Size = new System.Drawing.Size(1000, 100);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // barButtonItem1
@@ -218,12 +217,11 @@
             // 
             // formMenuClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 123);
+            this.ClientSize = new System.Drawing.Size(1000, 100);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formMenuClientes";
             this.Text = "formMenuClientes";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            this.mainMenu = new DevExpress.XtraBars.BarManager(this.components);
+            this.mainMenu = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.mainBar = new DevExpress.XtraBars.Bar();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
@@ -1290,6 +1289,7 @@
             this.barButtonItem14.Id = 32;
             this.barButtonItem14.Name = "barButtonItem14";
             this.barButtonItem14.Tag = "Agentes";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
             // 
@@ -3643,32 +3643,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1685, 52);
+            this.barDockControlTop.Size = new System.Drawing.Size(1264, 49);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 889);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1685, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 718);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1264, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 52);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 837);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 49);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 669);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1685, 52);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 837);
+            this.barDockControlRight.Location = new System.Drawing.Point(1264, 49);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 669);
             // 
             // barButtonItem1
             // 
@@ -3771,15 +3767,14 @@
             this.container1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container1.Horizontal = false;
             this.container1.IsSplitterFixed = true;
-            this.container1.Location = new System.Drawing.Point(0, 52);
-            this.container1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.container1.Location = new System.Drawing.Point(0, 49);
             this.container1.Name = "container1";
             this.container1.Panel1.Controls.Add(this.panelTopo);
             this.container1.Panel1.Text = "Panel1";
             this.container1.Panel2.Controls.Add(this.splitContainerControl1);
             this.container1.Panel2.Text = "Panel2";
-            this.container1.Size = new System.Drawing.Size(1685, 837);
-            this.container1.SplitterPosition = 81;
+            this.container1.Size = new System.Drawing.Size(1264, 669);
+            this.container1.SplitterPosition = 80;
             this.container1.TabIndex = 4;
             this.container1.Text = "splitContainerControl1";
             // 
@@ -3787,9 +3782,8 @@
             // 
             this.panelTopo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTopo.Location = new System.Drawing.Point(0, 0);
-            this.panelTopo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTopo.Name = "panelTopo";
-            this.panelTopo.Size = new System.Drawing.Size(1685, 109);
+            this.panelTopo.Size = new System.Drawing.Size(1264, 60);
             this.panelTopo.TabIndex = 0;
             // 
             // splitContainerControl1
@@ -3797,14 +3791,13 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.IsSplitterFixed = true;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.PanelLateral);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.panelPrincipal);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1685, 723);
-            this.splitContainerControl1.SplitterPosition = 98;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1264, 604);
+            this.splitContainerControl1.SplitterPosition = 96;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -3812,32 +3805,29 @@
             // 
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
-            this.PanelLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(132, 723);
+            this.PanelLateral.Size = new System.Drawing.Size(72, 604);
             this.PanelLateral.TabIndex = 0;
             // 
             // panelPrincipal
             // 
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1548, 723);
+            this.panelPrincipal.Size = new System.Drawing.Size(1187, 604);
             this.panelPrincipal.TabIndex = 0;
             // 
             // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1685, 912);
+            this.ClientSize = new System.Drawing.Size(1264, 741);
             this.Controls.Add(this.container1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WinGiic";

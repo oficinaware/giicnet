@@ -89,5 +89,12 @@ namespace GiicNetUI
             FormTabClasse.ShowDialog();
             FormTabClasse.Dispose();
         }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GiicNetUI.Comum.Forms.Base.TabAGE.formTABAGE FormTabAge = new Comum.Forms.Base.TabAGE.formTABAGE();
+            FormTabAge.ShowDialog();
+            FormTabAge.Dispose();
+        }
     }
 }

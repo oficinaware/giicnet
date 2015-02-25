@@ -11,23 +11,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GiicNetUI.Comum.Forms.Base.TabCONTASBAN
+namespace GiicNetUI.Comum.Forms.Base.TabRETENCOES
 {
-    public partial class formCONTASBAN : Form
+    public partial class formTABRETENCOES : Form
     {
-        GiicNetBus.Base.TabContasBan busBancos = new GiicNetBus.Base.TabContasBan();
+        GiicNetBus.Base.Tab_Retencoes busRetencoes = new GiicNetBus.Base.Tab_Retencoes();
 
         public static string sendBack;
 
-        public formCONTASBAN()
+        public formTABRETENCOES()
         {
             InitializeComponent();
         }
 
-        private void formCONTASBAN_Load(object sender, EventArgs e)
+        private void formTABRETENCOES_Load(object sender, EventArgs e)
         {
-            GiicNetBus.Base.ResultList resultList = busBancos.GetAll(1, 10000);
-            var Lista = new BindingList<GiicNetModels.TABCONTASBAN>((System.Collections.Generic.IList<GiicNetModels.TABCONTASBAN>)resultList.Lista);
+            GiicNetBus.Base.ResultList resultList = busRetencoes.GetAll(1, 10000);
+            var Lista = new BindingList<GiicNetModels.TAB_RETENCOES>((System.Collections.Generic.IList<GiicNetModels.TAB_RETENCOES>)resultList.Lista);
             if (resultList.Status) gridControl1.DataSource = Lista;
         }
 
@@ -36,12 +36,12 @@ namespace GiicNetUI.Comum.Forms.Base.TabCONTASBAN
             if (e.RowHandle == GridControl.NewItemRowHandle)
             {
                 //INSERT
-                GiicNetBus.Base.ResultList resultList = busBancos.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABCONTASBAN);
+                GiicNetBus.Base.ResultList resultList = busRetencoes.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TAB_RETENCOES);
             }
             else
             {
                 //UPDATE
-                GiicNetBus.Base.ResultList resultList = busBancos.Update(e.Row as GiicNetModels.TABCONTASBAN);
+                GiicNetBus.Base.ResultList resultList = busRetencoes.Update(e.Row as GiicNetModels.TAB_RETENCOES);
             }
         }
 
@@ -50,15 +50,15 @@ namespace GiicNetUI.Comum.Forms.Base.TabCONTASBAN
             DialogResult hR = MessageBox.Show("Tem a certeza que pretende remover?", "Tem a certeza que pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (hR == System.Windows.Forms.DialogResult.Yes)
             {
-                GiicNetBus.Base.ResultList resultList = busBancos.Delete((gridView1.GetRow(e.RowHandle) as GiicNetModels.TABCONTASBAN).ID_CONTA);
+                GiicNetBus.Base.ResultList resultList = busRetencoes.Delete((gridView1.GetRow(e.RowHandle) as GiicNetModels.TAB_RETENCOES).COD);
                 gridControl1.Refresh();
             }
         }
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
-            var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABCONTASBAN;
-            GiicNetBus.Base.ResultList resultList = busBancos.Valida(novaLinha);
+            var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TAB_RETENCOES;
+            GiicNetBus.Base.ResultList resultList = busRetencoes.Valida(novaLinha);
             e.Valid = resultList.Status;
             e.ErrorText = resultList.Erros;
         }
@@ -68,7 +68,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabCONTASBAN
             GridHitInfo info = ((GridView)sender).CalcHitInfo(((GridView)sender).GridControl.PointToClient(Control.MousePosition));
             if (info.InRow || info.InRowCell)
             {
-                sendBack = (string)gridView1.GetRowCellValue(info.RowHandle, "ID_CONTA");
+                sendBack = (string)gridView1.GetRowCellValue(info.RowHandle, "COD");
             }
         }
     }

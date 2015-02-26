@@ -96,9 +96,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABMT tab)
+        public ResultList Insert(TABMT source)
         {
-            tab = ProcessarVazios(tab);
+            TABMT tab = source.ProcessEmpty(); 
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -110,6 +110,12 @@ namespace GiicNetBus.Base
                 TABMT obj = GetByKey(tab.CODMT);
                 if (obj == null)
                 {
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
+
                     ctx.TABMT.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (!msg.Any())
@@ -148,6 +154,14 @@ namespace GiicNetBus.Base
             var ctx = new DataGiicNetEntities();
             try
             {
+
+                ResultList rval = Valida(tab);
+                if (rval.Status == false)
+                {
+                    return rval;
+                }
+                
+                
                 ctx.TABMT.Attach(tab);
                 ctx.Entry(tab).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)
@@ -171,41 +185,7 @@ namespace GiicNetBus.Base
             {
                 ctx.Dispose();
             }
-            //tab = ProcessarVazios(tab);
-            //var r = new ResultList();
-            //r.Status = false;
-            //r.Erros = "";
-            //r.Lista = null;
-            //try
-            //{
-            //    var ctx = new DataGiicNetEntities();
-
-            //    var obj = GetByKey(tab.CODMT);
-            //    if (obj != null)
-            //    {
-            //        obj = tab;
-            //        IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-            //        //update fields
-            //        if (!msg.Any())
-            //        {
-            //            ctx.SaveChanges();
-            //            r.Status = true;
-            //            return r;
-            //        }
-            //        {
-            //            r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-            //            return r;
-            //        }
-
-            //    }
-            //    r.Erros = "Não encontra o Registo...";
-            //    return r;
-            //}
-            //catch (Exception ex)
-            //{
-            //    r.Erros = ex.Message.ToString();
-            //    return r;
-            //}
+            
         }
 
         public ResultList Delete(String key)
@@ -245,29 +225,7 @@ namespace GiicNetBus.Base
             {
                 ctx.Dispose();
             }
-            //var r = new ResultList();
-            //r.Status = false;
-            //r.Erros = "";
-            //r.Lista = null;
-            //try
-            //{
-            //    var ctx = new DataGiicNetEntities();
-            //    var obj = GetByKey(key);
-            //    if (obj != null)
-            //    {
-            //        ctx.TABMT.Remove(obj);
-            //        ctx.SaveChanges();
-            //        r.Status = true;
-            //        return r;
-            //    }
-            //    r.Erros = "Não encontra Registo...";
-            //    return r;
-            //}
-            //catch (Exception ex)
-            //{
-            //    r.Erros = ex.Message;
-            //    return r;
-            //}
+            
         }
 
         public ResultList Valida(TABMT tab)

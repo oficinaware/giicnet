@@ -456,6 +456,7 @@ FIM:
 
         On Error GoTo ligar
         'cnn1 = CurrentProject.Connection
+
         GoTo siga
 ligar:
         'DoCmd.OpenForm("ligacao_sql", , , , , acDialog)

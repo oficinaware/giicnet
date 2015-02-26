@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
@@ -31,42 +32,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABAGE ProcessarVazios(TABAGE obj)
-        {
-            Type type = typeof(TABAGE);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
-
+       
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             var r = new ResultList();
@@ -95,9 +61,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABAGE tab)
+        public ResultList Insert(TABAGE source)
         {
-            tab = ProcessarVazios(tab);
+            TABAGE tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -106,43 +72,10 @@ namespace GiicNetBus.Base
             {
                 var ctx = new DataGiicNetEntities();
                 TABAGE obj = GetByKey(tab.AGENTE);
-                if (obj == null) ctx.TABAGE.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any())
+                if (obj == null)
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
-                }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    return r;
-                }
-            }
-            catch (Exception ex)
-            {
-                r.Erros = ex.Message;
-                return r;
-            }
-        }
-
-        public ResultList Update(TABAGE tab)
-        {
-            tab = ProcessarVazios(tab);
-            var r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
-            try
-            {
-                var ctx = new DataGiicNetEntities();
-
-                var obj = GetByKey(tab.AGENTE);
-                if (obj != null)
-                {
-                    obj = tab;
+                    ctx.TABAGE.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
                     if (!msg.Any())
                     {
                         ctx.SaveChanges();
@@ -153,10 +86,52 @@ namespace GiicNetBus.Base
                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
                         return r;
                     }
-
                 }
-                r.Erros = "Não encontra o Registo...";
+                r.Erros = "Registo já Existe...";
                 return r;
+
+            }
+            catch (Exception ex)
+            {
+                r.Erros = ex.Message;
+                return r;
+            }
+        }
+
+        public ResultList Update(TABAGE source)
+        {
+            TABAGE tab = source.ProcessEmpty();
+            var r = new ResultList();
+            r.Status = false;
+            r.Erros = "";
+            r.Lista = null;
+            try
+            {
+                var ctx = new DataGiicNetEntities();
+
+                var obj = GetByKey(tab.AGENTE);
+                if (obj != null)
+
+                    {
+                        ctx.TABAGE.Attach(tab);
+                        ctx.Entry(tab).State = EntityState.Modified;
+                        if (ctx.SaveChanges() > 0)
+                        {
+                            r.Status = true;
+                            return r;
+                        }
+                        else
+                        {
+                            r.Status = false;
+                            r.Erros = "No records were changed in update process!";
+                            return r;
+                        }
+                    }
+
+                r.Erros = "Registo não existe...";
+                return r;
+
+
             }
             catch (Exception ex)
             {

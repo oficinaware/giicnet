@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=SERVER\SQL2008DEV;Initial Catalog=DataGiicNet;Persist Security Info=T"& _ 
+            "rue;User ID=sa;Password=sa;MultipleActiveResultSets=True;Connect Timeout=60")>  _
+        Public ReadOnly Property cnn1() As String
+            Get
+                Return CType(Me("cnn1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -12,6 +12,12 @@ Imports Microsoft.VisualBasic
 Imports System.Reflection
 
 Public Class ServicosGcom
+
+    Private cnn1 As ADO.DbConnection
+
+    Public Sub New()
+        cnn1 = New ADO.DbConnection()
+        End Sub
     Public Function ValidaPrePack(pnrenco As String, plnenco As Long) As Boolean
         Dim prepack As New ADODB.Recordset
 
@@ -31,13 +37,13 @@ Public Class ServicosGcom
         End If
 
     End Function
-    Public Function NOVONR_MORADA() As Long
+    Public Function NOVONR_MORADA() As Result_Op
         Dim PARAM As New ADODB.Recordset
         Dim Moradas As New ADODB.Recordset
 
         Dim MSG As Object
         Dim NOVONUM As Long
-
+        Dim r As New Result_Op
 
         Dim NUMANT As Double
 
@@ -47,10 +53,8 @@ Public Class ServicosGcom
         End If
         PARAM.Open("select * from param", cnn1, adOpenStatic, adLockOptimistic)
         PARAM.MoveFirst()
-        ' novo numero para MORASAS DE CLIENTES '
 
-
-        NOVONR_MORADA = 0
+        'NOVONR_MORADA = 0
 
         On Error GoTo FIM
 
@@ -61,17 +65,18 @@ Public Class ServicosGcom
         End If
         Moradas.Open("select ITEMCLI from MORADAS where ITEMCLI = " & NOVONUM, cnn1, adOpenStatic, adLockReadOnly)
         If Not Moradas.EOF Then
-            MSG = MsgBox("Erro ! Numero já existe", vbExclamation)
-            NOVONR_MORADA = 0
+            r.Msg = "Erro ! Numero já existe"
             GoTo FIM
         End If
 
         PARAM.Fields("pitemcli").Value = NOVONUM
         PARAM.UpdateBatch()
-        NOVONR_MORADA = NOVONUM
+        r.Valor = NOVONUM
+        r.Status = True
+        'NOVONR_MORADA = NOVONUM
 
 FIM:
-
+        Return r
         If PARAM.State = adStateOpen Then
             PARAM.Close()
         End If
@@ -921,7 +926,7 @@ FINAL:
 
         Dim tabdoc As ADODB.Recordset, RST As ADODB.Recordset, MSG As Object
         Dim NOVONUM As Long, NUMANT As Long
-        
+
         tabdoc = New ADODB.Recordset
         RST = New ADODB.Recordset
         ' novo numero para documento '
@@ -936,7 +941,7 @@ inicio:
 
         On Error GoTo FIM
         NOVONUM = Nz(tabdoc.Fields("NUMERADOR").Value) + 1
-        
+
 
         RST.Open("select * from " & ficheiro & " where nrenco = '" & strzero(NOVONUM, 6) & "'", cnn1, adOpenStatic, adLockOptimistic)
         'rst.Seek "=", strzero(NOVONUM, 6)

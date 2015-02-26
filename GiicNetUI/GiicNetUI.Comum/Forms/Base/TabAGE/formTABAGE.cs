@@ -79,5 +79,14 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             fmTabAge.ShowDialog();
             fmTabAge.Dispose();
         }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formManutTABAGE fmTabAge = new formManutTABAGE();
+            GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
+            fmTabAge.PARAM_AGENTE = tA.AGENTE;
+            fmTabAge.ShowDialog();
+            fmTabAge.Dispose();
+        }
     }
 }

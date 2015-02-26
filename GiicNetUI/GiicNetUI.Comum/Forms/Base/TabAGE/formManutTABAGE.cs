@@ -16,7 +16,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
         GiicNetBus.Base.TabAge busAgentes = new GiicNetBus.Base.TabAge();
         GiicNetBus.Base.TabIdioma busIdioma = new GiicNetBus.Base.TabIdioma();
 
-        public static string PARAM_AGENTE;
+        public string PARAM_AGENTE { get; set; }
 
         public formManutTABAGE()
         {
@@ -36,6 +36,35 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             LINGUA.Properties.DataSource = ListaIdioma;
             LINGUA.Properties.DisplayMember = "IDIOMA";
             LINGUA.Properties.ValueMember = "DESCRICAO";
+
+            if (PARAM_AGENTE != string.Empty)
+            {
+                GiicNetModels.TABAGE uAgente = busAgentes.GetByKey(PARAM_AGENTE);
+                AGENTE.Text = uAgente.AGENTE;
+                AGENTEPAI.SelectedText = uAgente.AGENTEPAI;
+                NOME.Text = uAgente.NOME;
+                MORADA1.Text = uAgente.MORADA1;
+                MORADA2.Text = uAgente.MORADA2;
+                MORADA3.Text = uAgente.MORADA3;
+                MORADA4.Text = uAgente.MORADA4;
+                TELEF.Text = uAgente.TELEF;
+                TELEM.Text = uAgente.TELM;
+                FAX.Text = uAgente.FAX;
+                EMAIL.Text = uAgente.EMAIL;
+                COMISSAO.Text = uAgente.COMISSAO.ToString();
+                FTPFOLDER.Text = uAgente.FTPFOLDER;
+                FTPDIRREMOTO.Text = uAgente.FTPDIRREMOTO;
+                USERNAME.Text = uAgente.USERNAME;
+                PASSWORD.Text = uAgente.PASSWORD;
+                LINGUA.SelectedText = uAgente.LINGUA;
+                PREFIXO_ENC.Text = uAgente.PREFIXO_ENC;
+                COMISSIONISTA.Checked = (bool)uAgente.COMISSIONISTA;
+
+                //if (!uAgente.STAT.HasValue) STAT.Checked = false;
+                //else STAT.Checked = (bool)uAgente.STAT;
+
+                STAT.Checked = (bool)uAgente.STAT;
+            }
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -65,12 +94,37 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             GiicNetBus.Base.ResultList resultValida = busAgentes.Valida(nAGENTE);
             if (resultValida.Status)
             {
+                GiicNetBus.Base.ResultList resultList;
+                if (PARAM_AGENTE != string.Empty) resultList = busAgentes.Update(nAGENTE);
+                else resultList = busAgentes.Insert(nAGENTE);
+                if (resultList.Status) limpar();
+                else MessageBox.Show(resultList.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            else MessageBox.Show(resultValida.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+        }
 
-            }
-            else
-            {
-                
-            }
+        private void limpar()
+        {
+            AGENTE.Text = string.Empty;
+            AGENTEPAI.Text = string.Empty;
+            NOME.Text = string.Empty;
+            MORADA1.Text = string.Empty;
+            MORADA2.Text = string.Empty;
+            MORADA3.Text = string.Empty;
+            MORADA4.Text = string.Empty;
+            TELEF.Text = string.Empty;
+            TELEM.Text = string.Empty;
+            FAX.Text = string.Empty;
+            EMAIL.Text = string.Empty;
+            COMISSAO.Text = string.Empty;
+            FTPFOLDER.Text = string.Empty;
+            FTPDIRREMOTO.Text = string.Empty;
+            USERNAME.Text = string.Empty;
+            PASSWORD.Text = string.Empty;
+            LINGUA.Text = string.Empty;
+            PREFIXO_ENC.Text = string.Empty;
+            COMISSIONISTA.Checked = true;
+            STAT.Checked = false;
         }
     }
 }

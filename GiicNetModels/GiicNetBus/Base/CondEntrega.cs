@@ -33,41 +33,41 @@ namespace GiicNetBus.Base
             }
         }
 
-        public CNDENT ProcessarVazios(CNDENT cE)
-        {
-            Type type = typeof(CNDENT);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(cE).ToString() == "") property.SetValue(cE, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(cE).ToString().Contains("0001")) property.SetValue(cE, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(cE)) == 0) property.SetValue(cE, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(cE)) == 0) property.SetValue(cE, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return cE;
-        }
+        //public CNDENT ProcessarVazios(CNDENT cE)
+        //{
+        //    Type type = typeof(CNDENT);
+        //    PropertyInfo[] properties = type.GetProperties();
+        //    foreach (PropertyInfo property in properties)
+        //    {
+        //        try
+        //        {
+        //            string tipoP = property.PropertyType.ToString();
+        //            switch (tipoP)
+        //            {
+        //                case "System.String":
+        //                    if (property.GetValue(cE).ToString() == "") property.SetValue(cE, null);
+        //                    break;
+        //                case "System.DateTime":
+        //                    if (property.GetValue(cE).ToString().Contains("0001")) property.SetValue(cE, null);
+        //                    break;
+        //                case "System.Short":
+        //                    break;
+        //                case "System.Decimal":
+        //                    if (Convert.ToDecimal(property.GetValue(cE)) == 0) property.SetValue(cE, null);
+        //                    break;
+        //                case "System.Int":
+        //                    if ((int)(property.GetValue(cE)) == 0) property.SetValue(cE, null);
+        //                    break;
+        //                case "System.Bool":
+        //                    break;
+        //                default:
+        //                    break;
+        //            }
+        //        }
+        //        catch (Exception) { }
+        //    }
+        //    return cE;
+        //}
 
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
@@ -101,9 +101,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(CNDENT cndent)
+        public ResultList Insert(CNDENT source)
         {
-            cndent = ProcessarVazios(cndent);
+            CNDENT cndent = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -114,21 +114,25 @@ namespace GiicNetBus.Base
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 CNDENT obj = GetByKey(cndent.CODIGO);
                 if (obj == null)
-                ctx.CNDENT.Add(cndent);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (! msg.Any() )
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
+                    ctx.CNDENT.Add(cndent);
+                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                    if (! msg.Any())
+                    {
+                        ctx.SaveChanges();
+                        r.Status = true;
+                        return r;
 
+                    }
+                    {
+                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+
+                        return r;
+                    }
                 }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    
-                    return r;
-                }
-                
+                r.Erros = "Registo já existe...";
+                return r;
+
             }
             catch (Exception ex)
             {
@@ -137,9 +141,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(CNDENT cndent)
+        public ResultList Update(CNDENT source)
         {
-            cndent = ProcessarVazios(cndent);
+            CNDENT cndent = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";

@@ -96,9 +96,10 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABPAG tab)
+        public ResultList Insert(TABPAG source)
         {
-            tab = ProcessarVazios(tab);
+            //tab = ProcessarVazios(tab);
+            TABPAG tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";

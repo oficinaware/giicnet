@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
     public class TabLocal
     {
-        public TABLOCAL GetByKey(String codzon, string codpais, string codlocal)
+        public TABLOCAL GetByKey(string codpais, String codzon, string codlocal)
         {
             var r = new ResultList();
             r.Status = false;
@@ -31,42 +32,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABLOCAL ProcessarVazios(TABLOCAL obj)
-        {
-            Type type = typeof(TABLOCAL);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
-
+        
         public ResultList GetByPaisZona(string codpais, string codzon)
         {
             var r = new ResultList();
@@ -123,9 +89,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABLOCAL tab)
+        public ResultList Insert(TABLOCAL source)
         {
-            tab = ProcessarVazios(tab);
+            TABLOCAL tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -134,44 +100,11 @@ namespace GiicNetBus.Base
             {
 
                 var ctx = new DataGiicNetEntities();
-                TABLOCAL obj = GetByKey(tab.CODZON, tab.CODPAIS, tab.CODLOCAL);
-                if (obj == null) ctx.TABLOCAL.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any())
+                TABLOCAL obj = GetByKey(tab.CODPAIS, tab.CODZON, tab.CODLOCAL);
+                if (obj == null)
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
-                }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    return r;
-                }
-            }
-            catch (Exception ex)
-            {
-                r.Erros = ex.Message;
-                return r;
-            }
-        }
-
-        public ResultList Update(TABLOCAL tab)
-        {
-            tab = ProcessarVazios(tab);
-            var r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
-            try
-            {
-                var ctx = new DataGiicNetEntities();
-
-                var obj = GetByKey(tab.CODZON, tab.CODPAIS, tab.CODLOCAL);
-                if (obj != null)
-                {
-                    obj = tab;
+                    ctx.TABLOCAL.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
                     if (!msg.Any())
                     {
                         ctx.SaveChanges();
@@ -182,10 +115,50 @@ namespace GiicNetBus.Base
                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
                         return r;
                     }
-
                 }
-                r.Erros = "Não encontra o Registo...";
+                r.Erros = "Registo já Existe...";
                 return r;
+            }
+            catch (Exception ex)
+            {
+                r.Erros = ex.Message;
+                return r;
+            }
+        }
+
+        public ResultList Update(TABLOCAL source)
+        {
+            TABLOCAL tab = source.ProcessEmpty();
+            var r = new ResultList();
+            r.Status = false;
+            r.Erros = "";
+            r.Lista = null;
+            try
+            {
+                var ctx = new DataGiicNetEntities();
+
+                var obj = GetByKey(tab.CODPAIS,tab.CODZON, tab.CODLOCAL);
+                if (obj != null)
+                {
+                    ctx.TABLOCAL.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
+                    {
+                        r.Status = true;
+                        return r;
+                    }
+                    else
+                    {
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
+                        return r;
+                    }
+                }
+
+                r.Erros = "Registo não existe...";
+                return r;
+
+
             }
             catch (Exception ex)
             {
@@ -194,7 +167,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Delete(String codzon, string codpais, string codlocal)
+        public ResultList Delete(String codpais,String codzon, String codlocal)
         {
             var r = new ResultList();
             r.Status = false;
@@ -203,9 +176,10 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                var obj = GetByKey(codzon, codpais, codlocal);
+                var obj = GetByKey(codpais, codzon, codlocal);
                 if (obj != null)
                 {
+                    ctx.TABLOCAL.Attach(obj);
                     ctx.TABLOCAL.Remove(obj);
                     ctx.SaveChanges();
                     r.Status = true;

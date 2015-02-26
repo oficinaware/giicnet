@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
@@ -32,41 +33,41 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABPAIS ProcessarVazios(TABPAIS obj)
-        {
-            Type type = typeof(TABPAIS);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
+        //public TABPAIS ProcessarVazios(TABPAIS obj)
+        //{
+        //    Type type = typeof(TABPAIS);
+        //    PropertyInfo[] properties = type.GetProperties();
+        //    foreach (PropertyInfo property in properties)
+        //    {
+        //        try
+        //        {
+        //            string tipoP = property.PropertyType.ToString();
+        //            switch (tipoP)
+        //            {
+        //                case "System.String":
+        //                    if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
+        //                    break;
+        //                case "System.DateTime":
+        //                    if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
+        //                    break;
+        //                case "System.Short":
+        //                    break;
+        //                case "System.Decimal":
+        //                    if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
+        //                    break;
+        //                case "System.Int":
+        //                    if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
+        //                    break;
+        //                case "System.Bool":
+        //                    break;
+        //                default:
+        //                    break;
+        //            }
+        //        }
+        //        catch (Exception) { }
+        //    }
+        //    return obj;
+        //}
 
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
@@ -96,9 +97,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABPAIS tab)
+        public ResultList Insert(TABPAIS source)
         {
-            tab = ProcessarVazios(tab);
+            TABPAIS tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -128,53 +129,42 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(TABPAIS tab)
+        public ResultList Update(TABPAIS source)
         {
-            tab = ProcessarVazios(tab);
+            TABPAIS tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
+
+           DataGiicNetEntities ctx = new DataGiicNetEntities();
             try
             {
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
-
-                TABPAIS obj = GetByKey(tab.CODPAIS);
-                if (obj != null)
+                ctx.TABPAIS.Attach(tab);
+                ctx.Entry(tab).State = EntityState.Modified;
+                if (ctx.SaveChanges() > 0)
                 {
-                    obj.CATALOGO = tab.CATALOGO;
-                    obj.CATALOGO_PVP = tab.CATALOGO_PVP;
-                    obj.CLIENTES = tab.CLIENTES;
-                    obj.CODPAIS = tab.CODPAIS;
-                    obj.CTBCONTA_2C = tab.CTBCONTA_2C;
-                    obj.CTBCONTA_2D = tab.CTBCONTA_2D;
-                    obj.CTBCONTA_3C = tab.CTBCONTA_3C;
-                    obj.CTBCONTA_3D = tab.CTBCONTA_3D;
-                    obj.DESCRICAO = tab.DESCRICAO;
-                    obj.TABZON = tab.TABZON;
-                    obj.codctb = tab.codctb;
-                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
-                    if (!msg.Any())
-                    {
-                        ctx.SaveChanges();
-                        r.Status = true;
-                        return r;
-                    }
-                    {
-                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                        return r;
-                    }
-
+                    r.Status = true;
+                    return r;
                 }
-                r.Erros = "Não encontra o Registo...";
-                return r;
+                else
+                {
+                    r.Status = false;
+                    r.Erros = "No records were changed in update process!";
+                    return r;
+                }
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message.ToString();
+                r.Erros = ex.Message.ToString() + " Details: " + ex.InnerException;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
+
+           
         }
 
         public ResultList Delete(String key)

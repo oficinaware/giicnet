@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
@@ -59,42 +60,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABZON ProcessarVazios(TABZON obj)
-        {
-            Type type = typeof(TABZON);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
-
+        
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             ResultList r = new ResultList();
@@ -123,9 +89,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABZON tab)
+        public ResultList Insert(TABZON source)
         {
-            tab = ProcessarVazios(tab);
+            TABZON tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -135,43 +101,10 @@ namespace GiicNetBus.Base
 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 TABZON obj = GetByKey(tab.CODZON, tab.CODPAIS);
-                if (obj == null) ctx.TABZON.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any())
+                if (obj == null)
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
-                }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    return r;
-                }
-            }
-            catch (Exception ex)
-            {
-                r.Erros = ex.Message;
-                return r;
-            }
-        }
-
-        public ResultList Update(TABZON tab)
-        {
-            tab = ProcessarVazios(tab);
-            var r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
-            try
-            {
-                var ctx = new DataGiicNetEntities();
-
-                var obj = GetByKey(tab.CODZON, tab.CODPAIS);
-                if (obj != null)
-                {
-                    obj = tab;
+                    ctx.TABZON.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
                     if (!msg.Any())
                     {
                         ctx.SaveChanges();
@@ -182,11 +115,52 @@ namespace GiicNetBus.Base
                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
                         return r;
                     }
-
                 }
-                r.Erros = "Não encontra o Registo...";
+                r.Erros = "Registo já existe...";
                 return r;
             }
+            catch (Exception ex)
+            {
+                r.Erros = ex.Message;
+                return r;
+            }
+
+        }
+
+        public ResultList Update(TABZON source)
+        {
+            TABZON tab = source.ProcessEmpty();
+            var r = new ResultList();
+            r.Status = false;
+            r.Erros = "";
+            r.Lista = null;
+            try
+            {
+                var ctx = new DataGiicNetEntities();
+
+                var obj = GetByKey(tab.CODPAIS,tab.CODZON);
+                if (obj != null)
+                {
+                    ctx.TABZON.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
+                    {
+                        r.Status = true;
+                        return r;
+                    }
+                    else
+                    {
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
+                        return r;
+                    }
+                }
+
+                r.Erros = "Registo não existe...";
+                return r;
+
+
+             }
             catch (Exception ex)
             {
                 r.Erros = ex.Message.ToString();
@@ -194,7 +168,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Delete(String codzon, string codpais)
+        public ResultList Delete(string codpais,String codzon)
         {
             var r = new ResultList();
             r.Status = false;
@@ -203,9 +177,10 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                var obj = GetByKey(codzon, codpais);
+                var obj = GetByKey(codpais,codzon);
                 if (obj != null)
                 {
+                    ctx.TABZON.Attach(obj);
                     ctx.TABZON.Remove(obj);
                     ctx.SaveChanges();
                     r.Status = true;

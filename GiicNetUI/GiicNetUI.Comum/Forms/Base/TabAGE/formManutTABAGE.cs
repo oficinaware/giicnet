@@ -39,7 +39,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             var ListaIdioma = new BindingList<GiicNetModels.TABIDIOMA>((System.Collections.Generic.IList<GiicNetModels.TABIDIOMA>)resultList.Lista);
             LINGUA.Properties.DataSource = ListaIdioma;
             LINGUA.Properties.DisplayMember = "IDIOMA";
-            LINGUA.Properties.ValueMember = "DESCRICAO";
+            LINGUA.Properties.ValueMember = "IDIOMA";
 
             if (PARAM_AGENTE != string.Empty)
             {
@@ -73,7 +73,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
         {
             GiicNetModels.TABAGE nAGENTE = new GiicNetModels.TABAGE();
             nAGENTE.AGENTE = AGENTE.Text;
-            nAGENTE.AGENTEPAI = AGENTEPAI.Text;
+            nAGENTE.AGENTEPAI = (string)AGENTEPAI.EditValue;
             nAGENTE.NOME = NOME.Text;
             nAGENTE.MORADA1 = MORADA1.Text;
             nAGENTE.MORADA2 = MORADA2.Text;
@@ -88,7 +88,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.FTPDIRREMOTO = FTPDIRREMOTO.Text;
             nAGENTE.USERNAME = USERNAME.Text;
             nAGENTE.PASSWORD = PASSWORD.Text;
-            nAGENTE.LINGUA = LINGUA.Text;
+            nAGENTE.LINGUA = (string)LINGUA.EditValue;
             nAGENTE.PREFIXO_ENC = PREFIXO_ENC.Text;
             nAGENTE.COMISSIONISTA = COMISSIONISTA.Checked;
             nAGENTE.STAT = (bool)STAT.Checked;
@@ -97,7 +97,11 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             if (resultValida.Status)
             {
                 GiicNetBus.Base.ResultList resultList;
-                if (PARAM_AGENTE != string.Empty) resultList = busAgentes.Update(nAGENTE);
+                if (PARAM_AGENTE != string.Empty)
+                {
+                    resultList = busAgentes.Update(nAGENTE);
+                    this.Dispose();
+                }
                 else resultList = busAgentes.Insert(nAGENTE);
                 if (resultList.Status) limpar();
                 else MessageBox.Show(resultList.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);

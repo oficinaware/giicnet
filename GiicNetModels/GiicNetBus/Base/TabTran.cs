@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
@@ -31,41 +32,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABTRAN ProcessarVazios(TABTRAN obj)
-        {
-            Type type = typeof(TABTRAN);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
+        
 
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
@@ -95,9 +62,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(TABTRAN tab)
+        public ResultList Insert(TABTRAN source)
         {
-            tab = ProcessarVazios(tab);
+            TABTRAN tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -106,18 +73,28 @@ namespace GiicNetBus.Base
             {
                 var ctx = new DataGiicNetEntities();
                 TABTRAN obj = GetByKey(tab.CODTRAN);
-                if (obj == null) ctx.TABTRAN.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any())
+                if (obj == null)
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
+                    ctx.TABTRAN.Add(tab);
+                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                    if (!msg.Any())
+                    {
+                        ctx.SaveChanges();
+                        r.Status = true;
+                        return r;
+                    }
+                    {
+                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+                        return r;
+                    }
                 }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    return r;
-                }
+                r.Erros = "Registo não Existe...";
+                return r;
             }
             catch (Exception ex)
             {
@@ -125,10 +102,10 @@ namespace GiicNetBus.Base
                 return r;
             }
         }
-
-        public ResultList Update(TABTRAN tab)
+        
+        public ResultList Update(TABTRAN source)
         {
-            tab = ProcessarVazios(tab);
+            TABTRAN tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -140,27 +117,33 @@ namespace GiicNetBus.Base
                 var obj = GetByKey(tab.CODTRAN);
                 if (obj != null)
                 {
-                    obj = tab;
-                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
-                    if (!msg.Any())
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
                     {
-                        ctx.SaveChanges();
+                        return rval;
+                    }
+
+
+                    ctx.TABTRAN.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
+                    {
                         r.Status = true;
                         return r;
                     }
+                    else
                     {
-                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
                         return r;
                     }
-
                 }
-                r.Erros = "Não encontra o Registo...";
+                r.Erros = "Não existe Registo...";
                 return r;
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message.ToString();
+                r.Erros = ex.Message;
                 return r;
             }
         }

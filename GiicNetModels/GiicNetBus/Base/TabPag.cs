@@ -32,42 +32,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public TABPAG ProcessarVazios(TABPAG obj)
-        {
-            Type type = typeof(TABPAG);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
-
+        
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             var r = new ResultList();
@@ -98,7 +63,6 @@ namespace GiicNetBus.Base
 
         public ResultList Insert(TABPAG source)
         {
-            //tab = ProcessarVazios(tab);
             TABPAG tab = source.ProcessEmpty();
             var r = new ResultList();
             r.Status = false;
@@ -110,6 +74,11 @@ namespace GiicNetBus.Base
                 TABPAG obj = GetByKey(tab.CNDPAG);
                 if (obj == null)
                 {
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
                     ctx.TABPAG.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (!msg.Any())
@@ -145,64 +114,41 @@ namespace GiicNetBus.Base
             var ctx = new DataGiicNetEntities();
             try
             {
-                ctx.TABPAG.Attach(tab);
-                ctx.Entry(tab).State = EntityState.Modified;
-                if (ctx.SaveChanges() > 0)
+                 TABPAG obj = GetByKey(tab.CNDPAG);
+                if (obj != null)
                 {
-                    r.Status = true;
-                    return r;
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
+                    ctx.TABPAG.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
+                    {
+                        r.Status = true;
+                        return r;
+                    }
+                    else
+                    {
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
+                        return r;
+                    }
                 }
-                else
-                {
-                    r.Status = false;
-                    r.Erros = "No records were changed in update process!";
-                    return r;
-                }
+                r.Erros = "Não existe Registo...";
+                return r;
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message.ToString() + " Details: " + ex.InnerException;
+                r.Erros = ex.Message + " Details: " + ex.InnerException;
                 return r;
             }
             finally
             {
                 ctx.Dispose();
             }
-            //tab = ProcessarVazios(tab);
-            //var r = new ResultList();
-            //r.Status = false;
-            //r.Erros = "";
-            //r.Lista = null;
-            //try
-            //{
-            //    var ctx = new DataGiicNetEntities();
-
-            //    var obj = GetByKey(tab.CNDPAG);
-            //    if (obj != null)
-            //    {
-            //        obj = tab;
-            //        IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-            //        //update fields
-            //        if (!msg.Any())
-            //        {
-            //            ctx.SaveChanges();
-            //            r.Status = true;
-            //            return r;
-            //        }
-            //        {
-            //            r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-            //            return r;
-            //        }
-
-            //    }
-            //    r.Erros = "Não encontra o Registo...";
-            //    return r;
-            //}
-            //catch (Exception ex)
-            //{
-            //    r.Erros = ex.Message.ToString();
-            //    return r;
-            //}
+           
         }
 
         public ResultList Delete(String key)

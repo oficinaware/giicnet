@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GiicNetModels;
 using System.Reflection;
+using System.Data.Entity;
 
 namespace GiicNetBus.Base
 {
@@ -40,42 +41,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public tabeuro ProcessarVazios(tabeuro obj)
-        {
-            Type type = typeof(tabeuro);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
-
+       
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             ResultList r = new ResultList();
@@ -108,9 +74,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(tabeuro tab)
+        public ResultList Insert(tabeuro source)
         {
-            tab = ProcessarVazios(tab);
+            tabeuro tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -121,21 +87,32 @@ namespace GiicNetBus.Base
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 tabeuro obj = GetByKey(tab.MOEDA);
                 if (obj == null)
-                ctx.tabeuro.Add(tab);
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                if (!msg.Any() )
                 {
-                    ctx.SaveChanges();
-                    r.Status = true;
-                    return r;
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
 
+
+                    ctx.tabeuro.Add(tab);
+                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                    if (!msg.Any())
+                    {
+                        ctx.SaveChanges();
+                        r.Status = true;
+                        return r;
+
+                    }
+                    {
+                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+
+                        return r;
+                    }
                 }
-                {
-                    r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-                    
-                    return r;
-                }
-                
+                r.Erros = "Registo já Existe...";
+                return r;
+
             }
             catch (Exception ex)
             {
@@ -144,9 +121,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(tabeuro tab)
+        public ResultList Update(tabeuro source)
         {
-            tab = ProcessarVazios(tab);
+            tabeuro tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -158,24 +135,26 @@ namespace GiicNetBus.Base
                 tabeuro obj = GetByKey(tab.MOEDA);
                 if (obj != null)
                 {
-                    obj.DESCRICAO = tab.DESCRICAO;
-                    obj.COMPRA = tab.COMPRA;
-                    obj.VENDA = tab.VENDA;
-                    obj.DTCAMBIO = tab.DTCAMBIO;
-                    obj.COD = tab.COD;
-                    obj.UEM = tab.UEM;
-                    obj.FACTOR = tab.FACTOR;
-                    obj.DECIMAIS = tab.DECIMAIS;
-                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    //update fields
-                    if (!msg.Any())
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
                     {
-                        ctx.SaveChanges();
+                        return rval;
+                    }
+                    
+                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                   
+                    if (!msg.Any())
+                        ctx.tabeuro.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
+                    {
                         r.Status = true;
                         return r;
                     }
+                    else
                     {
-                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
                         return r;
                     }
                    

@@ -38,27 +38,27 @@ namespace Testing
             var condEnt = new GiicNetBus.Base.CondEntrega();
             var resCondEnt = condEnt.Delete(exemplo.CODIGO);
 
-            var xx = new GiicNetBus.Base.Estacoes();
-            var result = xx.GetAll(1, 10);
-            ResultList r = new ResultList();
-            r.Status = false;
-            r.Lista = result;
+            //var xx = new GiicNetBus.Base.Estacoes();
+            //var result = xx.GetAll(1, 10);
+            //ResultList r = new ResultList();
+            //r.Status = false;
+            //r.Lista = result;
             
-            r.Erros = "";
-            Assert.IsNotNull(result);
+            //r.Erros = "";
+            //Assert.IsNotNull(result);
         }
          [TestMethod]
         public void TestMethod2()
         {
-            Estacoes xx = new Estacoes();
-            estacoes est = new estacoes();
-            est.estacao = "V23";
-            est.descricao = "teste 2";
-            est.data1 = null;
+            //Estacoes xx = new Estacoes();
+            //estacoes est = new estacoes();
+            //est.estacao = "V23";
+            //est.descricao = "teste 2";
+            //est.data1 = null;
             
-            string Result = xx.Valida(est);
-            Boolean ok = (Result == "");
-            Assert.IsTrue(ok);
+            //string Result = xx.Valida(est);
+            //Boolean ok = (Result == "");
+            //Assert.IsTrue(ok);
         }
 
         [TestMethod]

@@ -115,6 +115,11 @@ namespace GiicNetBus.Base
                 CNDENT obj = GetByKey(cndent.CODIGO);
                 if (obj == null)
                 {
+                    ResultList rval = Valida(cndent);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
                     ctx.CNDENT.Add(cndent);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (! msg.Any())
@@ -148,9 +153,14 @@ namespace GiicNetBus.Base
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
+            DataGiicNetEntities ctx = new DataGiicNetEntities();
             try
             {
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
+                ResultList rval = Valida(cndent);
+                if (rval.Status == false)
+                {
+                    return rval;
+                }
                 ctx.CNDENT.Attach(cndent);
                 ctx.Entry(cndent).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)

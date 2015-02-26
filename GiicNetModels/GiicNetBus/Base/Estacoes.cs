@@ -37,112 +37,97 @@ namespace GiicNetBus.Base
             }
         }
 
-        public estacoes ProcessarVazios(estacoes obj)
-        {
-            Type type = typeof(estacoes);
-            PropertyInfo[] properties = type.GetProperties();
-            foreach (PropertyInfo property in properties)
-            {
-                try
-                {
-                    string tipoP = property.PropertyType.ToString();
-                    switch (tipoP)
-                    {
-                        case "System.String":
-                            if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-                            break;
-                        case "System.DateTime":
-                            if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-                            break;
-                        case "System.Short":
-                            break;
-                        case "System.Decimal":
-                            if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Int":
-                            if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-                            break;
-                        case "System.Bool":
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception) { }
-            }
-            return obj;
-        }
+       
 
-        public List<estacoes> GetAll(Int32 pag, Int32 itemsByPag)
+        public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
-            Boolean ok = false;
-            string msg = "";
+            var r = new ResultList();
             try
             {
                 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 //var obj = (from c in ctx.estacoes select c).Skip(pag * itemsByPag).Take(itemsByPag).ToList();
                 var obj = (from c in ctx.estacoes select c).ToList();
-                if (obj != null)
+                if (obj.Count > 0)
                 {
-                    return obj;
+                    r.Status = true;
+                    r.Lista = obj;
+                    return r;
                 }
-                return null;
+                r.Status = true;
+                r.Erros = "Não Existem Registos...";
+                return r;
             }
             catch (Exception ex)
             {
-                msg = ex.Message;
-                return null;
+                r.Erros= ex.Message;
+                return r;
             }
         }
 
-        public Boolean Insert(estacoes estacao)
+        public ResultList Insert(estacoes source)
         {
-            estacao = ProcessarVazios(estacao);
-            Boolean ok = false;
-            string msg = "";
+            ResultList r = new ResultList();
+            estacoes tab = source.ProcessEmpty();
             try
             {
                 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                estacoes obj = GetByKey(estacao.estacao);
+                estacoes obj = GetByKey(tab.estacao);
                 if (obj == null)
-                ctx.estacoes.Add(estacao);
-                ctx.SaveChanges();
-                IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> erros = ctx.GetValidationErrors();
-                if (erros.Count() > 0)
                 {
-                    msg = (from c in erros select c).FirstOrDefault().ToString();
-                               return false;
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
+                    
+                    ctx.estacoes.Add(tab);
+                   IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg =
+                        ctx.GetValidationErrors();
+                    if (!msg.Any())
+                    {
+                        ctx.SaveChanges();
+                        r.Status = true;
+                        return r;
+                    }
+                    {
+                        r.Erros = (from c in msg select c).FirstOrDefault().ToString();
+                        return r;
+                    }
+
                 }
-                return true;
+                r.Erros = "Registo já Existe...";
+                return r;
             }
             catch (Exception ex)
             {
-                msg = ex.Message.ToString();
-                return false;
+                r.Erros = ex.Message;
+                return r;
             }
         }
 
-        public ResultList Update(estacoes estacao)
+        public ResultList Update(estacoes source)
         {
-            estacao = ProcessarVazios(estacao);
+            estacoes tab = source.ProcessEmpty();
             ResultList r = new ResultList();
-            r.Status = false;
-            r.Erros = "";
-            r.Lista = null;
+            
            try
             {
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                
-                estacoes obj = GetByKey(estacao.estacao);
+                estacoes obj = GetByKey(tab.estacao);
                 if (obj != null)
                 {
-                    obj = estacao;
-                    IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
+                   IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (!msg.Any())
                     {
-                        ctx.estacoes.Attach(ProcessarVazios(obj));
+                        ctx.estacoes.Attach(tab);
                         ctx.Entry(obj).State = EntityState.Modified;
                         if (ctx.SaveChanges() > 0)
                         {
@@ -216,23 +201,24 @@ namespace GiicNetBus.Base
             }
         }
 
-        public string Valida(estacoes estacao)
+        public ResultList Valida(estacoes estacao)
         {
-            string msg = "";
+            ResultList r = new ResultList();
             try
             {
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                if ((estacao.descricao ?? "") == "")
+                if ((estacao.descricao ?? "") == "") 
                 {
-                    msg = "Descricao é Obrigatória...";
-                    return msg;
+                    r.Erros = "Descricao é Obrigatória...";
+                    return r;
                 }
-                
-                return msg;
+                r.Status = true;
+                return r;
             }
             catch (Exception ex)
             {
-                return "Erro " + ex.Message.ToString();
+                r.Erros = "Erro " + ex.Message.ToString();
+                return r;
             }
         }
     }

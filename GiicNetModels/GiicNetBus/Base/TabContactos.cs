@@ -35,41 +35,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        //public TABCONTACTOS ProcessarVazios(TABCONTACTOS obj)
-        //{
-        //    Type type = typeof(TABCONTACTOS);
-        //    PropertyInfo[] properties = type.GetProperties();
-        //    foreach (PropertyInfo property in properties)
-        //    {
-        //        try
-        //        {
-        //            string tipoP = property.PropertyType.ToString();
-        //            switch (tipoP)
-        //            {
-        //                case "System.String":
-        //                    if (property.GetValue(obj).ToString() == "") property.SetValue(obj, null);
-        //                    break;
-        //                case "System.DateTime":
-        //                    if (property.GetValue(obj).ToString().Contains("0001")) property.SetValue(obj, null);
-        //                    break;
-        //                case "System.Short":
-        //                    break;
-        //                case "System.Decimal":
-        //                    if (Convert.ToDecimal(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-        //                    break;
-        //                case "System.Int":
-        //                    if ((int)(property.GetValue(obj)) == 0) property.SetValue(obj, null);
-        //                    break;
-        //                case "System.Bool":
-        //                    break;
-        //                default:
-        //                    break;
-        //            }
-        //        }
-        //        catch (Exception) { }
-        //    }
-        //    return obj;
-        //}
+        
 
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
@@ -101,8 +67,7 @@ namespace GiicNetBus.Base
 
         public ResultList Insert(TABCONTACTOS source)
         {
-            //tab = ProcessarVazios(tab);
-             TABCONTACTOS tab = source.ProcessEmpty();
+            TABCONTACTOS tab = source.ProcessEmpty();
             var r = new ResultList();
             //r.Status = false;
             //r.Erros = "";
@@ -114,6 +79,11 @@ namespace GiicNetBus.Base
                 TABCONTACTOS obj = GetByKey(tab.NR_REG);
                 if (obj == null)
                 {
+                    ResultList rval = Valida(tab);
+                    if (rval.Status == false)
+                    {
+                        return rval;
+                    }
                     ctx.TABCONTACTOS.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (!msg.Any())
@@ -152,6 +122,11 @@ namespace GiicNetBus.Base
             var ctx = new DataGiicNetEntities();
             try
             {
+                ResultList rval = Valida(tab);
+                if (rval.Status == false)
+                {
+                    return rval;
+                }
                 ctx.TABCONTACTOS.Attach(tab);
                 ctx.Entry(tab).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)

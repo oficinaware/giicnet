@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,20 +30,29 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
             GiicNetBus.Base.ResultList resultList = busMT.GetAll(1, 10000);
             var Lista = new BindingList<GiicNetModels.TABMT>((System.Collections.Generic.IList<GiicNetModels.TABMT>)resultList.Lista);
             if (resultList.Status) gridControl1.DataSource = Lista;
+
+            formatosExportacao.Properties.DataSource = Helpers.Exportacao.formatosExportacao();
+            formatosExportacao.Properties.DisplayMember = "Formato";
+            formatosExportacao.Properties.ValueMember = "Formato";
         }
 
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            if (e.RowHandle == GridControl.NewItemRowHandle)
-            {
-                //INSERT
-                GiicNetBus.Base.ResultList resultList = busMT.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT);
-            }
-            else
-            {
-                //UPDATE
-                GiicNetBus.Base.ResultList resultList = busMT.Update(e.Row as GiicNetModels.TABMT);
-            }
+            //if (e.RowHandle == GridControl.NewItemRowHandle)
+            //{
+            //    //INSERT
+            //    GiicNetBus.Base.ResultList resultList = busMT.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT);
+            //    if (resultList.Status == false)
+            //    {
+            //        MessageBox.Show(resultList.Erros);
+                    
+            //    }
+            //}
+            //else
+            //{
+            //    //UPDATE
+            //    GiicNetBus.Base.ResultList resultList = busMT.Update(e.Row as GiicNetModels.TABMT);
+            //}
         }
 
         private void gridView1_RowDeleting(object sender, DevExpress.Data.RowDeletingEventArgs e)
@@ -56,9 +66,22 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
         }
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
-        {            
-            var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT;
-            GiicNetBus.Base.ResultList resultList = busMT.Valida(novaLinha);
+        {
+            GiicNetBus.Base.ResultList resultList;
+            if (e.RowHandle == GridControl.NewItemRowHandle)
+            {
+                //INSERT
+                resultList = busMT.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT);
+            }
+            else
+            {
+                //UPDATE
+                resultList = busMT.Update(e.Row as GiicNetModels.TABMT);
+            }
+   
+            //var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABMT;
+            //GiicNetBus.Base.ResultList resultList = busMT.Valida(novaLinha);
+
             e.Valid = resultList.Status;
             e.ErrorText = resultList.Erros;
         }
@@ -87,6 +110,20 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
                     }
                     catch { }
                 }
+            }
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            string result = Helpers.Exportacao.exportar(gridControl1, formatosExportacao.Text);
+            if(!result.StartsWith("Erro"))
+            {
+                DialogResult hR = MessageBox.Show("Exportação concluída com sucesso para a pasta " + result + ". Pretende abrir o ficheiro exportado?", "Exportação concluída", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (hR == System.Windows.Forms.DialogResult.Yes) System.Diagnostics.Process.Start(result);
+            }
+            else
+            {
+                MessageBox.Show(result, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
     }

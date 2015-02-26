@@ -34,8 +34,11 @@
             this.CODMT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DESCRICAO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.COD_INTRASTAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnExportar = new DevExpress.XtraEditors.SimpleButton();
+            this.formatosExportacao = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formatosExportacao.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -46,6 +49,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(486, 560);
             this.gridControl1.TabIndex = 0;
+            this.gridControl1.Tag = "TabMT";
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -95,11 +99,34 @@
             this.COD_INTRASTAT.VisibleIndex = 2;
             this.COD_INTRASTAT.Width = 70;
             // 
+            // btnExportar
+            // 
+            this.btnExportar.Location = new System.Drawing.Point(430, 8);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(49, 20);
+            this.btnExportar.TabIndex = 3;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
+            // formatosExportacao
+            // 
+            this.formatosExportacao.Location = new System.Drawing.Point(328, 8);
+            this.formatosExportacao.Name = "formatosExportacao";
+            this.formatosExportacao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.formatosExportacao.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Formato", "Formato")});
+            this.formatosExportacao.Properties.NullText = "Selecione...";
+            this.formatosExportacao.Size = new System.Drawing.Size(100, 20);
+            this.formatosExportacao.TabIndex = 4;
+            // 
             // formMeiosTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(486, 560);
+            this.Controls.Add(this.formatosExportacao);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.gridControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -111,6 +138,7 @@
             this.Load += new System.EventHandler(this.formMeiosTransporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formatosExportacao.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,5 +150,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn CODMT;
         private DevExpress.XtraGrid.Columns.GridColumn DESCRICAO;
         private DevExpress.XtraGrid.Columns.GridColumn COD_INTRASTAT;
+        private DevExpress.XtraEditors.SimpleButton btnExportar;
+        private DevExpress.XtraEditors.LookUpEdit formatosExportacao;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.EntitySql;
@@ -10,18 +12,41 @@ using System.Reflection;
 
 namespace GiicNetBus.Base
 {
-    public class CondEntrega
+    class Clientes_Crm : BaseRepository
     {
-        
-
-        public CNDENT GetByKey(String key)
+        public Clientes_Crm(DbContext context)
+            : base(context)
+        {
+        }
+         public CLIENTES_CRM GetByKey(Guid key)
         {
             Boolean ok = false;
             try
             {
                 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                var obj = (from c in ctx.CNDENT where c.CODIGO == key select c).FirstOrDefault();
+                var obj = (from c in ctx.CLIENTES_CRM where c.NR_REG == key select c).FirstOrDefault();
+                
+                if (obj != null)
+                {
+                    return obj;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public CLIENTES_CRM GetByCliente(String key)
+        {
+            Boolean ok = false;
+            try
+            {
+                
+                DataGiicNetEntities ctx = new DataGiicNetEntities();
+                var obj = (from c in ctx.CLIENTES_CRM orderby c.DATA_REG descending where c.CLIENTE == key select c).FirstOrDefault() ;
                
                 if (obj != null)
                 {
@@ -35,7 +60,36 @@ namespace GiicNetBus.Base
             }
         }
 
-       
+        public DataTable GetByClienteDT(string key)
+        {
+            DataTable dt = new DataTable();
+            //String queryString = "SELECT * FROM CLIENTES_CRM WHERE CLIENTE = @CLIENTE ORDER BY DATA_REG DESC";
+
+            // adapter = new SqlDataAdapter(queryString, Connection);
+
+            //DataSet customers = new DataSet();
+            //adapter.Fill(customers, "Customers");
+
+            if (Connection.State == ConnectionState.Closed)
+            {
+                Connection.Open();
+            }
+
+            SqlCommand command = new SqlCommand("SELECT * FROM CLIENTES_CRM WHERE CLIENTE = @CLIENTE ORDER BY DATA_REG DESC", Connection);
+            SqlParameter parameter = new SqlParameter();
+            parameter.ParameterName = "@CLIENTE";
+            parameter.SqlDbType = SqlDbType.NVarChar;
+            //parameter.Direction = ParameterDirection.Input;
+            parameter.Value = key;
+            command.Parameters.Add(parameter);
+            SqlDataReader dataReader = command.ExecuteReader();
+            dt.Load(dataReader);
+            dataReader.Close();
+            dataReader.Dispose();
+            command.Dispose();
+            return dt;
+        }
+
 
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
@@ -48,8 +102,8 @@ namespace GiicNetBus.Base
             {
                 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                //v ar obj = (from c in ctx.CNDENT select c).Skip(pag * itemsByPag).Take(itemsByPag).ToList();
-                var obj = (from c in ctx.CNDENT select c).ToList();
+                //v ar obj = (from c in ctx.CLIENTES_CRM select c).Skip(pag * itemsByPag).Take(itemsByPag).ToList();
+                var obj = (from c in ctx.CLIENTES_CRM select c).ToList();
                 if (obj.Count > 0)
                 {
                     r.Status = true;
@@ -69,9 +123,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(CNDENT source)
+        public ResultList Insert(CLIENTES_CRM source)
         {
-            CNDENT cndent = source.ProcessEmpty();
+            CLIENTES_CRM tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -80,15 +134,15 @@ namespace GiicNetBus.Base
             {
                 
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                CNDENT obj = GetByKey(cndent.CODIGO);
+                CLIENTES_CRM obj = GetByKey(tab.NR_REG);
                 if (obj == null)
                 {
-                    ResultList rval = Valida(cndent);
+                    ResultList rval = Valida(tab);
                     if (rval.Status == false)
                     {
                         return rval;
                     }
-                    ctx.CNDENT.Add(cndent);
+                    ctx.CLIENTES_CRM.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
                     if (! msg.Any())
                     {
@@ -114,9 +168,9 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Update(CNDENT source)
+        public ResultList Update(CLIENTES_CRM source)
         {
-            CNDENT cndent = source.ProcessEmpty();
+            CLIENTES_CRM tab = source.ProcessEmpty();
             ResultList r = new ResultList();
             r.Status = false;
             r.Erros = "";
@@ -124,20 +178,20 @@ namespace GiicNetBus.Base
             DataGiicNetEntities ctx = new DataGiicNetEntities();
             try
             {
-                CNDENT obj = GetByKey(cndent.CODIGO);
+                CLIENTES_CRM obj = GetByKey(tab.NR_REG);
                 if (obj == null)
                 {
                     r.Erros = "Registo não Existe...";
                     return r;
-                    }
+                }
                 
-                ResultList rval = Valida(cndent);
+                ResultList rval = Valida(tab);
                 if (rval.Status == false)
                 {
                     return rval;
                 }
-                ctx.CNDENT.Attach(cndent);
-                ctx.Entry(cndent).State = EntityState.Modified;
+                ctx.CLIENTES_CRM.Attach(tab);
+                ctx.Entry(tab).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)
                 {
                     r.Status = true;
@@ -157,7 +211,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Delete(String key)
+        public ResultList Delete(Guid key)
         {
             ResultList r = new ResultList();
             r.Status = false;
@@ -167,11 +221,11 @@ namespace GiicNetBus.Base
             {
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
                 Boolean ok = false;
-                CNDENT obj = GetByKey(key);
+                CLIENTES_CRM obj = GetByKey(key);
                 if (obj != null)
                 {
-                    ctx.CNDENT.Attach(obj);
-                    ctx.CNDENT.Remove(obj);
+                    ctx.CLIENTES_CRM.Attach(obj);
+                    ctx.CLIENTES_CRM.Remove(obj);
                     if (ctx.SaveChanges() > 0)
                     {
                         r.Status = true;
@@ -192,7 +246,7 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Valida(CNDENT cndent) 
+        public ResultList Valida(CLIENTES_CRM tab) 
         {
             ResultList r = new ResultList();
             r.Status = false;
@@ -202,9 +256,20 @@ namespace GiicNetBus.Base
             {
                
                 DataGiicNetEntities ctx = new DataGiicNetEntities();
-                if ((cndent.DESCRICAO ?? "") == "")
+                if ((tab.CLIENTE ?? "") == "")
                 {
-                    r.Erros = "Descricao é Obrigatória...";
+                    r.Erros = "Cliente é Obrigatório...";
+                    return r;
+                }
+
+                if ((tab.RUBRICA ?? "") == "")
+                {
+                    r.Erros = "Rubrica é Obrigatória...";
+                    return r;
+                }
+                if ((tab.TEXTO ?? "") == "")
+                {
+                    r.Erros = "Texto é Obrigatóri0...";
                     return r;
                 }
 
@@ -218,4 +283,5 @@ namespace GiicNetBus.Base
             }
         }
     }
-}
+    }
+

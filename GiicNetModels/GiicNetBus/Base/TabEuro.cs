@@ -12,6 +12,11 @@ namespace GiicNetBus.Base
 {
     public class TabEuro
     {
+        //private DataGiicNetEntities ctx;
+        //public TabEuro()
+        //{
+        //    using (ctx);
+        //}
         public tabeuro GetByKey(String key)
         {
            ResultList r = new ResultList();

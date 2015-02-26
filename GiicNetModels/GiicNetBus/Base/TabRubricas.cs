@@ -10,53 +10,46 @@ using System.Reflection;
 
 namespace GiicNetBus.Base
 {
-    public class CondEntrega
+    class TabRubricas
     {
-        
-
-        public CNDENT GetByKey(String key)
+        public TABRUBRICAS GetByKey(String key)
         {
-            Boolean ok = false;
+            var r = new ResultList();
+            r.Status = false;
+            r.Erros = "";
+            r.Lista = null;
             try
             {
-                
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
-                var obj = (from c in ctx.CNDENT where c.CODIGO == key select c).FirstOrDefault();
-               
-                if (obj != null)
-                {
-                    return obj;
-                }
+                var ctx = new DataGiicNetEntities();
+                TABRUBRICAS obj = (from c in ctx.TABRUBRICAS where c.rubrica == key select c).FirstOrDefault();
+                if (obj != null) return obj;
+                r.Erros = "Não encontra registo...";
                 return null;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                r.Erros = ex.Message;
                 return null;
             }
         }
 
-       
-
+        
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
-            ResultList r = new ResultList();
+            var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
-            
             try
             {
-                
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
-                //v ar obj = (from c in ctx.CNDENT select c).Skip(pag * itemsByPag).Take(itemsByPag).ToList();
-                var obj = (from c in ctx.CNDENT select c).ToList();
+                var ctx = new DataGiicNetEntities();
+                var obj = (from c in ctx.TABRUBRICAS select c).ToList();
                 if (obj.Count > 0)
                 {
                     r.Status = true;
                     r.Lista = obj;
                     return r;
                 }
-
                 r.Status = true;
                 r.Erros = "Não Existem Registos...";
                 return r;
@@ -69,75 +62,81 @@ namespace GiicNetBus.Base
             }
         }
 
-        public ResultList Insert(CNDENT source)
+        public ResultList Insert(TABRUBRICAS source)
         {
-            CNDENT cndent = source.ProcessEmpty();
-            ResultList r = new ResultList();
+            TABRUBRICAS tab = source.ProcessEmpty(); 
+            var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
-            try 
+            var ctx = new DataGiicNetEntities();
+            try
             {
-                
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
-                CNDENT obj = GetByKey(cndent.CODIGO);
+                //var ctx = new DataGiicNetEntities();
+                TABRUBRICAS obj = GetByKey(tab.rubrica);
                 if (obj == null)
                 {
-                    ResultList rval = Valida(cndent);
+                    ResultList rval = Valida(tab);
                     if (rval.Status == false)
                     {
                         return rval;
                     }
-                    ctx.CNDENT.Add(cndent);
+
+                    ctx.TABRUBRICAS.Add(tab);
                     IEnumerable<System.Data.Entity.Validation.DbEntityValidationResult> msg = ctx.GetValidationErrors();
-                    if (! msg.Any())
+                    if (!msg.Any())
                     {
                         ctx.SaveChanges();
                         r.Status = true;
                         return r;
-
                     }
                     {
                         r.Erros = (from c in msg select c).FirstOrDefault().ToString();
-
                         return r;
                     }
+                  
                 }
-                r.Erros = "Registo já existe...";
+                r.Erros = "Registo já Existe...";
                 return r;
-
             }
             catch (Exception ex)
             {
                 r.Erros = ex.Message;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
         }
 
-        public ResultList Update(CNDENT source)
+        public ResultList Update(TABRUBRICAS source)
         {
-            CNDENT cndent = source.ProcessEmpty();
-            ResultList r = new ResultList();
+            TABRUBRICAS tab = source.ProcessEmpty();
+            var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
-            DataGiicNetEntities ctx = new DataGiicNetEntities();
+            var ctx = new DataGiicNetEntities();
             try
             {
-                CNDENT obj = GetByKey(cndent.CODIGO);
+
+                TABRUBRICAS obj = GetByKey(tab.rubrica);
                 if (obj == null)
                 {
                     r.Erros = "Registo não Existe...";
                     return r;
-                    }
+                }
                 
-                ResultList rval = Valida(cndent);
+                ResultList rval = Valida(tab);
                 if (rval.Status == false)
                 {
                     return rval;
                 }
-                ctx.CNDENT.Attach(cndent);
-                ctx.Entry(cndent).State = EntityState.Modified;
+                
+                
+                ctx.TABRUBRICAS.Attach(tab);
+                ctx.Entry(tab).State = EntityState.Modified;
                 if (ctx.SaveChanges() > 0)
                 {
                     r.Status = true;
@@ -152,62 +151,76 @@ namespace GiicNetBus.Base
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message.ToString();
+                r.Erros = ex.Message + " Details: " + ex.InnerException;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
+            
         }
 
         public ResultList Delete(String key)
         {
-            ResultList r = new ResultList();
+            var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
+            var ctx = new DataGiicNetEntities();
             try
             {
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
                 Boolean ok = false;
-                CNDENT obj = GetByKey(key);
+                TABRUBRICAS obj = GetByKey(key);
                 if (obj != null)
                 {
-                    ctx.CNDENT.Attach(obj);
-                    ctx.CNDENT.Remove(obj);
+                    ctx.TABRUBRICAS.Attach(obj);
+                    ctx.TABRUBRICAS.Remove(obj);
                     if (ctx.SaveChanges() > 0)
                     {
                         r.Status = true;
                         return r;
                     }
                     r.Status = false;
-                    r.Erros = "No records were changed in update process!";
+                    r.Erros = "No records were deleted in update process!";
                     return r;
                 }
                 r.Status = false;
-                r.Erros = "Key value is null!";
+                r.Erros = "Registo não existe...";
                 return r;
             }
             catch (Exception ex)
             {
-                r.Erros = ex.Message;
+                r.Erros = ex.Message + " Details: " + ex.InnerException;
                 return r;
             }
+            finally
+            {
+                ctx.Dispose();
+            }
+            
         }
 
-        public ResultList Valida(CNDENT cndent) 
+        public ResultList Valida(TABRUBRICAS tab)
         {
-            ResultList r = new ResultList();
+            var r = new ResultList();
             r.Status = false;
             r.Erros = "";
             r.Lista = null;
             try
             {
+                var ctx = new DataGiicNetEntities();
+                if ((tab.rubrica ?? "") == "")
+                {
+                    r.Erros = "Código é Obrigatório...";
+                    return r;
+                }
                
-                DataGiicNetEntities ctx = new DataGiicNetEntities();
-                if ((cndent.DESCRICAO ?? "") == "")
+                if ((tab.descricao ?? "") == "")
                 {
                     r.Erros = "Descricao é Obrigatória...";
                     return r;
                 }
-
                 r.Status = true;
                 return r;
             }
@@ -219,3 +232,5 @@ namespace GiicNetBus.Base
         }
     }
 }
+
+

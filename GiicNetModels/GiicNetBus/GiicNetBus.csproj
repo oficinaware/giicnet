@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseRepository.cs" />
     <Compile Include="Base\Clientes.cs" />
+    <Compile Include="Base\Clientes_Crm.cs" />
     <Compile Include="Base\CondEntrega.cs" />
     <Compile Include="Base\Estacoes.cs" />
     <Compile Include="Base\Familias.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Base\TabMT.cs" />
     <Compile Include="Base\TabPag.cs" />
     <Compile Include="Base\TabPais.cs" />
+    <Compile Include="Base\TabRubricas.cs" />
     <Compile Include="Base\Tab_Retencoes.cs" />
     <Compile Include="Base\TabSeg.cs" />
     <Compile Include="Base\TabTran.cs" />

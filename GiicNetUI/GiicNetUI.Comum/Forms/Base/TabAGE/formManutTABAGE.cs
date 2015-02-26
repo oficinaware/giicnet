@@ -20,11 +20,15 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
 
         public formManutTABAGE()
         {
+            //System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("pt-PT");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pt-PT");
             InitializeComponent();
         }
 
         private void formManutTABAGE_Load(object sender, EventArgs e)
         {
+            
+
             GiicNetBus.Base.ResultList resultList = busAgentes.GetAll(1, 10000);
             var ListaAgente = new BindingList<GiicNetModels.TABAGE>((System.Collections.Generic.IList<GiicNetModels.TABAGE>)resultList.Lista);                       
             AGENTEPAI.Properties.DataSource = ListaAgente;
@@ -39,6 +43,8 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
 
             if (PARAM_AGENTE != string.Empty)
             {
+                AGENTE.Enabled = false;
+
                 GiicNetModels.TABAGE uAgente = busAgentes.GetByKey(PARAM_AGENTE);
                 AGENTE.Text = uAgente.AGENTE;
                 AGENTEPAI.SelectedText = uAgente.AGENTEPAI;
@@ -59,11 +65,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
                 LINGUA.SelectedText = uAgente.LINGUA;
                 PREFIXO_ENC.Text = uAgente.PREFIXO_ENC;
                 COMISSIONISTA.Checked = (bool)uAgente.COMISSIONISTA;
-
-                //if (!uAgente.STAT.HasValue) STAT.Checked = false;
-                //else STAT.Checked = (bool)uAgente.STAT;
-
-                STAT.Checked = (bool)uAgente.STAT;
+                STAT.EditValue = uAgente.STAT; 
             }
         }
 
@@ -81,7 +83,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.TELM = TELEM.Text;
             nAGENTE.FAX = FAX.Text;
             nAGENTE.EMAIL = EMAIL.Text;
-            nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text);
+            nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text.Replace(".",","));
             nAGENTE.FTPFOLDER = FTPFOLDER.Text;
             nAGENTE.FTPDIRREMOTO = FTPDIRREMOTO.Text;
             nAGENTE.USERNAME = USERNAME.Text;
@@ -89,7 +91,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.LINGUA = LINGUA.Text;
             nAGENTE.PREFIXO_ENC = PREFIXO_ENC.Text;
             nAGENTE.COMISSIONISTA = COMISSIONISTA.Checked;
-            nAGENTE.STAT = STAT.Checked;
+            nAGENTE.STAT = (bool)STAT.Checked;
 
             GiicNetBus.Base.ResultList resultValida = busAgentes.Valida(nAGENTE);
             if (resultValida.Status)

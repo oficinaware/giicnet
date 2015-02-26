@@ -212,6 +212,12 @@
     <EmbeddedResource Include="Forms\Base\Clientes\formMenuClientes.resx">
       <DependentUpon>formMenuClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabAGE\formManutTABAGE.af.resx">
+      <DependentUpon>formManutTABAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\TabAGE\formManutTABAGE.pt-PT.resx">
+      <DependentUpon>formManutTABAGE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Base\TabAGE\formManutTABAGE.resx">
       <DependentUpon>formManutTABAGE.cs</DependentUpon>
     </EmbeddedResource>

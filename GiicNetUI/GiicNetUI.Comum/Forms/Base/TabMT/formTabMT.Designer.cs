@@ -34,11 +34,17 @@
             this.CODMT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DESCRICAO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.COD_INTRASTAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.btnExportar = new DevExpress.XtraEditors.SimpleButton();
             this.formatosExportacao = new DevExpress.XtraEditors.LookUpEdit();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formatosExportacao.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -47,10 +53,13 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(486, 560);
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1,
+            this.repositoryItemTextEdit2,
+            this.repositoryItemTextEdit3});
+            this.gridControl1.Size = new System.Drawing.Size(486, 450);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.Tag = "TabMT";
-            this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.gridControl1_PreviewKeyDown);
@@ -75,6 +84,7 @@
             // CODMT
             // 
             this.CODMT.Caption = "Cod. MT";
+            this.CODMT.ColumnEdit = this.repositoryItemTextEdit1;
             this.CODMT.FieldName = "CODMT";
             this.CODMT.Name = "CODMT";
             this.CODMT.Visible = true;
@@ -84,6 +94,7 @@
             // DESCRICAO
             // 
             this.DESCRICAO.Caption = "Descrição";
+            this.DESCRICAO.ColumnEdit = this.repositoryItemTextEdit2;
             this.DESCRICAO.FieldName = "DESCRICAO";
             this.DESCRICAO.Name = "DESCRICAO";
             this.DESCRICAO.Visible = true;
@@ -93,11 +104,18 @@
             // COD_INTRASTAT
             // 
             this.COD_INTRASTAT.Caption = "Cod. Intrastat";
+            this.COD_INTRASTAT.ColumnEdit = this.repositoryItemTextEdit3;
             this.COD_INTRASTAT.FieldName = "COD_INTRASTAT";
             this.COD_INTRASTAT.Name = "COD_INTRASTAT";
             this.COD_INTRASTAT.Visible = true;
             this.COD_INTRASTAT.VisibleIndex = 2;
             this.COD_INTRASTAT.Width = 70;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.MaxLength = 2;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // btnExportar
             // 
@@ -120,11 +138,23 @@
             this.formatosExportacao.Size = new System.Drawing.Size(100, 20);
             this.formatosExportacao.TabIndex = 4;
             // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.MaxLength = 40;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            // 
+            // repositoryItemTextEdit3
+            // 
+            this.repositoryItemTextEdit3.AutoHeight = false;
+            this.repositoryItemTextEdit3.MaxLength = 2;
+            this.repositoryItemTextEdit3.Name = "repositoryItemTextEdit3";
+            // 
             // formMeiosTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 560);
+            this.ClientSize = new System.Drawing.Size(486, 450);
             this.Controls.Add(this.formatosExportacao);
             this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.gridControl1);
@@ -138,7 +168,10 @@
             this.Load += new System.EventHandler(this.formMeiosTransporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formatosExportacao.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +185,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn COD_INTRASTAT;
         private DevExpress.XtraEditors.SimpleButton btnExportar;
         private DevExpress.XtraEditors.LookUpEdit formatosExportacao;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
     }
 }

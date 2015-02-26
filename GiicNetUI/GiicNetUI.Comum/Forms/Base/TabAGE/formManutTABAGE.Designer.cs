@@ -90,306 +90,459 @@
             // 
             // AGENTE
             // 
-            this.AGENTE.Location = new System.Drawing.Point(96, 12);
+            resources.ApplyResources(this.AGENTE, "AGENTE");
             this.AGENTE.Name = "AGENTE";
-            this.AGENTE.Size = new System.Drawing.Size(36, 20);
-            this.AGENTE.TabIndex = 1;
+            this.AGENTE.Properties.AccessibleDescription = resources.GetString("AGENTE.Properties.AccessibleDescription");
+            this.AGENTE.Properties.AccessibleName = resources.GetString("AGENTE.Properties.AccessibleName");
+            this.AGENTE.Properties.AutoHeight = ((bool)(resources.GetObject("AGENTE.Properties.AutoHeight")));
+            this.AGENTE.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("AGENTE.Properties.Mask.AutoComplete")));
+            this.AGENTE.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("AGENTE.Properties.Mask.BeepOnError")));
+            this.AGENTE.Properties.Mask.EditMask = resources.GetString("AGENTE.Properties.Mask.EditMask");
+            this.AGENTE.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("AGENTE.Properties.Mask.IgnoreMaskBlank")));
+            this.AGENTE.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("AGENTE.Properties.Mask.MaskType")));
+            this.AGENTE.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("AGENTE.Properties.Mask.PlaceHolder")));
+            this.AGENTE.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("AGENTE.Properties.Mask.SaveLiteral")));
+            this.AGENTE.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("AGENTE.Properties.Mask.ShowPlaceHolders")));
+            this.AGENTE.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("AGENTE.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.AGENTE.Properties.NullValuePrompt = resources.GetString("AGENTE.Properties.NullValuePrompt");
+            this.AGENTE.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("AGENTE.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // NOME
             // 
-            this.NOME.Location = new System.Drawing.Point(96, 38);
+            resources.ApplyResources(this.NOME, "NOME");
             this.NOME.Name = "NOME";
-            this.NOME.Size = new System.Drawing.Size(334, 20);
-            this.NOME.TabIndex = 2;
+            this.NOME.Properties.AccessibleDescription = resources.GetString("NOME.Properties.AccessibleDescription");
+            this.NOME.Properties.AccessibleName = resources.GetString("NOME.Properties.AccessibleName");
+            this.NOME.Properties.AutoHeight = ((bool)(resources.GetObject("NOME.Properties.AutoHeight")));
+            this.NOME.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("NOME.Properties.Mask.AutoComplete")));
+            this.NOME.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("NOME.Properties.Mask.BeepOnError")));
+            this.NOME.Properties.Mask.EditMask = resources.GetString("NOME.Properties.Mask.EditMask");
+            this.NOME.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("NOME.Properties.Mask.IgnoreMaskBlank")));
+            this.NOME.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("NOME.Properties.Mask.MaskType")));
+            this.NOME.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("NOME.Properties.Mask.PlaceHolder")));
+            this.NOME.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("NOME.Properties.Mask.SaveLiteral")));
+            this.NOME.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("NOME.Properties.Mask.ShowPlaceHolders")));
+            this.NOME.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("NOME.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.NOME.Properties.NullValuePrompt = resources.GetString("NOME.Properties.NullValuePrompt");
+            this.NOME.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("NOME.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // TELEF
             // 
-            this.TELEF.Location = new System.Drawing.Point(96, 168);
+            resources.ApplyResources(this.TELEF, "TELEF");
             this.TELEF.Name = "TELEF";
-            this.TELEF.Size = new System.Drawing.Size(145, 20);
-            this.TELEF.TabIndex = 3;
+            this.TELEF.Properties.AccessibleDescription = resources.GetString("TELEF.Properties.AccessibleDescription");
+            this.TELEF.Properties.AccessibleName = resources.GetString("TELEF.Properties.AccessibleName");
+            this.TELEF.Properties.AutoHeight = ((bool)(resources.GetObject("TELEF.Properties.AutoHeight")));
+            this.TELEF.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("TELEF.Properties.Mask.AutoComplete")));
+            this.TELEF.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("TELEF.Properties.Mask.BeepOnError")));
+            this.TELEF.Properties.Mask.EditMask = resources.GetString("TELEF.Properties.Mask.EditMask");
+            this.TELEF.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("TELEF.Properties.Mask.IgnoreMaskBlank")));
+            this.TELEF.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("TELEF.Properties.Mask.MaskType")));
+            this.TELEF.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("TELEF.Properties.Mask.PlaceHolder")));
+            this.TELEF.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("TELEF.Properties.Mask.SaveLiteral")));
+            this.TELEF.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("TELEF.Properties.Mask.ShowPlaceHolders")));
+            this.TELEF.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("TELEF.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.TELEF.Properties.NullValuePrompt = resources.GetString("TELEF.Properties.NullValuePrompt");
+            this.TELEF.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("TELEF.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // TELEM
             // 
-            this.TELEM.Location = new System.Drawing.Point(96, 194);
+            resources.ApplyResources(this.TELEM, "TELEM");
             this.TELEM.Name = "TELEM";
-            this.TELEM.Size = new System.Drawing.Size(145, 20);
-            this.TELEM.TabIndex = 4;
+            this.TELEM.Properties.AccessibleDescription = resources.GetString("TELEM.Properties.AccessibleDescription");
+            this.TELEM.Properties.AccessibleName = resources.GetString("TELEM.Properties.AccessibleName");
+            this.TELEM.Properties.AutoHeight = ((bool)(resources.GetObject("TELEM.Properties.AutoHeight")));
+            this.TELEM.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("TELEM.Properties.Mask.AutoComplete")));
+            this.TELEM.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("TELEM.Properties.Mask.BeepOnError")));
+            this.TELEM.Properties.Mask.EditMask = resources.GetString("TELEM.Properties.Mask.EditMask");
+            this.TELEM.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("TELEM.Properties.Mask.IgnoreMaskBlank")));
+            this.TELEM.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("TELEM.Properties.Mask.MaskType")));
+            this.TELEM.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("TELEM.Properties.Mask.PlaceHolder")));
+            this.TELEM.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("TELEM.Properties.Mask.SaveLiteral")));
+            this.TELEM.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("TELEM.Properties.Mask.ShowPlaceHolders")));
+            this.TELEM.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("TELEM.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.TELEM.Properties.NullValuePrompt = resources.GetString("TELEM.Properties.NullValuePrompt");
+            this.TELEM.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("TELEM.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // FAX
             // 
-            this.FAX.Location = new System.Drawing.Point(96, 220);
+            resources.ApplyResources(this.FAX, "FAX");
             this.FAX.Name = "FAX";
-            this.FAX.Size = new System.Drawing.Size(145, 20);
-            this.FAX.TabIndex = 5;
+            this.FAX.Properties.AccessibleDescription = resources.GetString("FAX.Properties.AccessibleDescription");
+            this.FAX.Properties.AccessibleName = resources.GetString("FAX.Properties.AccessibleName");
+            this.FAX.Properties.AutoHeight = ((bool)(resources.GetObject("FAX.Properties.AutoHeight")));
+            this.FAX.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("FAX.Properties.Mask.AutoComplete")));
+            this.FAX.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("FAX.Properties.Mask.BeepOnError")));
+            this.FAX.Properties.Mask.EditMask = resources.GetString("FAX.Properties.Mask.EditMask");
+            this.FAX.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("FAX.Properties.Mask.IgnoreMaskBlank")));
+            this.FAX.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("FAX.Properties.Mask.MaskType")));
+            this.FAX.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("FAX.Properties.Mask.PlaceHolder")));
+            this.FAX.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("FAX.Properties.Mask.SaveLiteral")));
+            this.FAX.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("FAX.Properties.Mask.ShowPlaceHolders")));
+            this.FAX.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("FAX.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.FAX.Properties.NullValuePrompt = resources.GetString("FAX.Properties.NullValuePrompt");
+            this.FAX.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("FAX.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // EMAIL
             // 
-            this.EMAIL.Location = new System.Drawing.Point(96, 246);
+            resources.ApplyResources(this.EMAIL, "EMAIL");
             this.EMAIL.Name = "EMAIL";
-            this.EMAIL.Size = new System.Drawing.Size(334, 20);
-            this.EMAIL.TabIndex = 6;
+            this.EMAIL.Properties.AccessibleDescription = resources.GetString("EMAIL.Properties.AccessibleDescription");
+            this.EMAIL.Properties.AccessibleName = resources.GetString("EMAIL.Properties.AccessibleName");
+            this.EMAIL.Properties.AutoHeight = ((bool)(resources.GetObject("EMAIL.Properties.AutoHeight")));
+            this.EMAIL.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("EMAIL.Properties.Mask.AutoComplete")));
+            this.EMAIL.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("EMAIL.Properties.Mask.BeepOnError")));
+            this.EMAIL.Properties.Mask.EditMask = resources.GetString("EMAIL.Properties.Mask.EditMask");
+            this.EMAIL.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("EMAIL.Properties.Mask.IgnoreMaskBlank")));
+            this.EMAIL.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("EMAIL.Properties.Mask.MaskType")));
+            this.EMAIL.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("EMAIL.Properties.Mask.PlaceHolder")));
+            this.EMAIL.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("EMAIL.Properties.Mask.SaveLiteral")));
+            this.EMAIL.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("EMAIL.Properties.Mask.ShowPlaceHolders")));
+            this.EMAIL.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("EMAIL.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.EMAIL.Properties.NullValuePrompt = resources.GetString("EMAIL.Properties.NullValuePrompt");
+            this.EMAIL.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("EMAIL.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // COMISSAO
             // 
-            this.COMISSAO.Location = new System.Drawing.Point(96, 272);
+            resources.ApplyResources(this.COMISSAO, "COMISSAO");
             this.COMISSAO.Name = "COMISSAO";
-            this.COMISSAO.Size = new System.Drawing.Size(61, 20);
-            this.COMISSAO.TabIndex = 7;
+            this.COMISSAO.Properties.AccessibleDescription = resources.GetString("COMISSAO.Properties.AccessibleDescription");
+            this.COMISSAO.Properties.AccessibleName = resources.GetString("COMISSAO.Properties.AccessibleName");
+            this.COMISSAO.Properties.AutoHeight = ((bool)(resources.GetObject("COMISSAO.Properties.AutoHeight")));
+            this.COMISSAO.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("COMISSAO.Properties.Mask.AutoComplete")));
+            this.COMISSAO.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.BeepOnError")));
+            this.COMISSAO.Properties.Mask.EditMask = resources.GetString("COMISSAO.Properties.Mask.EditMask");
+            this.COMISSAO.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.IgnoreMaskBlank")));
+            this.COMISSAO.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("COMISSAO.Properties.Mask.MaskType")));
+            this.COMISSAO.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("COMISSAO.Properties.Mask.PlaceHolder")));
+            this.COMISSAO.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.SaveLiteral")));
+            this.COMISSAO.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.ShowPlaceHolders")));
+            this.COMISSAO.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.COMISSAO.Properties.NullValuePrompt = resources.GetString("COMISSAO.Properties.NullValuePrompt");
+            this.COMISSAO.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("COMISSAO.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // FTPFOLDER
             // 
-            this.FTPFOLDER.Location = new System.Drawing.Point(96, 298);
+            resources.ApplyResources(this.FTPFOLDER, "FTPFOLDER");
             this.FTPFOLDER.Name = "FTPFOLDER";
-            this.FTPFOLDER.Size = new System.Drawing.Size(334, 20);
-            this.FTPFOLDER.TabIndex = 8;
+            this.FTPFOLDER.Properties.AccessibleDescription = resources.GetString("FTPFOLDER.Properties.AccessibleDescription");
+            this.FTPFOLDER.Properties.AccessibleName = resources.GetString("FTPFOLDER.Properties.AccessibleName");
+            this.FTPFOLDER.Properties.AutoHeight = ((bool)(resources.GetObject("FTPFOLDER.Properties.AutoHeight")));
+            this.FTPFOLDER.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("FTPFOLDER.Properties.Mask.AutoComplete")));
+            this.FTPFOLDER.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("FTPFOLDER.Properties.Mask.BeepOnError")));
+            this.FTPFOLDER.Properties.Mask.EditMask = resources.GetString("FTPFOLDER.Properties.Mask.EditMask");
+            this.FTPFOLDER.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("FTPFOLDER.Properties.Mask.IgnoreMaskBlank")));
+            this.FTPFOLDER.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("FTPFOLDER.Properties.Mask.MaskType")));
+            this.FTPFOLDER.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("FTPFOLDER.Properties.Mask.PlaceHolder")));
+            this.FTPFOLDER.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("FTPFOLDER.Properties.Mask.SaveLiteral")));
+            this.FTPFOLDER.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("FTPFOLDER.Properties.Mask.ShowPlaceHolders")));
+            this.FTPFOLDER.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("FTPFOLDER.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.FTPFOLDER.Properties.NullValuePrompt = resources.GetString("FTPFOLDER.Properties.NullValuePrompt");
+            this.FTPFOLDER.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("FTPFOLDER.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // FTPDIRREMOTO
             // 
-            this.FTPDIRREMOTO.Location = new System.Drawing.Point(96, 324);
+            resources.ApplyResources(this.FTPDIRREMOTO, "FTPDIRREMOTO");
             this.FTPDIRREMOTO.Name = "FTPDIRREMOTO";
-            this.FTPDIRREMOTO.Size = new System.Drawing.Size(334, 20);
-            this.FTPDIRREMOTO.TabIndex = 9;
+            this.FTPDIRREMOTO.Properties.AccessibleDescription = resources.GetString("FTPDIRREMOTO.Properties.AccessibleDescription");
+            this.FTPDIRREMOTO.Properties.AccessibleName = resources.GetString("FTPDIRREMOTO.Properties.AccessibleName");
+            this.FTPDIRREMOTO.Properties.AutoHeight = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.AutoHeight")));
+            this.FTPDIRREMOTO.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.AutoComplete")));
+            this.FTPDIRREMOTO.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.BeepOnError")));
+            this.FTPDIRREMOTO.Properties.Mask.EditMask = resources.GetString("FTPDIRREMOTO.Properties.Mask.EditMask");
+            this.FTPDIRREMOTO.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.IgnoreMaskBlank")));
+            this.FTPDIRREMOTO.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.MaskType")));
+            this.FTPDIRREMOTO.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.PlaceHolder")));
+            this.FTPDIRREMOTO.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.SaveLiteral")));
+            this.FTPDIRREMOTO.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.ShowPlaceHolders")));
+            this.FTPDIRREMOTO.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.FTPDIRREMOTO.Properties.NullValuePrompt = resources.GetString("FTPDIRREMOTO.Properties.NullValuePrompt");
+            this.FTPDIRREMOTO.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("FTPDIRREMOTO.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // USERNAME
             // 
-            this.USERNAME.Location = new System.Drawing.Point(96, 350);
+            resources.ApplyResources(this.USERNAME, "USERNAME");
             this.USERNAME.Name = "USERNAME";
-            this.USERNAME.Size = new System.Drawing.Size(145, 20);
-            this.USERNAME.TabIndex = 10;
+            this.USERNAME.Properties.AccessibleDescription = resources.GetString("USERNAME.Properties.AccessibleDescription");
+            this.USERNAME.Properties.AccessibleName = resources.GetString("USERNAME.Properties.AccessibleName");
+            this.USERNAME.Properties.AutoHeight = ((bool)(resources.GetObject("USERNAME.Properties.AutoHeight")));
+            this.USERNAME.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("USERNAME.Properties.Mask.AutoComplete")));
+            this.USERNAME.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("USERNAME.Properties.Mask.BeepOnError")));
+            this.USERNAME.Properties.Mask.EditMask = resources.GetString("USERNAME.Properties.Mask.EditMask");
+            this.USERNAME.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("USERNAME.Properties.Mask.IgnoreMaskBlank")));
+            this.USERNAME.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("USERNAME.Properties.Mask.MaskType")));
+            this.USERNAME.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("USERNAME.Properties.Mask.PlaceHolder")));
+            this.USERNAME.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("USERNAME.Properties.Mask.SaveLiteral")));
+            this.USERNAME.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("USERNAME.Properties.Mask.ShowPlaceHolders")));
+            this.USERNAME.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("USERNAME.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.USERNAME.Properties.NullValuePrompt = resources.GetString("USERNAME.Properties.NullValuePrompt");
+            this.USERNAME.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("USERNAME.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // PASSWORD
             // 
-            this.PASSWORD.Location = new System.Drawing.Point(96, 376);
+            resources.ApplyResources(this.PASSWORD, "PASSWORD");
             this.PASSWORD.Name = "PASSWORD";
+            this.PASSWORD.Properties.AccessibleDescription = resources.GetString("PASSWORD.Properties.AccessibleDescription");
+            this.PASSWORD.Properties.AccessibleName = resources.GetString("PASSWORD.Properties.AccessibleName");
+            this.PASSWORD.Properties.AutoHeight = ((bool)(resources.GetObject("PASSWORD.Properties.AutoHeight")));
+            this.PASSWORD.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("PASSWORD.Properties.Mask.AutoComplete")));
+            this.PASSWORD.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("PASSWORD.Properties.Mask.BeepOnError")));
+            this.PASSWORD.Properties.Mask.EditMask = resources.GetString("PASSWORD.Properties.Mask.EditMask");
+            this.PASSWORD.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("PASSWORD.Properties.Mask.IgnoreMaskBlank")));
+            this.PASSWORD.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("PASSWORD.Properties.Mask.MaskType")));
+            this.PASSWORD.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("PASSWORD.Properties.Mask.PlaceHolder")));
+            this.PASSWORD.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("PASSWORD.Properties.Mask.SaveLiteral")));
+            this.PASSWORD.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("PASSWORD.Properties.Mask.ShowPlaceHolders")));
+            this.PASSWORD.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("PASSWORD.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.PASSWORD.Properties.NullValuePrompt = resources.GetString("PASSWORD.Properties.NullValuePrompt");
+            this.PASSWORD.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("PASSWORD.Properties.NullValuePromptShowForEmptyValue")));
             this.PASSWORD.Properties.PasswordChar = '*';
-            this.PASSWORD.Size = new System.Drawing.Size(145, 20);
-            this.PASSWORD.TabIndex = 11;
             // 
             // PREFIXO_ENC
             // 
-            this.PREFIXO_ENC.Location = new System.Drawing.Point(96, 428);
+            resources.ApplyResources(this.PREFIXO_ENC, "PREFIXO_ENC");
             this.PREFIXO_ENC.Name = "PREFIXO_ENC";
-            this.PREFIXO_ENC.Size = new System.Drawing.Size(61, 20);
-            this.PREFIXO_ENC.TabIndex = 13;
+            this.PREFIXO_ENC.Properties.AccessibleDescription = resources.GetString("PREFIXO_ENC.Properties.AccessibleDescription");
+            this.PREFIXO_ENC.Properties.AccessibleName = resources.GetString("PREFIXO_ENC.Properties.AccessibleName");
+            this.PREFIXO_ENC.Properties.AutoHeight = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.AutoHeight")));
+            this.PREFIXO_ENC.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("PREFIXO_ENC.Properties.Mask.AutoComplete")));
+            this.PREFIXO_ENC.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.Mask.BeepOnError")));
+            this.PREFIXO_ENC.Properties.Mask.EditMask = resources.GetString("PREFIXO_ENC.Properties.Mask.EditMask");
+            this.PREFIXO_ENC.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.Mask.IgnoreMaskBlank")));
+            this.PREFIXO_ENC.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("PREFIXO_ENC.Properties.Mask.MaskType")));
+            this.PREFIXO_ENC.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("PREFIXO_ENC.Properties.Mask.PlaceHolder")));
+            this.PREFIXO_ENC.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.Mask.SaveLiteral")));
+            this.PREFIXO_ENC.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.Mask.ShowPlaceHolders")));
+            this.PREFIXO_ENC.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.PREFIXO_ENC.Properties.NullValuePrompt = resources.GetString("PREFIXO_ENC.Properties.NullValuePrompt");
+            this.PREFIXO_ENC.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("PREFIXO_ENC.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 15);
+            resources.ApplyResources(this.labelControl1, "labelControl1");
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(70, 13);
-            this.labelControl1.TabIndex = 43;
-            this.labelControl1.Text = "Cod. Agente *";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 327);
+            resources.ApplyResources(this.labelControl2, "labelControl2");
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(78, 13);
-            this.labelControl2.TabIndex = 44;
-            this.labelControl2.Text = "FTP Dir. Remoto";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(138, 15);
+            resources.ApplyResources(this.labelControl3, "labelControl3");
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(102, 13);
-            this.labelControl3.TabIndex = 45;
-            this.labelControl3.Text = "Cod. Agente Chefe *";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 67);
+            resources.ApplyResources(this.labelControl4, "labelControl4");
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(36, 13);
-            this.labelControl4.TabIndex = 47;
-            this.labelControl4.Text = "Morada";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(12, 41);
+            resources.ApplyResources(this.labelControl5, "labelControl5");
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(36, 13);
-            this.labelControl5.TabIndex = 48;
-            this.labelControl5.Text = "Nome *";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(12, 171);
+            resources.ApplyResources(this.labelControl6, "labelControl6");
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(42, 13);
-            this.labelControl6.TabIndex = 50;
-            this.labelControl6.Text = "Telefone";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(12, 197);
+            resources.ApplyResources(this.labelControl7, "labelControl7");
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(48, 13);
-            this.labelControl7.TabIndex = 51;
-            this.labelControl7.Text = "Telemóvel";
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(12, 223);
+            resources.ApplyResources(this.labelControl8, "labelControl8");
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(18, 13);
-            this.labelControl8.TabIndex = 52;
-            this.labelControl8.Text = "Fax";
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(12, 249);
+            resources.ApplyResources(this.labelControl9, "labelControl9");
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(28, 13);
-            this.labelControl9.TabIndex = 53;
-            this.labelControl9.Text = "E-Mail";
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(12, 275);
+            resources.ApplyResources(this.labelControl10, "labelControl10");
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(59, 13);
-            this.labelControl10.TabIndex = 54;
-            this.labelControl10.Text = "Comissão %";
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(12, 301);
+            resources.ApplyResources(this.labelControl11, "labelControl11");
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(51, 13);
-            this.labelControl11.TabIndex = 55;
-            this.labelControl11.Text = "FTP Folder";
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(12, 353);
+            resources.ApplyResources(this.labelControl12, "labelControl12");
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(48, 13);
-            this.labelControl12.TabIndex = 56;
-            this.labelControl12.Text = "Username";
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(12, 379);
+            resources.ApplyResources(this.labelControl13, "labelControl13");
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(46, 13);
-            this.labelControl13.TabIndex = 57;
-            this.labelControl13.Text = "Password";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(12, 405);
+            resources.ApplyResources(this.labelControl14, "labelControl14");
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(40, 13);
-            this.labelControl14.TabIndex = 58;
-            this.labelControl14.Text = "Lingua *";
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(12, 431);
+            resources.ApplyResources(this.labelControl15, "labelControl15");
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(64, 13);
-            this.labelControl15.TabIndex = 59;
-            this.labelControl15.Text = "Prefixo Enco.";
             // 
             // COMISSIONISTA
             // 
-            this.COMISSIONISTA.EditValue = true;
-            this.COMISSIONISTA.Location = new System.Drawing.Point(164, 428);
+            resources.ApplyResources(this.COMISSIONISTA, "COMISSIONISTA");
             this.COMISSIONISTA.Name = "COMISSIONISTA";
-            this.COMISSIONISTA.Properties.Caption = "Comissionista";
-            this.COMISSIONISTA.Size = new System.Drawing.Size(89, 19);
-            this.COMISSIONISTA.TabIndex = 60;
+            this.COMISSIONISTA.Properties.AccessibleDescription = resources.GetString("COMISSIONISTA.Properties.AccessibleDescription");
+            this.COMISSIONISTA.Properties.AccessibleName = resources.GetString("COMISSIONISTA.Properties.AccessibleName");
+            this.COMISSIONISTA.Properties.AutoHeight = ((bool)(resources.GetObject("COMISSIONISTA.Properties.AutoHeight")));
+            this.COMISSIONISTA.Properties.Caption = resources.GetString("COMISSIONISTA.Properties.Caption");
+            this.COMISSIONISTA.Properties.DisplayValueChecked = resources.GetString("COMISSIONISTA.Properties.DisplayValueChecked");
+            this.COMISSIONISTA.Properties.DisplayValueGrayed = resources.GetString("COMISSIONISTA.Properties.DisplayValueGrayed");
+            this.COMISSIONISTA.Properties.DisplayValueUnchecked = resources.GetString("COMISSIONISTA.Properties.DisplayValueUnchecked");
             // 
             // STAT
             // 
-            this.STAT.Location = new System.Drawing.Point(258, 428);
+            resources.ApplyResources(this.STAT, "STAT");
             this.STAT.Name = "STAT";
-            this.STAT.Properties.Caption = "Stat.";
-            this.STAT.Size = new System.Drawing.Size(89, 19);
-            this.STAT.TabIndex = 61;
+            this.STAT.Properties.AccessibleDescription = resources.GetString("STAT.Properties.AccessibleDescription");
+            this.STAT.Properties.AccessibleName = resources.GetString("STAT.Properties.AccessibleName");
+            this.STAT.Properties.AutoHeight = ((bool)(resources.GetObject("STAT.Properties.AutoHeight")));
+            this.STAT.Properties.Caption = resources.GetString("STAT.Properties.Caption");
+            this.STAT.Properties.DisplayValueChecked = resources.GetString("STAT.Properties.DisplayValueChecked");
+            this.STAT.Properties.DisplayValueGrayed = resources.GetString("STAT.Properties.DisplayValueGrayed");
+            this.STAT.Properties.DisplayValueUnchecked = resources.GetString("STAT.Properties.DisplayValueUnchecked");
             // 
             // btnCancelar
             // 
+            resources.ApplyResources(this.btnCancelar, "btnCancelar");
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 454);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(78, 61);
-            this.btnCancelar.TabIndex = 62;
-            this.btnCancelar.Text = "Cancelar";
             // 
             // btnGravar
             // 
+            resources.ApplyResources(this.btnGravar, "btnGravar");
             this.btnGravar.Image = ((System.Drawing.Image)(resources.GetObject("btnGravar.Image")));
             this.btnGravar.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnGravar.Location = new System.Drawing.Point(352, 454);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(78, 61);
-            this.btnGravar.TabIndex = 63;
-            this.btnGravar.Text = "Gravar";
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // MORADA1
             // 
-            this.MORADA1.Location = new System.Drawing.Point(96, 64);
+            resources.ApplyResources(this.MORADA1, "MORADA1");
             this.MORADA1.Name = "MORADA1";
-            this.MORADA1.Size = new System.Drawing.Size(334, 20);
-            this.MORADA1.TabIndex = 65;
+            this.MORADA1.Properties.AccessibleDescription = resources.GetString("MORADA1.Properties.AccessibleDescription");
+            this.MORADA1.Properties.AccessibleName = resources.GetString("MORADA1.Properties.AccessibleName");
+            this.MORADA1.Properties.AutoHeight = ((bool)(resources.GetObject("MORADA1.Properties.AutoHeight")));
+            this.MORADA1.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("MORADA1.Properties.Mask.AutoComplete")));
+            this.MORADA1.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("MORADA1.Properties.Mask.BeepOnError")));
+            this.MORADA1.Properties.Mask.EditMask = resources.GetString("MORADA1.Properties.Mask.EditMask");
+            this.MORADA1.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("MORADA1.Properties.Mask.IgnoreMaskBlank")));
+            this.MORADA1.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("MORADA1.Properties.Mask.MaskType")));
+            this.MORADA1.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("MORADA1.Properties.Mask.PlaceHolder")));
+            this.MORADA1.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("MORADA1.Properties.Mask.SaveLiteral")));
+            this.MORADA1.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("MORADA1.Properties.Mask.ShowPlaceHolders")));
+            this.MORADA1.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("MORADA1.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.MORADA1.Properties.NullValuePrompt = resources.GetString("MORADA1.Properties.NullValuePrompt");
+            this.MORADA1.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("MORADA1.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // MORADA2
             // 
-            this.MORADA2.Location = new System.Drawing.Point(96, 90);
+            resources.ApplyResources(this.MORADA2, "MORADA2");
             this.MORADA2.Name = "MORADA2";
-            this.MORADA2.Size = new System.Drawing.Size(334, 20);
-            this.MORADA2.TabIndex = 66;
+            this.MORADA2.Properties.AccessibleDescription = resources.GetString("MORADA2.Properties.AccessibleDescription");
+            this.MORADA2.Properties.AccessibleName = resources.GetString("MORADA2.Properties.AccessibleName");
+            this.MORADA2.Properties.AutoHeight = ((bool)(resources.GetObject("MORADA2.Properties.AutoHeight")));
+            this.MORADA2.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("MORADA2.Properties.Mask.AutoComplete")));
+            this.MORADA2.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("MORADA2.Properties.Mask.BeepOnError")));
+            this.MORADA2.Properties.Mask.EditMask = resources.GetString("MORADA2.Properties.Mask.EditMask");
+            this.MORADA2.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("MORADA2.Properties.Mask.IgnoreMaskBlank")));
+            this.MORADA2.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("MORADA2.Properties.Mask.MaskType")));
+            this.MORADA2.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("MORADA2.Properties.Mask.PlaceHolder")));
+            this.MORADA2.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("MORADA2.Properties.Mask.SaveLiteral")));
+            this.MORADA2.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("MORADA2.Properties.Mask.ShowPlaceHolders")));
+            this.MORADA2.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("MORADA2.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.MORADA2.Properties.NullValuePrompt = resources.GetString("MORADA2.Properties.NullValuePrompt");
+            this.MORADA2.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("MORADA2.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // MORADA3
             // 
-            this.MORADA3.Location = new System.Drawing.Point(96, 116);
+            resources.ApplyResources(this.MORADA3, "MORADA3");
             this.MORADA3.Name = "MORADA3";
-            this.MORADA3.Size = new System.Drawing.Size(334, 20);
-            this.MORADA3.TabIndex = 67;
+            this.MORADA3.Properties.AccessibleDescription = resources.GetString("MORADA3.Properties.AccessibleDescription");
+            this.MORADA3.Properties.AccessibleName = resources.GetString("MORADA3.Properties.AccessibleName");
+            this.MORADA3.Properties.AutoHeight = ((bool)(resources.GetObject("MORADA3.Properties.AutoHeight")));
+            this.MORADA3.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("MORADA3.Properties.Mask.AutoComplete")));
+            this.MORADA3.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("MORADA3.Properties.Mask.BeepOnError")));
+            this.MORADA3.Properties.Mask.EditMask = resources.GetString("MORADA3.Properties.Mask.EditMask");
+            this.MORADA3.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("MORADA3.Properties.Mask.IgnoreMaskBlank")));
+            this.MORADA3.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("MORADA3.Properties.Mask.MaskType")));
+            this.MORADA3.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("MORADA3.Properties.Mask.PlaceHolder")));
+            this.MORADA3.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("MORADA3.Properties.Mask.SaveLiteral")));
+            this.MORADA3.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("MORADA3.Properties.Mask.ShowPlaceHolders")));
+            this.MORADA3.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("MORADA3.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.MORADA3.Properties.NullValuePrompt = resources.GetString("MORADA3.Properties.NullValuePrompt");
+            this.MORADA3.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("MORADA3.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // MORADA4
             // 
-            this.MORADA4.Location = new System.Drawing.Point(96, 142);
+            resources.ApplyResources(this.MORADA4, "MORADA4");
             this.MORADA4.Name = "MORADA4";
-            this.MORADA4.Size = new System.Drawing.Size(334, 20);
-            this.MORADA4.TabIndex = 68;
+            this.MORADA4.Properties.AccessibleDescription = resources.GetString("MORADA4.Properties.AccessibleDescription");
+            this.MORADA4.Properties.AccessibleName = resources.GetString("MORADA4.Properties.AccessibleName");
+            this.MORADA4.Properties.AutoHeight = ((bool)(resources.GetObject("MORADA4.Properties.AutoHeight")));
+            this.MORADA4.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("MORADA4.Properties.Mask.AutoComplete")));
+            this.MORADA4.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("MORADA4.Properties.Mask.BeepOnError")));
+            this.MORADA4.Properties.Mask.EditMask = resources.GetString("MORADA4.Properties.Mask.EditMask");
+            this.MORADA4.Properties.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("MORADA4.Properties.Mask.IgnoreMaskBlank")));
+            this.MORADA4.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("MORADA4.Properties.Mask.MaskType")));
+            this.MORADA4.Properties.Mask.PlaceHolder = ((char)(resources.GetObject("MORADA4.Properties.Mask.PlaceHolder")));
+            this.MORADA4.Properties.Mask.SaveLiteral = ((bool)(resources.GetObject("MORADA4.Properties.Mask.SaveLiteral")));
+            this.MORADA4.Properties.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("MORADA4.Properties.Mask.ShowPlaceHolders")));
+            this.MORADA4.Properties.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("MORADA4.Properties.Mask.UseMaskAsDisplayFormat")));
+            this.MORADA4.Properties.NullValuePrompt = resources.GetString("MORADA4.Properties.NullValuePrompt");
+            this.MORADA4.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("MORADA4.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // AGENTEPAI
             // 
-            this.AGENTEPAI.Location = new System.Drawing.Point(246, 12);
+            resources.ApplyResources(this.AGENTEPAI, "AGENTEPAI");
             this.AGENTEPAI.Name = "AGENTEPAI";
+            this.AGENTEPAI.Properties.AccessibleDescription = resources.GetString("AGENTEPAI.Properties.AccessibleDescription");
+            this.AGENTEPAI.Properties.AccessibleName = resources.GetString("AGENTEPAI.Properties.AccessibleName");
+            this.AGENTEPAI.Properties.AutoHeight = ((bool)(resources.GetObject("AGENTEPAI.Properties.AutoHeight")));
             this.AGENTEPAI.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("AGENTEPAI.Properties.Buttons"))))});
             this.AGENTEPAI.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AGENTE", 40, "Agente"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("NOME", 100, "Nome")});
-            this.AGENTEPAI.Properties.NullText = "Selecione um valor...";
-            this.AGENTEPAI.Size = new System.Drawing.Size(184, 20);
-            this.AGENTEPAI.TabIndex = 69;
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("AGENTEPAI.Properties.Columns"), ((int)(resources.GetObject("AGENTEPAI.Properties.Columns1"))), resources.GetString("AGENTEPAI.Properties.Columns2")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("AGENTEPAI.Properties.Columns3"), ((int)(resources.GetObject("AGENTEPAI.Properties.Columns4"))), resources.GetString("AGENTEPAI.Properties.Columns5"))});
+            this.AGENTEPAI.Properties.NullText = resources.GetString("AGENTEPAI.Properties.NullText");
+            this.AGENTEPAI.Properties.NullValuePrompt = resources.GetString("AGENTEPAI.Properties.NullValuePrompt");
+            this.AGENTEPAI.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("AGENTEPAI.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // LINGUA
             // 
-            this.LINGUA.Location = new System.Drawing.Point(96, 402);
+            resources.ApplyResources(this.LINGUA, "LINGUA");
             this.LINGUA.Name = "LINGUA";
+            this.LINGUA.Properties.AccessibleDescription = resources.GetString("LINGUA.Properties.AccessibleDescription");
+            this.LINGUA.Properties.AccessibleName = resources.GetString("LINGUA.Properties.AccessibleName");
+            this.LINGUA.Properties.AutoHeight = ((bool)(resources.GetObject("LINGUA.Properties.AutoHeight")));
             this.LINGUA.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LINGUA.Properties.Buttons"))))});
             this.LINGUA.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IDIOMA", "Idioma"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DESCRICAO", "Descrição")});
-            this.LINGUA.Properties.NullText = "Selecione um valor...";
-            this.LINGUA.Size = new System.Drawing.Size(144, 20);
-            this.LINGUA.TabIndex = 70;
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LINGUA.Properties.Columns"), resources.GetString("LINGUA.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("LINGUA.Properties.Columns2"), resources.GetString("LINGUA.Properties.Columns3"))});
+            this.LINGUA.Properties.NullText = resources.GetString("LINGUA.Properties.NullText");
+            this.LINGUA.Properties.NullValuePrompt = resources.GetString("LINGUA.Properties.NullValuePrompt");
+            this.LINGUA.Properties.NullValuePromptShowForEmptyValue = ((bool)(resources.GetObject("LINGUA.Properties.NullValuePromptShowForEmptyValue")));
             // 
             // formManutTABAGE
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 528);
             this.Controls.Add(this.LINGUA);
             this.Controls.Add(this.AGENTEPAI);
             this.Controls.Add(this.MORADA4);
@@ -428,12 +581,9 @@
             this.Controls.Add(this.NOME);
             this.Controls.Add(this.AGENTE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formManutTABAGE";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manutenção Agente";
             this.Load += new System.EventHandler(this.formManutTABAGE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AGENTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NOME.Properties)).EndInit();

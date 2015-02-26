@@ -71,5 +71,23 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
                 sendBack = (string)gridView1.GetRowCellValue(info.RowHandle, "CODMT");
             }
         }
+
+        private void gridControl1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DialogResult hR = MessageBox.Show("Tem a certeza pretende remover?", "Tem a certeza pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (hR == System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        GiicNetModels.TABMT TabMT = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABMT;
+                        GiicNetBus.Base.ResultList resultList = busMT.Delete(TabMT.CODMT);
+                        gridControl1.Refresh();
+                    }
+                    catch { }
+                }
+            }
+        }
     }
 }

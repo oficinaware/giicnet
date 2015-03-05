@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using System;
@@ -76,6 +77,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             formManutTABAGE fmTabAge = new formManutTABAGE();
+            fmTabAge.PARAM_AGENTE = "";
             fmTabAge.ShowDialog();
             fmTabAge.Dispose();
         }
@@ -84,9 +86,34 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
         {
             formManutTABAGE fmTabAge = new formManutTABAGE();
             GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
+            int rowHandle = (gridControl1.FocusedView as GridView).FocusedRowHandle;
             fmTabAge.PARAM_AGENTE = tA.AGENTE;
             fmTabAge.ShowDialog();
             fmTabAge.Dispose();
+
+            GiicNetBus.Base.ResultList resultList = busAgentes.GetAll(1, 10000);
+            var Lista = new BindingList<GiicNetModels.TABAGE>((System.Collections.Generic.IList<GiicNetModels.TABAGE>)resultList.Lista);
+            if (resultList.Status) gridControl1.DataSource = Lista;
+            
+            ColumnView cv = gridControl1.MainView as ColumnView;
+            cv.FocusedRowHandle = rowHandle;
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult hR = MessageBox.Show("Tem a certeza pretende remover?", "Tem a certeza pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (hR == System.Windows.Forms.DialogResult.No) return;
+
+            formManutTABAGE fmTabAge = new formManutTABAGE();
+            GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
+            GiicNetBus.Base.ResultList resultListDelete = busAgentes.Delete(tA.AGENTE);
+            if(resultListDelete.Status == true)
+            {
+                GiicNetBus.Base.ResultList resultList = busAgentes.GetAll(1, 10000);
+                var Lista = new BindingList<GiicNetModels.TABAGE>((System.Collections.Generic.IList<GiicNetModels.TABAGE>)resultList.Lista);
+                if (resultList.Status) gridControl1.DataSource = Lista;
+            }
+            
         }
     }
 }

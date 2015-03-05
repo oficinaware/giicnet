@@ -132,15 +132,13 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
         {
             if (!(gridView1.ActiveEditor == null))
             {
-                MessageBox.Show("Alterações não gravadas");
-                bool tok = gridView1.UpdateCurrentRow();
-                if (tok)
-
+                DialogResult hR = MessageBox.Show("Alterações detetadas! Pretende gravar as alterações?", "Alterações detetadas", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (hR == System.Windows.Forms.DialogResult.Yes)
                 {
-                    object row = gridView1.GetSelectedRows();
-
+                    //gridView1_ValidateRow("", "");
+                    e.Cancel = false;
                 }
-                e.Cancel = true;
+                else e.Cancel = true;
             }
         }
 

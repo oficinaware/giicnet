@@ -47,7 +47,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
 
                 GiicNetModels.TABAGE uAgente = busAgentes.GetByKey(PARAM_AGENTE);
                 AGENTE.Text = uAgente.AGENTE;
-                AGENTEPAI.SelectedText = uAgente.AGENTEPAI;
+                AGENTEPAI.EditValue = uAgente.AGENTEPAI;
                 NOME.Text = uAgente.NOME;
                 MORADA1.Text = uAgente.MORADA1;
                 MORADA2.Text = uAgente.MORADA2;
@@ -62,7 +62,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
                 FTPDIRREMOTO.Text = uAgente.FTPDIRREMOTO;
                 USERNAME.Text = uAgente.USERNAME;
                 PASSWORD.Text = uAgente.PASSWORD;
-                LINGUA.SelectedText = uAgente.LINGUA;
+                LINGUA.EditValue = uAgente.LINGUA;
                 PREFIXO_ENC.Text = uAgente.PREFIXO_ENC;
                 COMISSIONISTA.Checked = (bool)uAgente.COMISSIONISTA;
                 STAT.EditValue = uAgente.STAT; 
@@ -112,7 +112,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
         private void limpar()
         {
             AGENTE.Text = string.Empty;
-            AGENTEPAI.Text = string.Empty;
+            AGENTEPAI.EditValue = string.Empty;
             NOME.Text = string.Empty;
             MORADA1.Text = string.Empty;
             MORADA2.Text = string.Empty;
@@ -127,10 +127,15 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             FTPDIRREMOTO.Text = string.Empty;
             USERNAME.Text = string.Empty;
             PASSWORD.Text = string.Empty;
-            LINGUA.Text = string.Empty;
+            LINGUA.EditValue = string.Empty;
             PREFIXO_ENC.Text = string.Empty;
             COMISSIONISTA.Checked = true;
             STAT.Checked = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

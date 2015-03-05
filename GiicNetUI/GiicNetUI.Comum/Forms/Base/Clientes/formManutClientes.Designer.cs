@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formManutClientes));
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.CLIENTE = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
@@ -145,7 +145,7 @@
             this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
@@ -230,12 +230,12 @@
             this.groupControl11.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textEdit1
+            // CLIENTE
             // 
-            this.textEdit1.Location = new System.Drawing.Point(74, 5);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 0;
+            this.CLIENTE.Location = new System.Drawing.Point(74, 5);
+            this.CLIENTE.Name = "CLIENTE";
+            this.CLIENTE.Size = new System.Drawing.Size(100, 20);
+            this.CLIENTE.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -620,7 +620,7 @@
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.textEdit1);
+            this.groupControl3.Controls.Add(this.CLIENTE);
             this.groupControl3.Controls.Add(this.labelControl1);
             this.groupControl3.Controls.Add(this.textEdit2);
             this.groupControl3.Controls.Add(this.textEdit3);
@@ -1271,7 +1271,8 @@
             this.Name = "formManutClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            this.Load += new System.EventHandler(this.formManutClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
@@ -1370,7 +1371,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit CLIENTE;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit3;

@@ -1,4 +1,5 @@
-﻿using GiicNetBus.Base;
+﻿using DevExpress.XtraGrid.Views.Grid;
+using GiicNetBus.Base;
 using GiicNetModels;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace GiicNetUI.Comum.Forms.Base.Clientes
         public formClientes()
         {
             InitializeComponent();
+            ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
         }
 
         private void formClientes_Load(object sender, EventArgs e)
@@ -72,6 +74,31 @@ namespace GiicNetUI.Comum.Forms.Base.Clientes
             //        else ((Panel)c).Visible = true;
             //    }
             //}
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Base.Clientes.formManutClientes fC = new formManutClientes();
+            fC.ShowDialog();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Base.Clientes.formManutClientes fC = new formManutClientes();
+            //GiicNetModels.CLIENTES Cliente = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.CLIENTES;
+
+            int[] selRows = ((GridView)gridControl1.MainView).GetSelectedRows();
+            DataRowView selRow = (DataRowView)(((GridView)gridControl1.MainView).GetRow(selRows[0]));
+
+            fC.idCliente = selRow["CLIENTE"].ToString();
+            fC.ShowDialog();
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form fMenuClientes = this.FindForm();
+            formClientes fClient = fMenuClientes.Tag as formClientes;
+            fClient.SwitchVisibility(); 
         }
     }
 }

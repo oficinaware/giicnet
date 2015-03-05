@@ -33,14 +33,14 @@ namespace GiicNetUI
             this.panelPrincipal.Controls.Add(ClientForm);
             ClientForm.Show();
 
-            GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-            GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm = new Comum.Forms.Base.Clientes.formMenuClientes();
-            MenuClientForm.TopLevel = false;
-            MenuClientForm.AutoScroll = true;
-            MenuClientForm.Dock = DockStyle.Fill;
-            this.panelTopo.Controls.Add(MenuClientForm);
-            MenuClientForm.Show();
-            MenuClientForm.Tag = ClientForm;
+            //GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
+            //GiicNetUI.Comum.Forms.Base.Clientes.formMenuClientes MenuClientForm = new Comum.Forms.Base.Clientes.formMenuClientes();
+            //MenuClientForm.TopLevel = false;
+            //MenuClientForm.AutoScroll = true;
+            //MenuClientForm.Dock = DockStyle.Fill;
+            //this.panelTopo.Controls.Add(MenuClientForm);
+            //MenuClientForm.Show();
+            //MenuClientForm.Tag = ClientForm;
         }
 
         private void barButtonItem64_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -53,13 +53,13 @@ namespace GiicNetUI
             this.panelPrincipal.Controls.Add(ArticleForm);
             ArticleForm.Show();
 
-            GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
-            GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm = new Comum.Forms.Base.Artigos.formMenuArtigos();
-            MenuArticleForm.TopLevel = false;
-            MenuArticleForm.AutoScroll = true;
-            MenuArticleForm.Dock = DockStyle.Fill;
-            this.panelTopo.Controls.Add(MenuArticleForm);
-            MenuArticleForm.Show();
+            //GiicNetUI.Comum.Helpers.PanelHelper.Clear(panelTopo);
+            //GiicNetUI.Comum.Forms.Base.Artigos.formMenuArtigos MenuArticleForm = new Comum.Forms.Base.Artigos.formMenuArtigos();
+            //MenuArticleForm.TopLevel = false;
+            //MenuArticleForm.AutoScroll = true;
+            //MenuArticleForm.Dock = DockStyle.Fill;
+            //this.panelTopo.Controls.Add(MenuArticleForm);
+            //MenuArticleForm.Show();
         }
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

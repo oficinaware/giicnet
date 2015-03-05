@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
-            this.mainMenu = new DevExpress.XtraBars.BarManager();
+            this.mainMenu = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.mainBar = new DevExpress.XtraBars.Bar();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
@@ -419,17 +420,17 @@
             this.barButtonItem256 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem273 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.container1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelTopo = new System.Windows.Forms.Panel();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.PanelLateral = new System.Windows.Forms.Panel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             ((System.ComponentModel.ISupportInitialize)(this.mainMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.container1)).BeginInit();
-            this.container1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
+            this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
+            this.splitContainerControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -3762,51 +3763,20 @@
             this.barCheckItem1.Id = 326;
             this.barCheckItem1.Name = "barCheckItem1";
             // 
-            // container1
-            // 
-            this.container1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container1.Horizontal = false;
-            this.container1.IsSplitterFixed = true;
-            this.container1.Location = new System.Drawing.Point(0, 49);
-            this.container1.Name = "container1";
-            this.container1.Panel1.Controls.Add(this.panelTopo);
-            this.container1.Panel1.Text = "Panel1";
-            this.container1.Panel2.Controls.Add(this.splitContainerControl1);
-            this.container1.Panel2.Text = "Panel2";
-            this.container1.Size = new System.Drawing.Size(1264, 669);
-            this.container1.SplitterPosition = 80;
-            this.container1.TabIndex = 4;
-            this.container1.Text = "splitContainerControl1";
-            // 
             // panelTopo
             // 
             this.panelTopo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTopo.Location = new System.Drawing.Point(0, 0);
             this.panelTopo.Name = "panelTopo";
-            this.panelTopo.Size = new System.Drawing.Size(1264, 60);
+            this.panelTopo.Size = new System.Drawing.Size(1159, 100);
             this.panelTopo.TabIndex = 0;
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.IsSplitterFixed = true;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.PanelLateral);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.panelPrincipal);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1264, 604);
-            this.splitContainerControl1.SplitterPosition = 96;
-            this.splitContainerControl1.TabIndex = 0;
-            this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // PanelLateral
             // 
             this.PanelLateral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelLateral.Location = new System.Drawing.Point(0, 0);
             this.PanelLateral.Name = "PanelLateral";
-            this.PanelLateral.Size = new System.Drawing.Size(72, 604);
+            this.PanelLateral.Size = new System.Drawing.Size(100, 669);
             this.PanelLateral.TabIndex = 0;
             // 
             // panelPrincipal
@@ -3814,15 +3784,44 @@
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1187, 604);
+            this.panelPrincipal.Size = new System.Drawing.Size(1159, 564);
             this.panelPrincipal.TabIndex = 0;
+            // 
+            // splitContainerControl2
+            // 
+            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl2.IsSplitterFixed = true;
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 49);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            this.splitContainerControl2.Panel1.Controls.Add(this.PanelLateral);
+            this.splitContainerControl2.Panel1.Text = "Panel1";
+            this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
+            this.splitContainerControl2.Panel2.Text = "Panel2";
+            this.splitContainerControl2.Size = new System.Drawing.Size(1264, 669);
+            this.splitContainerControl2.TabIndex = 9;
+            this.splitContainerControl2.Text = "splitContainerControl2";
+            // 
+            // splitContainerControl3
+            // 
+            this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl3.Horizontal = false;
+            this.splitContainerControl3.IsSplitterFixed = true;
+            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl3.Name = "splitContainerControl3";
+            this.splitContainerControl3.Panel1.Controls.Add(this.panelTopo);
+            this.splitContainerControl3.Panel1.Text = "Panel1";
+            this.splitContainerControl3.Panel2.Controls.Add(this.panelPrincipal);
+            this.splitContainerControl3.Panel2.Text = "Panel2";
+            this.splitContainerControl3.Size = new System.Drawing.Size(1159, 669);
+            this.splitContainerControl3.TabIndex = 0;
+            this.splitContainerControl3.Text = "splitContainerControl3";
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 741);
-            this.Controls.Add(this.container1);
+            this.Controls.Add(this.splitContainerControl2);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -3834,10 +3833,10 @@
             this.Load += new System.EventHandler(this.main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.container1)).EndInit();
-            this.container1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
+            this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
+            this.splitContainerControl3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4234,11 +4233,11 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem333;
         private DevExpress.XtraBars.BarButtonItem barButtonItem273;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
-        private DevExpress.XtraEditors.SplitContainerControl container1;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.Panel panelTopo;
         private System.Windows.Forms.Panel PanelLateral;
         private System.Windows.Forms.Panel panelPrincipal;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
 
     }
 }

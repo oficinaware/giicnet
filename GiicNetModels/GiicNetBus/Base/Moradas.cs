@@ -108,12 +108,12 @@ namespace GiicNetBus.Base
                 MORADAS obj = GetByKey(tab.CLIENTE,tab.ITEMCLI);
                 if (obj == null)
                 {
-                    int mitemcli = (int)iofs.NOVONR_MORADA();
+                    int mitemcli = (int)iofs.NOVONR_MORADA( );
                     if (mitemcli == 0)
                     {
                         r.Status = false;
                         r.Erros = "Erro ao gerar ItemCli em Moradas...";
-                        ctxTransaction.Rollback();
+                        //ctxTransaction.Rollback();
                         return r;
                     }
                     tab.ITEMCLI = mitemcli;

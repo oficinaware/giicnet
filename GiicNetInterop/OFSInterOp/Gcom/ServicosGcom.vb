@@ -13,11 +13,11 @@ Imports System.Reflection
 
 Public Class ServicosGcom
 
-    Private cnn1 As ADO.DbConnection
+    Private cnn1 As ADODB.Connection
 
-    Public Sub New()
-        cnn1 = New ADO.DbConnection()
-        End Sub
+    Public Sub New(conn As Connection)
+        cnn1 = conn
+    End Sub
     Public Function ValidaPrePack(pnrenco As String, plnenco As Long) As Boolean
         Dim prepack As New ADODB.Recordset
 
@@ -37,13 +37,13 @@ Public Class ServicosGcom
         End If
 
     End Function
-    Public Function NOVONR_MORADA() As Result_Op
+    Public Function NOVONR_MORADA() As Result_Op(Of Long)
         Dim PARAM As New ADODB.Recordset
         Dim Moradas As New ADODB.Recordset
 
         Dim MSG As Object
         Dim NOVONUM As Long
-        Dim r As New Result_Op
+        Dim result As New Result_Op(Of Long)
 
         Dim NUMANT As Double
 
@@ -65,18 +65,18 @@ Public Class ServicosGcom
         End If
         Moradas.Open("select ITEMCLI from MORADAS where ITEMCLI = " & NOVONUM, cnn1, adOpenStatic, adLockReadOnly)
         If Not Moradas.EOF Then
-            r.Msg = "Erro ! Numero já existe"
+            result.Msg = "Erro ! Numero já existe"
             GoTo FIM
         End If
 
         PARAM.Fields("pitemcli").Value = NOVONUM
         PARAM.UpdateBatch()
-        r.Valor = NOVONUM
-        r.Status = True
+        result.Valor = NOVONUM
+        result.Status = True
         'NOVONR_MORADA = NOVONUM
 
 FIM:
-        Return r
+        Return result
         If PARAM.State = adStateOpen Then
             PARAM.Close()
         End If

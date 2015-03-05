@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid;
+﻿using DevExpress.XtraBars.Docking2010.Views;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using System;
@@ -45,7 +46,7 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
             //    if (resultList.Status == false)
             //    {
             //        MessageBox.Show(resultList.Erros);
-                    
+
             //    }
             //}
             //else
@@ -125,6 +126,27 @@ namespace GiicNetUI.Comum.Forms.Base.MeiosTrasporte
             {
                 MessageBox.Show(result, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
+        }
+
+        private void formMeiosTransporte_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!(gridView1.ActiveEditor == null))
+            {
+                MessageBox.Show("Alterações não gravadas");
+                bool tok = gridView1.UpdateCurrentRow();
+                if (tok)
+
+                {
+                    object row = gridView1.GetSelectedRows();
+
+                }
+                e.Cancel = true;
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+           // get a current row
         }
     }
 }

@@ -57,7 +57,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
                 TELEM.Text = uAgente.TELM;
                 FAX.Text = uAgente.FAX;
                 EMAIL.Text = uAgente.EMAIL;
-                COMISSAO.Text = uAgente.COMISSAO.ToString();
+                COMISSAO.EditValue = uAgente.COMISSAO;
                 FTPFOLDER.Text = uAgente.FTPFOLDER;
                 FTPDIRREMOTO.Text = uAgente.FTPDIRREMOTO;
                 USERNAME.Text = uAgente.USERNAME;
@@ -83,7 +83,8 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.TELM = TELEM.Text;
             nAGENTE.FAX = FAX.Text;
             nAGENTE.EMAIL = EMAIL.Text;
-            nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text.Replace(".",","));
+            //nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text.Replace(".",","));
+            nAGENTE.COMISSAO = (decimal?)COMISSAO.EditValue;
             nAGENTE.FTPFOLDER = FTPFOLDER.Text;
             nAGENTE.FTPDIRREMOTO = FTPDIRREMOTO.Text;
             nAGENTE.USERNAME = USERNAME.Text;
@@ -122,7 +123,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             TELEM.Text = string.Empty;
             FAX.Text = string.Empty;
             EMAIL.Text = string.Empty;
-            COMISSAO.Text = string.Empty;
+            COMISSAO.EditValue = 0;
             FTPFOLDER.Text = string.Empty;
             FTPDIRREMOTO.Text = string.Empty;
             USERNAME.Text = string.Empty;

@@ -33,37 +33,7 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             if (resultList.Status) gridControl1.DataSource = Lista;
         }
 
-        private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            if (e.RowHandle == GridControl.NewItemRowHandle)
-            {
-                //INSERT
-                GiicNetBus.Base.ResultList resultList = busAgentes.Insert(gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABAGE);
-            }
-            else
-            {
-                //UPDATE
-                GiicNetBus.Base.ResultList resultList = busAgentes.Update(e.Row as GiicNetModels.TABAGE);
-            }
-        }
-
-        private void gridView1_RowDeleting(object sender, DevExpress.Data.RowDeletingEventArgs e)
-        {
-            DialogResult hR = MessageBox.Show("Tem a certeza que pretende remover?", "Tem a certeza que pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (hR == System.Windows.Forms.DialogResult.Yes)
-            {
-                GiicNetBus.Base.ResultList resultList = busAgentes.Delete((gridView1.GetRow(e.RowHandle) as GiicNetModels.TABAGE).AGENTE);
-                gridControl1.Refresh();
-            }
-        }
-
-        private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
-        {
-            var novaLinha = gridView1.GetRow((sender as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
-            GiicNetBus.Base.ResultList resultList = busAgentes.Valida(novaLinha);
-            e.Valid = resultList.Status;
-            e.ErrorText = resultList.Erros;
-        }
+       
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -76,44 +46,65 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // novo registo
             formManutTABAGE fmTabAge = new formManutTABAGE();
             fmTabAge.PARAM_AGENTE = "";
             fmTabAge.ShowDialog();
             fmTabAge.Dispose();
+            refrescar(0);
+            //this.Refresh();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            // editar registo
             formManutTABAGE fmTabAge = new formManutTABAGE();
             GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
             int rowHandle = (gridControl1.FocusedView as GridView).FocusedRowHandle;
             fmTabAge.PARAM_AGENTE = tA.AGENTE;
+            
             fmTabAge.ShowDialog();
             fmTabAge.Dispose();
 
+            
+            refrescar(rowHandle);
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            // Delete Registo
+            DialogResult msg = MessageBox.Show("Tem a certeza pretende remover?", "Tem a certeza pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (msg == System.Windows.Forms.DialogResult.No) return;
+
+            int rowHandle = (gridControl1.FocusedView as GridView).FocusedRowHandle;
+            if (rowHandle > 0)
+            {
+                string mAgente = gridView1.GetRowCellValue(rowHandle, "AGENTE").ToString();
+                //formManutTABAGE fmTabAge = new formManutTABAGE();
+                //GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
+                GiicNetBus.Base.ResultList resultList = busAgentes.Delete(mAgente);
+                if (resultList.Status == true)
+                {
+                    refrescar(rowHandle);
+                }
+                else
+                {
+                    DialogResult msgerro = MessageBox.Show(resultList.Erros,"Erro" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
+                }
+            }
+            
+        }
+
+        public void refrescar(int p_rowHandle)
+        {
             GiicNetBus.Base.ResultList resultList = busAgentes.GetAll(1, 10000);
             var Lista = new BindingList<GiicNetModels.TABAGE>((System.Collections.Generic.IList<GiicNetModels.TABAGE>)resultList.Lista);
             if (resultList.Status) gridControl1.DataSource = Lista;
             
             ColumnView cv = gridControl1.MainView as ColumnView;
-            cv.FocusedRowHandle = rowHandle;
-        }
+            if (p_rowHandle > 0) cv.FocusedRowHandle = p_rowHandle;
 
-        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DialogResult hR = MessageBox.Show("Tem a certeza pretende remover?", "Tem a certeza pretende remover?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (hR == System.Windows.Forms.DialogResult.No) return;
-
-            formManutTABAGE fmTabAge = new formManutTABAGE();
-            GiicNetModels.TABAGE tA = (gridControl1.FocusedView as GridView).GetRow((gridControl1.FocusedView as GridView).FocusedRowHandle) as GiicNetModels.TABAGE;
-            GiicNetBus.Base.ResultList resultListDelete = busAgentes.Delete(tA.AGENTE);
-            if(resultListDelete.Status == true)
-            {
-                GiicNetBus.Base.ResultList resultList = busAgentes.GetAll(1, 10000);
-                var Lista = new BindingList<GiicNetModels.TABAGE>((System.Collections.Generic.IList<GiicNetModels.TABAGE>)resultList.Lista);
-                if (resultList.Status) gridControl1.DataSource = Lista;
-            }
-            
         }
     }
 }

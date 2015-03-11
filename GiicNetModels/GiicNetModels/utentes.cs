@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class utentes
+    public partial class utentes : Base
     {
         public string utente { get; set; }
         public string password { get; set; }

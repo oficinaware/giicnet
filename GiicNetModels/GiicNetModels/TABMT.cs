@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABMT
+    public partial class TABMT : Base
     {
         public string CODMT { get; set; }
         public string DESCRICAO { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class MORADAS
+    public partial class MORADAS : Base
     {
         public string CLIENTE { get; set; }
         public int ITEMCLI { get; set; }

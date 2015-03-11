@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class CLIENTES_BR
+    public partial class CLIENTES_BR : Base
     {
         public string CLIENTE { get; set; }
         public Nullable<System.DateTime> DTINI { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABDIA
+    public partial class TABDIA : Base
     {
         public string CODDIARIO { get; set; }
         public string DESCRICAO { get; set; }

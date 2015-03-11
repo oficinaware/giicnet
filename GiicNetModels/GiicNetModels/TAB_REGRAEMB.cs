@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TAB_REGRAEMB
+    public partial class TAB_REGRAEMB : Base
     {
         public string CODREGRA { get; set; }
         public string CODEMB { get; set; }

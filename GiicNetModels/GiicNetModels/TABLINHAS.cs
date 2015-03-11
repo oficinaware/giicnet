@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABLINHAS
+    public partial class TABLINHAS : Base
     {
         public string MARCA { get; set; }
         public string LINHA { get; set; }

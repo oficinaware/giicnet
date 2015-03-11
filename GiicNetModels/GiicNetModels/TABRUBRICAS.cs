@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABRUBRICAS
+    public partial class TABRUBRICAS : Base
     {
         public TABRUBRICAS()
         {

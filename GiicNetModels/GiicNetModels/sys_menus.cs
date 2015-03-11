@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class sys_menus
+    public partial class sys_menus : Base
     {
         public int Id { get; set; }
         public Nullable<int> parentId { get; set; }

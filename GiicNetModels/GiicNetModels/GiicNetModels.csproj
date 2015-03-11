@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base.cs" />
     <Compile Include="CLIENTES.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
@@ -107,6 +108,8 @@
     <Compile Include="MORADAS.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>
+    <Compile Include="partial\CLIENTES.cs" />
+    <Compile Include="partial\TABAGE.cs" />
     <Compile Include="PECAS.cs">
       <DependentUpon>Model_DataGiicNet.tt</DependentUpon>
     </Compile>

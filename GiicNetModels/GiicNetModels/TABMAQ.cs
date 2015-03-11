@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABMAQ
+    public partial class TABMAQ : Base
     {
         public string CODMAQ { get; set; }
         public string DESCRICAO { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TEMPLATES_CAB
+    public partial class TEMPLATES_CAB : Base
     {
         public TEMPLATES_CAB()
         {

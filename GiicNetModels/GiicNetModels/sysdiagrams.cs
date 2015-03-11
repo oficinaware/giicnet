@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class sysdiagrams : Base
     {
         public string name { get; set; }
         public int principal_id { get; set; }

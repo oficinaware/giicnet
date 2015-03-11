@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class tblmarcas
+    public partial class tblmarcas : Base
     {
         public tblmarcas()
         {

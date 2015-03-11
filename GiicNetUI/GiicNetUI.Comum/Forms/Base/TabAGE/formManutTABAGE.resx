@@ -132,9 +132,6 @@
   <data name="NOME.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;COMISSAO.Name" xml:space="preserve">
-    <value>COMISSAO</value>
-  </data>
   <data name="labelControl1.Text" xml:space="preserve">
     <value>Cod. Agente *</value>
   </data>
@@ -151,6 +148,9 @@
   <data name="MORADA1.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
     <value>Default</value>
   </data>
+  <data name="&gt;&gt;FAX.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="FAX.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -160,11 +160,11 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>442, 528</value>
+  </data>
   <data name="LINGUA.Properties.Columns2" xml:space="preserve">
     <value>DESCRICAO</value>
-  </data>
-  <data name="&gt;&gt;PASSWORD.ZOrder" xml:space="preserve">
-    <value>26</value>
   </data>
   <data name="PASSWORD.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -178,8 +178,8 @@
   <data name="&gt;&gt;labelControl5.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="MORADA1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 64</value>
+  <data name="&gt;&gt;PASSWORD.Name" xml:space="preserve">
+    <value>PASSWORD</value>
   </data>
   <data name="labelControl9.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 249</value>
@@ -193,8 +193,8 @@
   <data name="AGENTE.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;EMAIL.ZOrder" xml:space="preserve">
-    <value>31</value>
+  <data name="MORADA1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 64</value>
   </data>
   <data name="&gt;&gt;COMISSIONISTA.Name" xml:space="preserve">
     <value>COMISSIONISTA</value>
@@ -205,14 +205,17 @@
   <data name="USERNAME.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="EMAIL.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="FTPDIRREMOTO.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="PASSWORD.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="COMISSAO.Properties.NullValuePrompt" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;LINGUA.Name" xml:space="preserve">
-    <value>LINGUA</value>
   </data>
   <data name="NOME.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -220,14 +223,11 @@
   <data name="MORADA2.Size" type="System.Drawing.Size, System.Drawing">
     <value>334, 20</value>
   </data>
-  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 15</value>
+  <data name="TELEM.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="labelControl11.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
-  </data>
-  <data name="STAT.Properties.Caption" xml:space="preserve">
-    <value>Stat.</value>
   </data>
   <data name="&gt;&gt;FTPDIRREMOTO.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -262,8 +262,8 @@
   <data name="NOME.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
     <value>None</value>
   </data>
-  <data name="TELEM.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="MORADA3.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
+    <value>Default</value>
   </data>
   <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -317,8 +317,8 @@
   <data name="labelControl10.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
-  <data name="&gt;&gt;TELEF.ZOrder" xml:space="preserve">
-    <value>34</value>
+  <data name="COMISSAO.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PREFIXO_ENC.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 20</value>
@@ -328,6 +328,9 @@
   </data>
   <data name="COMISSAO.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
     <value>Numeric</value>
+  </data>
+  <data name="labelControl12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 353</value>
   </data>
   <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 67</value>
@@ -350,11 +353,14 @@
   <data name="&gt;&gt;btnGravar.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="USERNAME.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;labelControl9.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="COMISSIONISTA.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value>Nome *</value>
   </data>
   <data name="TELEM.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -386,11 +392,8 @@
   <data name="labelControl7.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="&gt;&gt;COMISSIONISTA.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;LINGUA.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="MORADA3.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="AGENTE.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -404,23 +407,18 @@
   <data name="COMISSAO.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;labelControl13.Name" xml:space="preserve">
-    <value>labelControl13</value>
+  <assembly alias="DevExpress.Utils.v14.2" name="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="LINGUA.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
+    <value>Combo</value>
   </data>
   <data name="AGENTE.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="btnGravar.Text" xml:space="preserve">
-    <value>Gravar</value>
   </data>
   <data name="PREFIXO_ENC.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
   <data name="TELEF.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 168</value>
-  </data>
-  <data name="labelControl10.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
   </data>
   <data name="FTPDIRREMOTO.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -433,6 +431,9 @@
   </data>
   <data name="&gt;&gt;COMISSAO.ZOrder" xml:space="preserve">
     <value>30</value>
+  </data>
+  <data name="PASSWORD.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="MORADA1.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -470,6 +471,9 @@
         9HGMMYxlDnP/8z+nVuMseHTy/OZHhMsaCfo4xpguzlipvwEsQoMDz+mRYQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="MORADA1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="TELEF.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -478,6 +482,12 @@
   </data>
   <data name="&gt;&gt;labelControl11.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="TELEF.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;COMISSAO.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="labelControl15.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -488,20 +498,14 @@
   <data name="AGENTE.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;labelControl7.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="NOME.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;USERNAME.Name" xml:space="preserve">
     <value>USERNAME</value>
   </data>
-  <data name="labelControl11.Text" xml:space="preserve">
-    <value>FTP Folder</value>
-  </data>
-  <data name="PREFIXO_ENC.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 15</value>
   </data>
   <data name="LINGUA.Properties.NullValuePrompt" xml:space="preserve">
     <value />
@@ -554,14 +558,14 @@
   <data name="EMAIL.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="FAX.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="FTPDIRREMOTO.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;AGENTEPAI.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="TELEM.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="LINGUA.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 402</value>
@@ -584,8 +588,8 @@
   <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="USERNAME.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
+  <data name="FTPFOLDER.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PASSWORD.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -605,6 +609,9 @@
   <data name="&gt;&gt;STAT.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="TELEM.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
@@ -623,14 +630,14 @@
   <data name="MORADA3.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="MORADA4.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
+    <value>None</value>
+  </data>
   <data name="&gt;&gt;FTPFOLDER.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
   <data name="PASSWORD.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
     <value>None</value>
-  </data>
-  <data name="MORADA4.Properties.Mask.EditMask" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;labelControl10.Name" xml:space="preserve">
     <value>labelControl10</value>
@@ -644,8 +651,8 @@
   <data name="TELEM.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;labelControl6.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="FAX.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -653,26 +660,26 @@
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="&gt;&gt;STAT.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 327</value>
   </data>
-  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 15</value>
+  <data name="USERNAME.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;labelControl14.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;labelControl14.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="AGENTEPAI.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;labelControl14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;MORADA3.Name" xml:space="preserve">
     <value>MORADA3</value>
-  </data>
-  <data name="FTPDIRREMOTO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 324</value>
   </data>
   <data name="MORADA1.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -713,11 +720,11 @@
   <data name="STAT.Location" type="System.Drawing.Point, System.Drawing">
     <value>258, 428</value>
   </data>
+  <data name="AGENTE.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;labelControl9.Name" xml:space="preserve">
     <value>labelControl9</value>
-  </data>
-  <data name="labelControl14.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
   </data>
   <data name="labelControl7.Text" xml:space="preserve">
     <value>Telemóvel</value>
@@ -731,9 +738,6 @@
   <data name="STAT.Properties.DisplayValueGrayed" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;EMAIL.Name" xml:space="preserve">
     <value>EMAIL</value>
   </data>
@@ -745,6 +749,9 @@
   </data>
   <data name="FAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 220</value>
+  </data>
+  <data name="FTPDIRREMOTO.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
+    <value>None</value>
   </data>
   <data name="MORADA1.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -760,9 +767,6 @@
   </data>
   <data name="&gt;&gt;TELEM.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;PASSWORD.Name" xml:space="preserve">
-    <value>PASSWORD</value>
   </data>
   <data name="PREFIXO_ENC.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -785,11 +789,17 @@
   <data name="&gt;&gt;FTPDIRREMOTO.Name" xml:space="preserve">
     <value>FTPDIRREMOTO</value>
   </data>
+  <data name="MORADA1.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="PASSWORD.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 20</value>
   </data>
   <data name="MORADA4.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="AGENTE.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -882,8 +892,8 @@
   <data name="AGENTEPAI.Properties.NullText" xml:space="preserve">
     <value>Selecione um valor...</value>
   </data>
-  <data name="FTPDIRREMOTO.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="USERNAME.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;NOME.Name" xml:space="preserve">
     <value>NOME</value>
@@ -900,9 +910,6 @@
   <data name="MORADA3.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelControl9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 13</value>
-  </data>
   <data name="MORADA3.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -915,17 +922,20 @@
   <data name="MORADA4.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
   </data>
+  <data name="labelControl12.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
   <data name="USERNAME.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="STAT.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
   <data name="MORADA3.Properties.NullValuePrompt" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;MORADA4.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="MORADA4.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -944,9 +954,6 @@
   </data>
   <data name="btnGravar.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 454</value>
-  </data>
-  <data name="&gt;&gt;btnCancelar.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="EMAIL.Properties.NullValuePrompt" xml:space="preserve">
     <value />
@@ -975,8 +982,8 @@
   <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
     <value>labelControl4</value>
   </data>
-  <data name="FAX.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
-    <value>None</value>
+  <data name="labelControl13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 379</value>
   </data>
   <data name="&gt;&gt;COMISSIONISTA.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -992,6 +999,9 @@
   </data>
   <data name="USERNAME.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 20</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
   <data name="&gt;&gt;TELEM.Name" xml:space="preserve">
     <value>TELEM</value>
@@ -1011,20 +1021,26 @@
   <data name="MORADA3.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
+  <data name="NOME.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="PREFIXO_ENC.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="MORADA2.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
     <value>Default</value>
   </data>
-  <data name="TELEM.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
-    <value>Default</value>
-  </data>
   <data name="COMISSIONISTA.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="PASSWORD.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
     <value>labelControl2</value>
+  </data>
+  <data name="MORADA3.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;TELEM.ZOrder" xml:space="preserve">
     <value>33</value>
@@ -1032,29 +1048,26 @@
   <data name="FTPFOLDER.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelControl5.Text" xml:space="preserve">
-    <value>Nome *</value>
-  </data>
   <data name="AGENTE.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
   <data name="MORADA4.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
     <value>Default</value>
   </data>
-  <data name="&gt;&gt;STAT.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="TELEF.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl11.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="FAX.Properties.NullValuePrompt" xml:space="preserve">
     <value />
   </data>
   <data name="EMAIL.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="&gt;&gt;labelControl10.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;PASSWORD.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1089,23 +1102,17 @@
   <data name="&gt;&gt;labelControl10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
+  <data name="&gt;&gt;labelControl8.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="labelControl9.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
-  <data name="PREFIXO_ENC.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
-    <value>Default</value>
+  <data name="FTPFOLDER.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="EMAIL.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="COMISSAO.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
-    <value>Default</value>
-  </data>
-  <data name="FTPDIRREMOTO.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
   </data>
   <data name="&gt;&gt;MORADA1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1113,11 +1120,14 @@
   <data name="&gt;&gt;USERNAME.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;FTPDIRREMOTO.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="USERNAME.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;labelControl6.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 61</value>
   </data>
   <data name="&gt;&gt;STAT.Name" xml:space="preserve">
     <value>STAT</value>
@@ -1134,12 +1144,6 @@
   <data name="MORADA3.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 116</value>
   </data>
-  <data name="COMISSAO.Properties.Mask.EditMask" xml:space="preserve">
-    <value>f1</value>
-  </data>
-  <data name="MORADA2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
-  </data>
   <data name="&gt;&gt;AGENTEPAI.Name" xml:space="preserve">
     <value>AGENTEPAI</value>
   </data>
@@ -1155,11 +1159,8 @@
   <data name="MORADA2.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 90</value>
   </data>
-  <data name="&gt;&gt;FTPFOLDER.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="labelControl13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 379</value>
+  <data name="FAX.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
+    <value>None</value>
   </data>
   <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -1173,14 +1174,17 @@
   <data name="AGENTE.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 20</value>
   </data>
-  <data name="TELEM.Properties.AutoHeight" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="MORADA2.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="COMISSIONISTA.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="TELEF.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="TELEF.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnGravar.Text" xml:space="preserve">
+    <value>Gravar</value>
   </data>
   <data name="MORADA4.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1224,14 +1228,17 @@
   <data name="labelControl7.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 197</value>
   </data>
+  <data name="MORADA3.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="AGENTEPAI.Properties.NullValuePrompt" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;MORADA1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;labelControl11.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="COMISSAO.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
+    <value>Default</value>
   </data>
   <data name="&gt;&gt;TELEF.Name" xml:space="preserve">
     <value>TELEF</value>
@@ -1248,14 +1255,14 @@
   <data name="FTPDIRREMOTO.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="TELEM.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="AGENTEPAI.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 20</value>
   </data>
   <data name="&gt;&gt;labelControl5.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="STAT.Properties.DisplayValueChecked" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;USERNAME.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1269,14 +1276,11 @@
   <data name="COMISSAO.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 272</value>
   </data>
-  <data name="&gt;&gt;labelControl10.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="AGENTE.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
-    <value>labelControl1</value>
+  <data name="TELEF.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
   </data>
   <data name="FTPFOLDER.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1293,9 +1297,6 @@
   <data name="AGENTEPAI.Location" type="System.Drawing.Point, System.Drawing">
     <value>246, 12</value>
   </data>
-  <data name="AGENTE.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="NOME.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1304,6 +1305,9 @@
   </data>
   <data name="AGENTE.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
     <value>Default</value>
+  </data>
+  <data name="MORADA2.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="MORADA2.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1314,11 +1318,14 @@
   <data name="&gt;&gt;labelControl15.Name" xml:space="preserve">
     <value>labelControl15</value>
   </data>
-  <data name="STAT.Properties.DisplayValueChecked" xml:space="preserve">
-    <value />
+  <data name="PREFIXO_ENC.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="PASSWORD.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="USERNAME.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
+    <value>None</value>
   </data>
   <data name="LINGUA.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1326,7 +1333,6 @@
   <data name="labelControl14.Text" xml:space="preserve">
     <value>Lingua *</value>
   </data>
-  <assembly alias="DevExpress.Utils.v14.2" name="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="AGENTEPAI.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
     <value>Combo</value>
   </data>
@@ -1348,6 +1354,9 @@
   <data name="&gt;&gt;USERNAME.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;labelControl12.Name" xml:space="preserve">
     <value>labelControl12</value>
   </data>
@@ -1357,8 +1366,8 @@
   <data name="NOME.Properties.NullValuePrompt" xml:space="preserve">
     <value />
   </data>
-  <data name="labelControl12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 353</value>
+  <data name="TELEM.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="AGENTE.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1369,8 +1378,8 @@
   <data name="TELEF.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="COMISSAO.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;labelControl13.Name" xml:space="preserve">
+    <value>labelControl13</value>
   </data>
   <data name="&gt;&gt;AGENTE.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1378,11 +1387,8 @@
   <data name="NOME.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="EMAIL.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TELEM.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="labelControl11.Text" xml:space="preserve">
+    <value>FTP Folder</value>
   </data>
   <data name="MORADA2.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1390,17 +1396,20 @@
   <data name="&gt;&gt;MORADA2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="TELEM.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="&gt;&gt;labelControl8.Name" xml:space="preserve">
+    <value>labelControl8</value>
   </data>
-  <data name="labelControl12.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
+  <data name="&gt;&gt;FTPFOLDER.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;MORADA4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;PREFIXO_ENC.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;FAX.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="MORADA4.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
   </data>
   <data name="TELEF.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1414,11 +1423,11 @@
   <data name="AGENTEPAI.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
   </data>
-  <data name="AGENTE.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="TELEM.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="EMAIL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 20</value>
+  <data name="COMISSAO.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;LINGUA.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1441,8 +1450,8 @@
   <data name="PREFIXO_ENC.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;labelControl14.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;EMAIL.ZOrder" xml:space="preserve">
+    <value>31</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>formManutTABAGE</value>
@@ -1453,11 +1462,11 @@
   <data name="&gt;&gt;MORADA3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="FTPFOLDER.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
-    <value>_</value>
+  <data name="FTPDIRREMOTO.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 324</value>
   </data>
-  <data name="LINGUA.Properties.Columns" xml:space="preserve">
-    <value>IDIOMA</value>
+  <data name="AGENTE.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="labelControl8.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -1468,8 +1477,8 @@
   <data name="EMAIL.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 246</value>
   </data>
-  <data name="MORADA3.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="FTPDIRREMOTO.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="MORADA3.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1489,17 +1498,20 @@
   <data name="&gt;&gt;AGENTE.Name" xml:space="preserve">
     <value>AGENTE</value>
   </data>
-  <data name="MORADA3.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="EMAIL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 20</value>
   </data>
-  <data name="AGENTE.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;LINGUA.Name" xml:space="preserve">
+    <value>LINGUA</value>
   </data>
   <data name="&gt;&gt;labelControl6.Name" xml:space="preserve">
     <value>labelControl6</value>
   </data>
   <data name="NOME.Properties.Mask.EditMask" xml:space="preserve">
     <value />
+  </data>
+  <data name="MORADA2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="MORADA1.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
@@ -1509,9 +1521,6 @@
   </data>
   <data name="USERNAME.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
-  </data>
-  <data name="MORADA2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;labelControl7.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1531,11 +1540,11 @@
   <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 41</value>
   </data>
-  <data name="PASSWORD.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;LINGUA.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="FTPDIRREMOTO.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="TELEM.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;labelControl3.Name" xml:space="preserve">
     <value>labelControl3</value>
@@ -1543,20 +1552,17 @@
   <data name="COMISSIONISTA.Properties.DisplayValueGrayed" xml:space="preserve">
     <value />
   </data>
-  <data name="MORADA3.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
-    <value>Default</value>
+  <data name="labelControl14.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="LINGUA.Properties.NullText" xml:space="preserve">
     <value>Selecione um valor...</value>
   </data>
-  <data name="&gt;&gt;labelControl8.Name" xml:space="preserve">
-    <value>labelControl8</value>
+  <data name="&gt;&gt;labelControl10.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="labelControl10.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 275</value>
-  </data>
-  <data name="labelControl15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
   </data>
   <data name="&gt;&gt;MORADA2.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1564,8 +1570,8 @@
   <data name="&gt;&gt;labelControl9.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="AGENTE.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;labelControl6.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="MORADA3.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1579,8 +1585,8 @@
   <data name="AGENTEPAI.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="STAT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;btnCancelar.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="MORADA2.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1609,8 +1615,8 @@
   <data name="MORADA2.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;FTPDIRREMOTO.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;TELEF.ZOrder" xml:space="preserve">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;MORADA3.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -1627,8 +1633,8 @@
   <data name="&gt;&gt;labelControl13.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="FTPDIRREMOTO.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
-    <value>None</value>
+  <data name="COMISSAO.Properties.Mask.EditMask" xml:space="preserve">
+    <value>f1</value>
   </data>
   <data name="USERNAME.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1645,14 +1651,11 @@
   <data name="PASSWORD.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;labelControl12.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="STAT.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="PREFIXO_ENC.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="labelControl11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 301</value>
   </data>
   <data name="FTPDIRREMOTO.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1663,8 +1666,8 @@
   <data name="MORADA2.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
     <value>None</value>
   </data>
-  <data name="TELEF.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="FAX.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="labelControl8.Text" xml:space="preserve">
     <value>Fax</value>
@@ -1675,14 +1678,14 @@
   <data name="AGENTEPAI.Properties.Columns2" xml:space="preserve">
     <value>Agente</value>
   </data>
-  <data name="USERNAME.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
-    <value>None</value>
+  <data name="LINGUA.Properties.Columns" xml:space="preserve">
+    <value>IDIOMA</value>
   </data>
-  <data name="MORADA4.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v14.2">
-    <value>None</value>
+  <data name="PREFIXO_ENC.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
+    <value>Default</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>442, 528</value>
+  <data name="&gt;&gt;labelControl10.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;MORADA1.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1690,8 +1693,8 @@
   <data name="&gt;&gt;btnGravar.Name" xml:space="preserve">
     <value>btnGravar</value>
   </data>
-  <data name="COMISSIONISTA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 428</value>
+  <data name="COMISSIONISTA.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="MORADA1.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1711,35 +1714,35 @@
   <data name="TELEF.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
     <value>_</value>
   </data>
-  <data name="STAT.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
+  <data name="TELEM.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v14.2">
+    <value>Default</value>
   </data>
-  <data name="COMISSAO.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;labelControl14.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="FTPFOLDER.Properties.Mask.EditMask" xml:space="preserve">
     <value />
   </data>
-  <data name="MORADA1.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="MORADA2.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;COMISSAO.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 15</value>
   </data>
-  <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 61</value>
+  <data name="labelControl10.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
   </data>
   <data name="AGENTEPAI.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="FTPFOLDER.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="COMISSIONISTA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 428</value>
   </data>
   <data name="&gt;&gt;FAX.Name" xml:space="preserve">
     <value>FAX</value>
   </data>
-  <data name="FAX.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
   </data>
   <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1747,8 +1750,8 @@
   <data name="MORADA4.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="AGENTE.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="FTPFOLDER.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1761,6 +1764,9 @@
   </data>
   <data name="FTPDIRREMOTO.Properties.NullValuePrompt" xml:space="preserve">
     <value />
+  </data>
+  <data name="&gt;&gt;labelControl12.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="MORADA4.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1777,14 +1783,14 @@
   <data name="STAT.Properties.DisplayValueUnchecked" xml:space="preserve">
     <value />
   </data>
-  <data name="MORADA2.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;labelControl6.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;STAT.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="USERNAME.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;COMISSAO.Name" xml:space="preserve">
+    <value>COMISSAO</value>
   </data>
   <data name="labelControl14.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -1807,8 +1813,8 @@
   <data name="AGENTEPAI.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="NOME.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;labelControl7.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="labelControl6.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 171</value>
@@ -1816,17 +1822,17 @@
   <data name="MORADA4.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="MORADA2.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="labelControl15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
   </data>
-  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;COMISSIONISTA.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="PREFIXO_ENC.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 428</value>
   </data>
-  <data name="TELEF.Properties.NullValuePrompt" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;PASSWORD.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="TELEF.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 20</value>
@@ -1849,17 +1855,17 @@
   <data name="FTPDIRREMOTO.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="MORADA1.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="labelControl11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 301</value>
   </data>
   <data name="COMISSAO.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="PASSWORD.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="labelControl9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
   </data>
-  <data name="MORADA3.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
   </data>
   <data name="&gt;&gt;labelControl6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1873,8 +1879,8 @@
   <data name="STAT.Properties.AutoHeight" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="USERNAME.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="STAT.Properties.Caption" xml:space="preserve">
+    <value>Stat.</value>
   </data>
   <data name="FTPDIRREMOTO.Properties.Mask.EditMask" xml:space="preserve">
     <value />
@@ -1888,11 +1894,8 @@
   <data name="TELEF.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="LINGUA.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.2">
-    <value>Combo</value>
-  </data>
-  <data name="&gt;&gt;labelControl8.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="FTPDIRREMOTO.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
   </data>
   <data name="&gt;&gt;TELEF.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>

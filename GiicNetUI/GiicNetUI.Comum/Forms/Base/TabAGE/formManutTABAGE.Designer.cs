@@ -209,6 +209,7 @@
             this.COMISSAO.Properties.AccessibleDescription = resources.GetString("COMISSAO.Properties.AccessibleDescription");
             this.COMISSAO.Properties.AccessibleName = resources.GetString("COMISSAO.Properties.AccessibleName");
             this.COMISSAO.Properties.AutoHeight = ((bool)(resources.GetObject("COMISSAO.Properties.AutoHeight")));
+            this.COMISSAO.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.COMISSAO.Properties.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("COMISSAO.Properties.Mask.AutoComplete")));
             this.COMISSAO.Properties.Mask.BeepOnError = ((bool)(resources.GetObject("COMISSAO.Properties.Mask.BeepOnError")));
             this.COMISSAO.Properties.Mask.EditMask = resources.GetString("COMISSAO.Properties.Mask.EditMask");

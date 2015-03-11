@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class FASES
+    public partial class FASES : Base
     {
         public string FASE { get; set; }
         public short SEQ { get; set; }

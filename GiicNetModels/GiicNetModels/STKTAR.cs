@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class STKTAR
+    public partial class STKTAR : Base
     {
         public string ARM { get; set; }
         public string DESCRICAO { get; set; }

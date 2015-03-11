@@ -55,7 +55,7 @@
         <EntityTypeShape EntityType="DataGiicNetModel.TABUNMED" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataGiicNetModel.TABZON" Width="1.5" PointX="5" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DataGiicNetModel.TABZON_AGENTE" Width="1.5" PointX="21.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataGiicNetModel.tblmarcas" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataGiicNetModel.tblmarcas" Width="1.5" PointX="5.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataGiicNetModel.tblUtil" Width="1.5" PointX="21.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DataGiicNetModel.TEMPLATES" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DataGiicNetModel.TEMPLATES_CAB" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />

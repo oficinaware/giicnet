@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABTRAN
+    public partial class TABTRAN : Base
     {
         public string CODTRAN { get; set; }
         public string TRANSIT { get; set; }

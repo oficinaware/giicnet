@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class GRUPOS
+    public partial class GRUPOS : Base
     {
         public string GRUPO { get; set; }
         public Nullable<short> NIVEL { get; set; }

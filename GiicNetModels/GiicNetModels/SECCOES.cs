@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class SECCOES
+    public partial class SECCOES : Base
     {
         public string SECCAO { get; set; }
         public string DESCRICAO { get; set; }

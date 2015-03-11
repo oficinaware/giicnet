@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABIDIOMA
+    public partial class TABIDIOMA : Base
     {
         public string IDIOMA { get; set; }
         public string DESCRICAO { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class ROTACAB
+    public partial class ROTACAB : Base
     {
         public string CODROTA { get; set; }
         public string DESCRICAO { get; set; }

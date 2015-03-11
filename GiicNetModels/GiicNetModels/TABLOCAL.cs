@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABLOCAL
+    public partial class TABLOCAL : Base
     {
         public string CODPAIS { get; set; }
         public string CODZON { get; set; }

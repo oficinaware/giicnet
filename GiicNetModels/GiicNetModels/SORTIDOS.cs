@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class SORTIDOS
+    public partial class SORTIDOS : Base
     {
         public string TIPSORT { get; set; }
         public string ESCALA { get; set; }

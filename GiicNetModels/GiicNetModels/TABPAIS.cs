@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABPAIS
+    public partial class TABPAIS : Base
     {
         public TABPAIS()
         {

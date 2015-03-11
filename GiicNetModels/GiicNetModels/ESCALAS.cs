@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class ESCALAS
+    public partial class ESCALAS : Base
     {
         public string TIPSORT { get; set; }
         public string descricao { get; set; }

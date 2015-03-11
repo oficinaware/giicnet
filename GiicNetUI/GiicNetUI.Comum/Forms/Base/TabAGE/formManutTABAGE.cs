@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Columns;
+﻿using System.Globalization;
+using DevExpress.XtraGrid.Columns;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GiicNetModels;
+using GiicNetUI.Comum.Helpers;
 
 namespace GiicNetUI.Comum.Forms.Base.TabAGE
 {
@@ -18,11 +21,16 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
 
         public string PARAM_AGENTE { get; set; }
 
+        public int binditem = 0;
+
+        public GiicNetModels.TABAGE uAgente { get; set; }
+
         public formManutTABAGE()
         {
             //System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("pt-PT");
             //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pt-PT");
             InitializeComponent();
+            COMISSAO.BindingContext = new BindingContext();
         }
 
         private void formManutTABAGE_Load(object sender, EventArgs e)
@@ -41,32 +49,41 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             LINGUA.Properties.DisplayMember = "IDIOMA";
             LINGUA.Properties.ValueMember = "IDIOMA";
 
+           
             if (PARAM_AGENTE != string.Empty)
             {
                 AGENTE.Enabled = false;
 
-                GiicNetModels.TABAGE uAgente = busAgentes.GetByKey(PARAM_AGENTE);
-                AGENTE.Text = uAgente.AGENTE;
-                AGENTEPAI.EditValue = uAgente.AGENTEPAI;
-                NOME.Text = uAgente.NOME;
-                MORADA1.Text = uAgente.MORADA1;
-                MORADA2.Text = uAgente.MORADA2;
-                MORADA3.Text = uAgente.MORADA3;
-                MORADA4.Text = uAgente.MORADA4;
-                TELEF.Text = uAgente.TELEF;
-                TELEM.Text = uAgente.TELM;
-                FAX.Text = uAgente.FAX;
-                EMAIL.Text = uAgente.EMAIL;
-                COMISSAO.Text = uAgente.COMISSAO.ToString();
-                FTPFOLDER.Text = uAgente.FTPFOLDER;
-                FTPDIRREMOTO.Text = uAgente.FTPDIRREMOTO;
-                USERNAME.Text = uAgente.USERNAME;
-                PASSWORD.Text = uAgente.PASSWORD;
-                LINGUA.EditValue = uAgente.LINGUA;
-                PREFIXO_ENC.Text = uAgente.PREFIXO_ENC;
-                COMISSIONISTA.Checked = (bool)uAgente.COMISSIONISTA;
-                STAT.EditValue = uAgente.STAT; 
+                uAgente = busAgentes.GetByKey(PARAM_AGENTE);
+                
             }
+            else
+            {
+                AGENTE.Enabled = true;
+
+                 uAgente = new GiicNetModels.TABAGE();
+                
+            }
+            AGENTE.Text = uAgente.AGENTE;
+            AGENTEPAI.EditValue = uAgente.AGENTEPAI;
+            NOME.Text = uAgente.NOME;
+            MORADA1.Text = uAgente.MORADA1;
+            MORADA2.Text = uAgente.MORADA2;
+            MORADA3.Text = uAgente.MORADA3;
+            MORADA4.Text = uAgente.MORADA4;
+            TELEF.Text = uAgente.TELEF;
+            TELEM.Text = uAgente.TELM;
+            FAX.Text = uAgente.FAX;
+            EMAIL.Text = uAgente.EMAIL;
+            COMISSAO.EditValue = uAgente.COMISSAO;
+            FTPFOLDER.Text = uAgente.FTPFOLDER;
+            FTPDIRREMOTO.Text = uAgente.FTPDIRREMOTO;
+            USERNAME.Text = uAgente.USERNAME;
+            PASSWORD.Text = uAgente.PASSWORD;
+            LINGUA.EditValue = uAgente.LINGUA;
+            PREFIXO_ENC.Text = uAgente.PREFIXO_ENC;
+            COMISSIONISTA.Checked = (bool)uAgente.COMISSIONISTA;
+            STAT.EditValue = uAgente.STAT; 
         }
 
         private void btnGravar_Click(object sender, EventArgs e)
@@ -83,7 +100,14 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.TELM = TELEM.Text;
             nAGENTE.FAX = FAX.Text;
             nAGENTE.EMAIL = EMAIL.Text;
-            nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text.Replace(".",","));
+            //nAGENTE.COMISSAO = Convert.ToDecimal(COMISSAO.Text.Replace(".",","));
+            
+            //decimal comm;
+            //var type = decimal.TryParse(COMISSAO.EditValue as string, NumberStyles.Any, new CultureInfo("pt-PT"), out comm);
+            //
+
+
+            nAGENTE.COMISSAO = (decimal?) COMISSAO.EditValue ?? 0;
             nAGENTE.FTPFOLDER = FTPFOLDER.Text;
             nAGENTE.FTPDIRREMOTO = FTPDIRREMOTO.Text;
             nAGENTE.USERNAME = USERNAME.Text;
@@ -93,18 +117,28 @@ namespace GiicNetUI.Comum.Forms.Base.TabAGE
             nAGENTE.COMISSIONISTA = COMISSIONISTA.Checked;
             nAGENTE.STAT = (bool)STAT.Checked;
 
-            GiicNetBus.Base.ResultList resultValida = busAgentes.Valida(nAGENTE);
+
+            //fetching current information from UI passes on ef update
+            uAgente = nAGENTE;
+
+
+
+            GiicNetBus.Base.ResultList resultValida = busAgentes.Valida(uAgente);
             if (resultValida.Status)
             {
                 GiicNetBus.Base.ResultList resultList;
                 if (PARAM_AGENTE != string.Empty)
                 {
-                    resultList = busAgentes.Update(nAGENTE);
+
+                    resultList = busAgentes.Update((TABAGE)uAgente.Clone());
                     this.Dispose();
                 }
-                else resultList = busAgentes.Insert(nAGENTE);
-                if (resultList.Status) limpar();
-                else MessageBox.Show(resultList.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                else resultList = busAgentes.Insert(uAgente);
+
+                if (resultList.Status) 
+                    limpar();
+                else 
+                    MessageBox.Show(resultList.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
             else MessageBox.Show(resultValida.Erros, "Erro na operação", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
         }

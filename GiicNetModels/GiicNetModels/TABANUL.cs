@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABANUL
+    public partial class TABANUL : Base
     {
         public string COD { get; set; }
         public string DESCRICAO { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABCONTASBAN
+    public partial class TABCONTASBAN : Base
     {
         public TABCONTASBAN()
         {

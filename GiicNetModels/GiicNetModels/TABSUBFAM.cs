@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABSUBFAM
+    public partial class TABSUBFAM : Base
     {
         public string FAMILIA { get; set; }
         public string SUBFAM { get; set; }

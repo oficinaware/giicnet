@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABFPAG
+    public partial class TABFPAG : Base
     {
         public string FPAG { get; set; }
         public string DESCRICAO { get; set; }

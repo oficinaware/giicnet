@@ -20,7 +20,7 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                TABAGE obj = (from c in ctx.TABAGE where c.AGENTE == key select c).FirstOrDefault();
+                TABAGE obj = (from c in ctx.TABAGE.AsNoTracking() where c.AGENTE == key select c).FirstOrDefault();
                 if (obj != null) return obj;
                 r.Erros = "Não encontra registo...";
                 return null;
@@ -32,7 +32,7 @@ namespace GiicNetBus.Base
             }
         }
 
-       
+
         public ResultList GetAll(Int32 pag, Int32 itemsByPag)
         {
             var r = new ResultList();
@@ -42,7 +42,7 @@ namespace GiicNetBus.Base
             try
             {
                 var ctx = new DataGiicNetEntities();
-                var obj = (from c in ctx.TABAGE select c).ToList();
+                var obj = (from c in ctx.TABAGE.AsNoTracking() select c).ToList();
                 if (obj.Count > 0)
                 {
                     r.Status = true;
@@ -109,24 +109,28 @@ namespace GiicNetBus.Base
             {
                 var ctx = new DataGiicNetEntities();
 
-                var obj = GetByKey(tab.AGENTE);
-                if (obj != null)
+                //var obj = GetByKey(tab.AGENTE);
+                //if (obj != null)
+                if (true)
+                {
 
+                    //ctx.Entry(obj).State = EntityState.Detached;
+                    //var ok = ctx.SaveChanges();
+
+                    ctx.TABAGE.Attach(tab);
+                    ctx.Entry(tab).State = EntityState.Modified;
+                    if (ctx.SaveChanges() > 0)
                     {
-                        ctx.TABAGE.Attach(tab);
-                        ctx.Entry(tab).State = EntityState.Modified;
-                        if (ctx.SaveChanges() > 0)
-                        {
-                            r.Status = true;
-                            return r;
-                        }
-                        else
-                        {
-                            r.Status = false;
-                            r.Erros = "No records were changed in update process!";
-                            return r;
-                        }
+                        r.Status = true;
+                        return r;
                     }
+                    else
+                    {
+                        r.Status = false;
+                        r.Erros = "No records were changed in update process!";
+                        return r;
+                    }
+                }
 
                 r.Erros = "Registo não existe...";
                 return r;

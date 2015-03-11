@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class FASES_LIG
+    public partial class FASES_LIG : Base
     {
         public short SEQPAI { get; set; }
         public short SEQFIL { get; set; }

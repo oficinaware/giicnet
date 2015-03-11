@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class tabeuro
+    public partial class tabeuro : Base
     {
         public string MOEDA { get; set; }
         public string DESCRICAO { get; set; }

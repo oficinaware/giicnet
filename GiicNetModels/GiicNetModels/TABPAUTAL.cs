@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABPAUTAL
+    public partial class TABPAUTAL : Base
     {
         public string CODPAUTAL { get; set; }
         public string DESCRICAO { get; set; }

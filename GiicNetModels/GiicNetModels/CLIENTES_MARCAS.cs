@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class CLIENTES_MARCAS
+    public partial class CLIENTES_MARCAS : Base
     {
         public string CLIENTE { get; set; }
         public string MARCA { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABDOC
+    public partial class TABDOC : Base
     {
         public string TIPODOC { get; set; }
         public string SERIE { get; set; }

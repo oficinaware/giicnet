@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class CNDENT
+    public partial class CNDENT : Base
     {
         public string CODIGO { get; set; }
         public string DESCRICAO { get; set; }

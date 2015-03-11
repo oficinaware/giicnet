@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class PICTOGRAMAS
+    public partial class PICTOGRAMAS : Base
     {
         public string COD_PICT { get; set; }
         public string DESCRICAO { get; set; }

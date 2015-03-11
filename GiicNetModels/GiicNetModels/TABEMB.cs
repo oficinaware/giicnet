@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABEMB
+    public partial class TABEMB : Base
     {
         public TABEMB()
         {

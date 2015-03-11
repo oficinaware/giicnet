@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABFUNC
+    public partial class TABFUNC : Base
     {
         public string CODFUNC { get; set; }
         public string NOME { get; set; }

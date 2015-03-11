@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABCONTACTOS
+    public partial class TABCONTACTOS : Base
     {
         public System.Guid NR_REG { get; set; }
         public string TERCEIRO { get; set; }

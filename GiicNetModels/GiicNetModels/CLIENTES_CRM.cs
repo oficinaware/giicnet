@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class CLIENTES_CRM
+    public partial class CLIENTES_CRM : Base
     {
         public System.Guid NR_REG { get; set; }
         public string CLIENTE { get; set; }

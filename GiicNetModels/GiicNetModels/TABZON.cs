@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABZON
+    public partial class TABZON : Base
     {
         public TABZON()
         {

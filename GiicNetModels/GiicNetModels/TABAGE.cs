@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABAGE
+    public partial class TABAGE : Base
     {
         public TABAGE()
         {

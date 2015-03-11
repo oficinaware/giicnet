@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TAB_PICT
+    public partial class TAB_PICT : Base
     {
         public string COD_PICT { get; set; }
         public string NOME_PICT { get; set; }

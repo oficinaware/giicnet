@@ -83,10 +83,12 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1512, 744);
+            this.gridControl1.Size = new System.Drawing.Size(1942, 933);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -258,31 +260,35 @@
             this.panelFiltros.Controls.Add(this.textEdit3);
             this.panelFiltros.Controls.Add(this.textEdit2);
             this.panelFiltros.Controls.Add(this.textEdit1);
-            this.panelFiltros.Location = new System.Drawing.Point(6, 48);
+            this.panelFiltros.Location = new System.Drawing.Point(8, 59);
+            this.panelFiltros.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(720, 32);
+            this.panelFiltros.Size = new System.Drawing.Size(960, 39);
             this.panelFiltros.TabIndex = 1;
             this.panelFiltros.Visible = false;
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(433, 6);
+            this.textEdit3.Location = new System.Drawing.Point(576, 7);
+            this.textEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(34, 20);
+            this.textEdit3.Size = new System.Drawing.Size(45, 22);
             this.textEdit3.TabIndex = 2;
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(61, 6);
+            this.textEdit2.Location = new System.Drawing.Point(80, 7);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(250, 20);
+            this.textEdit2.Size = new System.Drawing.Size(333, 22);
             this.textEdit2.TabIndex = 1;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(11, 6);
+            this.textEdit1.Location = new System.Drawing.Point(15, 7);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(49, 20);
+            this.textEdit1.Size = new System.Drawing.Size(64, 22);
             this.textEdit1.TabIndex = 0;
             // 
             // splitContainerControl1
@@ -291,13 +297,15 @@
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.IsSplitterFixed = true;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.ribbonControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.panelFiltros);
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1512, 849);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1942, 1045);
+            this.splitContainerControl1.SplitterPosition = 93;
             this.splitContainerControl1.TabIndex = 2;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -323,12 +331,13 @@
             this.barButtonItem14,
             this.barButtonItem15});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1512, 100);
+            this.ribbonControl1.Size = new System.Drawing.Size(1942, 107);
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
             // barButtonItem1
@@ -468,11 +477,12 @@
             // 
             // formClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1512, 849);
+            this.ClientSize = new System.Drawing.Size(1942, 1045);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "formClientes";
             this.Load += new System.EventHandler(this.formClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

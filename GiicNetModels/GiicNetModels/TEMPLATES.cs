@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TEMPLATES
+    public partial class TEMPLATES : Base
     {
         public string TEMPLATE { get; set; }
         public int POS { get; set; }

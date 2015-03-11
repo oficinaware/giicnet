@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TAB_RETENCOES
+    public partial class TAB_RETENCOES : Base
     {
         public string COD { get; set; }
         public string TIPO { get; set; }

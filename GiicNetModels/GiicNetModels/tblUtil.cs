@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class tblUtil
+    public partial class tblUtil : Base
     {
         public string Util { get; set; }
         public string Pass { get; set; }

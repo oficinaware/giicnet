@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABTIPOART
+    public partial class TABTIPOART : Base
     {
         public string TIPO { get; set; }
         public string DESCRICAO { get; set; }

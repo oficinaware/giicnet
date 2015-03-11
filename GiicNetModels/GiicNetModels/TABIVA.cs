@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABIVA
+    public partial class TABIVA : Base
     {
         public string TAXREGION { get; set; }
         public string IVA { get; set; }

@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class LINKS_DOC
+    public partial class LINKS_DOC : Base
     {
         public string TPDOC { get; set; }
         public int NRFACT { get; set; }

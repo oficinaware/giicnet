@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class PECAS
+    public partial class PECAS : Base
     {
         public PECAS()
         {

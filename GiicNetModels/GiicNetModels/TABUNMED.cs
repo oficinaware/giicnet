@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class TABUNMED
+    public partial class TABUNMED : Base
     {
         public string UNMED { get; set; }
         public string UNMED_INGLES { get; set; }

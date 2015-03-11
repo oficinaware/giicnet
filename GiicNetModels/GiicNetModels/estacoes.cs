@@ -12,7 +12,7 @@ namespace GiicNetModels
     using System;
     using System.Collections.Generic;
     
-    public partial class estacoes
+    public partial class estacoes : Base
     {
         public string estacao { get; set; }
         public string descricao { get; set; }
